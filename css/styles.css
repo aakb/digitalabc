@@ -9,6 +9,8 @@
  * Variables
  *
  */
+/* Breakpoints
+   ================================================================================================================== */
 /* Layout
    ================================================================================================================== */
 /* Colors
@@ -17,8 +19,11 @@
    ================================================================================================================== */
 /* Link colors
    ================================================================================================================== */
-/* Spacing
-   ================================================================================================================== */
+/**
+ *
+ * Mixins
+ *
+ */
 /**
  *
  * Normalize
@@ -356,13 +361,20 @@ table {
  *
  */
 /* line 10, ../sass/base/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 15, ../sass/base/_base.scss */
 body {
+  overflow-y: scroll;
+  height: 100%;
   background-color: white;
   color: #4d4d4d;
   font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 17, ../sass/base/_base.scss */
+/* line 26, ../sass/base/_base.scss */
 h1,
 h2,
 h3,
@@ -379,51 +391,51 @@ h6 {
   text-rendering: optimizeLegibility;
 }
 
-/* line 37, ../sass/base/_base.scss */
+/* line 46, ../sass/base/_base.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 42, ../sass/base/_base.scss */
+/* line 51, ../sass/base/_base.scss */
 em {
   font-style: italic;
 }
-/* line 45, ../sass/base/_base.scss */
+/* line 54, ../sass/base/_base.scss */
 em strong {
   font-weight: bold;
 }
 
 /* Links
    ================================================================================================================== */
-/* line 56, ../sass/base/_base.scss */
+/* line 65, ../sass/base/_base.scss */
 a:link {
   color: blue;
   text-decoration: underline;
 }
-/* line 61, ../sass/base/_base.scss */
+/* line 70, ../sass/base/_base.scss */
 a:visited {
   color: #0000e6;
 }
-/* line 65, ../sass/base/_base.scss */
+/* line 74, ../sass/base/_base.scss */
 a:hover {
   color: #0000cc;
   text-decoration: none;
 }
-/* line 70, ../sass/base/_base.scss */
+/* line 79, ../sass/base/_base.scss */
 a:focus {
   color: #0000cc;
 }
 
 /* Paragraph
    ================================================================================================================== */
-/* line 79, ../sass/base/_base.scss */
+/* line 88, ../sass/base/_base.scss */
 p {
   margin-top: 0;
 }
 
 /* Image
    ================================================================================================================== */
-/* line 87, ../sass/base/_base.scss */
+/* line 96, ../sass/base/_base.scss */
 img {
   display: inline;
   height: auto;
@@ -519,65 +531,77 @@ label {
 
 /**
  *
- * Breakpoints
- *
- * Should contain breakpoint variables and breakpoints related mixins
- *
- */
-/* Breakpoints
-   *
-   * These are only examples, change/add/remove so they match your needs
-   *
-   ================================================================================================================== */
-/* Mixins
-   *
-   * Use this mixin to change styling for your rulesets depending on a breakpoint (width)
-   *
-   * Usage example: @include breakpoint($breakpoint-x)
-   *
-   ================================================================================================================== */
-/**
- *
  * Layouts
  *
- * This is an example file
- *
  */
+/* Header */
 /* line 10, ../sass/layout/_layout.scss */
-.example-header--inner, .example-layout {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 75em;
+.header {
+  position: fixed;
+  width: 100%;
 }
-
-/* Example logo */
+/* line 15, ../sass/layout/_layout.scss */
+.header--inner {
+  position: relative;
+}
 /* line 19, ../sass/layout/_layout.scss */
-.example-logo {
-  font-size: 200%;
+.header--logo {
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+  display: block;
+  max-width: 15em;
+}
+/* line 28, ../sass/layout/_layout.scss */
+.header--menu {
+  position: absolute;
+  top: 4em;
+  right: 6em;
+  display: block;
+  max-width: 4em;
+}
+@media only screen and (min-width: 481px) {
+  /* line 38, ../sass/layout/_layout.scss */
+  .header--logo {
+    top: 4em;
+    left: 6em;
+    max-width: 23em;
+  }
 }
 
-/* Example header */
-/* line 25, ../sass/layout/_layout.scss */
-.example-header {
-  margin-bottom: 1.5em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background-color: #cccccc;
+/* line 50, ../sass/layout/_layout.scss */
+.quiz-header {
+  height: 100%;
+  width: 100%;
+  background: url("/images/image-flip.jpg") no-repeat;
+  text-align: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
-
-/* Example layout */
-/* Example section */
-/* line 47, ../sass/layout/_layout.scss */
-.example-section {
-  margin-bottom: 1.5em;
-  padding: 2em;
-  background-color: #e6e6e6;
+/* line 59, ../sass/layout/_layout.scss */
+.quiz-header--inner {
+  position: relative;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
-/* Example form */
-/* line 58, ../sass/layout/_layout.scss */
-.example-form .example-form--input {
-  margin-bottom: 1.5em;
+/* line 66, ../sass/layout/_layout.scss */
+.quiz-header--question, .quiz-header--punchline {
+  color: white;
+  font-family: 'bebas_neueregular';
+}
+/* line 72, ../sass/layout/_layout.scss */
+.quiz-header--question {
+  margin-bottom: 0;
+  font-size: 4em;
+}
+/* line 78, ../sass/layout/_layout.scss */
+.quiz-header--punchline {
+  font-size: 10em;
 }
 
 /**

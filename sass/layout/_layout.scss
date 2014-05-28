@@ -2,60 +2,80 @@
  *
  * Layouts
  *
- * This is an example file
- *
  */
 
 
-%example-center-layout-container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 75em;
+/* Header */
+
+.header {
+  position: fixed;
+
+  width: 100%;
+
+  &--inner {
+    position: relative;
+  }
+
+  &--logo {
+    position: absolute;
+    top: 1.5em;
+    left: 1.5em;
+
+    display: block;
+    max-width: 15em;
+  }
+
+  &--menu {
+    position: absolute;
+    top: 4em;
+    right: 6em;
+
+    display: block;
+    max-width: 4em;
+  }
+
+  @include breakpoint($breakpoint-lap) {
+    &--logo {
+      top: 4em;
+      left: 6em;
+
+      max-width: 23em;
+    }
+  }
 }
 
 
-/* Example logo */
+// Quiz header
 
-.example-logo {
-  font-size: 200%;
-}
+.quiz-header {
+  height: 100%;
+  width: 100%;
 
-/* Example header */
+  background: url('/images/image-flip.jpg') no-repeat;
+  text-align: center;
 
-.example-header {
-  margin-bottom: $margin-bottom;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  @include background-size(cover);
 
-  background-color: $gray-lighter;
-}
+  &--inner {
+    position: relative;
+    top: 50%;
 
-.example-header--inner {
-  @extend %example-center-layout-container;
-}
+    @include translateY(-50%);
+  }
 
+  &--question,
+  &--punchline {
+    color: $white;
+    font-family: 'bebas_neueregular';
+  }
 
-/* Example layout */
+  &--question {
+    margin-bottom: 0;
 
-.example-layout {
-  @extend %example-center-layout-container;
-}
+    font-size: 4em;
+  }
 
-
-/* Example section */
-
-.example-section {
-  margin-bottom: $margin-bottom;
-  padding: 2em;
-
-  background-color: $gray-lightest;
-}
-
-
-/* Example form */
-
-.example-form {
-  .example-form--input {
-    margin-bottom: $margin-bottom;
+  &--punchline {
+    font-size: 10em;
   }
 }
