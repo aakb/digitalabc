@@ -36,5 +36,4 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, qu
       $location.path('/quiz/' + (parseInt($scope.step - 1)));
     }
   }
-
 });

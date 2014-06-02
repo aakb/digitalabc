@@ -1,0 +1,35 @@
+[
+{
+  "question": "Kan du finde ud af nemid? 1",
+  "answers": [
+    {"id": 0, "text": "Ja"},
+    {"id": 1, "text": "NEEJJJ!!!"},
+    {"id": 2, "text": "Måske"},
+    {"id": 3, "text": "Hvorfor?"}
+  ],
+  "correctAnswer": 0,
+  "chosenAnswer": null
+},
+{
+  "question": "Kan du finde ud af nemid? 2",
+  "answers": [
+    {"id": 0, "text": "Ja"},
+    {"id": 1, "text": "NEEJJJ!!!"},
+    {"id": 2, "text": "Måske"},
+    {"id": 3, "text": "Hvorfor?"}
+  ],
+  "correctAnswer": 0,
+  "chosenAnswer": null
+},
+{
+  "question": "Kan du finde ud af nemid? 3",
+  "answers": [
+    {"id": 0, "text": "Ja"},
+    {"id": 1, "text": "NEEJJJ!!!"},
+    {"id": 2, "text": "Måske"},
+    {"id": 3, "text": "Hvorfor?"}
+  ],
+  "correctAnswer": 0,
+  "chosenAnswer": null
+}
+]

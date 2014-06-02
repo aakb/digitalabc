@@ -1,40 +1,13 @@
-abcApp.factory('quizFactory', function() {
+abcApp.factory('quizFactory', function($http) {
   var factory = {};
-  var questions = [
-    {
-      question: 'Kan du finde ud af nemid?',
-      answers: [
-        {id: 0, text: 'Ja'},
-        {id: 1, text: 'NEEJJJ!!!'},
-        {id: 2, text: 'Måske'},
-        {id: 3, text: 'Hvorfor?'}
-      ],
-      correctAnswer: 0,
-      chosenAnswer: null
-    },
-    {
-      question: 'Skal man bruge nemid for at bruge e-post?',
-      answers: [
-        {id: 0, text: 'Ja'},
-        {id: 1, text: 'Nej'},
-        {id: 2, text: 'Måske'},
-        {id: 3, text: 'Hvorfor?'}
-      ],
-      correctAnswer: 0,
-      chosenAnswer: null
-    },
-    {
-      question: 'Er nem ID nemt?',
-      answers: [
-        {id: 0, text: 'Ja'},
-        {id: 1, text: 'Nej'},
-        {id: 2, text: 'Måske'},
-        {id: 3, text: 'Hvorfor?'}
-      ],
-      correctAnswer: 1,
-      chosenAnswer: null
-    }
-  ];
+  var questions = [];
+
+  $http(
+    {method: 'GET', url: './backend/quiz.php'}
+  )
+  .success(function(data, status, headers, config) {
+    questions = data;
+  });
 
   var quizFinished = false;
 
