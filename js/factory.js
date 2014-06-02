@@ -36,6 +36,16 @@ abcApp.factory('quizFactory', function() {
     }
   ];
 
+  var quizFinished = false;
+
+  factory.finishQuiz = function() {
+    quizFinished = true;
+  }
+
+  factory.getQuizFinished = function() {
+    return quizFinished;
+  }
+
   factory.getQuestions = function() {
     return questions;
   }

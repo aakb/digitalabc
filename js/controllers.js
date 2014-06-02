@@ -5,6 +5,10 @@ abcApp.controller('ShareController', function($scope, quizFactory) {
 });
 
 abcApp.controller('QuizController', function($scope, $routeParams, $location, quizFactory) {
+  if (quizFactory.getQuizFinished()) {
+    $location.path('/quiz/done');
+  }
+
   $scope.step = $routeParams.step;
   $scope.numberOfQuestions = quizFactory.getNumberOfQuestions();
   $scope.highestQuestionAnswered = quizFactory.getHighestAnsweredQuestion();
@@ -16,21 +20,21 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, qu
   $scope.question = quizFactory.getQuestion($scope.step);
 
   $scope.nextStep = function() {
-
-
-    if ($scope.step < $scope.numberOfQuestions) {
-      $location.path('/quiz/' + (parseInt($scope.step) + 1));
-    }
-    else if ($scope.step > $scope.numberOfQuestions) {
-      $location.path('/quiz/1');
-    }
-    else {
-      $location.path('/quiz/done');
+    if ($scope.question.chosenAnswer !== null) {
+      if ($scope.step < $scope.numberOfQuestions) {
+        $location.path('/quiz/' + (parseInt($scope.step) + 1));
+      }
+      else if ($scope.step == $scope.numberOfQuestions) {
+        quizFactory.finishQuiz();
+        $location.path('/quiz/done');
+      }
     }
   }
 
   $scope.previousStep = function() {
-    $location.path('/quiz/' + (parseInt($scope.step) - 1));
+    if ($scope.step > 1) {
+      $location.path('/quiz/' + (parseInt($scope.step - 1)));
+    }
   }
 
 });
