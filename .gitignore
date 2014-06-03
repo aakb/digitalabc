@@ -3,4 +3,5 @@
 /app/config/parameters.yml
 /app/logs/*
 /vendor/
-
+composer.phar
+/app/bootstrap*
