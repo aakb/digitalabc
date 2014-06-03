@@ -2,8 +2,6 @@
  *
  * Buttons
  *
- * This is an example file
- *
  */
 
 
@@ -27,6 +25,7 @@
   @include text-shadow(.025em .025em .1em lighten($gray-darker, 5%));
 }
 
+
 .button {
   @extend %button;
 
@@ -38,3 +37,21 @@
     background-color: $gray-darkest;
   }
 }
+
+
+.button-transparent {
+  @extend %button;
+
+  background-color: transparent;
+  border: 2px solid $white;
+  font-family: 'bebas_neueregular';
+
+  &:hover {
+    background-color: #0ABBEF;
+  }
+
+  @include border-radius(0);
+  @include strip-link-styles($white);
+  @include text-shadow(0);
+}
+
