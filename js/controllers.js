@@ -1,6 +1,9 @@
 abcApp.controller('IndexController', function($scope) {});
 
-abcApp.controller('ShareController', function($scope, quizFactory) {
+abcApp.controller('ShareController', function($scope, $location, quizFactory) {
+  if (!quizFactory.getQuizFinished()) {
+    $location.path('/quiz')
+  }
   $scope.result = quizFactory.getResult();
 });
 

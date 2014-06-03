@@ -12,7 +12,7 @@ abcApp.factory('quizFactory', function($http, $q) {
     }
 
     var defer = $q.defer();
-    $http({method: 'GET', url: './backend/quiz.php'})
+    $http({method: 'GET', url: './backend/quiz.php?action=questions'})
     .success(function(data, status, headers, config) {
       questions = data;
       defer.resolve(true);
