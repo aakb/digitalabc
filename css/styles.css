@@ -531,6 +531,11 @@ label {
 
 /**
  *
+ * Mixins
+ *
+ */
+/**
+ *
  * Layouts
  *
  */
@@ -612,7 +617,7 @@ label {
  *
  */
 /* line 10, ../sass/modules/_buttons.scss */
-.button {
+.button, .button-transparent {
   display: inline-block;
   font-size: 125%;
   padding: .5em 1.5em;
@@ -626,7 +631,7 @@ label {
   text-shadow: 0.025em 0.025em 0.1em #737373;
 }
 /* line 20, ../sass/modules/_buttons.scss */
-.button:focus, .button:hover, .button:active {
+.button:focus, .button-transparent:focus, .button:hover, .button-transparent:hover, .button:active, .button-transparent:active {
   text-decoration: none;
 }
 
@@ -639,4 +644,39 @@ label {
 /* line 37, ../sass/modules/_buttons.scss */
 .button:hover {
   background-color: #4d4d4d;
+}
+
+/* line 43, ../sass/modules/_buttons.scss */
+.button-transparent {
+  background-color: transparent;
+  border: 2px solid white;
+  font-size: 200%;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  text-shadow: 0;
+}
+/* line 50, ../sass/modules/_buttons.scss */
+.button-transparent:hover {
+  background-color: #0ABBEF;
+}
+/* line 15, ../sass/mixins/_mixins.scss */
+.button-transparent:link {
+  color: white;
+  text-decoration: none;
+}
+/* line 20, ../sass/mixins/_mixins.scss */
+.button-transparent:visited {
+  color: white;
+  text-decoration: none;
+}
+/* line 25, ../sass/mixins/_mixins.scss */
+.button-transparent:hover {
+  color: white;
+  text-decoration: none;
+}
+/* line 30, ../sass/mixins/_mixins.scss */
+.button-transparent:focus {
+  color: white;
+  text-decoration: none;
 }
