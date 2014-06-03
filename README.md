@@ -1,7 +1,7 @@
-#Infostander Backend
+#Digital ABC
 
 ##Information
-This is the DigitalABC project. It is a Symfony2 project.
+This is the Digital ABC project. It is a Symfony2 project that utilises angularjs.
 
 ###Helpful commands
 To clear cache
