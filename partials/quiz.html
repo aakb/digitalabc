@@ -1,9 +1,11 @@
-<h4>Spørgsmål {{step}}/{{numberOfQuestions}}</h4>
-<h1>{{question.question}}</h1>
-<form name="myForm" ng-submit="nextStep()">
-  <div data-ng-repeat="answer in question.answers">
-    <input type="radio" value="{{answer.id}}" ng-model="question.chosenAnswer">{{answer.text}}<br/>
+<h4 class="quiz--progress">Spørgsmål {{step}}/{{numberOfQuestions}}</h4>
+<h1 class="quiz--question">{{question.question}}</h1>
+<form class="quiz--answers" name="myForm" ng-submit="nextStep()">
+  <div class="quiz--selection" data-ng-repeat="answer in question.answers">
+    <input class="quiz--selection-input" id="selection-{{answer.id}}" type="radio" value="{{answer.id}}" ng-model="question.chosenAnswer">
+    <label class="quiz--selection-label" for="selection-{{answer.id}}">{{answer.text}}</label>
+    <div class="quiz--selection-number">{{answer.id+1}}</div>
   </div>
-  <input type="button" value="Forrige spørgsmål" ng-click="previousStep()">
-  <input type="button" value="Næste spørgsmål" ng-click="nextStep()">
+  <input type="button" class="quiz--button" value="Forrige spørgsmål" ng-click="previousStep()">
+  <input type="button" class="quiz--button is-inactive" value="Næste spørgsmål" ng-click="nextStep()">
 </form>

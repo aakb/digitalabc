@@ -78,4 +78,10 @@
   &--punchline {
     font-size: 10em;
   }
+
+  &--button {
+    @extend .button-transparent;
+
+    font-size: 200%;
+  }
 }
