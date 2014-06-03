@@ -1,15 +1,25 @@
-abcApp.factory('quizFactory', function($http) {
+abcApp.factory('quizFactory', function($http, $q) {
   var factory = {};
   var questions = [];
-
-  $http(
-    {method: 'GET', url: './backend/quiz.php'}
-  )
-  .success(function(data, status, headers, config) {
-    questions = data;
-  });
-
   var quizFinished = false;
+  var initialized = false;
+
+  factory.init = function() {
+    if (initialized) {
+      var defer = $q.defer();
+      defer.resolve(true);
+      return defer.promise;
+    }
+
+    var defer = $q.defer();
+    $http({method: 'GET', url: './backend/quiz.php'})
+    .success(function(data, status, headers, config) {
+      questions = data;
+      defer.resolve(true);
+      initialized = true;
+    });
+    return defer.promise;
+  }
 
   factory.finishQuiz = function() {
     quizFinished = true;
