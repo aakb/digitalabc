@@ -1,9 +1,0 @@
-<h4>Spørgsmål {{step}}/{{numberOfQuestions}}</h4>
-<h1>{{question.question}}</h1>
-<form name="myForm" ng-submit="nextStep()">
-  <div data-ng-repeat="answer in question.answers">
-    <input type="radio" value="{{answer.id}}" ng-model="question.chosenAnswer">{{answer.text}}<br/>
-  </div>
-  <input type="button" value="Forrige spørgsmål" ng-click="previousStep()">
-  <input type="button" value="Næste spørgsmål" ng-click="nextStep()">
-</form>

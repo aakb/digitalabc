@@ -1,0 +1,3 @@
+digital_abc_quiz_homepage:
+    pattern:  /
+    defaults: { _controller: DigitalABCQuizBundle:Default:index }
