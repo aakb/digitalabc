@@ -14,5 +14,5 @@ abcApp.config(function($routeProvider) {$routeProvider
   .when('/quiz', {
     redirectTo: '/quiz/1'
   })
-  .otherwise({redirectTo: '/quiz'});
+  .otherwise({redirectTo: '/'});
 });
