@@ -8,7 +8,7 @@ abcApp.config(function($routeProvider) {$routeProvider
     templateUrl: '/partials/quiz.html'
   })
   .when('/', {
-    redirectTo: '/1'
+    templateUrl: '/partials/quiz-start.html'
   })
   .otherwise({redirectTo: '/'});
 });

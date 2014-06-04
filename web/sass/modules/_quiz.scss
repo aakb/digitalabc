@@ -8,22 +8,23 @@
 // ----- Selecters related to this document ----- //
 
 // Selector for displaying backgrounds properly
-%layout--set-quiz-font--selector {
+%quiz--set-font--selector {
   color: $white;
   font-family: 'bebas_neueregular';
 }
 
 
+
 .quiz {
 
-  &--countdown-header {
-    @extend %layout--set-quiz-font--selector;
+  &--start-header {
+    @extend %quiz--set-font--selector;
     font-size: 4em;
   }
 
 
-  &--countdown-subtitle {
-    @extend %layout--set-quiz-font--selector;
+  &--start-subtitle {
+    @extend %quiz--set-font--selector;
     font-size: 3em;
   }
 
@@ -36,14 +37,14 @@
 
 
   &--question {
-    @extend %layout--set-quiz-font--selector;
+    @extend %quiz--set-font--selector;
 
     font-size: 4em;
   }
 
 
   &--answers {
-    @extend %layout--set-quiz-font--selector;
+    @extend %quiz--set-font--selector;
 
     font-size: 2em;
   }
@@ -52,11 +53,10 @@
   &--selection {
     background-color:rgba(0,0,0,0.35);
     border: 0.3em solid white;
-    height: 3em;
     margin: 1em auto;
+    min-height: 2.90em;
     position: relative;
     width: 50%;
-    line-height: 3.05em;
     font-size: 0.8em;
   }
 
@@ -77,6 +77,8 @@
   &--selection-label {
     color: $white;
     margin: 0;
+    min-height: 2.40em;
+    padding: .5em 1em .5em;
 
     &:hover {
       cursor: pointer;
@@ -93,7 +95,7 @@
     left: -1.1em;
     position: absolute;
     text-indent: -2px;
-    top: 0.5em;
+    top: 0.7em;
     width: 1.5em;
 
     @include border-radius(100%);
@@ -126,12 +128,13 @@
 
 
   &--result {
-    @extend %layout--set-quiz-font--selector;
+    @extend %quiz--set-font--selector;
+
     font-size: 4em;
   }
 
   &--text {
-    @extend %layout--set-quiz-font--selector;
+    @extend %quiz--set-font--selector;
 
     font-size: 2em;
   }
