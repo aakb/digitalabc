@@ -1,35 +1,159 @@
 [
-{
-  "question": "Kan du finde ud af nemid? 1",
-  "answers": [
-    {"id": 0, "text": "Ja"},
-    {"id": 1, "text": "NEEJJJ!!!"},
-    {"id": 2, "text": "Måske"},
-    {"id": 3, "text": "Hvorfor?"}
-  ],
-  "correctAnswer": 0,
-  "chosenAnswer": null
-},
-{
-  "question": "Kan du finde ud af nemid? 2",
-  "answers": [
-    {"id": 0, "text": "Ja"},
-    {"id": 1, "text": "NEEJJJ!!!"},
-    {"id": 2, "text": "Måske"},
-    {"id": 3, "text": "Hvorfor?"}
-  ],
-  "correctAnswer": 0,
-  "chosenAnswer": null
-},
-{
-  "question": "Kan du finde ud af nemid? 3",
-  "answers": [
-    {"id": 0, "text": "Ja"},
-    {"id": 1, "text": "NEEJJJ!!!"},
-    {"id": 2, "text": "Måske"},
-    {"id": 3, "text": "Hvorfor?"}
-  ],
-  "correctAnswer": 0,
-  "chosenAnswer": null
-}
+    {
+        "question": "HVAD ER DIGITAL SELVBETJENING?",
+        "answers": [
+            {"id": 0, "text": "Når ældre borgere har fjernbetjening til døre, gardiner mv."},
+            {"id": 1, "text": "Når køledisken automatisk registrerer prisen på de varer du tager i supermarkedet"},
+            {"id": 2, "text": "Når borgere kan udfylde skemaer og kommunikere med stat og kommune over internettet"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVORDAN FÅR MAN UNGDOMS ELLER STUDIERABAT TIL BUSSEN?",
+        "answers": [
+            {"id": 0, "text": "Spørger chaufføren (Han er cool)"},
+            {"id": 1, "text": "Udfylder et skema man får på uddannelsesinstitutioner og sender det til midttrafik"},
+            {"id": 2, "text": "Udfylder en ansøgning på nettet, hvor du bruger din NemID"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD ER NemBS?",
+        "answers": [
+            {"id": 0, "text": "En ny udsendelsesrække på TV2, hvor BS Christiansen dater realitystjerner"},
+            {"id": 1, "text": "En lightversion af borgerservice, som findes på lokalbibliotekerne"},
+            {"id": 2, "text": "Quickkassen i borgerservice på Rådhuset"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD ER ET NØGLEKORT?",
+        "answers": [
+            {"id": 0, "text": "Et elektronisk kort, der erstatter gammeldags nøgler"},
+            {"id": 1, "text": "En app, der hjælper dig med at finde dine nøgler via gps"},
+            {"id": 2, "text": "En lap papir med koder, som knytter sig til din NemID"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD ER DIGITAL POSTKASSE?",
+        "answers": [
+            {"id": 0, "text": "Indbakken på min E-mail"},
+            {"id": 1, "text": "Det nye pakkepostsystem opstillet i supermarkeder"},
+            {"id": 2, "text": "En personlig postkasse på nettet, hvor du modtager breve og beskeder fra ”det offentlige”"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD ER HOTLINE?",
+        "answers": [
+            {"id": 0, "text": "Et direkte nummer til vagtlæger og skadestuer"},
+            {"id": 1, "text": "Et nummer, du kan ringe til og få hjælp til digital selvbetjening"},
+            {"id": 2, "text": "En datingportal for kommunalt ansatte"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD ER FÆLLESOFFENTLIG KANALSTRATEGI?",
+        "answers": [
+            {"id": 0, "text": "Plan for udgravning af kanaler som klimasikring langs danske kyster."},
+            {"id": 1, "text": "Plan for overgangen til digital kommunikation mellem Stat og Borger"},
+            {"id": 2, "text": "DRs plan for omsætning af licensmidler til Radio, DAB og Livestream"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD KAN DU KLARE MED DIGITAL SELVBETJENING?",
+        "answers": [
+            {"id": 0, "text": "Stemme til folketingsvalg"},
+            {"id": 1, "text": "Melde lægeskift"},
+            {"id": 2, "text": "Bestille et pas"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVORDAN MODTAGER DU I FREMTIDEN BØDER FRA BIBLIOTEKET?",
+        "answers": [
+            {"id": 0, "text": "De trækkes automatisk fra din fremtidige uddannelsesstøtte"},
+            {"id": 1, "text": "I din digitale postkasse på nettet"},
+            {"id": 2, "text": "Via facebook så alle dine venner kan se det"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVORDAN FÅR MAN SU PÅ SIN VIDEREGÅENDE UDDANNELSE?",
+        "answers": [
+            {"id": 0, "text": "Taler med studievejlederen på sin nuværende skole"},
+            {"id": 1, "text": "Ansøger via banken med forældreunderskrifter"},
+            {"id": 2, "text": "Ansøger med NemID via Borger.dk"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD ER NemID?",
+        "answers": [
+            {"id": 0, "text": "Et elektronisk ID-kort man kan vise i døren til adgangskontrollanter"},
+            {"id": 1, "text": "Elektronisk signatur på nettet som alle borgere over 15 år skal bestille"},
+            {"id": 2, "text": "En app, der identificerer kendte og berømte i en radius af 500 meter"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD ER BORGER.DK",
+        "answers": [
+            {"id": 0, "text": "En netportal for køb og salg af borgere"},
+            {"id": 1, "text": "En hjemmeside for borgmestre, der twerker og dansker gangnam-style"},
+            {"id": 2, "text": "En portal for digital selvbetjening, hvor borgere kan finde digital post og oplysninger fra stat og kommune"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD ER INKASSO?",
+        "answers": [
+            {"id": 0, "text": "Mexikansk for det engelske udtryk ”in case”, altså i tilfælde af"},
+            {"id": 1, "text": "Betegnelse for firmaer der ”sørger for” at du betaler din gæld til det offentlige"},
+            {"id": 2, "text": "Vestjysk Slangbetegnelse for pizzaæsker"}
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "question": "HVAD SKER DER D. 1. NOVEMBER 2014?",
+        "answers": [
+            {"id": 0, "text": "Det offentlige begynder at sende post til din digitale postkasse"},
+            {"id": 1, "text": "Folketinget holder ”tag-dit-kæledyr-med-på-arbejde”-dag"}
+        ],
+        "correctAnswer": 0
+    }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
