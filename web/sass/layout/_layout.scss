@@ -15,41 +15,58 @@
 }
 
 
+/* Body - change font size on breakpoints throughout site. */
+
+body {
+  font-size: .7em;
+
+  @include breakpoint($breakpoint-lap) {
+    font-size: .8em;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    font-size: 1em;
+  }
+}
+
+
 /* Header */
 
 .header {
   position: fixed;
-
   width: 100%;
 
   &--inner {
     position: relative;
   }
 
+
   &--logo {
     position: absolute;
-    top: 1.5em;
-    left: 1.5em;
+    top: 1em;
+    left: 1em;
 
     display: block;
     max-width: 15em;
+
+    @include breakpoint(30em) {
+      top: 4em;
+      left: 6em;
+    }
   }
+
 
   &--menu {
     position: absolute;
-    top: 4em;
-    right: 6em;
+    top: 1em;
+    right: 1em;
 
     display: block;
     max-width: 4em;
-  }
 
-  @include breakpoint($breakpoint-lap) {
-    &--logo {
+    @include breakpoint(30em) {
       top: 4em;
-      left: 6em;
-
-      max-width: 23em;
+      right: 6em;
     }
   }
 }
@@ -64,10 +81,11 @@
 
   &--inner {
     position: relative;
-    top: 50em;
+    top: 50%;
 
     @include translateY(-50%);
   }
+
 
   &--text,
   &--question,
@@ -76,19 +94,23 @@
     font-family: 'bebas_neueregular';
   }
 
+
   &--question {
     margin-bottom: 0;
 
     font-size: 4em;
   }
 
+
   &--punchline {
     font-size: 10em;
   }
 
+
   &--text {
     font-size: 2em;
   }
+
 
   &--button {
     @extend .button-transparent;
@@ -97,10 +119,15 @@
   }
 }
 
-.layout--quiz,
-.layout--quiz-countdown {
+
+// Layout for the quiz pages.
+
+.layout--quiz {
   background: url('/images/quiz-bg.jpg') no-repeat;
   @extend %layout--set-background--selector;
+
+  letter-spacing: .08em;
+
   @include background-size(cover);
 
   &--inner {
