@@ -7,13 +7,14 @@
 
 // ----- Selecters related to this document ----- //
 
-// Selector for displaying backgrounds properly
+// Selector for displaying backgrounds properly.
 %quiz--set-font--selector {
   color: $white;
   font-family: 'bebas_neueregular';
 }
 
 
+// ----- Quiz styles ----- //
 
 .quiz {
 
@@ -51,12 +52,13 @@
 
 
   &--selection {
-    background-color:rgba(0,0,0,0.35);
-    border: 0.3em solid white;
     margin: 1em auto;
     min-height: 2.90em;
     position: relative;
     width: 70%;
+
+    background-color:rgba(0,0,0,0.35);
+    border: 0.3em solid white;
     font-size: 0.8em;
 
     @include breakpoint($breakpoint-lap) {
@@ -79,10 +81,11 @@
 
 
   &--selection-label {
-    color: $white;
     margin: 0;
     min-height: 1.9em;
     padding: .5em 1.5em .5em;
+
+    color: $white;
     word-wrap: break-word;
 
     &:hover {
@@ -92,17 +95,17 @@
 
 
   &--selection-number {
+    height:1.5em;
+    left: -1.1em;
+    line-height: 1.5em;
     position: absolute;
     top: 50%;
+    width: 1.5em;
 
     background: black;
     border: .2em solid $white;
-
-    height:1.5em;
-    line-height: 1.5em;
-    left: -1.1em;
     text-indent: -2px;
-    width: 1.5em;
+
 
     @include border-radius(100%);
     @include translateY(-50%);
@@ -112,11 +115,12 @@
   &--button {
     @extend .button-transparent;
 
+    margin: 0 .2em .2em .2em;
+    padding: .1em 1.5em;
+
     background-color:rgba(0,0,0,0.35);
     color: #fff;
     font-size: 1.25em;
-    margin: 0 .2em .2em .2em;
-    padding: .1em 1.5em;
 
     &.is-inactive {
       cursor: default;
@@ -128,6 +132,7 @@
 
       @include opacity(.5);
     }
+
 
     &:focus {
       outline: none
@@ -141,20 +146,22 @@
     font-size: 4em;
   }
 
+
   &--text {
     @extend %quiz--set-font--selector;
 
     font-size: 2em;
   }
 
+
   &--start-opponents-wrapper {
     @extend %quiz--set-font--selector;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3em;
+    width: 16em;
 
     font-size: 2em;
     text-align: left;
-    margin-left: auto;
-    width: 16em;
-    margin-right: auto;
-    padding-left: 3em;
   }
 }
