@@ -32,12 +32,17 @@ class QuizResult
     /**
      * @ORM\Column(type="string", name="facebook_id", length=255)
      */
-    protected $fbID;
+    protected $facebookID;
 
     /**
      * @ORM\Column(type="integer", name="result")
      */
     protected $result;
+
+    /**
+     * @ORM\Column(name="created", type="date")
+     */
+    protected $created;
 
     public function getId()
     {
@@ -60,5 +65,13 @@ class QuizResult
 
     public function setResult($result) {
         $this->result = $result;
+    }
+
+    public function getCreated() {
+        return $this->created;
+    }
+
+    public function setCreated($created) {
+        $this->created = $created;
     }
 }

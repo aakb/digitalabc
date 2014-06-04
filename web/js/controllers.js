@@ -24,9 +24,16 @@ abcApp.controller('StartController', function($scope, $timeout) {
 
 abcApp.controller('ShareController', function($scope, $location, quizFactory) {
   if (!quizFactory.getQuizFinished()) {
-    $location.path('/')
+    $location.path('/');
+    return;
   }
   $scope.result = quizFactory.getResult();
+  $scope.id = "";
+
+  quizFactory.saveResult().then(function(id) {
+      console.log(id);
+      $scope.id = id;
+  });
 });
 
 abcApp.controller('QuizController', function($scope, $routeParams, $location, quizFactory) {

@@ -67,5 +67,14 @@ abcApp.factory('quizFactory', function($http, $q) {
     return parseInt(100 * (res / questions.length));
   }
 
+  factory.saveResult = function() {
+      var defer = $q.defer();
+      $http({method: 'GET', url: '/quiz/api/result/save?result=' + factory.getResult()})
+          .success(function(data, status, headers, config) {
+              defer.resolve(data.id);
+          });
+      return defer.promise;
+  }
+
   return factory;
 });
