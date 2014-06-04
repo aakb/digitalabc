@@ -5,6 +5,19 @@
  */
 
 
+// ----- Selecters related to this document ----- //
+
+// Selector for displaying backgrounds properly
+%layout--set-background--selector {
+  height: 100%;
+  width: 100%;
+
+  text-align: center;
+
+  @include background-size(cover);
+}
+
+
 /* Header */
 
 .header {
@@ -48,13 +61,10 @@
 // Quiz header
 
 .quiz-header {
-  height: 100%;
-  width: 100%;
+
+  @extend %layout--set-background--selector;
 
   background: url('/images/image-flip.jpg') no-repeat;
-  text-align: center;
-
-  @include background-size(cover);
 
   &--inner {
     position: relative;
@@ -63,6 +73,7 @@
     @include translateY(-50%);
   }
 
+  &--text,
   &--question,
   &--punchline {
     color: $white;
@@ -83,5 +94,18 @@
     @extend .button-transparent;
 
     font-size: 200%;
+  }
+}
+
+.layout--quiz-countdown {
+  @extend %layout--set-background--selector;
+
+  background: url('/images/image-flip.jpg') no-repeat;
+
+  &--inner {
+    position: relative;
+    top: 50%;
+
+    @include translateY(-50%);
   }
 }

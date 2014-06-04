@@ -4,7 +4,29 @@
  *
  */
 
+
+// ----- Selecters related to this document ----- //
+
+// Selector for displaying backgrounds properly
+%layout--set-quiz-font--selector {
+  color: $white;
+  font-family: 'bebas_neueregular';
+}
+
+
 .quiz {
+
+  &--countdown-header {
+    @extend %layout--set-quiz-font--selector;
+    font-size: 4em;
+  }
+
+
+  &--countdown-subtitle {
+    @extend %layout--set-quiz-font--selector;
+    font-size: 3em;
+  }
+
 
   &--progress {
     color: #3E5F6B;
@@ -14,16 +36,16 @@
 
 
   &--question {
-    color: $white;
+    @extend %layout--set-quiz-font--selector;
+
     font-size: 4em;
-    font-family: 'bebas_neueregular';
   }
 
 
   &--answers {
-    color: $white;
+    @extend %layout--set-quiz-font--selector;
+
     font-size: 2em;
-    font-family: 'bebas_neueregular';
   }
 
 
@@ -77,6 +99,7 @@
     @include border-radius(100%);
   }
 
+
   &--button {
     @extend .button-transparent;
 
@@ -86,7 +109,30 @@
     padding: .1em 1.5em;
 
     &.is-inactive {
+      cursor: default;
+
+      &:hover {
+        background-color:rgba(0,0,0,0.35);
+
+      }
+
       @include opacity(.5);
     }
+
+    &:focus {
+      outline: none
+    }
+  }
+
+
+  &--result {
+    @extend %layout--set-quiz-font--selector;
+    font-size: 4em;
+  }
+
+  &--text {
+    @extend %layout--set-quiz-font--selector;
+
+    font-size: 2em;
   }
 }

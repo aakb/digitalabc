@@ -1,3 +1,7 @@
 digital_abc_quiz_homepage:
     pattern:  /
     defaults: { _controller: DigitalABCQuizBundle:Default:index }
+
+digital_abc_quiz_countdown:
+    pattern:  /countdown
+    defaults: { _controller: DigitalABCQuizBundle:Default:countdown }
