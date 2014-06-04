@@ -64,7 +64,7 @@
 
   &--inner {
     position: relative;
-    top: 50em;
+    top: 50%;
 
     @include translateY(-50%);
   }
@@ -100,7 +100,11 @@
 .layout--quiz,
 .layout--quiz-countdown {
   background: url('/images/quiz-bg.jpg') no-repeat;
+  letter-spacing: .08em;
+  font-size: .7em;
+
   @extend %layout--set-background--selector;
+
   @include background-size(cover);
 
   &--inner {
@@ -108,5 +112,13 @@
     top: 50%;
 
     @include translateY(-50%);
+  }
+
+  @include breakpoint(30em) {
+    font-size: .8em;
+  }
+
+  @include breakpoint(90em) {
+    font-size: 1em;
   }
 }

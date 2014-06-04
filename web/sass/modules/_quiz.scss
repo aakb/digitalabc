@@ -15,6 +15,7 @@
 
 
 
+
 .quiz {
 
   &--start-header {
@@ -77,8 +78,7 @@
   &--selection-label {
     color: $white;
     margin: 0;
-    min-height: 2.40em;
-    padding: .5em 1em .5em;
+    padding: .5em 1.5em .5em;
 
     &:hover {
       cursor: pointer;
@@ -87,18 +87,20 @@
 
 
   &--selection-number {
+    position: absolute;
+    top: 50%;
+
     background: black;
     border: .2em solid $white;
 
     height:1.5em;
     line-height: 1.5em;
     left: -1.1em;
-    position: absolute;
     text-indent: -2px;
-    top: 0.7em;
     width: 1.5em;
 
     @include border-radius(100%);
+    @include translateY(-50%);
   }
 
 
