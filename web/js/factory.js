@@ -3,6 +3,8 @@ abcApp.factory('quizFactory', function($http, $q) {
   var questions = [];
   var quizFinished = false;
   var initialized = false;
+  var resultSaved = false;
+  var resultID = null;
   var answers = [];
 
   factory.init = function() {
@@ -69,10 +71,18 @@ abcApp.factory('quizFactory', function($http, $q) {
 
   factory.saveResult = function() {
       var defer = $q.defer();
-      $http({method: 'GET', url: '/quiz/api/result/save?result=' + factory.getResult()})
-          .success(function(data, status, headers, config) {
-              defer.resolve(data.id);
-          });
+      if (!resultSaved) {
+          $http({method: 'GET', url: '/quiz/api/result/save?result=' + factory.getResult()})
+              .success(function(data, status, headers, config) {
+                  resultID = data.id;
+                  resultSaved = true;
+                  defer.resolve(resultID);
+              });
+
+      }
+      else {
+          defer.resolve(resultID);
+      }
       return defer.promise;
   }
 

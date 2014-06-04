@@ -4,7 +4,6 @@ namespace DigitalABC\QuizBundle\Controller;
 
 use DigitalABC\QuizBundle\Entity\QuizResult;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class ApiController extends Controller
