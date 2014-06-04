@@ -15,7 +15,6 @@
 
 
 
-
 .quiz {
 
   &--start-header {
@@ -59,6 +58,8 @@
     position: relative;
     width: 50%;
     font-size: 0.8em;
+
+
   }
 
 
@@ -78,6 +79,7 @@
   &--selection-label {
     color: $white;
     margin: 0;
+    min-height: 1.9em;
     padding: .5em 1.5em .5em;
 
     &:hover {
@@ -109,6 +111,7 @@
 
     background-color:rgba(0,0,0,0.35);
     color: #fff;
+    font-size: 1.25em;
     margin: 0 .2em .2em .2em;
     padding: .1em 1.5em;
 
@@ -139,5 +142,16 @@
     @extend %quiz--set-font--selector;
 
     font-size: 2em;
+  }
+
+  &--start-opponents-wrapper {
+    @extend %quiz--set-font--selector;
+
+    font-size: 2em;
+    text-align: left;
+    margin-left: auto;
+    width: 16em;
+    margin-right: auto;
+    padding-left: 3em;
   }
 }
