@@ -31,12 +31,12 @@ abcApp.controller('ShareController', function($scope, $location, quizFactory) {
   $scope.id = "";
 
   quizFactory.saveResult().then(function(id) {
-      console.log(id);
       $scope.id = id;
   });
 
   $scope.submitResult = function() {
-      alert("FISK");
+      // Login: See https://developers.facebook.com/docs/facebook-login/login-flow-for-web/v2.0
+
   }
 });
 
@@ -64,6 +64,8 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
         }
         else if ($scope.step == $scope.numberOfQuestions) {
           quizFactory.finishQuiz();
+          $('body').unbind("keydown keypress");
+
           $location.path('/done');
         }
       }
@@ -75,20 +77,23 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
       }
     }
 
-    // jQuery to setup listeners for the keys 1,2,3
+    // jQuery to setup listeners for the keyboard.
     $('body').unbind("keydown keypress");
     $('body').bind("keydown keypress", function (event) {
       if (event.which >= 49 && event.which <= 51 ) {
+          // Handles the 1,2,3 keys
           $scope.chosen.answer = parseInt(event.which) - 49;
           $scope.$apply();
           $timeout($scope.nextStep, 500);
           event.preventDefault();
       }
       else if (event.which == 37) {
+          // Handles the left arrow.
           $timeout($scope.previousStep, 100);
           event.preventDefault();
       }
       else if (event.which == 39) {
+          // Handles the right arrow.
           $timeout($scope.nextStep, 100);
           event.preventDefault();
       }
