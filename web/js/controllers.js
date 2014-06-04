@@ -79,10 +79,18 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
     $('body').unbind("keydown keypress");
     $('body').bind("keydown keypress", function (event) {
       if (event.which >= 49 && event.which <= 51 ) {
-          event.preventDefault();
           $scope.chosen.answer = parseInt(event.which) - 49;
           $scope.$apply();
           $timeout($scope.nextStep, 500);
+          event.preventDefault();
+      }
+      else if (event.which == 37) {
+          $timeout($scope.previousStep, 100);
+          event.preventDefault();
+      }
+      else if (event.which == 39) {
+          $timeout($scope.nextStep, 100);
+          event.preventDefault();
       }
     });
   });
