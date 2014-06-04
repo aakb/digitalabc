@@ -7,6 +7,6 @@
     <div class="quiz--selection-number"><[answer.id+1]></div>
   </div>
   <input type="button" class="quiz--button" data-ng-class="{'is-inactive': step<=1}" value="Forrige spørgsmål" ng-click="previousStep()">
-  <input type="button" class="quiz--button" data-ng-class="{'is-inactive': !chosen.answer}" data-ng-show="step<numberOfQuestions" value="Næste spørgsmål" ng-click="nextStep()">
-  <input type="button" class="quiz--button" data-ng-class="{'is-inactive': !chosen.answer}" data-ng-show="step==numberOfQuestions" value="Afslut quizzen !" ng-click="nextStep()">
+  <input type="button" class="quiz--button" data-ng-class="{'is-inactive': chosen.answer == null}" data-ng-show="step<numberOfQuestions" value="Næste spørgsmål" ng-click="nextStep()">
+  <input type="button" class="quiz--button" data-ng-class="{'is-inactive': chosen.answer == null}" data-ng-show="step==numberOfQuestions" value="Afslut quizzen !" ng-click="nextStep()">
 </form>

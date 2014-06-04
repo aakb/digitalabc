@@ -34,9 +34,13 @@ abcApp.controller('ShareController', function($scope, $location, quizFactory) {
       console.log(id);
       $scope.id = id;
   });
+
+  $scope.submitResult = function() {
+      alert("FISK");
+  }
 });
 
-abcApp.controller('QuizController', function($scope, $routeParams, $location, quizFactory) {
+abcApp.controller('QuizController', function($scope, $routeParams, $location, $timeout, quizFactory) {
   quizFactory.init().then(function() {
     if (quizFactory.getQuizFinished()) {
       $location.path('/done');
@@ -70,5 +74,16 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, qu
         $location.path('/' + (parseInt($scope.step - 1)));
       }
     }
+
+    // jQuery to setup listeners for the keys 1,2,3
+    $('body').unbind("keydown keypress");
+    $('body').bind("keydown keypress", function (event) {
+      if (event.which >= 49 && event.which <= 51 ) {
+          event.preventDefault();
+          $scope.chosen.answer = parseInt(event.which) - 49;
+          $scope.$apply();
+          $timeout($scope.nextStep, 500);
+      }
+    });
   });
 });
