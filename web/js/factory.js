@@ -3,6 +3,7 @@ abcApp.factory('quizFactory', function($http, $q) {
   var questions = [];
   var quizFinished = false;
   var initialized = false;
+  var answers = [];
 
   factory.init = function() {
     if (initialized) {
@@ -15,6 +16,9 @@ abcApp.factory('quizFactory', function($http, $q) {
     $http({method: 'GET', url: '/backend/quiz.php?action=questions'})
     .success(function(data, status, headers, config) {
       questions = data;
+      angular.forEach(questions, function(question, key) {
+        answers.push({answer: null});
+      });
       defer.resolve(true);
       initialized = true;
     });
@@ -29,12 +33,12 @@ abcApp.factory('quizFactory', function($http, $q) {
     return quizFinished;
   }
 
-  factory.getQuestions = function() {
-    return questions;
-  }
-
   factory.getQuestion = function(id) {
     return questions[id - 1];
+  }
+
+  factory.getAnswer = function(id) {
+    return answers[id - 1];
   }
 
   factory.getNumberOfQuestions = function() {
@@ -42,20 +46,20 @@ abcApp.factory('quizFactory', function($http, $q) {
   }
 
   factory.getHighestAnsweredQuestion = function() {
-    var questionAnswered = 0;
-    angular.forEach(questions, function(question, key) {
-      if (question.chosenAnswer !== null) {
-        questionAnswered++;
+    var questionsAnswered = 0;
+    angular.forEach(answers, function(answer, key) {
+      if (answer.answer !== null) {
+        questionsAnswered++;
       }
     });
 
-    return questionAnswered;
+    return questionsAnswered;
   }
 
   factory.getResult = function() {
     var res = 0;
     angular.forEach(questions, function(question, key) {
-      if (question.correctAnswer == question.chosenAnswer) {
+      if (question.correctAnswer == answers[key].answer) {
         res = res + 1;
       }
     });

@@ -22,9 +22,10 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, qu
     }
 
     $scope.question = quizFactory.getQuestion($scope.step);
+    $scope.chosen = quizFactory.getAnswer($scope.step);
 
     $scope.nextStep = function() {
-      if ($scope.question.chosenAnswer !== null) {
+      if ($scope.chosen.answer !== null) {
         if ($scope.step < $scope.numberOfQuestions) {
           $location.path('/' + (parseInt($scope.step) + 1));
         }
