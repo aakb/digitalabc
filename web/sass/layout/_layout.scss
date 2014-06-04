@@ -50,9 +50,8 @@ body {
     max-width: 15em;
 
     @include breakpoint(30em) {
-      font-size: .8em;
-      top: 1.5em;
-      left: 1.5em;
+      top: 4em;
+      left: 6em;
     }
   }
 
@@ -67,15 +66,6 @@ body {
     @include breakpoint(30em) {
       top: 4em;
       right: 6em;
-    }
-  }
-
-  @include breakpoint($breakpoint-lap) {
-    &--logo {
-      top: 4em;
-      left: 6em;
-
-      max-width: 23em;
     }
   }
 }
