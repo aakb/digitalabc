@@ -1126,27 +1126,24 @@ label {
  *
  */
 /* line 11, ../sass/layout/_layout.scss */
-.quiz-header, .layout--quiz-countdown {
+.quiz-header, .layout--quiz,
+.layout--quiz-countdown {
   height: 100%;
   width: 100%;
   text-align: center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
 }
 
 /* Header */
-/* line 23, ../sass/layout/_layout.scss */
+/* line 20, ../sass/layout/_layout.scss */
 .header {
   position: fixed;
   width: 100%;
 }
-/* line 28, ../sass/layout/_layout.scss */
+/* line 25, ../sass/layout/_layout.scss */
 .header--inner {
   position: relative;
 }
-/* line 32, ../sass/layout/_layout.scss */
+/* line 29, ../sass/layout/_layout.scss */
 .header--logo {
   position: absolute;
   top: 1.5em;
@@ -1154,7 +1151,7 @@ label {
   display: block;
   max-width: 15em;
 }
-/* line 41, ../sass/layout/_layout.scss */
+/* line 38, ../sass/layout/_layout.scss */
 .header--menu {
   position: absolute;
   top: 4em;
@@ -1163,7 +1160,7 @@ label {
   max-width: 4em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 51, ../sass/layout/_layout.scss */
+  /* line 48, ../sass/layout/_layout.scss */
   .header--logo {
     top: 4em;
     left: 6em;
@@ -1171,32 +1168,40 @@ label {
   }
 }
 
-/* line 63, ../sass/layout/_layout.scss */
+/* line 60, ../sass/layout/_layout.scss */
 .quiz-header {
   background: url("/images/image-flip.jpg") no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
-/* line 69, ../sass/layout/_layout.scss */
+/* line 65, ../sass/layout/_layout.scss */
 .quiz-header--inner {
   position: relative;
-  top: 50%;
+  top: 50em;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 76, ../sass/layout/_layout.scss */
+/* line 72, ../sass/layout/_layout.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
   font-family: 'bebas_neueregular';
 }
-/* line 83, ../sass/layout/_layout.scss */
+/* line 79, ../sass/layout/_layout.scss */
 .quiz-header--question {
   margin-bottom: 0;
   font-size: 4em;
 }
-/* line 89, ../sass/layout/_layout.scss */
+/* line 85, ../sass/layout/_layout.scss */
 .quiz-header--punchline {
   font-size: 10em;
+}
+/* line 89, ../sass/layout/_layout.scss */
+.quiz-header--text {
+  font-size: 2em;
 }
 /* line 93, ../sass/layout/_layout.scss */
 .quiz-header--button {
@@ -1204,10 +1209,16 @@ label {
 }
 
 /* line 100, ../sass/layout/_layout.scss */
+.layout--quiz,
 .layout--quiz-countdown {
-  background: url("/images/image-flip.jpg") no-repeat;
+  background: url("/images/quiz-bg.jpg") no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
-/* line 105, ../sass/layout/_layout.scss */
+/* line 106, ../sass/layout/_layout.scss */
+.layout--quiz--inner,
 .layout--quiz-countdown--inner {
   position: relative;
   top: 50%;
@@ -1293,42 +1304,41 @@ label {
  *
  */
 /* line 11, ../sass/modules/_quiz.scss */
-.quiz--countdown-header, .quiz--countdown-subtitle, .quiz--question, .quiz--answers, .quiz--result, .quiz--text {
+.quiz--start-header, .quiz--start-subtitle, .quiz--question, .quiz--answers, .quiz--result, .quiz--text {
   color: white;
   font-family: 'bebas_neueregular';
 }
 
-/* line 19, ../sass/modules/_quiz.scss */
-.quiz--countdown-header {
+/* line 20, ../sass/modules/_quiz.scss */
+.quiz--start-header {
   font-size: 4em;
 }
-/* line 25, ../sass/modules/_quiz.scss */
-.quiz--countdown-subtitle {
+/* line 26, ../sass/modules/_quiz.scss */
+.quiz--start-subtitle {
   font-size: 3em;
 }
-/* line 31, ../sass/modules/_quiz.scss */
+/* line 32, ../sass/modules/_quiz.scss */
 .quiz--progress {
   color: #3E5F6B;
   font-size: 3em;
   font-family: 'bebas_neueregular';
 }
-/* line 38, ../sass/modules/_quiz.scss */
+/* line 39, ../sass/modules/_quiz.scss */
 .quiz--question {
   font-size: 4em;
 }
-/* line 45, ../sass/modules/_quiz.scss */
+/* line 46, ../sass/modules/_quiz.scss */
 .quiz--answers {
   font-size: 2em;
 }
-/* line 52, ../sass/modules/_quiz.scss */
+/* line 53, ../sass/modules/_quiz.scss */
 .quiz--selection {
   background-color: rgba(0, 0, 0, 0.35);
   border: 0.3em solid white;
-  height: 3em;
   margin: 1em auto;
+  min-height: 2.90em;
   position: relative;
   width: 50%;
-  line-height: 3.05em;
   font-size: 0.8em;
 }
 /* line 64, ../sass/modules/_quiz.scss */
@@ -1349,12 +1359,14 @@ label {
 .quiz--selection-label {
   color: white;
   margin: 0;
+  min-height: 2.40em;
+  padding: .5em 1em .5em;
 }
-/* line 81, ../sass/modules/_quiz.scss */
+/* line 83, ../sass/modules/_quiz.scss */
 .quiz--selection-label:hover {
   cursor: pointer;
 }
-/* line 87, ../sass/modules/_quiz.scss */
+/* line 89, ../sass/modules/_quiz.scss */
 .quiz--selection-number {
   background: black;
   border: 0.2em solid white;
@@ -1363,38 +1375,38 @@ label {
   left: -1.1em;
   position: absolute;
   text-indent: -2px;
-  top: 0.5em;
+  top: 0.7em;
   width: 1.5em;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-/* line 103, ../sass/modules/_quiz.scss */
+/* line 105, ../sass/modules/_quiz.scss */
 .quiz--button {
   background-color: rgba(0, 0, 0, 0.35);
   color: #fff;
   margin: 0 .2em .2em .2em;
   padding: .1em 1.5em;
 }
-/* line 111, ../sass/modules/_quiz.scss */
+/* line 113, ../sass/modules/_quiz.scss */
 .quiz--button.is-inactive {
   cursor: default;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 114, ../sass/modules/_quiz.scss */
+/* line 116, ../sass/modules/_quiz.scss */
 .quiz--button.is-inactive:hover {
   background-color: rgba(0, 0, 0, 0.35);
 }
-/* line 122, ../sass/modules/_quiz.scss */
+/* line 124, ../sass/modules/_quiz.scss */
 .quiz--button:focus {
   outline: none;
 }
-/* line 128, ../sass/modules/_quiz.scss */
+/* line 130, ../sass/modules/_quiz.scss */
 .quiz--result {
   font-size: 4em;
 }
-/* line 133, ../sass/modules/_quiz.scss */
+/* line 136, ../sass/modules/_quiz.scss */
 .quiz--text {
   font-size: 2em;
 }
