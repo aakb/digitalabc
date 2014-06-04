@@ -1,5 +1,27 @@
 abcApp.controller('IndexController', function($scope) {});
 
+abcApp.controller('StartController', function($scope, $timeout) {
+    $scope.text = "dine venner";
+
+    var texts = ["raske penge", "dine venner", "din mor", "Helle Thorning-Scmidt"];
+    var timeoutMilliseconds = 1000;
+    var lastIndex = 1;
+    var setNewText = function() {
+        do {
+            var index = parseInt(Math.random() * texts.length);
+        } while (texts.length > 1 && index === lastIndex);
+
+        $scope.text = texts[index];
+        $scope.$apply();
+
+        lastIndex = index;
+
+        $timeout(setNewText, timeoutMilliseconds);
+    }
+
+    $timeout(setNewText, timeoutMilliseconds);
+});
+
 abcApp.controller('ShareController', function($scope, $location, quizFactory) {
   if (!quizFactory.getQuizFinished()) {
     $location.path('/')
