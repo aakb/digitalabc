@@ -1,0 +1,1 @@
+var mainApp=angular.module("mainApp",["ngRoute","ngAnimate"],function(n){n.startSymbol("<["),n.endSymbol("]>")});

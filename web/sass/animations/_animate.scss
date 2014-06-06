@@ -9,3 +9,46 @@
     transform: rotate(359deg);
   }
 }
+
+@include keyframes(toggle-nav-open) {
+  0% {
+    width:0;
+  }
+
+  100% {
+    width:75%;
+  }
+}
+
+
+@include keyframes(toggle-nav-close) {
+  0% {
+    width:75%;
+  }
+
+  100% {
+    width: 0px;
+  }
+}
+
+
+@include keyframes(item-show) {
+  0% {
+    @include opacity(0);
+  }
+
+  100% {
+    @include opacity(1);
+  }
+}
+
+
+@include keyframes(item-hide) {
+  0% {
+    @include opacity(1);
+  }
+
+  100% {
+    @include opacity(0);
+  }
+}

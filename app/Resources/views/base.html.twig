@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="mainApp">
 <head>
     <title>Digital ABC</title>
     <meta charset="utf-8">
@@ -8,14 +8,35 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/fonts/bebas/bebas.css">
 </head>
-<body>
+<body data-ng-controller="HeaderController">
+    <nav class="nav" data-ng-class="{'nav--open--ang': menuOpen,'nav--close--ang': menuClose}">
+        <div title="Menu" class="nav--menu" data-ng-class="{'is-hidden': menuClose}" data-ng-click="closeMenu()">
+            <img class="nav--menu-image" src="/images/menu.png">
+        </div>
+        <div class="nav--inner">
+            123
+        </div>
+    </nav>
+
     <header class="header" role="banner">
         <div class="header--inner">
             <a href="/" title="Digital ABC" class="header--logo"><img src="/images/logo.png"></a>
-            <a href="#" title="Menu" class="header--menu"><img src="/images/menu.png"></a>
+            <div title="Menu" class="header--menu" data-ng-class="{'is-hidden': menuOpen}" data-ng-click="openMenu()">
+                <img class="header-menu-image" src="/images/menu.png">
+            </div>
         </div>
     </header>
+
     {% block body %}{% endblock %}
+
+    <!-- Global script imports -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers.js"></script>
+
     {% block javascripts %}{% endblock %}
 </body>
 </html>

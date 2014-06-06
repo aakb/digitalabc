@@ -1120,6 +1120,138 @@ label {
     transform: rotate(359deg);
   }
 }
+@-moz-keyframes toggle-nav-open {
+  /* line 14, ../sass/animations/_animate.scss */
+  0% {
+    width: 0;
+  }
+
+  /* line 18, ../sass/animations/_animate.scss */
+  100% {
+    width: 75%;
+  }
+}
+@-webkit-keyframes toggle-nav-open {
+  /* line 14, ../sass/animations/_animate.scss */
+  0% {
+    width: 0;
+  }
+
+  /* line 18, ../sass/animations/_animate.scss */
+  100% {
+    width: 75%;
+  }
+}
+@keyframes toggle-nav-open {
+  /* line 14, ../sass/animations/_animate.scss */
+  0% {
+    width: 0;
+  }
+
+  /* line 18, ../sass/animations/_animate.scss */
+  100% {
+    width: 75%;
+  }
+}
+@-moz-keyframes toggle-nav-close {
+  /* line 25, ../sass/animations/_animate.scss */
+  0% {
+    width: 75%;
+  }
+
+  /* line 29, ../sass/animations/_animate.scss */
+  100% {
+    width: 0px;
+  }
+}
+@-webkit-keyframes toggle-nav-close {
+  /* line 25, ../sass/animations/_animate.scss */
+  0% {
+    width: 75%;
+  }
+
+  /* line 29, ../sass/animations/_animate.scss */
+  100% {
+    width: 0px;
+  }
+}
+@keyframes toggle-nav-close {
+  /* line 25, ../sass/animations/_animate.scss */
+  0% {
+    width: 75%;
+  }
+
+  /* line 29, ../sass/animations/_animate.scss */
+  100% {
+    width: 0px;
+  }
+}
+@-moz-keyframes item-show {
+  /* line 36, ../sass/animations/_animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 40, ../sass/animations/_animate.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes item-show {
+  /* line 36, ../sass/animations/_animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 40, ../sass/animations/_animate.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes item-show {
+  /* line 36, ../sass/animations/_animate.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 40, ../sass/animations/_animate.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes item-hide {
+  /* line 47, ../sass/animations/_animate.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 51, ../sass/animations/_animate.scss */
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes item-hide {
+  /* line 47, ../sass/animations/_animate.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 51, ../sass/animations/_animate.scss */
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes item-hide {
+  /* line 47, ../sass/animations/_animate.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 51, ../sass/animations/_animate.scss */
+  100% {
+    opacity: 0;
+  }
+}
 /**
  *
  * Layouts
@@ -1182,6 +1314,9 @@ body {
   right: 1em;
   display: block;
   max-width: 4em;
+  -moz-animation: 1s, item-show;
+  -webkit-animation: 1s, item-show;
+  animation: 1s, item-show;
 }
 @media only screen and (min-width: 30em) {
   /* line 59, ../sass/layout/_layout.scss */
@@ -1190,8 +1325,19 @@ body {
     right: 6em;
   }
 }
+/* line 75, ../sass/layout/_layout.scss */
+.header--menu.is-hidden {
+  -moz-animation: 1s, item-hide;
+  -webkit-animation: 1s, item-hide;
+  animation: 1s, item-hide;
+}
+/* line 80, ../sass/layout/_layout.scss */
+.header--menu-image {
+  max-width: 4em;
+  width: 4em;
+}
 
-/* line 77, ../sass/layout/_layout.scss */
+/* line 89, ../sass/layout/_layout.scss */
 .quiz-header {
   background: url("/images/image-flip.jpg") no-repeat;
   -moz-background-size: cover;
@@ -1199,8 +1345,9 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 82, ../sass/layout/_layout.scss */
+/* line 94, ../sass/layout/_layout.scss */
 .quiz-header--inner {
+  display: none;
   position: relative;
   top: 50%;
   -moz-transform: translateY(-50%);
@@ -1208,30 +1355,30 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 90, ../sass/layout/_layout.scss */
+/* line 103, ../sass/layout/_layout.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
   font-family: 'bebas_neueregular';
 }
-/* line 98, ../sass/layout/_layout.scss */
+/* line 111, ../sass/layout/_layout.scss */
 .quiz-header--question {
   margin-bottom: 0;
   font-size: 4em;
 }
-/* line 105, ../sass/layout/_layout.scss */
+/* line 118, ../sass/layout/_layout.scss */
 .quiz-header--punchline {
   font-size: 10em;
 }
-/* line 110, ../sass/layout/_layout.scss */
+/* line 123, ../sass/layout/_layout.scss */
 .quiz-header--text {
   font-size: 2em;
 }
-/* line 115, ../sass/layout/_layout.scss */
+/* line 128, ../sass/layout/_layout.scss */
 .quiz-header--button {
   font-size: 200%;
 }
 
-/* line 125, ../sass/layout/_layout.scss */
+/* line 138, ../sass/layout/_layout.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1240,7 +1387,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 133, ../sass/layout/_layout.scss */
+/* line 146, ../sass/layout/_layout.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;
@@ -1319,6 +1466,49 @@ body {
 .button-transparent:focus, .quiz-header--button:focus, .quiz--button:focus {
   color: white;
   text-decoration: none;
+}
+
+/**
+ *
+ * Menu
+ *
+ */
+/* line 7, ../sass/modules/_menu.scss */
+.nav {
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  display: none;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+/* line 19, ../sass/modules/_menu.scss */
+.nav--close--ang {
+  display: block;
+  width: 0;
+  -moz-animation: 1s toggle-nav-close;
+  -webkit-animation: 1s toggle-nav-close;
+  animation: 1s toggle-nav-close;
+}
+/* line 27, ../sass/modules/_menu.scss */
+.nav--open--ang {
+  display: block;
+  width: 75%;
+  -moz-animation: 1s toggle-nav-open;
+  -webkit-animation: 1s toggle-nav-open;
+  animation: 1s toggle-nav-open;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+/* line 38, ../sass/modules/_menu.scss */
+.nav--inner {
+  font-size: 1.2em;
+  margin-top: 8em;
+  padding: 2em;
+  position: relative;
 }
 
 /**

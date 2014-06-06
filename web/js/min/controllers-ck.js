@@ -1,0 +1,1 @@
+mainApp.controller("HeaderController",function(e){e.menuOpen=!1,e.menuClose=!0,e.openMenu=function(){e.menuOpen=!e.menuOpen,e.menuClose=!e.menuClose},e.closeMenu=function(){e.menuClose=!e.menuClose,e.menuOpen=!e.menuOpen}});

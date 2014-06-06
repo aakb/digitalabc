@@ -64,10 +64,22 @@ body {
     display: block;
     max-width: 4em;
 
+    @include animation(1s, item-show);
+
     @include breakpoint(30em) {
       top: 4em;
       right: 6em;
     }
+
+    // Added by angular.
+    &.is-hidden {
+      @include animation(1s, item-hide);
+    }
+  }
+
+  &--menu-image {
+    max-width: 4em;
+    width: 4em;
   }
 }
 
@@ -80,6 +92,7 @@ body {
   @include background-size(cover);
 
   &--inner {
+    display: none;
     position: relative;
     top: 50%;
 

@@ -1,0 +1,44 @@
+/**
+ *
+ * Menu
+ *
+ */
+
+.nav {
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  display: none;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
+
+  // Added by angular.
+  &--close--ang {
+    display: block;
+    width:0;
+
+    @include animation(1s toggle-nav-close);
+  }
+
+
+  &--open--ang {
+    display: block;
+    width:75%;
+
+    @include animation(1s toggle-nav-open);
+
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards;
+  }
+
+
+  &--inner {
+    font-size: 1.2em;
+    margin-top: 8em;
+    padding: 2em;
+    position: relative;
+  }
+}
