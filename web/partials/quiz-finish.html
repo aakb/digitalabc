@@ -1,66 +1,10 @@
 <h2 class="quiz--result">Your result was: <[result]> points</h2>
 <h1 class="quiz--text">Share your result: <[id]></h1>
 <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '672101806188225',
-            cookie     : true,  // enable cookies to allow the server to access
-            // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.0' // use version 2.0
-        });
-    };
 
-    // Load the SDK asynchronously
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/da_DK/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-    function shareOnFacebook() {
-        FB.login(function(response) {
-            console.log(response)
-            if (response.status === 'connected') {
-                /*
-                FB.ui({
-                    method: 'share_open_graph',
-                    action_type: 'og.likes',
-                    action_properties: JSON.stringify({
-                        object:'http://digitalabc.vm/quiz/challenge/'
-                    })
-                }, function(response){});*/
-                FB.api(
-                        'me/tujmytestapp:complete',
-                        'post',
-                         {
-                             quiz: "http://digitalabc.vm/quiz/challenge/4dbfa78f-ec25-11e3-86a0-0800270a2d11"
-                         },
-                        function(response) {
-                            console.log(response);
-                        }
-                );
-            } else if (response.status === 'not_authorized') {
-                // The person is logged into Facebook, but not your app.
-            } else {
-                // The person is not logged into Facebook, so we're not sure if
-                // they are logged into this app or not.
-            }
-        }, {scope: 'publish_actions'});
-    }
 </script>
 
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
-
-<!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>-->
-   <input type="button" onclick="shareOnFacebook();" value="Del dit result på facebook og udfordrer dine venner ved at tagge dem.">
+  <input type="button" ng-click="shareOnFacebook()" value="Del dit result på facebook og udfordrer dine venner ved at tagge dem.">
 
 <div id="status">
 </div>
