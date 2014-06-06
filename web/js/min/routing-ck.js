@@ -1,1 +1,0 @@
-abcApp.config(function(t){t.when("/done",{controller:"ShareController",templateUrl:"/partials/share.html"}).when("/:step",{controller:"QuizController",templateUrl:"/partials/quiz.html"}).when("/",{templateUrl:"/partials/quiz-start.html"}).otherwise({redirectTo:"/"})});

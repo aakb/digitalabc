@@ -33,11 +33,6 @@ abcApp.controller('ShareController', function($scope, $location, quizFactory) {
   quizFactory.saveResult().then(function(id) {
       $scope.id = id;
   });
-
-  $scope.submitResult = function() {
-      // Login: See https://developers.facebook.com/docs/facebook-login/login-flow-for-web/v2.0
-
-  }
 });
 
 abcApp.controller('QuizController', function($scope, $routeParams, $location, $timeout, quizFactory) {

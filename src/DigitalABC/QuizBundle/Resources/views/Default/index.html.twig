@@ -1,7 +1,7 @@
 {%  extends '::base.html.twig' %}
 
 {% block body %}
-<section class="layout--quiz" data-ng-app="abcApp">
+<section class="layout--quiz">
     <div class="layout--quiz--inner">
         <div data-ng-view="" class="view-frame">
         </div>
@@ -10,8 +10,6 @@
 {% endblock %}
 
 {% block javascripts %}
-
-<!-- Angular scripts -->
 <script src="/js/quiz/app.js"></script>
 <script src="/js/quiz/directives.js"></script>
 <script src="/js/quiz/routing.js"></script>

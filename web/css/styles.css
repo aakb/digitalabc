@@ -1347,7 +1347,6 @@ body {
 }
 /* line 94, ../sass/layout/_layout.scss */
 .quiz-header--inner {
-  display: none;
   position: relative;
   top: 50%;
   -moz-transform: translateY(-50%);
@@ -1355,30 +1354,30 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 103, ../sass/layout/_layout.scss */
+/* line 102, ../sass/layout/_layout.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
   font-family: 'bebas_neueregular';
 }
-/* line 111, ../sass/layout/_layout.scss */
+/* line 110, ../sass/layout/_layout.scss */
 .quiz-header--question {
   margin-bottom: 0;
   font-size: 4em;
 }
-/* line 118, ../sass/layout/_layout.scss */
+/* line 117, ../sass/layout/_layout.scss */
 .quiz-header--punchline {
   font-size: 10em;
 }
-/* line 123, ../sass/layout/_layout.scss */
+/* line 122, ../sass/layout/_layout.scss */
 .quiz-header--text {
   font-size: 2em;
 }
-/* line 128, ../sass/layout/_layout.scss */
+/* line 127, ../sass/layout/_layout.scss */
 .quiz-header--button {
   font-size: 200%;
 }
 
-/* line 138, ../sass/layout/_layout.scss */
+/* line 137, ../sass/layout/_layout.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1387,7 +1386,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 146, ../sass/layout/_layout.scss */
+/* line 145, ../sass/layout/_layout.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;

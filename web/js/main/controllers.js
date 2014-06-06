@@ -1,4 +1,4 @@
-mainApp.controller('HeaderController', function($scope) {
+abcApp.controller('HeaderController', function($scope) {
   $scope.menuOpen = false;
   $scope.menuClose = true;
 

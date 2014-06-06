@@ -236,56 +236,23 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/controllers.js": {
+	"\/js\/main\/controllers.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/controllers.js",
-		"outputAbbreviatedPath": "\/js\/min\/controllers-ck.js",
+		"inputAbbreviatedPath": "\/js\/main\/controllers.js",
+		"outputAbbreviatedPath": "\/js\/main\/min\/controllers-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/min\/app-ck.js": {
+	"\/js\/main\/min\/controllers-ck.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/app-ck.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/app-ck-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/controllers-ck.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/controllers-ck.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/controllers-ck-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/min\/routing-ck.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/routing-ck.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/routing-ck-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/js\/quiz\/app.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/quiz\/app.js",
-		"outputAbbreviatedPath": "\/js\/quiz\/min\/app-ck.js",
+		"inputAbbreviatedPath": "\/js\/main\/min\/controllers-ck.js",
+		"outputAbbreviatedPath": "\/js\/main\/min\/min\/controllers-ck-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -344,6 +311,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/partials\/quiz-finish.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/quiz-finish.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/partials\/quiz-start.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -358,15 +334,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/partials\/quiz.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/partials\/share.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/partials\/share.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -598,7 +565,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Martin Yde Granath",
+"lastSavedByUser": "Troels Ugilt Jensen",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -1173,7 +1140,7 @@
 	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 0,
 	"shouldRunBless": 0,
-	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs",
+	"skippedItemsString": "_cache, logs, _logs, cache, \/js, .git, log, .svn, .hg",
 	"slimAutoOutputPathRelativePath": "",
 	"slimAutoOutputPathReplace1": "",
 	"slimAutoOutputPathReplace2": "",
