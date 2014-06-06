@@ -23,6 +23,25 @@ abcApp.controller('StartController', function($scope, $timeout) {
 });
 
 abcApp.controller('ShareController', function($scope, $location, quizFactory) {
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '672101806188225',
+            cookie     : true,  // enable cookies to allow the server to access
+            // the session
+            xfbml      : true,  // parse social plugins on this page
+            version    : 'v2.0' // use version 2.0
+        });
+    };
+
+    // Load the SDK asynchronously
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/da_DK/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
   if (!quizFactory.getQuizFinished()) {
     $location.path('/');
     return;
@@ -34,10 +53,29 @@ abcApp.controller('ShareController', function($scope, $location, quizFactory) {
       $scope.id = id;
   });
 
-  $scope.submitResult = function() {
-      // Login: See https://developers.facebook.com/docs/facebook-login/login-flow-for-web/v2.0
+  $scope.shareOnFacebook = function() {
+    FB.login(function(response) {
+        console.log(response)
+        if (response.status === 'connected') {
+            FB.api(
+                'me/tujmytestapp:complete',
+                'post',
+                {
+                    quiz: "http://digitalabc.vm/quiz/challenge/4dbfa78f-ec25-11e3-86a0-0800270a2d11"
+                },
+                function(response) {
+                    console.log(response);
+                }
+            );
+        } else if (response.status === 'not_authorized') {
+            // The person is logged into Facebook, but not your app.
+        } else {
+            // The person is not logged into Facebook, so we're not sure if
+            // they are logged into this app or not.
+        }
+    }, {scope: 'publish_actions'});
+    }
 
-  }
 });
 
 abcApp.controller('QuizController', function($scope, $routeParams, $location, $timeout, quizFactory) {
