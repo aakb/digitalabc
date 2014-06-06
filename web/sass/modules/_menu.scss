@@ -10,16 +10,30 @@
   z-index: 1;
 
   height: 100%;
-
   background: rgba(0, 0, 0, 0.65);
   color: #fff;
+  width: 75%;
 
-  @include translateX(100%);
 
   &--inner {
     font-size: 1.2em;
     margin-top: 8em;
     padding: 2em;
     position: relative;
+  }
+
+  &.my-class {
+    @include animation(1s, toggle-nav-close);
+  }
+
+
+  &.ng-hide-add {
+    display: block !important;
+    //@include animation(5s, toggle-nav-close);
+  }
+
+  &.ng-hide-remove {
+    display: block !important;
+    //@include animation(5s, toggle-nav);
   }
 }

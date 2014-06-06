@@ -1,14 +1,7 @@
 abcApp.controller('HeaderController', function($scope) {
   $scope.menuOpen = false;
-  $scope.menuClose = false;
 
-  $scope.openMenu = function(){
-    $scope.menuOpen = !$scope.menuOpen;
-    $scope.menuClose = !$scope.menuClose;
-  };
-
-  $scope.closeMenu = function(){
-    $scope.menuClose = !$scope.menuClose;
+  $scope.toggleMenu = function(){
     $scope.menuOpen = !$scope.menuOpen;
   };
 });

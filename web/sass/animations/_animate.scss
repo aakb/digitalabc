@@ -10,13 +10,13 @@
   }
 }
 
-@include keyframes(toggle-nav) {
+@include keyframes(toggle-nav-open) {
   0% {
-    @include translateX(100%);
+    width: 0;
   }
 
   100% {
-    @include translateX(0);
+    width: 75%;
   }
 }
 

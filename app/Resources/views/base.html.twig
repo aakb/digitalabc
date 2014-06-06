@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="/css/fonts/bebas/bebas.css">
 </head>
 <body data-ng-controller="HeaderController">
-    <nav class="nav" data-ng-">
-        <div title="Menu" class="nav--menu" data-ng-class="{'is-hidden': menuClose}" data-ng-click="closeMenu()">
+    <nav class="nav my-class" data-ng-show="menuOpen">
+        <div title="Menu" class="nav--menu" data-ng-click="toggleMenu()">
             <img class="nav--menu-image" src="/images/menu.png">
         </div>
         <div class="nav--inner">
@@ -22,7 +22,7 @@
     <header class="header" role="banner">
         <div class="header--inner">
             <a href="/" title="Digital ABC" class="header--logo"><img src="/images/logo.png"></a>
-            <div title="Menu" class="header--menu" data-ng-class="{'is-hidden': menuOpen}" data-ng-click="openMenu()">
+            <div title="Menu" class="header--menu" data-ng-click="toggleMenu()">
                 <img class="header-menu-image" src="/images/menu.png">
             </div>
         </div>

@@ -1120,47 +1120,37 @@ label {
     transform: rotate(359deg);
   }
 }
-@-moz-keyframes toggle-nav {
+@-moz-keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    -moz-transform: translateX(100%);
-    transform: translateX(100%);
+    width: 0;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    -moz-transform: translateX(0);
-    transform: translateX(0);
+    width: 75%;
   }
 }
-@-webkit-keyframes toggle-nav {
+@-webkit-keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    width: 0;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    width: 75%;
   }
 }
-@keyframes toggle-nav {
+@keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
+    width: 0;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    width: 75%;
   }
 }
 @-moz-keyframes toggle-nav-close {
@@ -1490,17 +1480,28 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.65);
   color: #fff;
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+  width: 75%;
 }
-/* line 19, ../sass/modules/_menu.scss */
+/* line 18, ../sass/modules/_menu.scss */
 .nav--inner {
   font-size: 1.2em;
   margin-top: 8em;
   padding: 2em;
   position: relative;
+}
+/* line 25, ../sass/modules/_menu.scss */
+.nav.my-class {
+  -moz-animation: 1s, toggle-nav-close;
+  -webkit-animation: 1s, toggle-nav-close;
+  animation: 1s, toggle-nav-close;
+}
+/* line 30, ../sass/modules/_menu.scss */
+.nav.ng-hide-add {
+  display: block !important;
+}
+/* line 35, ../sass/modules/_menu.scss */
+.nav.ng-hide-remove {
+  display: block !important;
 }
 
 /**
