@@ -1120,37 +1120,47 @@ label {
     transform: rotate(359deg);
   }
 }
-@-moz-keyframes toggle-nav-open {
+@-moz-keyframes toggle-nav {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    -moz-transform: translateX(0);
+    transform: translateX(0);
   }
 }
-@-webkit-keyframes toggle-nav-open {
+@-webkit-keyframes toggle-nav {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
-@keyframes toggle-nav-open {
+@keyframes toggle-nav {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 @-moz-keyframes toggle-nav-close {
@@ -1347,7 +1357,6 @@ body {
 }
 /* line 94, ../sass/layout/_layout.scss */
 .quiz-header--inner {
-  display: none;
   position: relative;
   top: 50%;
   -moz-transform: translateY(-50%);
@@ -1355,30 +1364,30 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 103, ../sass/layout/_layout.scss */
+/* line 102, ../sass/layout/_layout.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
   font-family: 'bebas_neueregular';
 }
-/* line 111, ../sass/layout/_layout.scss */
+/* line 110, ../sass/layout/_layout.scss */
 .quiz-header--question {
   margin-bottom: 0;
   font-size: 4em;
 }
-/* line 118, ../sass/layout/_layout.scss */
+/* line 117, ../sass/layout/_layout.scss */
 .quiz-header--punchline {
   font-size: 10em;
 }
-/* line 123, ../sass/layout/_layout.scss */
+/* line 122, ../sass/layout/_layout.scss */
 .quiz-header--text {
   font-size: 2em;
 }
-/* line 128, ../sass/layout/_layout.scss */
+/* line 127, ../sass/layout/_layout.scss */
 .quiz-header--button {
   font-size: 200%;
 }
 
-/* line 138, ../sass/layout/_layout.scss */
+/* line 137, ../sass/layout/_layout.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1387,7 +1396,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 146, ../sass/layout/_layout.scss */
+/* line 145, ../sass/layout/_layout.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;
@@ -1475,35 +1484,18 @@ body {
  */
 /* line 7, ../sass/modules/_menu.scss */
 .nav {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  height: 100%;
   background: rgba(0, 0, 0, 0.65);
   color: #fff;
-  display: none;
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  right: 0;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
 }
 /* line 19, ../sass/modules/_menu.scss */
-.nav--close--ang {
-  display: block;
-  width: 0;
-  -moz-animation: 1s toggle-nav-close;
-  -webkit-animation: 1s toggle-nav-close;
-  animation: 1s toggle-nav-close;
-}
-/* line 27, ../sass/modules/_menu.scss */
-.nav--open--ang {
-  display: block;
-  width: 75%;
-  -moz-animation: 1s toggle-nav-open;
-  -webkit-animation: 1s toggle-nav-open;
-  animation: 1s toggle-nav-open;
-  animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-}
-/* line 38, ../sass/modules/_menu.scss */
 .nav--inner {
   font-size: 1.2em;
   margin-top: 8em;
