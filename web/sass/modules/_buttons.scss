@@ -7,8 +7,7 @@
 
 %button {
   display: inline-block;
-  font-size: 125%;
-  padding: .5em 1.5em;
+  padding: .25em .75em;
   position: relative;
 
   cursor: pointer;
@@ -20,39 +19,22 @@
   &:active {
     text-decoration: none;
   }
-
-  @include border-radius($border-radius);
-  @include text-shadow(.025em .025em .1em lighten($gray-darker, 5%));
 }
 
 
-.button {
+%button-transparent {
   @extend %button;
 
-  background-color: $gray-darker;
-  border: 0;
-  color: $white;
-
-  &:hover {
-    background-color: $gray-darkest;
-  }
-}
-
-
-.button-transparent {
-  @extend %button;
-
-  background-color: transparent;
+  background-color: transparentize($black, .65);
   border: 2px solid $white;
   font-family: 'bebas_neueregular';
-  font-size: 3em;
+  font-size: 1em;
+  line-height: 100%;
 
   &:hover {
-    background-color: #0ABBEF;
+    background-color: transparentize($black, .35);
   }
 
-  @include border-radius(0);
   @include strip-link-styles($white);
-  @include text-shadow(0);
 }
 
