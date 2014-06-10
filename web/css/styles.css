@@ -1073,140 +1073,145 @@ label {
  * Mixins
  *
  */
+/**
+ *
+ * Animations
+ *
+ */
 @-moz-keyframes spinner {
-  /* line 2, ../sass/animations/_animate.scss */
+  /* line 9, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 7, ../sass/animations/_animate.scss */
+  /* line 14, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-webkit-keyframes spinner {
-  /* line 2, ../sass/animations/_animate.scss */
+  /* line 9, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 7, ../sass/animations/_animate.scss */
+  /* line 14, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @keyframes spinner {
-  /* line 2, ../sass/animations/_animate.scss */
+  /* line 9, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 7, ../sass/animations/_animate.scss */
+  /* line 14, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-moz-keyframes toggle-nav-open {
-  /* line 14, ../sass/animations/_animate.scss */
+  /* line 24, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 18, ../sass/animations/_animate.scss */
+  /* line 28, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-webkit-keyframes toggle-nav-open {
-  /* line 14, ../sass/animations/_animate.scss */
+  /* line 24, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 18, ../sass/animations/_animate.scss */
+  /* line 28, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @keyframes toggle-nav-open {
-  /* line 14, ../sass/animations/_animate.scss */
+  /* line 24, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 18, ../sass/animations/_animate.scss */
+  /* line 28, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-moz-keyframes toggle-nav-close {
-  /* line 24, ../sass/animations/_animate.scss */
+  /* line 34, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 28, ../sass/animations/_animate.scss */
+  /* line 38, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @-webkit-keyframes toggle-nav-close {
-  /* line 24, ../sass/animations/_animate.scss */
+  /* line 34, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 28, ../sass/animations/_animate.scss */
+  /* line 38, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @keyframes toggle-nav-close {
-  /* line 24, ../sass/animations/_animate.scss */
+  /* line 34, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 28, ../sass/animations/_animate.scss */
+  /* line 38, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @-moz-keyframes toggle-nav-overlay {
-  /* line 35, ../sass/animations/_animate.scss */
+  /* line 45, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 39, ../sass/animations/_animate.scss */
+  /* line 49, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @-webkit-keyframes toggle-nav-overlay {
-  /* line 35, ../sass/animations/_animate.scss */
+  /* line 45, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 39, ../sass/animations/_animate.scss */
+  /* line 49, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @keyframes toggle-nav-overlay {
-  /* line 35, ../sass/animations/_animate.scss */
+  /* line 45, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 39, ../sass/animations/_animate.scss */
+  /* line 49, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
@@ -1249,16 +1254,16 @@ body {
 }
 
 /* Header */
-/* line 44, ../sass/layout/_layout.scss */
+/* line 42, ../sass/layout/_layout.scss */
 .header {
   position: fixed;
   width: 100%;
 }
-/* line 48, ../sass/layout/_layout.scss */
+/* line 46, ../sass/layout/_layout.scss */
 .header--inner {
   position: relative;
 }
-/* line 53, ../sass/layout/_layout.scss */
+/* line 51, ../sass/layout/_layout.scss */
 .header--logo {
   position: absolute;
   top: 2em;
@@ -1267,7 +1272,7 @@ body {
   max-width: 20em;
 }
 @media only screen and (min-width: 30em) {
-  /* line 53, ../sass/layout/_layout.scss */
+  /* line 51, ../sass/layout/_layout.scss */
   .header--logo {
     top: 4em;
     left: 6em;
