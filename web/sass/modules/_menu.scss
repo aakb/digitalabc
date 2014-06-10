@@ -1,6 +1,6 @@
 /**
  *
- * Menu
+ * Menu.
  *
  */
 
@@ -17,7 +17,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.65);
   color: #fff;
-  width: 75%;
+  //width: 75%;
 
 
   &--inner {
@@ -28,7 +28,7 @@
   }
 
   &.my-class {
-    @include animation(1s, toggle-nav-close);
+    @include animation(3s, toggle-nav-open);
   }
 
 
