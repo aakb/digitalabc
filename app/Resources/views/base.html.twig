@@ -11,7 +11,7 @@
 </head>
 <body data-ng-controller="HeaderController">
     <nav class="nav" data-ng-class="{'open': menuOpen !== null && menuOpen, 'close': menuOpen !== null && !menuOpen}">
-      <div class="nav--blank" data-ng-click="toggleMenu()"></div>
+      <div class="nav--blank" data-ng-click="toggleMenu()" ng-show="menuOpen"></div>
       <div class="nav--content">
         <div title="Menu" class="nav--menu" data-ng-click="toggleMenu()">
           <img class="nav--menu-image" src="/images/menu.png">
