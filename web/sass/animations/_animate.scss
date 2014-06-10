@@ -12,22 +12,22 @@
 
 @include keyframes(toggle-nav-open) {
   0% {
-    width: 0;
+    width: 0%;
   }
 
   100% {
-    width: 75%;
+    width: 100%;
   }
 }
 
 
 @include keyframes(toggle-nav-close) {
   0% {
-    width:75%;
+    width: 100%;
   }
 
   100% {
-    width: 0px;
+    width: 0%;
   }
 }
 

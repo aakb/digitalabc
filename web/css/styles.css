@@ -1115,67 +1115,67 @@ label {
 @-moz-keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    width: 0%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    width: 100%;
   }
 }
 @-webkit-keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    width: 0%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    width: 100%;
   }
 }
 @keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    width: 0%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    width: 100%;
   }
 }
 @-moz-keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 75%;
+    width: 100%;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
   100% {
-    width: 0px;
+    width: 0%;
   }
 }
 @-webkit-keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 75%;
+    width: 100%;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
   100% {
-    width: 0px;
+    width: 0%;
   }
 }
 @keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 75%;
+    width: 100%;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
   100% {
-    width: 0px;
+    width: 0%;
   }
 }
 @-moz-keyframes item-show {
@@ -1394,28 +1394,26 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.65);
   color: #fff;
-  width: 75%;
+  width: 0;
 }
-/* line 18, ../sass/modules/_menu.scss */
+/* line 17, ../sass/modules/_menu.scss */
 .nav--inner {
   font-size: 1.2em;
   margin-top: 8em;
   padding: 2em;
   position: relative;
 }
-/* line 25, ../sass/modules/_menu.scss */
-.nav.my-class {
-  -moz-animation: 1s, toggle-nav-close;
-  -webkit-animation: 1s, toggle-nav-close;
-  animation: 1s, toggle-nav-close;
+/* line 24, ../sass/modules/_menu.scss */
+.nav.close {
+  -moz-animation: 5s, toggle-nav-close;
+  -webkit-animation: 5s, toggle-nav-close;
+  animation: 5s, toggle-nav-close;
 }
-/* line 30, ../sass/modules/_menu.scss */
-.nav.ng-hide-add {
-  display: block !important;
-}
-/* line 35, ../sass/modules/_menu.scss */
-.nav.ng-hide-remove {
-  display: block !important;
+/* line 28, ../sass/modules/_menu.scss */
+.nav.open {
+  -moz-animation: 5s, toggle-nav-open;
+  -webkit-animation: 5s, toggle-nav-open;
+  animation: 5s, toggle-nav-open;
 }
 
 /**
