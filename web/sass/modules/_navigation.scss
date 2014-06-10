@@ -19,8 +19,14 @@
   &.is-visible {
     @include box-shadow(-5px 0px 10px transparentize($black, .75));
 
+    @include animation(toggle-nav-open .25s ease 1);
+    @include animation-fill-mode(forwards);
+
     @include breakpoint($breakpoint-lap) {
       max-width: 60%;
+
+      @include animation(toggle-nav-open .25s ease 1);
+      @include animation-fill-mode(forwards);
     }
 
     @include breakpoint($breakpoint-desk) {
@@ -30,9 +36,6 @@
     @include breakpoint($breakpoint-bigscreen) {
       max-width: 30%;
     }
-
-    @include animation(toggle-nav-open .5s ease 1);
-    @include animation-fill-mode(forwards);
   }
 
   &--inner {

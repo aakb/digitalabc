@@ -1282,9 +1282,9 @@ body {
   -moz-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
-  -moz-animation: toggle-nav-open 0.5s ease 1;
-  -webkit-animation: toggle-nav-open 0.5s ease 1;
-  animation: toggle-nav-open 0.5s ease 1;
+  -moz-animation: toggle-nav-open 0.25s ease 1;
+  -webkit-animation: toggle-nav-open 0.25s ease 1;
+  animation: toggle-nav-open 0.25s ease 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -1293,6 +1293,12 @@ body {
   /* line 19, ../sass/modules/_navigation.scss */
   .nav.is-visible {
     max-width: 60%;
+    -moz-animation: toggle-nav-open 0.25s ease 1;
+    -webkit-animation: toggle-nav-open 0.25s ease 1;
+    animation: toggle-nav-open 0.25s ease 1;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -1307,14 +1313,14 @@ body {
     max-width: 30%;
   }
 }
-/* line 38, ../sass/modules/_navigation.scss */
+/* line 41, ../sass/modules/_navigation.scss */
 .nav--inner {
   margin-top: 8em;
   padding: 2em;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 47, ../sass/modules/_navigation.scss */
+/* line 50, ../sass/modules/_navigation.scss */
 .close-nav {
   position: absolute;
   top: 0;
@@ -1324,31 +1330,31 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 58, ../sass/modules/_navigation.scss */
+/* line 61, ../sass/modules/_navigation.scss */
 .close-nav.is-visible {
   width: 20%;
 }
 @media only screen and (min-width: 481px) {
-  /* line 58, ../sass/modules/_navigation.scss */
+  /* line 61, ../sass/modules/_navigation.scss */
   .close-nav.is-visible {
     width: 40%;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 58, ../sass/modules/_navigation.scss */
+  /* line 61, ../sass/modules/_navigation.scss */
   .close-nav.is-visible {
     width: 50%;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 58, ../sass/modules/_navigation.scss */
+  /* line 61, ../sass/modules/_navigation.scss */
   .close-nav.is-visible {
     width: 70%;
   }
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 78, ../sass/modules/_navigation.scss */
+/* line 81, ../sass/modules/_navigation.scss */
 .toggle-nav-icon {
   position: absolute;
   top: 1em;
@@ -1358,7 +1364,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 30em) {
-  /* line 78, ../sass/modules/_navigation.scss */
+  /* line 81, ../sass/modules/_navigation.scss */
   .toggle-nav-icon {
     top: 4em;
     right: 6em;
