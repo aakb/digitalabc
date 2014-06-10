@@ -1115,34 +1115,100 @@ label {
 @-moz-keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    right: -100%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 80%;
+    right: 0;
   }
 }
 @-webkit-keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    right: -100%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 80%;
+    right: 0;
   }
 }
 @keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    right: -100%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 80%;
+    right: 0;
+  }
+}
+@-moz-keyframes toggle-nav-close {
+  /* line 24, ../sass/animations/_animate.scss */
+  0% {
+    right: 0;
+  }
+
+  /* line 28, ../sass/animations/_animate.scss */
+  100% {
+    right: -100%;
+  }
+}
+@-webkit-keyframes toggle-nav-close {
+  /* line 24, ../sass/animations/_animate.scss */
+  0% {
+    right: 0;
+  }
+
+  /* line 28, ../sass/animations/_animate.scss */
+  100% {
+    right: -100%;
+  }
+}
+@keyframes toggle-nav-close {
+  /* line 24, ../sass/animations/_animate.scss */
+  0% {
+    right: 0;
+  }
+
+  /* line 28, ../sass/animations/_animate.scss */
+  100% {
+    right: -100%;
+  }
+}
+@-moz-keyframes toggle-nav-overlay {
+  /* line 35, ../sass/animations/_animate.scss */
+  0% {
+    background-color: transparent;
+  }
+
+  /* line 39, ../sass/animations/_animate.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+@-webkit-keyframes toggle-nav-overlay {
+  /* line 35, ../sass/animations/_animate.scss */
+  0% {
+    background-color: transparent;
+  }
+
+  /* line 39, ../sass/animations/_animate.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+@keyframes toggle-nav-overlay {
+  /* line 35, ../sass/animations/_animate.scss */
+  0% {
+    background-color: transparent;
+  }
+
+  /* line 39, ../sass/animations/_animate.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0.65);
   }
 }
 /**
@@ -1165,6 +1231,7 @@ label {
  * ========================================================================== */
 /* line 24, ../sass/layout/_layout.scss */
 body {
+  overflow-x: hidden;
   position: relative;
   font-size: .7em;
 }
@@ -1182,25 +1249,25 @@ body {
 }
 
 /* Header */
-/* line 43, ../sass/layout/_layout.scss */
+/* line 44, ../sass/layout/_layout.scss */
 .header {
   position: fixed;
   width: 100%;
 }
-/* line 47, ../sass/layout/_layout.scss */
+/* line 48, ../sass/layout/_layout.scss */
 .header--inner {
   position: relative;
 }
-/* line 52, ../sass/layout/_layout.scss */
+/* line 53, ../sass/layout/_layout.scss */
 .header--logo {
   position: absolute;
-  top: 1em;
+  top: 2em;
   left: 1em;
   display: block;
   max-width: 15em;
 }
 @media only screen and (min-width: 30em) {
-  /* line 52, ../sass/layout/_layout.scss */
+  /* line 53, ../sass/layout/_layout.scss */
   .header--logo {
     top: 4em;
     left: 6em;
@@ -1271,101 +1338,84 @@ body {
 .nav {
   height: 100%;
   position: absolute;
-  right: 0;
-  z-index: 98;
+  right: -100%;
+  z-index: 99;
+  padding-top: 4em;
+  padding-right: 3em;
+  padding-left: 3em;
+  width: 30em;
   background: white;
   color: #666666;
-  width: 0;
-}
-/* line 19, ../sass/modules/_navigation.scss */
-.nav.is-visible {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   -moz-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
-  -moz-animation: toggle-nav-open 0.25s ease 1;
-  -webkit-animation: toggle-nav-open 0.25s ease 1;
-  animation: toggle-nav-open 0.25s ease 1;
+}
+/* line 25, ../sass/modules/_navigation.scss */
+.nav.is-visible {
+  -moz-animation: toggle-nav-open 0.5s ease 1;
+  -webkit-animation: toggle-nav-open 0.5s ease 1;
+  animation: toggle-nav-open 0.5s ease 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-@media only screen and (min-width: 481px) {
-  /* line 19, ../sass/modules/_navigation.scss */
-  .nav.is-visible {
-    max-width: 60%;
-    -moz-animation: toggle-nav-open 0.25s ease 1;
-    -webkit-animation: toggle-nav-open 0.25s ease 1;
-    animation: toggle-nav-open 0.25s ease 1;
-    -moz-animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
+/* line 30, ../sass/modules/_navigation.scss */
+.nav.is-hidden {
+  -moz-animation: toggle-nav-close 0.5s ease 1;
+  -webkit-animation: toggle-nav-close 0.5s ease 1;
+  animation: toggle-nav-close 0.5s ease 1;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
-@media only screen and (min-width: 1024px) {
-  /* line 19, ../sass/modules/_navigation.scss */
-  .nav.is-visible {
-    max-width: 50%;
-  }
+/* line 35, ../sass/modules/_navigation.scss */
+.nav--item-wrapper {
+  border-bottom: 1px solid #999999;
 }
-@media only screen and (min-width: 1700px) {
-  /* line 19, ../sass/modules/_navigation.scss */
-  .nav.is-visible {
-    max-width: 30%;
-  }
-}
-/* line 41, ../sass/modules/_navigation.scss */
-.nav--inner {
-  margin-top: 8em;
-  padding: 2em;
+/* line 39, ../sass/modules/_navigation.scss */
+.nav--item {
+  display: block;
+  font-size: 1.25em;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 50, ../sass/modules/_navigation.scss */
-.close-nav {
+/* line 49, ../sass/modules/_navigation.scss */
+.nav-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 99;
+  z-index: 98;
   width: 0;
   cursor: pointer;
 }
-/* line 61, ../sass/modules/_navigation.scss */
-.close-nav.is-visible {
-  width: 20%;
-}
-@media only screen and (min-width: 481px) {
-  /* line 61, ../sass/modules/_navigation.scss */
-  .close-nav.is-visible {
-    width: 40%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  /* line 61, ../sass/modules/_navigation.scss */
-  .close-nav.is-visible {
-    width: 50%;
-  }
-}
-@media only screen and (min-width: 1700px) {
-  /* line 61, ../sass/modules/_navigation.scss */
-  .close-nav.is-visible {
-    width: 70%;
-  }
+/* line 60, ../sass/modules/_navigation.scss */
+.nav-overlay.is-visible {
+  width: 100%;
+  -moz-animation: toggle-nav-overlay 0.25s linear 1;
+  -webkit-animation: toggle-nav-overlay 0.25s linear 1;
+  animation: toggle-nav-overlay 0.25s linear 1;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 81, ../sass/modules/_navigation.scss */
-.toggle-nav-icon {
+/* line 71, ../sass/modules/_navigation.scss */
+.nav-toggle-icon {
   position: absolute;
-  top: 1em;
+  top: 2em;
   right: 1em;
   display: block;
   max-width: 4em;
   cursor: pointer;
 }
 @media only screen and (min-width: 30em) {
-  /* line 81, ../sass/modules/_navigation.scss */
-  .toggle-nav-icon {
+  /* line 71, ../sass/modules/_navigation.scss */
+  .nav-toggle-icon {
     top: 4em;
     right: 6em;
   }

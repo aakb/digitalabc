@@ -8,79 +8,69 @@
 .nav {
   height: 100%;
   position: absolute;
-  right: 0;
-  z-index: 98;
+  right: -100%;
+  z-index: 99;
+
+  padding-top: 4em;
+  padding-right: 3em;
+  padding-left: 3em;
+  width: 30em;
 
   background: $white;
   color: $text-color-dark;
 
-  width: 0;
+  @include box-sizing(border-box);
+  @include box-shadow(-5px 0px 10px transparentize($black, .75));
 
   &.is-visible {
-    @include box-shadow(-5px 0px 10px transparentize($black, .75));
-
-    @include animation(toggle-nav-open .25s ease 1);
+    @include animation(toggle-nav-open .5s ease 1);
     @include animation-fill-mode(forwards);
-
-    @include breakpoint($breakpoint-lap) {
-      max-width: 60%;
-
-      @include animation(toggle-nav-open .25s ease 1);
-      @include animation-fill-mode(forwards);
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      max-width: 50%;
-    }
-
-    @include breakpoint($breakpoint-bigscreen) {
-      max-width: 30%;
-    }
   }
 
-  &--inner {
-    margin-top: 8em;
-    padding: 2em;
+  &.is-hidden {
+    @include animation(toggle-nav-close .5s ease 1);
+    @include animation-fill-mode(forwards);
+  }
+
+  &--item-wrapper {
+    border-bottom: 1px solid $gray;
+  }
+
+  &--item {
+    display: block;
+
+    font-size: 1.25em;
   }
 }
 
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
 
-.close-nav {
+.nav-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 99;
+  z-index: 98;
 
   width: 0;
 
   cursor: pointer;
 
   &.is-visible {
-    width: 20%;
+    width: 100%;
 
-    @include breakpoint($breakpoint-lap) {
-      width: 40%;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      width: 50%;
-    }
-
-    @include breakpoint($breakpoint-bigscreen) {
-      width: 70%;
-    }
+    @include animation(toggle-nav-overlay .25s linear 1);
+    @include animation-fill-mode(forwards);
   }
 }
 
 
 /* Toggle icon use for opening and closing the menu */
 
-.toggle-nav-icon {
+.nav-toggle-icon {
   position: absolute;
-  top: 1em;
+  top: 2em;
   right: 1em;
 
   display: block;
