@@ -1355,18 +1355,18 @@ body {
 }
 /* line 25, ../sass/modules/_navigation.scss */
 .nav.is-visible {
-  -moz-animation: toggle-nav-open 0.5s ease 1;
-  -webkit-animation: toggle-nav-open 0.5s ease 1;
-  animation: toggle-nav-open 0.5s ease 1;
+  -moz-animation: toggle-nav-open 0.15s ease 1;
+  -webkit-animation: toggle-nav-open 0.15s ease 1;
+  animation: toggle-nav-open 0.15s ease 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 /* line 30, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
-  -moz-animation: toggle-nav-close 0.5s ease 1;
-  -webkit-animation: toggle-nav-close 0.5s ease 1;
-  animation: toggle-nav-close 0.5s ease 1;
+  -moz-animation: toggle-nav-close 0.15s ease 1;
+  -webkit-animation: toggle-nav-close 0.15s ease 1;
+  animation: toggle-nav-close 0.15s ease 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -1395,9 +1395,9 @@ body {
 /* line 60, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
-  -moz-animation: toggle-nav-overlay 0.25s linear 1;
-  -webkit-animation: toggle-nav-overlay 0.25s linear 1;
-  animation: toggle-nav-overlay 0.25s linear 1;
+  -moz-animation: toggle-nav-overlay 0.15s linear 1;
+  -webkit-animation: toggle-nav-overlay 0.15s linear 1;
+  animation: toggle-nav-overlay 0.15s linear 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;

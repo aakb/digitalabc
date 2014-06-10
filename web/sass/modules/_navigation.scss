@@ -23,12 +23,12 @@
   @include box-shadow(-5px 0px 10px transparentize($black, .75));
 
   &.is-visible {
-    @include animation(toggle-nav-open .5s ease 1);
+    @include animation(toggle-nav-open .15s ease 1);
     @include animation-fill-mode(forwards);
   }
 
   &.is-hidden {
-    @include animation(toggle-nav-close .5s ease 1);
+    @include animation(toggle-nav-close .15s ease 1);
     @include animation-fill-mode(forwards);
   }
 
@@ -60,7 +60,7 @@
   &.is-visible {
     width: 100%;
 
-    @include animation(toggle-nav-overlay .25s linear 1);
+    @include animation(toggle-nav-overlay .15s linear 1);
     @include animation-fill-mode(forwards);
   }
 }
