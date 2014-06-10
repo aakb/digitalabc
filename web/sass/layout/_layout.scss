@@ -41,12 +41,12 @@ body {
 
 .header {
   position: fixed;
+  z-index: 98;
   width: 100%;
 
   &--inner {
     position: relative;
   }
-
 
   &--logo {
     position: absolute;

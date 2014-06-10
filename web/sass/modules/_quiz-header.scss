@@ -8,9 +8,15 @@
 .quiz-header {
   @extend %layout--set-background--selector;
 
+  position: relative;
+
   background: url('/images/image-flip.jpg') no-repeat;
 
   @include background-size(cover);
+
+  &.is-loading {
+    @extend %animate--move-left;
+  }
 
   &--inner {
     position: relative;
