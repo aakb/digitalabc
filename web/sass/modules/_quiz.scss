@@ -31,6 +31,13 @@
     font-size: 3em;
   }
 
+  &--start-button {
+    @extend %button-transparent;
+
+    font-size: 3em;
+    padding: .5em 1em;
+  }
+
 
   &--progress {
     color: #3E5F6B;
