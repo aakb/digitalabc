@@ -17,8 +17,6 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.65);
   color: #fff;
-  //width: 75%;
-
 
   &--inner {
     font-size: 1.2em;
@@ -27,18 +25,11 @@
     position: relative;
   }
 
-  &.my-class {
-    @include animation(3s, toggle-nav-open);
+  &.close {
+    @include animation(5s, toggle-nav-close);
   }
 
-
-  &.ng-hide-add {
-    display: block !important;
-    //@include animation(5s, toggle-nav-close);
-  }
-
-  &.ng-hide-remove {
-    display: block !important;
-    //@include animation(5s, toggle-nav);
+  &.open {
+    @include animation(5s, toggle-nav-open);
   }
 }

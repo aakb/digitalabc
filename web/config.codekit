@@ -348,15 +348,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/mixins\/_mixins.scss": {
+	"\/sass\/base\/_vars.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/mixins\/_mixins.scss",
-		"outputAbbreviatedPath": "\/sass\/css\/_mixins.css",
+		"inputAbbreviatedPath": "\/sass\/base\/_vars.scss",
+		"outputAbbreviatedPath": "\/css\/_vars.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -364,15 +364,31 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/sass\/modules\/_menu.scss": {
+	"\/sass\/modules\/_buttons.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 5,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/modules\/_menu.scss",
-		"outputAbbreviatedPath": "\/css\/_menu.css",
+		"inputAbbreviatedPath": "\/sass\/modules\/_buttons.scss",
+		"outputAbbreviatedPath": "\/css\/_buttons.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/styles.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/styles.scss",
+		"outputAbbreviatedPath": "\/css\/styles.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -383,7 +399,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Martin Yde Granath",
+"lastSavedByUser": "Troels Ugilt Jensen",
 "manualImportLinks": {
 	},
 "projectAttributes": {

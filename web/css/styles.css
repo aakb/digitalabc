@@ -1115,7 +1115,7 @@ label {
 @-moz-keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    width: 0%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
@@ -1126,7 +1126,7 @@ label {
 @-webkit-keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    width: 0%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
@@ -1137,7 +1137,7 @@ label {
 @keyframes toggle-nav-open {
   /* line 14, ../sass/animations/_animate.scss */
   0% {
-    width: 0;
+    width: 0%;
   }
 
   /* line 18, ../sass/animations/_animate.scss */
@@ -1153,7 +1153,7 @@ label {
 
   /* line 29, ../sass/animations/_animate.scss */
   100% {
-    width: 0px;
+    width: 0%;
   }
 }
 @-webkit-keyframes toggle-nav-close {
@@ -1164,7 +1164,7 @@ label {
 
   /* line 29, ../sass/animations/_animate.scss */
   100% {
-    width: 0px;
+    width: 0%;
   }
 }
 @keyframes toggle-nav-close {
@@ -1175,7 +1175,7 @@ label {
 
   /* line 29, ../sass/animations/_animate.scss */
   100% {
-    width: 0px;
+    width: 0%;
   }
 }
 @-moz-keyframes item-show {
@@ -1406,26 +1406,24 @@ body {
   background: rgba(0, 0, 0, 0.65);
   color: #fff;
 }
-/* line 23, ../sass/modules/_menu.scss */
+/* line 21, ../sass/modules/_menu.scss */
 .nav--inner {
   font-size: 1.2em;
   margin-top: 8em;
   padding: 2em;
   position: relative;
 }
-/* line 30, ../sass/modules/_menu.scss */
-.nav.my-class {
-  -moz-animation: 3s, toggle-nav-open;
-  -webkit-animation: 3s, toggle-nav-open;
-  animation: 3s, toggle-nav-open;
+/* line 28, ../sass/modules/_menu.scss */
+.nav.close {
+  -moz-animation: 5s, toggle-nav-close;
+  -webkit-animation: 5s, toggle-nav-close;
+  animation: 5s, toggle-nav-close;
 }
-/* line 35, ../sass/modules/_menu.scss */
-.nav.ng-hide-add {
-  display: block !important;
-}
-/* line 40, ../sass/modules/_menu.scss */
-.nav.ng-hide-remove {
-  display: block !important;
+/* line 32, ../sass/modules/_menu.scss */
+.nav.open {
+  -moz-animation: 5s, toggle-nav-open;
+  -webkit-animation: 5s, toggle-nav-open;
+  animation: 5s, toggle-nav-open;
 }
 
 /**
