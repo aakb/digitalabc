@@ -19,3 +19,25 @@
     right: 0;
   }
 }
+
+@include keyframes(toggle-nav-close) {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -100%;
+  }
+}
+
+
+@include keyframes(toggle-nav-overlay) {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparentize($black, .35);
+  }
+}
+

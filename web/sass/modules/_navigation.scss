@@ -14,24 +14,22 @@
   padding-top: 4em;
   padding-right: 3em;
   padding-left: 3em;
-  min-width: 30em;
-  max-width: 30em;
+  width: 30em;
 
   background: $white;
   color: $text-color-dark;
 
   @include box-sizing(border-box);
+  @include box-shadow(-5px 0px 10px transparentize($black, .75));
 
   &.is-visible {
-    @include box-shadow(-5px 0px 10px transparentize($black, .75));
-
-    @include animation(toggle-nav-open .25s ease 1);
+    @include animation(toggle-nav-open .5s ease 1);
     @include animation-fill-mode(forwards);
+  }
 
-    @include breakpoint($breakpoint-lap) {
-      @include animation(toggle-nav-open .25s ease 1);
-      @include animation-fill-mode(forwards);
-    }
+  &.is-hidden {
+    @include animation(toggle-nav-close .5s ease 1);
+    @include animation-fill-mode(forwards);
   }
 
   &--item-wrapper {
@@ -48,7 +46,7 @@
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
 
-.close-nav {
+.nav-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -61,13 +59,16 @@
 
   &.is-visible {
     width: 100%;
+
+    @include animation(toggle-nav-overlay .25s linear 1);
+    @include animation-fill-mode(forwards);
   }
 }
 
 
 /* Toggle icon use for opening and closing the menu */
 
-.toggle-nav-icon {
+.nav-toggle-icon {
   position: absolute;
   top: 2em;
   right: 1em;

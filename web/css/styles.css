@@ -1145,6 +1145,72 @@ label {
     right: 0;
   }
 }
+@-moz-keyframes toggle-nav-close {
+  /* line 24, ../sass/animations/_animate.scss */
+  0% {
+    right: 0;
+  }
+
+  /* line 28, ../sass/animations/_animate.scss */
+  100% {
+    right: -100%;
+  }
+}
+@-webkit-keyframes toggle-nav-close {
+  /* line 24, ../sass/animations/_animate.scss */
+  0% {
+    right: 0;
+  }
+
+  /* line 28, ../sass/animations/_animate.scss */
+  100% {
+    right: -100%;
+  }
+}
+@keyframes toggle-nav-close {
+  /* line 24, ../sass/animations/_animate.scss */
+  0% {
+    right: 0;
+  }
+
+  /* line 28, ../sass/animations/_animate.scss */
+  100% {
+    right: -100%;
+  }
+}
+@-moz-keyframes toggle-nav-overlay {
+  /* line 35, ../sass/animations/_animate.scss */
+  0% {
+    background-color: transparent;
+  }
+
+  /* line 39, ../sass/animations/_animate.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+@-webkit-keyframes toggle-nav-overlay {
+  /* line 35, ../sass/animations/_animate.scss */
+  0% {
+    background-color: transparent;
+  }
+
+  /* line 39, ../sass/animations/_animate.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+@keyframes toggle-nav-overlay {
+  /* line 35, ../sass/animations/_animate.scss */
+  0% {
+    background-color: transparent;
+  }
+
+  /* line 39, ../sass/animations/_animate.scss */
+  100% {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
 /**
  *
  * Layouts
@@ -1277,50 +1343,47 @@ body {
   padding-top: 4em;
   padding-right: 3em;
   padding-left: 3em;
-  min-width: 30em;
-  max-width: 30em;
+  width: 30em;
   background: white;
   color: #666666;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-/* line 25, ../sass/modules/_navigation.scss */
-.nav.is-visible {
   -moz-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
-  -moz-animation: toggle-nav-open 0.25s ease 1;
-  -webkit-animation: toggle-nav-open 0.25s ease 1;
-  animation: toggle-nav-open 0.25s ease 1;
+}
+/* line 25, ../sass/modules/_navigation.scss */
+.nav.is-visible {
+  -moz-animation: toggle-nav-open 0.5s ease 1;
+  -webkit-animation: toggle-nav-open 0.5s ease 1;
+  animation: toggle-nav-open 0.5s ease 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-@media only screen and (min-width: 481px) {
-  /* line 25, ../sass/modules/_navigation.scss */
-  .nav.is-visible {
-    -moz-animation: toggle-nav-open 0.25s ease 1;
-    -webkit-animation: toggle-nav-open 0.25s ease 1;
-    animation: toggle-nav-open 0.25s ease 1;
-    -moz-animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-  }
+/* line 30, ../sass/modules/_navigation.scss */
+.nav.is-hidden {
+  -moz-animation: toggle-nav-close 0.5s ease 1;
+  -webkit-animation: toggle-nav-close 0.5s ease 1;
+  animation: toggle-nav-close 0.5s ease 1;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
-/* line 37, ../sass/modules/_navigation.scss */
+/* line 35, ../sass/modules/_navigation.scss */
 .nav--item-wrapper {
   border-bottom: 1px solid #999999;
 }
-/* line 41, ../sass/modules/_navigation.scss */
+/* line 39, ../sass/modules/_navigation.scss */
 .nav--item {
   display: block;
   font-size: 1.25em;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 51, ../sass/modules/_navigation.scss */
-.close-nav {
+/* line 49, ../sass/modules/_navigation.scss */
+.nav-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1329,14 +1392,20 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 62, ../sass/modules/_navigation.scss */
-.close-nav.is-visible {
+/* line 60, ../sass/modules/_navigation.scss */
+.nav-overlay.is-visible {
   width: 100%;
+  -moz-animation: toggle-nav-overlay 0.25s linear 1;
+  -webkit-animation: toggle-nav-overlay 0.25s linear 1;
+  animation: toggle-nav-overlay 0.25s linear 1;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 70, ../sass/modules/_navigation.scss */
-.toggle-nav-icon {
+/* line 71, ../sass/modules/_navigation.scss */
+.nav-toggle-icon {
   position: absolute;
   top: 2em;
   right: 1em;
@@ -1345,8 +1414,8 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 30em) {
-  /* line 70, ../sass/modules/_navigation.scss */
-  .toggle-nav-icon {
+  /* line 71, ../sass/modules/_navigation.scss */
+  .nav-toggle-icon {
     top: 4em;
     right: 6em;
   }
