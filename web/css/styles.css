@@ -10,6 +10,8 @@
  * Variables
  *
  */
+/* Layout
+   ================================================================================================================== */
 /* Breakpoints
    ================================================================================================================== */
 /* Layout
@@ -556,16 +558,6 @@
 /**
  * Pull classes, to move grid items back to the left by certain amounts.
  */
-/* Layout
-   ================================================================================================================== */
-/* Colors
-   ================================================================================================================== */
-/* Link colors
-   ================================================================================================================== */
-/* Spacing
-   ================================================================================================================== */
-/* Misc
-   ================================================================================================================== */
 /**
  *
  * Mixins
@@ -1024,9 +1016,9 @@ textarea {
   padding: .75em;
   color: #666666;
   background-color: white;
-  -moz-border-radius: 0.4em;
-  -webkit-border-radius: 0.4em;
-  border-radius: 0.4em;
+  -moz-border-radius: 0.6em;
+  -webkit-border-radius: 0.6em;
+  border-radius: 0.6em;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1337,132 +1329,54 @@ body {
   width: 4em;
 }
 
-/* line 89, ../sass/layout/_layout.scss */
-.quiz-header {
-  background: url("/images/image-flip.jpg") no-repeat;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-/* line 94, ../sass/layout/_layout.scss */
-.quiz-header--inner {
-  position: relative;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-/* line 102, ../sass/layout/_layout.scss */
-.quiz-header--text, .quiz-header--question, .quiz-header--punchline {
-  color: white;
-  font-family: 'bebas_neueregular';
-}
-/* line 110, ../sass/layout/_layout.scss */
-.quiz-header--question {
-  margin-bottom: 0;
-  font-size: 4em;
-}
-/* line 117, ../sass/layout/_layout.scss */
-.quiz-header--punchline {
-  font-size: 10em;
-}
-/* line 122, ../sass/layout/_layout.scss */
-.quiz-header--text {
-  font-size: 2em;
-}
-/* line 127, ../sass/layout/_layout.scss */
-.quiz-header--button {
-  font-size: 200%;
-}
-
-/* line 137, ../sass/layout/_layout.scss */
-.layout--quiz {
-  background: url("/images/quiz-bg.jpg") no-repeat;
-  letter-spacing: .08em;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-/* line 145, ../sass/layout/_layout.scss */
-.layout--quiz--inner {
-  position: relative;
-  top: 50%;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 /**
  *
  * Buttons
  *
  */
 /* line 8, ../sass/modules/_buttons.scss */
-.button, .button-transparent, .quiz-header--button, .quiz--button {
+.quiz--button, .quiz-header--button {
   display: inline-block;
-  font-size: 125%;
-  padding: .5em 1.5em;
+  padding: .25em .75em;
   position: relative;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
-  -moz-border-radius: 0.4em;
-  -webkit-border-radius: 0.4em;
-  border-radius: 0.4em;
-  text-shadow: 0.025em 0.025em 0.1em #737373;
 }
-/* line 18, ../sass/modules/_buttons.scss */
-.button:focus, .button-transparent:focus, .quiz-header--button:focus, .quiz--button:focus, .button:hover, .button-transparent:hover, .quiz-header--button:hover, .quiz--button:hover, .button:active, .button-transparent:active, .quiz-header--button:active, .quiz--button:active {
+/* line 17, ../sass/modules/_buttons.scss */
+.quiz--button:focus, .quiz-header--button:focus, .quiz--button:hover, .quiz-header--button:hover, .quiz--button:active, .quiz-header--button:active {
   text-decoration: none;
 }
 
-/* line 29, ../sass/modules/_buttons.scss */
-.button {
-  background-color: #666666;
-  border: 0;
-  color: white;
-}
-/* line 36, ../sass/modules/_buttons.scss */
-.button:hover {
-  background-color: #4d4d4d;
-}
-
-/* line 42, ../sass/modules/_buttons.scss */
-.button-transparent, .quiz-header--button, .quiz--button {
-  background-color: transparent;
+/* line 25, ../sass/modules/_buttons.scss */
+.quiz--button, .quiz-header--button {
+  background-color: rgba(0, 0, 0, 0.35);
   border: 2px solid white;
   font-family: 'bebas_neueregular';
-  font-size: 3em;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  text-shadow: 0;
+  font-size: 1em;
+  line-height: 100%;
 }
-/* line 50, ../sass/modules/_buttons.scss */
-.button-transparent:hover, .quiz-header--button:hover, .quiz--button:hover {
-  background-color: #0ABBEF;
+/* line 34, ../sass/modules/_buttons.scss */
+.quiz--button:hover, .quiz-header--button:hover {
+  background-color: rgba(0, 0, 0, 0.65);
 }
 /* line 15, ../sass/mixins/_mixins.scss */
-.button-transparent:link, .quiz-header--button:link, .quiz--button:link {
+.quiz--button:link, .quiz-header--button:link {
   color: white;
   text-decoration: none;
 }
 /* line 20, ../sass/mixins/_mixins.scss */
-.button-transparent:visited, .quiz-header--button:visited, .quiz--button:visited {
+.quiz--button:visited, .quiz-header--button:visited {
   color: white;
   text-decoration: none;
 }
 /* line 25, ../sass/mixins/_mixins.scss */
-.button-transparent:hover, .quiz-header--button:hover, .quiz--button:hover {
+.quiz--button:hover, .quiz-header--button:hover {
   color: white;
   text-decoration: none;
 }
 /* line 30, ../sass/mixins/_mixins.scss */
-.button-transparent:focus, .quiz-header--button:focus, .quiz--button:focus {
+.quiz--button:focus, .quiz-header--button:focus {
   color: white;
   text-decoration: none;
 }
@@ -1519,25 +1433,25 @@ body {
 .quiz--start-header {
   font-size: 4em;
 }
-/* line 27, ../sass/modules/_quiz.scss */
+/* line 28, ../sass/modules/_quiz.scss */
 .quiz--start-subtitle {
   font-size: 3em;
 }
-/* line 33, ../sass/modules/_quiz.scss */
+/* line 35, ../sass/modules/_quiz.scss */
 .quiz--progress {
   color: #3E5F6B;
   font-size: 3em;
   font-family: 'bebas_neueregular';
 }
-/* line 40, ../sass/modules/_quiz.scss */
+/* line 42, ../sass/modules/_quiz.scss */
 .quiz--question {
   font-size: 4em;
 }
-/* line 47, ../sass/modules/_quiz.scss */
+/* line 49, ../sass/modules/_quiz.scss */
 .quiz--answers {
   font-size: 2em;
 }
-/* line 54, ../sass/modules/_quiz.scss */
+/* line 56, ../sass/modules/_quiz.scss */
 .quiz--selection {
   margin: 1em auto;
   min-height: 2.90em;
@@ -1548,26 +1462,26 @@ body {
   font-size: 0.8em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 54, ../sass/modules/_quiz.scss */
+  /* line 56, ../sass/modules/_quiz.scss */
   .quiz--selection {
     width: 50%;
   }
 }
-/* line 70, ../sass/modules/_quiz.scss */
+/* line 72, ../sass/modules/_quiz.scss */
 .quiz--selection-input {
   display: none;
 }
-/* line 73, ../sass/modules/_quiz.scss */
+/* line 75, ../sass/modules/_quiz.scss */
 .quiz--selection-input:checked ~ .quiz--selection-label {
-  background-image: -moz-linear-gradient(left, #00b9f3, rgba(0, 0, 0, 0.35));
-  background-image: -webkit-linear-gradient(left, #00b9f3, rgba(0, 0, 0, 0.35));
-  background-image: linear-gradient(to right, #00b9f3, rgba(0, 0, 0, 0.35));
+  background-image: -moz-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.35));
+  background-image: -webkit-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.35));
+  background-image: linear-gradient(to right, #0abbef, rgba(0, 0, 0, 0.35));
 }
-/* line 77, ../sass/modules/_quiz.scss */
+/* line 79, ../sass/modules/_quiz.scss */
 .quiz--selection-input:checked ~ .quiz--selection-number {
-  background-color: #00B9F3;
+  background-color: #0abbef;
 }
-/* line 83, ../sass/modules/_quiz.scss */
+/* line 85, ../sass/modules/_quiz.scss */
 .quiz--selection-label {
   margin: 0;
   min-height: 1.9em;
@@ -1575,11 +1489,11 @@ body {
   color: white;
   word-wrap: break-word;
 }
-/* line 91, ../sass/modules/_quiz.scss */
+/* line 93, ../sass/modules/_quiz.scss */
 .quiz--selection-label:hover {
   cursor: pointer;
 }
-/* line 97, ../sass/modules/_quiz.scss */
+/* line 99, ../sass/modules/_quiz.scss */
 .quiz--selection-number {
   height: 1.5em;
   left: -1.1em;
@@ -1598,7 +1512,7 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 115, ../sass/modules/_quiz.scss */
+/* line 117, ../sass/modules/_quiz.scss */
 .quiz--button {
   margin: 0 .2em .2em .2em;
   padding: .1em 1.5em;
@@ -1606,29 +1520,29 @@ body {
   color: #fff;
   font-size: 1.25em;
 }
-/* line 125, ../sass/modules/_quiz.scss */
+/* line 127, ../sass/modules/_quiz.scss */
 .quiz--button.is-inactive {
   cursor: default;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 128, ../sass/modules/_quiz.scss */
+/* line 130, ../sass/modules/_quiz.scss */
 .quiz--button.is-inactive:hover {
   background-color: rgba(0, 0, 0, 0.35);
 }
-/* line 137, ../sass/modules/_quiz.scss */
+/* line 139, ../sass/modules/_quiz.scss */
 .quiz--button:focus {
   outline: none;
 }
-/* line 143, ../sass/modules/_quiz.scss */
+/* line 145, ../sass/modules/_quiz.scss */
 .quiz--result {
   font-size: 4em;
 }
-/* line 150, ../sass/modules/_quiz.scss */
+/* line 152, ../sass/modules/_quiz.scss */
 .quiz--text {
   font-size: 2em;
 }
-/* line 157, ../sass/modules/_quiz.scss */
+/* line 159, ../sass/modules/_quiz.scss */
 .quiz--start-opponents-wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -1636,4 +1550,68 @@ body {
   width: 16em;
   font-size: 2em;
   text-align: left;
+}
+
+/**
+ *
+ * Quiz header
+ *
+ */
+/* line 8, ../sass/modules/_quiz-header.scss */
+.quiz-header {
+  background: url("/images/image-flip.jpg") no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 15, ../sass/modules/_quiz-header.scss */
+.quiz-header--inner {
+  position: relative;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 22, ../sass/modules/_quiz-header.scss */
+.quiz-header--text, .quiz-header--question, .quiz-header--punchline {
+  color: white;
+  font-family: 'bebas_neueregular';
+}
+/* line 30, ../sass/modules/_quiz-header.scss */
+.quiz-header--question {
+  margin-bottom: 0;
+  font-size: 4em;
+}
+/* line 37, ../sass/modules/_quiz-header.scss */
+.quiz-header--punchline {
+  font-size: 10em;
+}
+/* line 42, ../sass/modules/_quiz-header.scss */
+.quiz-header--text {
+  font-size: 2em;
+}
+/* line 47, ../sass/modules/_quiz-header.scss */
+.quiz-header--button {
+  font-size: 5em;
+}
+
+/* line 57, ../sass/modules/_quiz-header.scss */
+.layout--quiz {
+  background: url("/images/quiz-bg.jpg") no-repeat;
+  letter-spacing: .08em;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 65, ../sass/modules/_quiz-header.scss */
+.layout--quiz--inner {
+  position: relative;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

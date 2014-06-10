@@ -14,10 +14,6 @@
 @import "base/_grid";
 
 
-// Theme
-@import "theme/_theme-vars";
-
-
 // Include base
 @import "base/_mixins";
 @import "base/_normalize";
@@ -41,3 +37,4 @@
 @import "modules/_buttons";
 @import "modules/_menu";
 @import "modules/_quiz";
+@import "modules/_quiz-header";

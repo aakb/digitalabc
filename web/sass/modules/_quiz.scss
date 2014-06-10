@@ -20,12 +20,14 @@
 
   &--start-header {
     @extend %quiz--set-font--selector;
+
     font-size: 4em;
   }
 
 
   &--start-subtitle {
     @extend %quiz--set-font--selector;
+
     font-size: 3em;
   }
 
@@ -71,11 +73,11 @@
     display: none;
 
     &:checked ~ .quiz--selection-label {
-      @include background-image(linear-gradient(left, #00B9F3, rgba(0,0,0,0.35)));
+      @include background-image(linear-gradient(left, $theme-color, rgba(0,0,0,0.35)));
     }
 
     &:checked ~ .quiz--selection-number {
-      background-color: #00B9F3;
+      background-color: $theme-color;
     }
   }
 
@@ -113,7 +115,7 @@
 
 
   &--button {
-    @extend .button-transparent;
+    @extend %button-transparent;
 
     margin: 0 .2em .2em .2em;
     padding: .1em 1.5em;
@@ -156,6 +158,7 @@
 
   &--start-opponents-wrapper {
     @extend %quiz--set-font--selector;
+
     margin-left: auto;
     margin-right: auto;
     padding-left: 3em;

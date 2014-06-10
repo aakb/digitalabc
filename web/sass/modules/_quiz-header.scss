@@ -1,0 +1,71 @@
+/**
+ *
+ * Quiz header
+ *
+ */
+
+
+.quiz-header {
+  @extend %layout--set-background--selector;
+
+  background: url('/images/image-flip.jpg') no-repeat;
+
+  @include background-size(cover);
+
+  &--inner {
+    position: relative;
+    top: 50%;
+
+    @include translateY(-50%);
+  }
+
+  &--text,
+  &--question,
+  &--punchline {
+    color: $white;
+    font-family: 'bebas_neueregular';
+  }
+
+
+  &--question {
+    margin-bottom: 0;
+
+    font-size: 4em;
+  }
+
+
+  &--punchline {
+    font-size: 10em;
+  }
+
+
+  &--text {
+    font-size: 2em;
+  }
+
+
+  &--button {
+    @extend %button-transparent;
+
+    font-size: 5em;
+  }
+}
+
+
+// Layout for the quiz pages.
+
+.layout--quiz {
+  background: url('/images/quiz-bg.jpg') no-repeat;
+  @extend %layout--set-background--selector;
+
+  letter-spacing: .08em;
+
+  @include background-size(cover);
+
+  &--inner {
+    position: relative;
+    top: 50%;
+
+    @include translateY(-50%);
+  }
+}
