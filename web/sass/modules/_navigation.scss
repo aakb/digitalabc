@@ -1,0 +1,95 @@
+/**
+ *
+ * Menu
+ *
+ */
+
+
+.nav {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 98;
+
+  background: $white;
+  color: $text-color-dark;
+
+  width: 0;
+
+  &.is-closing {
+    @include animation(toggle-nav-close .5s ease 1);
+    @include animation-fill-mode(forwards);
+  }
+
+  &.is-visible {
+    @include box-shadow(-5px 0px 10px transparentize($black, .75));
+
+    @include breakpoint($breakpoint-lap) {
+      max-width: 60%;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      max-width: 50%;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      max-width: 30%;
+    }
+
+    @include animation(toggle-nav-open .5s ease 1);
+    @include animation-fill-mode(forwards);
+  }
+
+  &--inner {
+    margin-top: 8em;
+    padding: 2em;
+  }
+}
+
+
+/* Invisible close element that allows the user to close the menu by clicking outside it */
+
+.close-nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+
+  display: block !important;
+  width: 0;
+
+  cursor: pointer;
+
+  &.is-visible {
+    width: 20%;
+
+    @include breakpoint($breakpoint-lap) {
+      width: 40%;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      width: 50%;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      width: 70%;
+    }
+  }
+}
+
+.toggle-nav-icon {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+
+  display: block;
+  max-width: 4em;
+
+  cursor: pointer;
+
+  @include breakpoint(30em) {
+    top: 4em;
+    right: 6em;
+  }
+}

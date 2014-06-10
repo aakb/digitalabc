@@ -43,6 +43,7 @@ $border-radius:    .6em;
 $theme-color:      #0abbef;
 $black:            #000;
 $white:            #fff;
+
 $gray-lightest:    lighten($black, 90%);
 $gray-lighter:     lighten($black, 80%);
 $gray-light:       lighten($black, 70%);
@@ -50,6 +51,8 @@ $gray:             lighten($black, 60%);
 $gray-dark:        lighten($black, 50%);
 $gray-darker:      lighten($black, 40%);
 $gray-darkest:     lighten($black, 30%);
+
+$text-color-dark:  $gray-darker;
 
 
 

@@ -22,6 +22,8 @@
  * ========================================================================== */
 
 body {
+  position: relative;
+
   font-size: .7em;
 
   @include breakpoint($breakpoint-lap) {
@@ -59,32 +61,5 @@ body {
       top: 4em;
       left: 6em;
     }
-  }
-
-
-  &--menu {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-
-    display: block;
-    max-width: 4em;
-
-    @include animation(1s, item-show);
-
-    @include breakpoint(30em) {
-      top: 4em;
-      right: 6em;
-    }
-
-    // Added by angular.
-    &.is-hidden {
-      @include animation(1s, item-hide);
-    }
-  }
-
-  &--menu-image {
-    max-width: 4em;
-    width: 4em;
   }
 }
