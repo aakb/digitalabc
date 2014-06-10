@@ -11,18 +11,21 @@
 </head>
 <body data-ng-controller="HeaderController">
     <nav class="nav" data-ng-class="{'open': menuOpen !== null && menuOpen, 'close': menuOpen !== null && !menuOpen}">
+      <div class="nav--blank" data-ng-click="toggleMenu()"></div>
+      <div class="nav--content">
         <div title="Menu" class="nav--menu" data-ng-click="toggleMenu()">
-            <img class="nav--menu-image" src="/images/menu.png">
+          <img class="nav--menu-image" src="/images/menu.png">
         </div>
         <div class="nav--inner">
-            123
+          123
         </div>
+      </div>
     </nav>
 
     <header class="header" role="banner">
         <div class="header--inner">
             <a href="/" title="Digital ABC" class="header--logo"><img src="/images/logo.png"></a>
-            <div title="Menu" class="header--menu" data-ng-click="toggleMenu()">
+            <div title="Menu" class="header--menu" data-ng-show="!menuOpen" data-ng-click="toggleMenu()">
                 <img class="header-menu-image" src="/images/menu.png">
             </div>
         </div>

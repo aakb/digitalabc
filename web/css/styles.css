@@ -1120,7 +1120,7 @@ label {
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 70%;
+    width: 100%;
   }
 }
 @-webkit-keyframes toggle-nav-open {
@@ -1131,7 +1131,7 @@ label {
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 70%;
+    width: 100%;
   }
 }
 @keyframes toggle-nav-open {
@@ -1142,13 +1142,13 @@ label {
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 70%;
+    width: 100%;
   }
 }
 @-moz-keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 70%;
+    width: 100%;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
@@ -1159,7 +1159,7 @@ label {
 @-webkit-keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 70%;
+    width: 100%;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
@@ -1170,7 +1170,7 @@ label {
 @keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 70%;
+    width: 100%;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
@@ -1404,17 +1404,34 @@ body {
   right: 0;
   z-index: 1;
   height: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  color: #fff;
+  background: transparent;
 }
-/* line 22, ../sass/modules/_menu.scss */
+/* line 21, ../sass/modules/_menu.scss */
 .nav--inner {
   font-size: 1.2em;
   margin-top: 8em;
   padding: 2em;
-  position: relative;
 }
-/* line 29, ../sass/modules/_menu.scss */
+/* line 27, ../sass/modules/_menu.scss */
+.nav--blank {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 34, ../sass/modules/_menu.scss */
+.nav--content {
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  right: 0;
+  display: inline-block;
+  margin-left: -4px;
+  vertical-align: top;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+}
+/* line 47, ../sass/modules/_menu.scss */
 .nav.close {
   -moz-animation: toggle-nav-close 0.5s;
   -webkit-animation: toggle-nav-close 0.5s;
@@ -1423,7 +1440,7 @@ body {
   -webkit-animation-fill-mode: forwards;
   /* Safari and Chrome */
 }
-/* line 35, ../sass/modules/_menu.scss */
+/* line 53, ../sass/modules/_menu.scss */
 .nav.open {
   -moz-animation: toggle-nav-open 0.5s;
   -webkit-animation: toggle-nav-open 0.5s;

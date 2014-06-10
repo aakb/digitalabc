@@ -122,7 +122,6 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
           // Handles the 1,2,3 keys
           $scope.chosen.answer = parseInt(event.which) - 49;
           $scope.$apply();
-          $timeout($scope.nextStep, 500);
           event.preventDefault();
       }
       else if (event.which == 37) {
@@ -130,7 +129,7 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
           $timeout($scope.previousStep, 100);
           event.preventDefault();
       }
-      else if (event.which == 39) {
+      else if (event.which == 39 || event.which == 13) {
           // Handles the right arrow.
           $timeout($scope.nextStep, 100);
           event.preventDefault();

@@ -16,14 +16,32 @@
   z-index: 1;
 
   height: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  color: #fff;
+  background: transparent;
 
   &--inner {
     font-size: 1.2em;
     margin-top: 8em;
     padding: 2em;
-    position: relative;
+  }
+
+  &--blank {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &--content {
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    right: 0;
+    display: inline-block;
+    margin-left: -4px;
+    vertical-align: top;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
   }
 
   &.close {
@@ -37,4 +55,5 @@
     animation-fill-mode:forwards;
     -webkit-animation-fill-mode:forwards; /* Safari and Chrome */
   }
+
 }
