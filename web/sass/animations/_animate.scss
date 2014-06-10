@@ -16,14 +16,14 @@
   }
 
   100% {
-    width: 75%;
+    width:300px;
   }
 }
 
 
 @include keyframes(toggle-nav-close) {
   0% {
-    width:75%;
+    width: 300px;
   }
 
   100% {

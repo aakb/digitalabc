@@ -1120,7 +1120,7 @@ label {
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    width: 300px;
   }
 }
 @-webkit-keyframes toggle-nav-open {
@@ -1131,7 +1131,7 @@ label {
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    width: 300px;
   }
 }
 @keyframes toggle-nav-open {
@@ -1142,13 +1142,13 @@ label {
 
   /* line 18, ../sass/animations/_animate.scss */
   100% {
-    width: 75%;
+    width: 300px;
   }
 }
 @-moz-keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 75%;
+    width: 300px;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
@@ -1159,7 +1159,7 @@ label {
 @-webkit-keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 75%;
+    width: 300px;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
@@ -1170,7 +1170,7 @@ label {
 @keyframes toggle-nav-close {
   /* line 25, ../sass/animations/_animate.scss */
   0% {
-    width: 75%;
+    width: 300px;
   }
 
   /* line 29, ../sass/animations/_animate.scss */
