@@ -16,11 +16,6 @@
 
   width: 0;
 
-  &.is-closing {
-    @include animation(toggle-nav-close .5s ease 1);
-    @include animation-fill-mode(forwards);
-  }
-
   &.is-visible {
     @include box-shadow(-5px 0px 10px transparentize($black, .75));
 
@@ -56,7 +51,6 @@
   left: 0;
   z-index: 99;
 
-  display: block !important;
   width: 0;
 
   cursor: pointer;

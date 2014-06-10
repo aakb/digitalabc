@@ -1278,15 +1278,6 @@ body {
   width: 0;
 }
 /* line 19, ../sass/modules/_navigation.scss */
-.nav.is-closing {
-  -moz-animation: toggle-nav-close 0.5s ease 1;
-  -webkit-animation: toggle-nav-close 0.5s ease 1;
-  animation: toggle-nav-close 0.5s ease 1;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-/* line 24, ../sass/modules/_navigation.scss */
 .nav.is-visible {
   -moz-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
@@ -1299,65 +1290,64 @@ body {
   animation-fill-mode: forwards;
 }
 @media only screen and (min-width: 481px) {
-  /* line 24, ../sass/modules/_navigation.scss */
+  /* line 19, ../sass/modules/_navigation.scss */
   .nav.is-visible {
     max-width: 60%;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 24, ../sass/modules/_navigation.scss */
+  /* line 19, ../sass/modules/_navigation.scss */
   .nav.is-visible {
     max-width: 50%;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 24, ../sass/modules/_navigation.scss */
+  /* line 19, ../sass/modules/_navigation.scss */
   .nav.is-visible {
     max-width: 30%;
   }
 }
-/* line 43, ../sass/modules/_navigation.scss */
+/* line 38, ../sass/modules/_navigation.scss */
 .nav--inner {
   margin-top: 8em;
   padding: 2em;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 52, ../sass/modules/_navigation.scss */
+/* line 47, ../sass/modules/_navigation.scss */
 .close-nav {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 99;
-  display: block !important;
   width: 0;
   cursor: pointer;
 }
-/* line 64, ../sass/modules/_navigation.scss */
+/* line 58, ../sass/modules/_navigation.scss */
 .close-nav.is-visible {
   width: 20%;
 }
 @media only screen and (min-width: 481px) {
-  /* line 64, ../sass/modules/_navigation.scss */
+  /* line 58, ../sass/modules/_navigation.scss */
   .close-nav.is-visible {
     width: 40%;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 64, ../sass/modules/_navigation.scss */
+  /* line 58, ../sass/modules/_navigation.scss */
   .close-nav.is-visible {
     width: 50%;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 64, ../sass/modules/_navigation.scss */
+  /* line 58, ../sass/modules/_navigation.scss */
   .close-nav.is-visible {
     width: 70%;
   }
 }
 
-/* line 81, ../sass/modules/_navigation.scss */
+/* line 75, ../sass/modules/_navigation.scss */
 .toggle-nav-icon {
   position: absolute;
   top: 1em;
@@ -1367,7 +1357,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 30em) {
-  /* line 81, ../sass/modules/_navigation.scss */
+  /* line 75, ../sass/modules/_navigation.scss */
   .toggle-nav-icon {
     top: 4em;
     right: 6em;
