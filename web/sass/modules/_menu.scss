@@ -10,6 +10,7 @@
  * ========================================================================== */
 
 .nav {
+  width: 0;
   position: fixed;
   right: 0;
   z-index: 1;
@@ -26,10 +27,14 @@
   }
 
   &.close {
-    @include animation(5s, toggle-nav-close);
+    @include animation(toggle-nav-close .5s);
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards; /* Safari and Chrome */
   }
 
   &.open {
-    @include animation(5s, toggle-nav-open);
+    @include animation(toggle-nav-open .5s);
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode:forwards; /* Safari and Chrome */
   }
 }
