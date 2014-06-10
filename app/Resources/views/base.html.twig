@@ -12,14 +12,18 @@
 <body data-ng-controller="HeaderController">
     <a class="close-nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}" data-ng-click="toggleMenu()"></a>
     <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}">
-      <img class="toggle-nav-icon" src="/images/menu-close.png" data-ng-click="toggleMenu()" ng-show="menuOpen">
+        <img class="toggle-nav-icon" src="/images/menu-close.png" data-ng-click="toggleMenu()" ng-show="menuOpen">
+        <div class="nav--item-wrapper">
+            <a href="#" class="nav--item">Ta' Quizzen!</a>
+            <a href="#" class="nav--item">Se videoerne</a>
+            <a href="#" class="nav--item">Musikvideo: "Kom med mig"</a>
+        </div>
     </nav>
 
     <header class="header" role="banner">
         <div class="header--inner">
-            <a href="/" title="Digital ABC" class="header--logo"><img src="/images/logo.png"></a>
             <a href="{{ path('digital_abc_main_homepage') }}" title="Digital ABC" class="header--logo"><img src="/images/logo.png"></a>
-            <img class="toggle-nav-icon" src="/images/menu.png" data-ng-click="toggleMenu()" ng-hide="menuOpen">
+            <img class="toggle-nav-icon" src="/images/menu.png" data-ng-click="toggleMenu()">
         </div>
     </header>
 

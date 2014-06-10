@@ -12,10 +12,10 @@
 
 @include keyframes(toggle-nav-open) {
   0% {
-    width: 0;
+    right: -100%;
   }
 
   100% {
-    width: 80%;
+    right: 0;
   }
 }
