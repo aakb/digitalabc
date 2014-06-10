@@ -61,7 +61,7 @@ abcApp.controller('ShareController', function($scope, $location, quizFactory) {
                 'me/tujmytestapp:complete',
                 'post',
                 {
-                    quiz: "http://digitalabc.vm/quiz/challenge/4dbfa78f-ec25-11e3-86a0-0800270a2d11"
+                    quiz: "http://zippy-zebu-8018.vagrantshare.com/quiz/challenge/" + $scope.id
                 },
                 function(response) {
                     console.log(response);
@@ -75,7 +75,6 @@ abcApp.controller('ShareController', function($scope, $location, quizFactory) {
         }
     }, {scope: 'publish_actions'});
     }
-
 });
 
 abcApp.controller('QuizController', function($scope, $routeParams, $location, $timeout, quizFactory) {

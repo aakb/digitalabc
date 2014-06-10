@@ -1,12 +1,13 @@
 {%  extends '::base.html.twig' %}
 
 {% block metatags %}
-    <meta property="fb:app_id"          content="672101806188225" />
-    <meta property="og:type"            content="tujmytestapp:quiz" />
-    <meta property="og:url"             content="http://digitalabc.vm/quiz/challenge/{{ id }}" />
-    <meta property="og:title"           content="Test quiz 1" />
-    <meta property="og:image"           content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" />
-    <meta property="quiz:result"        content="1" />
+    <meta property="fb:app_id"                  content="672101806188225" />
+    <meta property="og:title"                   content="testQuiz" />
+    <meta property="og:type"                    content="tujmytestapp:quiz" />
+    <meta property="og:locale"                  content="da_DK">
+    <meta property="og:url"                     content="http://zippy-zebu-8018.vagrantshare.com/quiz/challenge/{{ id }}" />
+    <meta property="og:image"                   content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" />
+    <meta property="tujmytestapp:result"        content="{{result}}" />
 {% endblock %}
 
 {% block body %}
