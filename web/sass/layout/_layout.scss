@@ -5,9 +5,11 @@
  */
 
 
-// ----- Selecters related to this document ----- //
+/* Silent classes related to this document.
+ *
+ * ========================================================================== */
 
-// Selector for displaying backgrounds properly
+// Selector for displaying backgrounds properly.
 %layout--set-background--selector {
   height: 100%;
   width: 100%;
@@ -15,7 +17,9 @@
 }
 
 
-/* Body - change font size on breakpoints throughout site. */
+/* Layout styles.
+ *
+ * ========================================================================== */
 
 body {
   font-size: .7em;
@@ -28,6 +32,8 @@ body {
     font-size: 1em;
   }
 }
+
+
 
 
 /* Header */
