@@ -34,4 +34,20 @@ class ApiController extends Controller
 
         return new Response(json_encode($resposeArray), 200);
     }
+
+    public function getResultAction($id)
+    {
+        $result = $this->getDoctrine()->getRepository('DigitalABCQuizBundle:QuizResult')->findOneById($id);
+
+        if (!$result) {
+            return new Response(null, 404);
+        }
+
+        $resultArray = array(
+            'answers' => $result->getAnswers(),
+            'result'  => $result->getResult()
+        );
+
+        return new Response(json_encode($resultArray), 200);
+    }
 }

@@ -22,7 +22,19 @@ abcApp.controller('StartController', function($scope, $timeout) {
     $timeout(setNewText, timeoutMilliseconds);
 });
 
-abcApp.controller('ShareController', function($scope, $location, quizFactory) {
+abcApp.controller('ShareController', function($scope, $location, $routeParams, quizFactory) {
+    $scope.challengeid = $routeParams.challengeid;
+    $scope.challengerResult = 0;
+
+    if ($scope.challengeid !== undefined) {
+        quizFactory.getChallenge($scope.challengeid).then(function(challenger) {
+            console.log(challenger);
+            if (challenger !== null) {
+                $scope.challengerResult = challenger.result;
+            }
+        });
+    }
+
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '672101806188225',
@@ -42,97 +54,133 @@ abcApp.controller('ShareController', function($scope, $location, quizFactory) {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-  if (!quizFactory.getQuizFinished()) {
-    $location.path('/');
-    return;
-  }
-  $scope.result = quizFactory.getResult();
-  $scope.id = "";
+    if (!quizFactory.getQuizFinished()) {
+        $location.path('/');
+        return;
+    }
+    $scope.result = quizFactory.getResult();
+    $scope.id = "";
 
-  quizFactory.saveResult().then(function(id) {
-      $scope.id = id;
-  });
+    quizFactory.saveResult().then(function(id) {
+        $scope.id = id;
+    });
 
-  $scope.shareOnFacebook = function() {
-    FB.login(function(response) {
-        console.log(response)
-        if (response.status === 'connected') {
-            FB.api(
-                'me/tujmytestapp:complete',
-                'post',
-                {
-                    quiz: "http://zippy-zebu-8018.vagrantshare.com/quiz/challenge/" + $scope.id
-                },
-                function(response) {
-                    console.log(response);
-                }
-            );
-        } else if (response.status === 'not_authorized') {
-            // The person is logged into Facebook, but not your app.
-        } else {
-            // The person is not logged into Facebook, so we're not sure if
-            // they are logged into this app or not.
-        }
-    }, {scope: 'publish_actions'});
+    $scope.shareOnFacebook = function() {
+        FB.login(function(response) {
+            console.log(response)
+            if (response.status === 'connected') {
+                FB.api(
+                    'me/tujmytestapp:complete',
+                    'post',
+                    {
+                        quiz: "http://zippy-zebu-8018.vagrantshare.com/quiz/challenge/" + $scope.id
+                    },
+                    function(response) {
+                        console.log(response);
+                    }
+                );
+            } else if (response.status === 'not_authorized') {
+                // The person is logged into Facebook, but not your app.
+            } else {
+                // The person is not logged into Facebook, so we're not sure if
+                // they are logged into this app or not.
+            }
+        }, {scope: 'publish_actions'});
     }
 });
 
 abcApp.controller('QuizController', function($scope, $routeParams, $location, $timeout, quizFactory) {
-  quizFactory.init().then(function() {
-    if (quizFactory.getQuizFinished()) {
-      $location.path('/done');
-    }
-
-    $scope.step = $routeParams.step;
-    $scope.numberOfQuestions = quizFactory.getNumberOfQuestions();
-    $scope.highestQuestionAnswered = quizFactory.getHighestAnsweredQuestion();
-
-    if ($scope.step < 1 || $scope.step > $scope.highestQuestionAnswered) {
-      $location.path('/' + parseInt($scope.highestQuestionAnswered + 1));
-    }
-
-    $scope.question = quizFactory.getQuestion($scope.step);
-    $scope.chosen = quizFactory.getAnswer($scope.step);
-
-    $scope.nextStep = function() {
-      if ($scope.chosen.answer !== null) {
-        if ($scope.step < $scope.numberOfQuestions) {
-          $location.path('/' + (parseInt($scope.step) + 1));
+    quizFactory.init().then(function() {
+        if (quizFactory.getQuizFinished()) {
+            $location.path('/done');
         }
-        else if ($scope.step == $scope.numberOfQuestions) {
-          quizFactory.finishQuiz();
-          $('body').unbind("keydown keypress");
 
-          $location.path('/done');
+        $scope.challengeid = $routeParams.challengeid;
+        $scope.challengeResult = "";
+        $scope.challengerAnswerCorrect = false;
+
+        $scope.step = $routeParams.step;
+        $scope.numberOfQuestions = quizFactory.getNumberOfQuestions();
+        $scope.highestQuestionAnswered = quizFactory.getHighestAnsweredQuestion();
+
+        if ($scope.step < 1 || $scope.step > $scope.highestQuestionAnswered) {
+            if ($scope.challengeid !== undefined) {
+                $location.path('/' + parseInt($scope.highestQuestionAnswered + 1) + '/' + $scope.challengeid);
+            }
+            else {
+                $location.path('/' + parseInt($scope.highestQuestionAnswered + 1));
+            }
         }
-      }
-    }
 
-    $scope.previousStep = function() {
-      if ($scope.step > 1) {
-        $location.path('/' + (parseInt($scope.step - 1)));
-      }
-    }
+        $scope.question = quizFactory.getQuestion($scope.step);
+        $scope.chosen = quizFactory.getAnswer($scope.step);
 
-    // jQuery to setup listeners for the keyboard.
-    $('body').unbind("keydown keypress");
-    $('body').bind("keydown keypress", function (event) {
-      if (event.which >= 49 && event.which <= 51 ) {
-          // Handles the 1,2,3 keys
-          $scope.chosen.answer = parseInt(event.which) - 49;
-          $scope.$apply();
-          event.preventDefault();
-      }
-      else if (event.which == 37) {
-          // Handles the left arrow.
-          $timeout($scope.previousStep, 100);
-          event.preventDefault();
-      }
-      else if (event.which == 39 || event.which == 13) {
-          // Handles the right arrow.
-          $timeout($scope.nextStep, 100);
-          event.preventDefault();
-      }
+        if ($scope.challengeid !== undefined) {
+            quizFactory.getChallenge($scope.challengeid).then(function(challenger) {
+                if (challenger === null) {
+                    $scope.challengeid = undefined;
+                }
+                else {
+                    if (challenger.answers[$scope.step - 1] == $scope.question.correctAnswer) {
+                        $scope.challengerAnswerCorrect = true;
+                        $scope.challengeResult = "rigtigt";
+                    } else {
+                        $scope.challengerAnswerCorrect = false;
+                        $scope.challengeResult = "forkert";
+                    }
+                }
+            });
+        }
+
+        $scope.nextStep = function() {
+            if ($scope.chosen.answer !== null) {
+                if ($scope.step < $scope.numberOfQuestions) {
+                    if ($scope.challengeid !== undefined) {
+                        $location.path('/' + (parseInt($scope.step) + 1) + '/' + $scope.challengeid);
+                    }
+                    else {
+                        $location.path('/' + (parseInt($scope.step) + 1));
+                    }
+                }
+                else if ($scope.step == $scope.numberOfQuestions) {
+                    quizFactory.finishQuiz();
+                    $('body').unbind("keydown keypress");
+
+                    if ($scope.challengeid !== undefined) {
+                        $location.path('/done' + '/' + $scope.challengeid);
+                    }
+                    else {
+                        $location.path('/done');
+                    }
+                }
+            }
+        }
+
+        $scope.previousStep = function() {
+            if ($scope.step > 1) {
+                $location.path('/' + (parseInt($scope.step - 1)));
+            }
+        }
+
+        // jQuery to setup listeners for the keyboard.
+        $('body').unbind("keydown keypress");
+        $('body').bind("keydown keypress", function (event) {
+            if (event.which >= 49 && event.which <= 51 ) {
+                // Handles the 1,2,3 keys
+                $scope.chosen.answer = parseInt(event.which) - 49;
+                $scope.$apply();
+                event.preventDefault();
+            }
+            else if (event.which == 37) {
+                // Handles the left arrow.
+                $timeout($scope.previousStep, 100);
+                event.preventDefault();
+            }
+            else if (event.which == 39 || event.which == 13) {
+                // Handles the right arrow.
+                $timeout($scope.nextStep, 100);
+                event.preventDefault();
+            }
+        });
     });
-  });
 });

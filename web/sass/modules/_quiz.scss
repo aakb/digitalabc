@@ -166,6 +166,16 @@
     font-size: 2em;
   }
 
+  &--challenger-answer {
+    &.is-correct {
+      color: #0f0;
+    }
+
+    &.is-wrong {
+      color: #f00;
+    }
+  }
+
 
   &--start-opponents-wrapper {
     @extend %quiz--set-font--selector;

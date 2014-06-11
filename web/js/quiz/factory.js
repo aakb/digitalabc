@@ -6,6 +6,7 @@ abcApp.factory('quizFactory', function($http, $q) {
   var resultSaved = false;
   var resultID = null;
   var answers = [];
+  var challenger = null;
 
   factory.init = function() {
     if (initialized) {
@@ -89,6 +90,23 @@ abcApp.factory('quizFactory', function($http, $q) {
       }
       else {
           defer.resolve(resultID);
+      }
+      return defer.promise;
+  }
+
+  factory.getChallenge = function(id) {
+      var defer = $q.defer();
+      if (challenger !== null) {
+          defer.resolve(challenger);
+      } else {
+          $http.get('/quiz/api/result/get/' + id)
+              .success(function(data, status, headers, config) {
+                challenger = data;
+                defer.resolve(challenger);
+            })
+              .error(function() {
+                  defer.resolve(null);
+              });
       }
       return defer.promise;
   }
