@@ -1408,34 +1408,28 @@ body {
 }
 /* line 25, ../sass/modules/_navigation.scss */
 .nav.is-visible {
-  -moz-animation: toggle-nav-open 0.15s ease 1;
-  -webkit-animation: toggle-nav-open 0.15s ease 1;
-  animation: toggle-nav-open 0.15s ease 1;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -moz-animation: toggle-nav-open 0.15s ease 1 forwards;
+  -webkit-animation: toggle-nav-open 0.15s ease 1 forwards;
+  animation: toggle-nav-open 0.15s ease 1 forwards;
 }
-/* line 30, ../sass/modules/_navigation.scss */
+/* line 29, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
-  -moz-animation: toggle-nav-close 0.15s ease 1;
-  -webkit-animation: toggle-nav-close 0.15s ease 1;
-  animation: toggle-nav-close 0.15s ease 1;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -moz-animation: toggle-nav-close 0.15s ease 1 forwards;
+  -webkit-animation: toggle-nav-close 0.15s ease 1 forwards;
+  animation: toggle-nav-close 0.15s ease 1 forwards;
 }
-/* line 35, ../sass/modules/_navigation.scss */
+/* line 33, ../sass/modules/_navigation.scss */
 .nav--item-wrapper {
   border-bottom: 1px solid #999999;
 }
-/* line 39, ../sass/modules/_navigation.scss */
+/* line 37, ../sass/modules/_navigation.scss */
 .nav--item {
   display: block;
   font-size: 1.25em;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 49, ../sass/modules/_navigation.scss */
+/* line 47, ../sass/modules/_navigation.scss */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -1445,19 +1439,16 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 60, ../sass/modules/_navigation.scss */
+/* line 58, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
-  -moz-animation: toggle-nav-overlay 0.15s linear 1;
-  -webkit-animation: toggle-nav-overlay 0.15s linear 1;
-  animation: toggle-nav-overlay 0.15s linear 1;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
+  -webkit-animation: toggle-nav-overlay 0.15s linear 1 forwards;
+  animation: toggle-nav-overlay 0.15s linear 1 forwards;
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 71, ../sass/modules/_navigation.scss */
+/* line 68, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
@@ -1467,7 +1458,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 30em) {
-  /* line 71, ../sass/modules/_navigation.scss */
+  /* line 68, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;

@@ -23,13 +23,11 @@
   @include box-shadow(-5px 0px 10px transparentize($black, .75));
 
   &.is-visible {
-    @include animation(toggle-nav-open .15s ease 1);
-    @include animation-fill-mode(forwards);
+    @include animation(toggle-nav-open .15s ease 1 forwards);
   }
 
   &.is-hidden {
-    @include animation(toggle-nav-close .15s ease 1);
-    @include animation-fill-mode(forwards);
+    @include animation(toggle-nav-close .15s ease 1 forwards);
   }
 
   &--item-wrapper {
@@ -60,8 +58,7 @@
   &.is-visible {
     width: 100%;
 
-    @include animation(toggle-nav-overlay .15s linear 1);
-    @include animation-fill-mode(forwards);
+    @include animation(toggle-nav-overlay .15s linear 1 forwards);
   }
 }
 
