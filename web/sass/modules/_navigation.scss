@@ -11,16 +11,19 @@
   right: -100%;
   z-index: 99;
 
-  padding-top: 4em;
+  padding-top: 3.75em;
   padding-right: 3em;
   padding-left: 3em;
-  width: 30em;
+  width: 40em;
 
   background: $white;
   color: $text-color-dark;
 
   @include box-sizing(border-box);
   @include box-shadow(-5px 0px 10px transparentize($black, .75));
+
+
+  /* States */
 
   &.is-visible {
     @include animation(toggle-nav-open .15s ease 1 forwards);
@@ -30,14 +33,58 @@
     @include animation(toggle-nav-close .15s ease 1 forwards);
   }
 
+
+  /* Elements */
+
+  &--header {
+    border-bottom: 1px solid $gray-lighter;
+    margin-right: 3em;
+    margin-bottom: .35em;
+    padding-bottom: .25em;
+
+    color: $gray-light;
+    font-family: $font-primary;
+    font-size: 3em;
+    line-height: 1em;
+  }
+
   &--item-wrapper {
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid $gray-lighter;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+
+  &--item,
+  &--sub-item {
+    display: block;
+
+    font-family: $font-primary;
+    line-height: 1.75em;
+
+    &:link {
+      color: $text-color-dark;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: darken($text-color-dark, 5%);
+    }
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+      text-decoration: none;
+    }
   }
 
   &--item {
-    display: block;
+    font-size: 2em;
+  }
 
-    font-size: 1.25em;
+  &--sub-item {
+    padding-left: 1.5em;
+
+    font-size: 1.5em;
   }
 }
 
