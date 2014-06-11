@@ -948,21 +948,21 @@ em strong {
    ================================================================================================================== */
 /* line 65, ../sass/base/_base.scss */
 a:link {
-  color: blue;
+  color: #0abbef;
   text-decoration: underline;
 }
 /* line 70, ../sass/base/_base.scss */
 a:visited {
-  color: #0000e6;
+  color: #09a8d7;
 }
 /* line 74, ../sass/base/_base.scss */
 a:hover {
-  color: #0000cc;
+  color: #0895be;
   text-decoration: none;
 }
 /* line 79, ../sass/base/_base.scss */
 a:focus {
-  color: #0000cc;
+  color: #0895be;
 }
 
 /* Paragraph
@@ -1393,10 +1393,10 @@ body {
   position: absolute;
   right: -100%;
   z-index: 99;
-  padding-top: 4em;
+  padding-top: 3.75em;
   padding-right: 3em;
   padding-left: 3em;
-  width: 30em;
+  width: 40em;
   background: white;
   color: #666666;
   -moz-box-sizing: border-box;
@@ -1405,37 +1405,70 @@ body {
   -moz-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.25);
+  /* States */
+  /* Elements */
 }
-/* line 25, ../sass/modules/_navigation.scss */
+/* line 28, ../sass/modules/_navigation.scss */
 .nav.is-visible {
-  -moz-animation: toggle-nav-open 0.15s ease 1;
-  -webkit-animation: toggle-nav-open 0.15s ease 1;
-  animation: toggle-nav-open 0.15s ease 1;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -moz-animation: toggle-nav-open 0.15s ease 1 forwards;
+  -webkit-animation: toggle-nav-open 0.15s ease 1 forwards;
+  animation: toggle-nav-open 0.15s ease 1 forwards;
 }
-/* line 30, ../sass/modules/_navigation.scss */
+/* line 32, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
-  -moz-animation: toggle-nav-close 0.15s ease 1;
-  -webkit-animation: toggle-nav-close 0.15s ease 1;
-  animation: toggle-nav-close 0.15s ease 1;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-/* line 35, ../sass/modules/_navigation.scss */
-.nav--item-wrapper {
-  border-bottom: 1px solid #999999;
+  -moz-animation: toggle-nav-close 0.15s ease 1 forwards;
+  -webkit-animation: toggle-nav-close 0.15s ease 1 forwards;
+  animation: toggle-nav-close 0.15s ease 1 forwards;
 }
 /* line 39, ../sass/modules/_navigation.scss */
-.nav--item {
+.nav--header {
+  border-bottom: 1px solid #cccccc;
+  margin-right: 3em;
+  margin-bottom: .35em;
+  padding-bottom: .25em;
+  color: #b3b3b3;
+  font-family: "bebas_neueregular";
+  font-size: 3em;
+  line-height: 1em;
+}
+/* line 51, ../sass/modules/_navigation.scss */
+.nav--item-wrapper {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+/* line 57, ../sass/modules/_navigation.scss */
+.nav--item, .nav--sub-item {
   display: block;
-  font-size: 1.25em;
+  font-family: "bebas_neueregular";
+  line-height: 1.75em;
+}
+/* line 64, ../sass/modules/_navigation.scss */
+.nav--item:link, .nav--sub-item:link {
+  color: #666666;
+  text-decoration: none;
+}
+/* line 69, ../sass/modules/_navigation.scss */
+.nav--item:visited, .nav--sub-item:visited {
+  color: #595959;
+}
+/* line 73, ../sass/modules/_navigation.scss */
+.nav--item:hover, .nav--item:focus, .nav--sub-item:hover, .nav--sub-item:focus {
+  color: #0abbef;
+  text-decoration: none;
+}
+/* line 80, ../sass/modules/_navigation.scss */
+.nav--item {
+  font-size: 2em;
+}
+/* line 84, ../sass/modules/_navigation.scss */
+.nav--sub-item {
+  padding-left: 1.5em;
+  font-size: 1.5em;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 49, ../sass/modules/_navigation.scss */
+/* line 94, ../sass/modules/_navigation.scss */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -1445,19 +1478,16 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 60, ../sass/modules/_navigation.scss */
+/* line 105, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
-  -moz-animation: toggle-nav-overlay 0.15s linear 1;
-  -webkit-animation: toggle-nav-overlay 0.15s linear 1;
-  animation: toggle-nav-overlay 0.15s linear 1;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
+  -webkit-animation: toggle-nav-overlay 0.15s linear 1 forwards;
+  animation: toggle-nav-overlay 0.15s linear 1 forwards;
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 71, ../sass/modules/_navigation.scss */
+/* line 115, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
@@ -1467,7 +1497,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 30em) {
-  /* line 71, ../sass/modules/_navigation.scss */
+  /* line 115, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
@@ -1653,7 +1683,7 @@ body {
 /* line 28, ../sass/modules/_quiz-header.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
-  font-family: 'bebas_neueregular';
+  font-family: "bebas_neueregular";
 }
 /* line 36, ../sass/modules/_quiz-header.scss */
 .quiz-header--question {
