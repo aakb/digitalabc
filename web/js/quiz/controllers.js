@@ -1,11 +1,17 @@
 abcApp.controller('IndexController', function($scope) {});
 
+/**
+ * Controller for the start page of the quiz.
+ */
 abcApp.controller('StartController', function($scope, $timeout) {
+    // Initial choice.
     $scope.text = "dine venner";
 
     var texts = ["raske penge", "dine venner", "din mor", "Helle Thorning-Scmidt"];
     var timeoutMilliseconds = 1000;
     var lastIndex = 1;
+
+    // Timeout function to update the text.
     var setNewText = function() {
         do {
             var index = parseInt(Math.random() * texts.length);
@@ -22,10 +28,22 @@ abcApp.controller('StartController', function($scope, $timeout) {
     $timeout(setNewText, timeoutMilliseconds);
 });
 
+/**
+ * Controller for the finish page.
+ */
 abcApp.controller('ShareController', function($scope, $location, $routeParams, quizFactory) {
-    $scope.challengeid = $routeParams.challengeid;
-    $scope.challengerResult = 0;
+    // Redirect if the quiz has not been completed.
+    if (!quizFactory.getQuizFinished()) {
+        $location.path('/');
+        return;
+    }
 
+    $scope.challengeid = $routeParams.challengeid;
+    $scope.challengerResult = null;
+    $scope.result = quizFactory.getResult();
+    $scope.id = "";
+
+    // Test whether this is the result of a challenge and set value of challenger result.
     if ($scope.challengeid !== undefined) {
         quizFactory.getChallenge($scope.challengeid).then(function(challenger) {
             console.log(challenger);
@@ -35,6 +53,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
         });
     }
 
+    // Initialise Facebook.
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '672101806188225',
@@ -54,17 +73,12 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    if (!quizFactory.getQuizFinished()) {
-        $location.path('/');
-        return;
-    }
-    $scope.result = quizFactory.getResult();
-    $scope.id = "";
-
+    // Get the ID of the result.
     quizFactory.saveResult().then(function(id) {
         $scope.id = id;
     });
 
+    // Function for sharing on facebook.
     $scope.shareOnFacebook = function() {
         FB.login(function(response) {
             console.log(response)
@@ -89,20 +103,22 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
     }
 });
 
+/**
+ * Controller for the quiz.
+ */
 abcApp.controller('QuizController', function($scope, $routeParams, $location, $timeout, quizFactory) {
+    // Make sure the quiz has been initialised.
     quizFactory.init().then(function() {
         if (quizFactory.getQuizFinished()) {
             $location.path('/done');
         }
 
         $scope.challengeid = $routeParams.challengeid;
-        $scope.challengeResult = "";
-        $scope.challengerAnswerCorrect = false;
-
         $scope.step = $routeParams.step;
         $scope.numberOfQuestions = quizFactory.getNumberOfQuestions();
         $scope.highestQuestionAnswered = quizFactory.getHighestAnsweredQuestion();
 
+        // Make sure we are at the right step in the quiz.
         if ($scope.step < 1 || $scope.step > $scope.highestQuestionAnswered) {
             if ($scope.challengeid !== undefined) {
                 $location.path('/' + parseInt($scope.highestQuestionAnswered + 1) + '/' + $scope.challengeid);
@@ -112,9 +128,12 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
             }
         }
 
+        $scope.challengeResult = "";
+        $scope.challengerAnswerCorrect = false;
         $scope.question = quizFactory.getQuestion($scope.step);
         $scope.chosen = quizFactory.getAnswer($scope.step);
 
+        // Setup the challenge.
         if ($scope.challengeid !== undefined) {
             quizFactory.getChallenge($scope.challengeid).then(function(challenger) {
                 if (challenger === null) {
@@ -132,6 +151,7 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
             });
         }
 
+        // Function for moving to the next step in the quiz.
         $scope.nextStep = function() {
             if ($scope.chosen.answer !== null) {
                 if ($scope.step < $scope.numberOfQuestions) {
@@ -156,9 +176,15 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
             }
         }
 
+        // Funciton to move one step back in the quiz.
         $scope.previousStep = function() {
             if ($scope.step > 1) {
-                $location.path('/' + (parseInt($scope.step - 1)));
+                if ($scope.challengeid !== undefined) {
+                    $location.path('/' + (parseInt($scope.step - 1)) + '/' + $scope.challengeid);
+                }
+                else {
+                    $location.path('/' + (parseInt($scope.step - 1)));
+                }
             }
         }
 
