@@ -1073,140 +1073,192 @@ label {
  * Mixins
  *
  */
+/**
+ *
+ * Animations
+ *
+ */
+/* Reusable animation classes
+ *
+ * ========================================================================== */
+/* line 13, ../sass/animations/_animations.scss */
+.quiz-header.is-loading {
+  position: relative;
+  -moz-animation: animate-move-left 0.25s ease 1 forwards;
+  -webkit-animation: animate-move-left 0.25s ease 1 forwards;
+  animation: animate-move-left 0.25s ease 1 forwards;
+}
+
+@-moz-keyframes animate-move-left {
+  /* line 20, ../sass/animations/_animations.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 24, ../sass/animations/_animations.scss */
+  100% {
+    left: -100%;
+  }
+}
+@-webkit-keyframes animate-move-left {
+  /* line 20, ../sass/animations/_animations.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 24, ../sass/animations/_animations.scss */
+  100% {
+    left: -100%;
+  }
+}
+@keyframes animate-move-left {
+  /* line 20, ../sass/animations/_animations.scss */
+  0% {
+    left: 0;
+  }
+
+  /* line 24, ../sass/animations/_animations.scss */
+  100% {
+    left: -100%;
+  }
+}
+/* This section needs a comment, author please provide :)
+ *
+ * ========================================================================== */
 @-moz-keyframes spinner {
-  /* line 2, ../sass/animations/_animate.scss */
+  /* line 36, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 7, ../sass/animations/_animate.scss */
+  /* line 41, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-webkit-keyframes spinner {
-  /* line 2, ../sass/animations/_animate.scss */
+  /* line 36, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 7, ../sass/animations/_animate.scss */
+  /* line 41, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @keyframes spinner {
-  /* line 2, ../sass/animations/_animate.scss */
+  /* line 36, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 7, ../sass/animations/_animate.scss */
+  /* line 41, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-moz-keyframes toggle-nav-open {
-  /* line 14, ../sass/animations/_animate.scss */
+  /* line 51, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 18, ../sass/animations/_animate.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-webkit-keyframes toggle-nav-open {
-  /* line 14, ../sass/animations/_animate.scss */
+  /* line 51, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 18, ../sass/animations/_animate.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @keyframes toggle-nav-open {
-  /* line 14, ../sass/animations/_animate.scss */
+  /* line 51, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 18, ../sass/animations/_animate.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-moz-keyframes toggle-nav-close {
-  /* line 24, ../sass/animations/_animate.scss */
+  /* line 61, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 28, ../sass/animations/_animate.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @-webkit-keyframes toggle-nav-close {
-  /* line 24, ../sass/animations/_animate.scss */
+  /* line 61, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 28, ../sass/animations/_animate.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @keyframes toggle-nav-close {
-  /* line 24, ../sass/animations/_animate.scss */
+  /* line 61, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 28, ../sass/animations/_animate.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @-moz-keyframes toggle-nav-overlay {
-  /* line 35, ../sass/animations/_animate.scss */
+  /* line 72, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 39, ../sass/animations/_animate.scss */
+  /* line 76, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @-webkit-keyframes toggle-nav-overlay {
-  /* line 35, ../sass/animations/_animate.scss */
+  /* line 72, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 39, ../sass/animations/_animate.scss */
+  /* line 76, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @keyframes toggle-nav-overlay {
-  /* line 35, ../sass/animations/_animate.scss */
+  /* line 72, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 39, ../sass/animations/_animate.scss */
+  /* line 76, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
@@ -1249,25 +1301,26 @@ body {
 }
 
 /* Header */
-/* line 44, ../sass/layout/_layout.scss */
+/* line 42, ../sass/layout/_layout.scss */
 .header {
   position: fixed;
+  z-index: 98;
   width: 100%;
 }
-/* line 48, ../sass/layout/_layout.scss */
+/* line 47, ../sass/layout/_layout.scss */
 .header--inner {
   position: relative;
 }
-/* line 53, ../sass/layout/_layout.scss */
+/* line 51, ../sass/layout/_layout.scss */
 .header--logo {
   position: absolute;
   top: 2em;
   left: 1em;
   display: block;
-  max-width: 15em;
+  max-width: 20em;
 }
 @media only screen and (min-width: 30em) {
-  /* line 53, ../sass/layout/_layout.scss */
+  /* line 51, ../sass/layout/_layout.scss */
   .header--logo {
     top: 4em;
     left: 6em;
@@ -1355,18 +1408,18 @@ body {
 }
 /* line 25, ../sass/modules/_navigation.scss */
 .nav.is-visible {
-  -moz-animation: toggle-nav-open 0.5s ease 1;
-  -webkit-animation: toggle-nav-open 0.5s ease 1;
-  animation: toggle-nav-open 0.5s ease 1;
+  -moz-animation: toggle-nav-open 0.15s ease 1;
+  -webkit-animation: toggle-nav-open 0.15s ease 1;
+  animation: toggle-nav-open 0.15s ease 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 /* line 30, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
-  -moz-animation: toggle-nav-close 0.5s ease 1;
-  -webkit-animation: toggle-nav-close 0.5s ease 1;
-  animation: toggle-nav-close 0.5s ease 1;
+  -moz-animation: toggle-nav-close 0.15s ease 1;
+  -webkit-animation: toggle-nav-close 0.15s ease 1;
+  animation: toggle-nav-close 0.15s ease 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -1395,9 +1448,9 @@ body {
 /* line 60, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
-  -moz-animation: toggle-nav-overlay 0.25s linear 1;
-  -webkit-animation: toggle-nav-overlay 0.25s linear 1;
-  animation: toggle-nav-overlay 0.25s linear 1;
+  -moz-animation: toggle-nav-overlay 0.15s linear 1;
+  -webkit-animation: toggle-nav-overlay 0.15s linear 1;
+  animation: toggle-nav-overlay 0.15s linear 1;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -1573,13 +1626,14 @@ body {
  */
 /* line 8, ../sass/modules/_quiz-header.scss */
 .quiz-header {
+  position: relative;
   background: url("/images/image-flip.jpg") no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 15, ../sass/modules/_quiz-header.scss */
+/* line 21, ../sass/modules/_quiz-header.scss */
 .quiz-header--inner {
   position: relative;
   top: 50%;
@@ -1588,30 +1642,30 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 22, ../sass/modules/_quiz-header.scss */
+/* line 28, ../sass/modules/_quiz-header.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
   font-family: 'bebas_neueregular';
 }
-/* line 30, ../sass/modules/_quiz-header.scss */
+/* line 36, ../sass/modules/_quiz-header.scss */
 .quiz-header--question {
   margin-bottom: 0;
   font-size: 4em;
 }
-/* line 37, ../sass/modules/_quiz-header.scss */
+/* line 43, ../sass/modules/_quiz-header.scss */
 .quiz-header--punchline {
   font-size: 10em;
 }
-/* line 42, ../sass/modules/_quiz-header.scss */
+/* line 48, ../sass/modules/_quiz-header.scss */
 .quiz-header--text {
   font-size: 2em;
 }
-/* line 47, ../sass/modules/_quiz-header.scss */
+/* line 53, ../sass/modules/_quiz-header.scss */
 .quiz-header--button {
   font-size: 5em;
 }
 
-/* line 57, ../sass/modules/_quiz-header.scss */
+/* line 63, ../sass/modules/_quiz-header.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1620,7 +1674,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 65, ../sass/modules/_quiz-header.scss */
+/* line 71, ../sass/modules/_quiz-header.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;

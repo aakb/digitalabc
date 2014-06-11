@@ -1,3 +1,37 @@
+/**
+ *
+ * Animations
+ *
+ */
+ 
+
+
+/* Reusable animation classes
+ *
+ * ========================================================================== */
+
+%animate--move-left {
+  position: relative;
+
+  @include animation(animate-move-left .25s ease 1 forwards);
+}
+
+@include keyframes(animate-move-left) {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+
+
+/* This section needs a comment, author please provide :)
+ *
+ * ========================================================================== */
+
 @include keyframes(spinner) {
   0% {
     -webkit-transform: rotate(0deg);
@@ -9,6 +43,9 @@
     transform: rotate(359deg);
   }
 }
+
+
+
 
 @include keyframes(toggle-nav-open) {
   0% {
@@ -40,4 +77,3 @@
     background-color: transparentize($black, .35);
   }
 }
-
