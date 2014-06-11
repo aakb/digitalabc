@@ -1601,6 +1601,14 @@ body {
   font-size: 2em;
 }
 /* line 170, ../sass/modules/_quiz.scss */
+.quiz--challenger-answer.is-correct {
+  color: #0f0;
+}
+/* line 174, ../sass/modules/_quiz.scss */
+.quiz--challenger-answer.is-wrong {
+  color: #f00;
+}
+/* line 180, ../sass/modules/_quiz.scss */
 .quiz--start-opponents-wrapper {
   margin-left: auto;
   margin-right: auto;

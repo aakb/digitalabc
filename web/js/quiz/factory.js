@@ -6,6 +6,7 @@ abcApp.factory('quizFactory', function($http, $q) {
   var resultSaved = false;
   var resultID = null;
   var answers = [];
+  var challenger = null;
 
   factory.init = function() {
     if (initialized) {
@@ -72,16 +73,40 @@ abcApp.factory('quizFactory', function($http, $q) {
   factory.saveResult = function() {
       var defer = $q.defer();
       if (!resultSaved) {
-          $http({method: 'GET', url: '/quiz/api/result/save?result=' + factory.getResult()})
+          var ans = [];
+          angular.forEach(answers, function(answer, index) {
+            ans.push(answer.answer);
+          });
+          var data = {
+              result: factory.getResult(),
+              answers: ans
+          };
+          $http.post('/quiz/api/result/save', data)
               .success(function(data, status, headers, config) {
                   resultID = data.id;
                   resultSaved = true;
                   defer.resolve(resultID);
               });
-
       }
       else {
           defer.resolve(resultID);
+      }
+      return defer.promise;
+  }
+
+  factory.getChallenge = function(id) {
+      var defer = $q.defer();
+      if (challenger !== null) {
+          defer.resolve(challenger);
+      } else {
+          $http.get('/quiz/api/result/get/' + id)
+              .success(function(data, status, headers, config) {
+                challenger = data;
+                defer.resolve(challenger);
+            })
+              .error(function() {
+                  defer.resolve(null);
+              });
       }
       return defer.promise;
   }

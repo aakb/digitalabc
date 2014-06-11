@@ -13,7 +13,7 @@ class DefaultController extends Controller
 
     public function countdownAction()
     {
-      return $this->render('DigitalABCQuizBundle:Default:countdown.html.twig');
+        return $this->render('DigitalABCQuizBundle:Default:countdown.html.twig');
     }
 
     public function challengeAction($id)
