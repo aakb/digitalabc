@@ -5,7 +5,7 @@
     <meta property="og:title"                   content="testQuiz" />
     <meta property="og:type"                    content="tujmytestapp:quiz" />
     <meta property="og:locale"                  content="da_DK">
-    <meta property="og:url"                     content="http://zippy-zebu-8018.vagrantshare.com/quiz/challenge/{{ id }}" />
+    <meta property="og:url"                     content="{{server_path}}quiz/challenge/{{ id }}" />
     <meta property="og:image"                   content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" />
     <meta property="tujmytestapp:result"        content="{{result}}" />
 {% endblock %}
@@ -13,11 +13,4 @@
 {% block body %}
     <h2 class="quiz--result">The result was: {{result}} points</h2>
     <h1><a href="/quiz/#/1/{{ id }}">Challenge this result!!!</a></h1>
-{% endblock %}
-
-{% block javascripts %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
 {% endblock %}

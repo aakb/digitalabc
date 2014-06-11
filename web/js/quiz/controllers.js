@@ -31,14 +31,16 @@ abcApp.controller('StartController', function($scope, $timeout) {
 /**
  * Controller for the finish page.
  */
-abcApp.controller('ShareController', function($scope, $location, $routeParams, quizFactory) {
+abcApp.controller('ShareController', function($scope, $location, $routeParams, quizFactory, settingsFactory) {
     // Redirect if the quiz has not been completed.
     if (!quizFactory.getQuizFinished()) {
         $location.path('/');
         return;
     }
 
+    $scope.link = "";
     $scope.challengeid = $routeParams.challengeid;
+    $scope.facebookStatusText = "";
     $scope.challengerResult = null;
     $scope.result = quizFactory.getResult();
     $scope.id = "";
@@ -76,28 +78,27 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
     // Get the ID of the result.
     quizFactory.saveResult().then(function(id) {
         $scope.id = id;
+        $scope.link = settingsFactory.getServerPath() + 'quiz/challenge/' + $scope.id;
     });
 
     // Function for sharing on facebook.
     $scope.shareOnFacebook = function() {
         FB.login(function(response) {
-            console.log(response)
             if (response.status === 'connected') {
                 FB.api(
                     'me/tujmytestapp:complete',
                     'post',
                     {
-                        quiz: "http://zippy-zebu-8018.vagrantshare.com/quiz/challenge/" + $scope.id
+                        quiz: settingsFactory.getServerPath() + "quiz/challenge/" + $scope.id
                     },
                     function(response) {
-                        console.log(response);
+                        if (response.error) {
+                            $scope.facebookStatusText = "Der skete en fejl. Prøv igen.";
+                        }
                     }
                 );
-            } else if (response.status === 'not_authorized') {
-                // The person is logged into Facebook, but not your app.
             } else {
-                // The person is not logged into Facebook, so we're not sure if
-                // they are logged into this app or not.
+                $scope.facebookStatusText = "Du er ikke logget ind i facebook. Login for at dele dit resultat.";
             }
         }, {scope: 'publish_actions'});
     }

@@ -17,3 +17,8 @@ parameters:
     debug_toolbar:          true
     debug_redirects:        false
     use_assetic_controller: true
+
+twig:
+    globals:
+        server_path: http://digitalabc.vm/
+        facebook_app_namespace: tujmytestapp

@@ -1,3 +1,15 @@
+abcApp.factory('settingsFactory', function() {
+    var factory = {};
+
+    var serverPath = 'http://digitalabc.vm/'
+
+    factory.getServerPath = function() {
+        return serverPath;
+    }
+
+    return factory;
+});
+
 abcApp.factory('quizFactory', function($http, $q) {
   var factory = {};
   var questions = [];
