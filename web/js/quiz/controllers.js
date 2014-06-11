@@ -192,10 +192,12 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
         // jQuery to setup listeners for the keyboard.
         $('body').unbind("keydown keypress");
         $('body').bind("keydown keypress", function (event) {
-            if (event.which >= 49 && event.which <= 51 ) {
-                // Handles the 1,2,3 keys
-                $scope.chosen.answer = parseInt(event.which) - 49;
-                $scope.$apply();
+            if (event.which >= 49 && event.which <= 57 ) {
+                var answer = parseInt(event.which) - 49;
+                if (answer < $scope.question.answers.length) {
+                    $scope.chosen.answer = parseInt(event.which) - 49;
+                    $scope.$apply();
+                }
                 event.preventDefault();
             }
             else if (event.which == 37) {
