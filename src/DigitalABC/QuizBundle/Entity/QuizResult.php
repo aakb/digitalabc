@@ -30,11 +30,6 @@ class QuizResult
     protected $id;
 
     /**
-     * @ORM\Column(type="string", name="facebook_id", length=255)
-     */
-    protected $facebookID;
-
-    /**
      * @ORM\Column(type="integer", name="result")
      */
     protected $result;
@@ -44,19 +39,14 @@ class QuizResult
      */
     protected $created;
 
+    /**
+     * @ORM\Column(name="answers", type="array")
+     */
+    protected $answers;
+
     public function getId()
     {
         return $this->id;
-    }
-
-    public function getFacebookID()
-    {
-        return $this->facebookID;
-    }
-
-    public function setFacebookID($facebookID)
-    {
-        $this->facebookID = $facebookID;
     }
 
     public function getResult() {
@@ -73,5 +63,13 @@ class QuizResult
 
     public function setCreated($created) {
         $this->created = $created;
+    }
+
+    public function getAnswers() {
+        return $this->answers;
+    }
+
+    public function setAnswers($answers) {
+        $this->answers = $answers;
     }
 }

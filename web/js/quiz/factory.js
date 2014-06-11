@@ -72,13 +72,20 @@ abcApp.factory('quizFactory', function($http, $q) {
   factory.saveResult = function() {
       var defer = $q.defer();
       if (!resultSaved) {
-          $http({method: 'GET', url: '/quiz/api/result/save?result=' + factory.getResult()})
+          var ans = [];
+          angular.forEach(answers, function(answer, index) {
+            ans.push(answer.answer);
+          });
+          var data = {
+              result: factory.getResult(),
+              answers: ans
+          };
+          $http.post('/quiz/api/result/save', data)
               .success(function(data, status, headers, config) {
                   resultID = data.id;
                   resultSaved = true;
                   defer.resolve(resultID);
               });
-
       }
       else {
           defer.resolve(resultID);
