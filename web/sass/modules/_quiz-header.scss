@@ -5,6 +5,10 @@
  */
 
 
+.test {
+  @include animation(test .5s ease 1 forwards);
+}
+
 .quiz-header {
   @extend %layout--set-background--selector;
 

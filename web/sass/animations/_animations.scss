@@ -27,6 +27,18 @@
 }
 
 
+@include keyframes(test) {
+  0% {
+    @include scale(1);
+  }
+
+  100% {
+    @include scale(0);
+    @include opacity(0);
+  }
+}
+
+
 
 /* This section needs a comment, author please provide :)
  *

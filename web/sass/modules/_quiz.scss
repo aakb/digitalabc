@@ -25,7 +25,8 @@
   &--start-header {
     @extend %quiz--set-font--selector;
 
-    font-size: 4em;
+    font-size: 6em;
+    line-height: 1em;
   }
 
 
@@ -33,20 +34,20 @@
     @extend %quiz--set-font--selector;
 
     font-size: 3em;
+    line-height: 1em;
   }
 
   &--start-button {
     @extend %button-transparent;
 
-    font-size: 3em;
-    padding: .5em 1em;
+    font-size: 4em;
   }
 
 
   &--progress {
-    color: #3E5F6B;
+    color: #3e5f6b;
     font-size: 3em;
-    font-family: 'bebas_neueregular';
+    font-family: $font-primary;
   }
 
 
@@ -180,12 +181,17 @@
   &--start-opponents-wrapper {
     @extend %quiz--set-font--selector;
 
-    margin-left: auto;
     margin-right: auto;
-    padding-left: 3em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    padding-left: 6em;
     width: 16em;
 
     font-size: 2em;
     text-align: left;
+  }
+
+  &--start-opponent {
+    color: lighten($theme-color, 35%);
   }
 }

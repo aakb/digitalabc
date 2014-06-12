@@ -908,7 +908,7 @@ html {
 body {
   overflow-y: scroll;
   height: 100%;
-  background-color: white;
+  background-color: #4d4d4d;
   color: #4d4d4d;
   font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -1122,143 +1122,189 @@ label {
     left: -100%;
   }
 }
+@-moz-keyframes test {
+  /* line 31, ../sass/animations/_animations.scss */
+  0% {
+    -moz-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  /* line 35, ../sass/animations/_animations.scss */
+  100% {
+    -moz-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes test {
+  /* line 31, ../sass/animations/_animations.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  /* line 35, ../sass/animations/_animations.scss */
+  100% {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+}
+@keyframes test {
+  /* line 31, ../sass/animations/_animations.scss */
+  0% {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  /* line 35, ../sass/animations/_animations.scss */
+  100% {
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+}
 /* This section needs a comment, author please provide :)
  *
  * ========================================================================== */
 @-moz-keyframes spinner {
-  /* line 36, ../sass/animations/_animations.scss */
+  /* line 48, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 41, ../sass/animations/_animations.scss */
+  /* line 53, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-webkit-keyframes spinner {
-  /* line 36, ../sass/animations/_animations.scss */
+  /* line 48, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 41, ../sass/animations/_animations.scss */
+  /* line 53, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @keyframes spinner {
-  /* line 36, ../sass/animations/_animations.scss */
+  /* line 48, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 41, ../sass/animations/_animations.scss */
+  /* line 53, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-moz-keyframes toggle-nav-open {
-  /* line 51, ../sass/animations/_animations.scss */
+  /* line 63, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 55, ../sass/animations/_animations.scss */
+  /* line 67, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-webkit-keyframes toggle-nav-open {
-  /* line 51, ../sass/animations/_animations.scss */
+  /* line 63, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 55, ../sass/animations/_animations.scss */
+  /* line 67, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @keyframes toggle-nav-open {
-  /* line 51, ../sass/animations/_animations.scss */
+  /* line 63, ../sass/animations/_animations.scss */
   0% {
     right: -100%;
   }
 
-  /* line 55, ../sass/animations/_animations.scss */
+  /* line 67, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-moz-keyframes toggle-nav-close {
-  /* line 61, ../sass/animations/_animations.scss */
+  /* line 73, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 65, ../sass/animations/_animations.scss */
+  /* line 77, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @-webkit-keyframes toggle-nav-close {
-  /* line 61, ../sass/animations/_animations.scss */
+  /* line 73, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 65, ../sass/animations/_animations.scss */
+  /* line 77, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @keyframes toggle-nav-close {
-  /* line 61, ../sass/animations/_animations.scss */
+  /* line 73, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 65, ../sass/animations/_animations.scss */
+  /* line 77, ../sass/animations/_animations.scss */
   100% {
     right: -100%;
   }
 }
 @-moz-keyframes toggle-nav-overlay {
-  /* line 72, ../sass/animations/_animations.scss */
+  /* line 84, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 76, ../sass/animations/_animations.scss */
+  /* line 88, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @-webkit-keyframes toggle-nav-overlay {
-  /* line 72, ../sass/animations/_animations.scss */
+  /* line 84, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 76, ../sass/animations/_animations.scss */
+  /* line 88, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @keyframes toggle-nav-overlay {
-  /* line 72, ../sass/animations/_animations.scss */
+  /* line 84, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 76, ../sass/animations/_animations.scss */
+  /* line 88, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
@@ -1523,32 +1569,33 @@ body {
  * ========================================================================== */
 /* line 25, ../sass/modules/_quiz.scss */
 .quiz--start-header {
-  font-size: 4em;
+  font-size: 6em;
+  line-height: 1em;
 }
-/* line 32, ../sass/modules/_quiz.scss */
+/* line 33, ../sass/modules/_quiz.scss */
 .quiz--start-subtitle {
   font-size: 3em;
+  line-height: 1em;
 }
-/* line 38, ../sass/modules/_quiz.scss */
+/* line 40, ../sass/modules/_quiz.scss */
 .quiz--start-button {
-  font-size: 3em;
-  padding: .5em 1em;
+  font-size: 4em;
 }
-/* line 46, ../sass/modules/_quiz.scss */
+/* line 47, ../sass/modules/_quiz.scss */
 .quiz--progress {
-  color: #3E5F6B;
+  color: #3e5f6b;
   font-size: 3em;
-  font-family: 'bebas_neueregular';
+  font-family: "bebas_neueregular";
 }
-/* line 53, ../sass/modules/_quiz.scss */
+/* line 54, ../sass/modules/_quiz.scss */
 .quiz--question {
   font-size: 4em;
 }
-/* line 60, ../sass/modules/_quiz.scss */
+/* line 61, ../sass/modules/_quiz.scss */
 .quiz--answers {
   font-size: 2em;
 }
-/* line 67, ../sass/modules/_quiz.scss */
+/* line 68, ../sass/modules/_quiz.scss */
 .quiz--selection {
   margin: 1em auto;
   min-height: 2.90em;
@@ -1559,26 +1606,26 @@ body {
   font-size: 0.8em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 67, ../sass/modules/_quiz.scss */
+  /* line 68, ../sass/modules/_quiz.scss */
   .quiz--selection {
     width: 50%;
   }
 }
-/* line 83, ../sass/modules/_quiz.scss */
+/* line 84, ../sass/modules/_quiz.scss */
 .quiz--selection-input {
   display: none;
 }
-/* line 86, ../sass/modules/_quiz.scss */
+/* line 87, ../sass/modules/_quiz.scss */
 .quiz--selection-input:checked ~ .quiz--selection-label {
   background-image: -moz-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.35));
   background-image: -webkit-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.35));
   background-image: linear-gradient(to right, #0abbef, rgba(0, 0, 0, 0.35));
 }
-/* line 90, ../sass/modules/_quiz.scss */
+/* line 91, ../sass/modules/_quiz.scss */
 .quiz--selection-input:checked ~ .quiz--selection-number {
   background-color: #0abbef;
 }
-/* line 96, ../sass/modules/_quiz.scss */
+/* line 97, ../sass/modules/_quiz.scss */
 .quiz--selection-label {
   margin: 0;
   min-height: 1.9em;
@@ -1586,11 +1633,11 @@ body {
   color: white;
   word-wrap: break-word;
 }
-/* line 104, ../sass/modules/_quiz.scss */
+/* line 105, ../sass/modules/_quiz.scss */
 .quiz--selection-label:hover {
   cursor: pointer;
 }
-/* line 110, ../sass/modules/_quiz.scss */
+/* line 111, ../sass/modules/_quiz.scss */
 .quiz--selection-number {
   height: 1.5em;
   left: -1.1em;
@@ -1609,7 +1656,7 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 128, ../sass/modules/_quiz.scss */
+/* line 129, ../sass/modules/_quiz.scss */
 .quiz--button {
   margin: 0 .2em .2em .2em;
   padding: .1em 1.5em;
@@ -1617,44 +1664,49 @@ body {
   color: #fff;
   font-size: 1.25em;
 }
-/* line 138, ../sass/modules/_quiz.scss */
+/* line 139, ../sass/modules/_quiz.scss */
 .quiz--button.is-inactive {
   cursor: default;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 141, ../sass/modules/_quiz.scss */
+/* line 142, ../sass/modules/_quiz.scss */
 .quiz--button.is-inactive:hover {
   background-color: rgba(0, 0, 0, 0.35);
 }
-/* line 150, ../sass/modules/_quiz.scss */
+/* line 151, ../sass/modules/_quiz.scss */
 .quiz--button:focus {
   outline: none;
 }
-/* line 156, ../sass/modules/_quiz.scss */
+/* line 157, ../sass/modules/_quiz.scss */
 .quiz--result {
   font-size: 4em;
 }
-/* line 163, ../sass/modules/_quiz.scss */
+/* line 164, ../sass/modules/_quiz.scss */
 .quiz--text {
   font-size: 2em;
 }
-/* line 170, ../sass/modules/_quiz.scss */
+/* line 171, ../sass/modules/_quiz.scss */
 .quiz--challenger-answer.is-correct {
   color: #0f0;
 }
-/* line 174, ../sass/modules/_quiz.scss */
+/* line 175, ../sass/modules/_quiz.scss */
 .quiz--challenger-answer.is-wrong {
   color: #f00;
 }
-/* line 180, ../sass/modules/_quiz.scss */
+/* line 181, ../sass/modules/_quiz.scss */
 .quiz--start-opponents-wrapper {
-  margin-left: auto;
   margin-right: auto;
-  padding-left: 3em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  padding-left: 6em;
   width: 16em;
   font-size: 2em;
   text-align: left;
+}
+/* line 194, ../sass/modules/_quiz.scss */
+.quiz--start-opponent {
+  color: #b0eafc;
 }
 
 /**
@@ -1663,6 +1715,13 @@ body {
  *
  */
 /* line 8, ../sass/modules/_quiz-header.scss */
+.test {
+  -moz-animation: test 0.5s ease 1 forwards;
+  -webkit-animation: test 0.5s ease 1 forwards;
+  animation: test 0.5s ease 1 forwards;
+}
+
+/* line 12, ../sass/modules/_quiz-header.scss */
 .quiz-header {
   position: relative;
   background: url("/images/image-flip.jpg") no-repeat;
@@ -1671,7 +1730,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 21, ../sass/modules/_quiz-header.scss */
+/* line 25, ../sass/modules/_quiz-header.scss */
 .quiz-header--inner {
   position: relative;
   top: 50%;
@@ -1680,30 +1739,30 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 28, ../sass/modules/_quiz-header.scss */
+/* line 32, ../sass/modules/_quiz-header.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
   font-family: "bebas_neueregular";
 }
-/* line 36, ../sass/modules/_quiz-header.scss */
+/* line 40, ../sass/modules/_quiz-header.scss */
 .quiz-header--question {
   margin-bottom: 0;
   font-size: 4em;
 }
-/* line 43, ../sass/modules/_quiz-header.scss */
+/* line 47, ../sass/modules/_quiz-header.scss */
 .quiz-header--punchline {
   font-size: 10em;
 }
-/* line 48, ../sass/modules/_quiz-header.scss */
+/* line 52, ../sass/modules/_quiz-header.scss */
 .quiz-header--text {
   font-size: 2em;
 }
-/* line 53, ../sass/modules/_quiz-header.scss */
+/* line 57, ../sass/modules/_quiz-header.scss */
 .quiz-header--button {
   font-size: 5em;
 }
 
-/* line 63, ../sass/modules/_quiz-header.scss */
+/* line 67, ../sass/modules/_quiz-header.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1712,7 +1771,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 71, ../sass/modules/_quiz-header.scss */
+/* line 75, ../sass/modules/_quiz-header.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;
