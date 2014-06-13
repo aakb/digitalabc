@@ -54,11 +54,47 @@ body {
     left: 1em;
 
     display: block;
-    max-width: 20em;
+    height: 5.5em;
+    width: 21.875em;
+
+    .logo-text,
+    .logo-symbol {
+      fill: $white;
+    }
+
+    &:hover {
+      .logo-text,
+      .logo-symbol {
+        fill: $theme-color;
+      }
+    }
+
+    @include background-size(contain);
 
     @include breakpoint(30em) {
       top: 4em;
       left: 6em;
     }
   }
+}
+
+
+.kiwi {
+  fill: #94d31b;
+
+  // stroke: #909;
+  // stroke-width: 10;
+
+  // not sure which of these is correct
+  // stroke-linejoin: butt | round | square;
+  // stroke-linecap: butt | round | square;
+
+  // stroke-dasharray: 5, 5, 10;
+
+  // filter: url(#pictureFilter);
+  // mask: url(#f1);
+  // clip-path: url();
+}
+.kiwi:hover {
+  fill: #ace63c;
 }
