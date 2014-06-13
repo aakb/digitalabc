@@ -970,11 +970,12 @@ a:focus {
 /* line 88, ../sass/base/_base.scss */
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Image
    ================================================================================================================== */
-/* line 96, ../sass/base/_base.scss */
+/* line 97, ../sass/base/_base.scss */
 img {
   display: inline;
   height: auto;
@@ -1383,16 +1384,6 @@ body {
   }
 }
 
-/* line 75, ../sass/layout/_layout.scss */
-.kiwi {
-  fill: #94d31b;
-}
-
-/* line 91, ../sass/layout/_layout.scss */
-.kiwi:hover {
-  fill: #ace63c;
-}
-
 /**
  *
  * Buttons.
@@ -1768,22 +1759,49 @@ body {
 /* line 40, ../sass/modules/_quiz-header.scss */
 .quiz-header--question {
   margin-bottom: 0;
-  font-size: 4em;
-}
-/* line 47, ../sass/modules/_quiz-header.scss */
-.quiz-header--punchline {
-  font-size: 10em;
-}
-/* line 52, ../sass/modules/_quiz-header.scss */
-.quiz-header--text {
   font-size: 2em;
 }
-/* line 57, ../sass/modules/_quiz-header.scss */
-.quiz-header--button {
+@media only screen and (min-width: 481px) {
+  /* line 40, ../sass/modules/_quiz-header.scss */
+  .quiz-header--question {
+    font-size: 4em;
+  }
+}
+/* line 51, ../sass/modules/_quiz-header.scss */
+.quiz-header--punchline {
+  margin-bottom: .25em;
   font-size: 5em;
+  line-height: 1em;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 51, ../sass/modules/_quiz-header.scss */
+  .quiz-header--punchline {
+    font-size: 10em;
+  }
+}
+/* line 63, ../sass/modules/_quiz-header.scss */
+.quiz-header--text {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 481px) {
+  /* line 63, ../sass/modules/_quiz-header.scss */
+  .quiz-header--text {
+    font-size: 2.5em;
+  }
+}
+/* line 73, ../sass/modules/_quiz-header.scss */
+.quiz-header--button {
+  font-size: 3.5em;
+}
+@media only screen and (min-width: 481px) {
+  /* line 73, ../sass/modules/_quiz-header.scss */
+  .quiz-header--button {
+    font-size: 4.5em;
+  }
 }
 
-/* line 67, ../sass/modules/_quiz-header.scss */
+/* line 87, ../sass/modules/_quiz-header.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1792,7 +1810,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 75, ../sass/modules/_quiz-header.scss */
+/* line 95, ../sass/modules/_quiz-header.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;
