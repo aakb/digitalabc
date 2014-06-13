@@ -1363,8 +1363,8 @@ body {
   top: 2em;
   left: 1em;
   display: block;
-  height: 5.5em;
-  width: 21.875em;
+  height: 3.5em;
+  width: 18em;
   -moz-background-size: contain;
   -o-background-size: contain;
   -webkit-background-size: contain;
@@ -1375,12 +1375,7 @@ body {
 .header--logo .logo-symbol {
   fill: white;
 }
-/* line 66, ../sass/layout/_layout.scss */
-.header--logo:hover .logo-text,
-.header--logo:hover .logo-symbol {
-  fill: #0abbef;
-}
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 481px) {
   /* line 51, ../sass/layout/_layout.scss */
   .header--logo {
     top: 4em;
@@ -1388,12 +1383,12 @@ body {
   }
 }
 
-/* line 82, ../sass/layout/_layout.scss */
+/* line 75, ../sass/layout/_layout.scss */
 .kiwi {
   fill: #94d31b;
 }
 
-/* line 98, ../sass/layout/_layout.scss */
+/* line 91, ../sass/layout/_layout.scss */
 .kiwi:hover {
   fill: #ace63c;
 }
@@ -1571,10 +1566,11 @@ body {
   top: 2em;
   right: 1em;
   display: block;
-  max-width: 4em;
+  height: 4.5em;
+  width: 5em;
   cursor: pointer;
 }
-@media only screen and (min-width: 30em) {
+@media only screen and (min-width: 481px) {
   /* line 120, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;

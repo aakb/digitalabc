@@ -123,11 +123,12 @@
   right: 1em;
 
   display: block;
-  max-width: 4em;
+  height: 4.5em;
+  width: 5em;
 
   cursor: pointer;
 
-  @include breakpoint(30em) {
+  @include breakpoint($breakpoint-lap) {
     top: 4em;
     right: 6em;
   }

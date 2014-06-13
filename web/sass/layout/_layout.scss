@@ -54,24 +54,17 @@ body {
     left: 1em;
 
     display: block;
-    height: 5.5em;
-    width: 21.875em;
+    height: 3.5em;
+    width: 18em;
 
     .logo-text,
     .logo-symbol {
       fill: $white;
     }
 
-    &:hover {
-      .logo-text,
-      .logo-symbol {
-        fill: $theme-color;
-      }
-    }
-
     @include background-size(contain);
 
-    @include breakpoint(30em) {
+    @include breakpoint($breakpoint-lap) {
       top: 4em;
       left: 6em;
     }
