@@ -4,6 +4,37 @@
  *
  */
 
+
 @mixin breakpoint($breakpoint) {
   @media only screen and (min-width: $breakpoint) { @content; }
+}
+
+
+@mixin strip-list-styles() {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+
+@mixin strip-link-styles($color:inherit) {
+  &:link {
+    color: $color;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $color;
+    text-decoration: none;
+  }
 }

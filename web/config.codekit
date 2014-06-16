@@ -203,24 +203,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/menu-close.png": {
+	"\/images\/menu-icon-close.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 16903,
-		"inputAbbreviatedPath": "\/images\/menu-close.png",
-		"outputAbbreviatedPath": "\/images\/menu-close.png",
+		"inputAbbreviatedPath": "\/images\/menu-icon-close.png",
+		"outputAbbreviatedPath": "\/images\/menu-icon-close.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/menu.png": {
+	"\/images\/menu-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 12733,
-		"inputAbbreviatedPath": "\/images\/menu.png",
-		"outputAbbreviatedPath": "\/images\/menu.png",
+		"inputAbbreviatedPath": "\/images\/menu-icon.png",
+		"outputAbbreviatedPath": "\/images\/menu-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -393,22 +393,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/layout\/_layout.scss",
 		"outputAbbreviatedPath": "\/css\/_layout.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/sass\/mixins\/_mixins.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 5,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/sass\/mixins\/_mixins.scss",
-		"outputAbbreviatedPath": "\/css\/_mixins.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

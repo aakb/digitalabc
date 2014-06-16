@@ -10,8 +10,6 @@
  * Variables
  *
  */
-/* Layout
-   ================================================================================================================== */
 /* Breakpoints
    ================================================================================================================== */
 /* Layout
@@ -1071,11 +1069,6 @@ label {
 
 /**
  *
- * Mixins
- *
- */
-/**
- *
  * Animations
  *
  */
@@ -1418,22 +1411,22 @@ body {
 .quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover {
   background-color: rgba(0, 0, 0, 0.65);
 }
-/* line 16, ../sass/mixins/_mixins.scss */
+/* line 21, ../sass/base/_mixins.scss */
 .quiz--start-button:link, .quiz--button:link, .quiz-header--button:link {
   color: white;
   text-decoration: none;
 }
-/* line 21, ../sass/mixins/_mixins.scss */
+/* line 26, ../sass/base/_mixins.scss */
 .quiz--start-button:visited, .quiz--button:visited, .quiz-header--button:visited {
   color: white;
   text-decoration: none;
 }
-/* line 26, ../sass/mixins/_mixins.scss */
+/* line 31, ../sass/base/_mixins.scss */
 .quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover {
   color: white;
   text-decoration: none;
 }
-/* line 31, ../sass/mixins/_mixins.scss */
+/* line 36, ../sass/base/_mixins.scss */
 .quiz--start-button:focus, .quiz--button:focus, .quiz-header--button:focus {
   color: white;
   text-decoration: none;
@@ -1441,7 +1434,7 @@ body {
 
 /**
  *
- * Menu
+ * Navigation
  *
  */
 /* line 8, ../sass/modules/_navigation.scss */
@@ -1598,23 +1591,29 @@ body {
 }
 /* line 40, ../sass/modules/_quiz.scss */
 .quiz--start-button {
-  font-size: 4em;
+  font-size: 3.5em;
 }
-/* line 47, ../sass/modules/_quiz.scss */
+@media only screen and (min-width: 481px) {
+  /* line 40, ../sass/modules/_quiz.scss */
+  .quiz--start-button {
+    font-size: 4.5em;
+  }
+}
+/* line 51, ../sass/modules/_quiz.scss */
 .quiz--progress {
-  color: #3e5f6b;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 3em;
   font-family: "bebas_neueregular";
 }
-/* line 54, ../sass/modules/_quiz.scss */
+/* line 58, ../sass/modules/_quiz.scss */
 .quiz--question {
   font-size: 4em;
 }
-/* line 61, ../sass/modules/_quiz.scss */
+/* line 65, ../sass/modules/_quiz.scss */
 .quiz--answers {
   font-size: 2em;
 }
-/* line 68, ../sass/modules/_quiz.scss */
+/* line 72, ../sass/modules/_quiz.scss */
 .quiz--selection {
   margin: 1em auto;
   height: 2.9em;
@@ -1626,26 +1625,26 @@ body {
   font-size: 0.8em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 68, ../sass/modules/_quiz.scss */
+  /* line 72, ../sass/modules/_quiz.scss */
   .quiz--selection {
     width: 30em;
   }
 }
-/* line 83, ../sass/modules/_quiz.scss */
+/* line 87, ../sass/modules/_quiz.scss */
 .quiz--selection.is-checked {
   background-image: -moz-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.35));
   background-image: -webkit-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.35));
   background-image: linear-gradient(to right, #0abbef, rgba(0, 0, 0, 0.35));
 }
-/* line 86, ../sass/modules/_quiz.scss */
+/* line 90, ../sass/modules/_quiz.scss */
 .quiz--selection.is-checked .quiz--selection-number {
   background-color: #0abbef;
 }
-/* line 93, ../sass/modules/_quiz.scss */
+/* line 97, ../sass/modules/_quiz.scss */
 .quiz--selection-input {
   display: none;
 }
-/* line 98, ../sass/modules/_quiz.scss */
+/* line 102, ../sass/modules/_quiz.scss */
 .quiz--selection-label {
   position: relative;
   top: 50%;
@@ -1657,11 +1656,11 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 109, ../sass/modules/_quiz.scss */
+/* line 113, ../sass/modules/_quiz.scss */
 .quiz--selection-label:hover {
   cursor: pointer;
 }
-/* line 115, ../sass/modules/_quiz.scss */
+/* line 119, ../sass/modules/_quiz.scss */
 .quiz--selection-number {
   height: 1.5em;
   left: -1.1em;
@@ -1679,34 +1678,34 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 131, ../sass/modules/_quiz.scss */
+/* line 135, ../sass/modules/_quiz.scss */
 .quiz--button {
   color: white;
   font-size: 1.695em;
 }
-/* line 137, ../sass/modules/_quiz.scss */
+/* line 141, ../sass/modules/_quiz.scss */
 .quiz--button.is-inactive {
   cursor: default;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 145, ../sass/modules/_quiz.scss */
+/* line 149, ../sass/modules/_quiz.scss */
 .quiz--result {
   font-size: 4em;
 }
-/* line 152, ../sass/modules/_quiz.scss */
+/* line 156, ../sass/modules/_quiz.scss */
 .quiz--text {
   font-size: 2em;
 }
-/* line 159, ../sass/modules/_quiz.scss */
+/* line 163, ../sass/modules/_quiz.scss */
 .quiz--challenger-answer.is-correct {
   color: #0f0;
 }
-/* line 163, ../sass/modules/_quiz.scss */
+/* line 167, ../sass/modules/_quiz.scss */
 .quiz--challenger-answer.is-wrong {
   color: #f00;
 }
-/* line 169, ../sass/modules/_quiz.scss */
+/* line 173, ../sass/modules/_quiz.scss */
 .quiz--start-opponents-wrapper {
   margin-right: auto;
   margin-bottom: 2em;
@@ -1716,7 +1715,7 @@ body {
   font-size: 2em;
   text-align: left;
 }
-/* line 182, ../sass/modules/_quiz.scss */
+/* line 186, ../sass/modules/_quiz.scss */
 .quiz--start-opponent {
   color: #b0eafc;
 }

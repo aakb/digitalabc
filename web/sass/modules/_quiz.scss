@@ -40,12 +40,16 @@
   &--start-button {
     @extend %button-transparent;
 
-    font-size: 4em;
+    font-size: 3.5em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 4.5em;
+    }
   }
 
 
   &--progress {
-    color: #3e5f6b;
+    color: transparentize($white, .5);
     font-size: 3em;
     font-family: $font-primary;
   }
