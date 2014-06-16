@@ -908,7 +908,7 @@ html {
 
 /* line 15, ../sass/base/_base.scss */
 body {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100%;
   background-color: #4d4d4d;
   color: #4d4d4d;
@@ -1452,7 +1452,7 @@ body {
 /* line 8, ../sass/modules/_navigation.scss */
 .nav {
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: fixed;
   right: -200%;
   z-index: 99;
