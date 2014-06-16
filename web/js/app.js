@@ -1,4 +1,4 @@
-var abcApp = angular.module('abcApp', ['ngRoute'], function($interpolateProvider) {
+var abcApp = angular.module('abcApp', ['ngTouch', 'ngRoute'], function($interpolateProvider) {
     $interpolateProvider.startSymbol('<[');
     $interpolateProvider.endSymbol(']>');
 });

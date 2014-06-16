@@ -7,7 +7,8 @@
 
 .nav {
   height: 100%;
-  position: absolute;
+  overflow-y: scroll;
+  position: fixed;
   right: -200%;
   z-index: 99;
 
@@ -120,7 +121,7 @@
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
-  right: 1em;
+  right: 2em;
 
   display: block;
   height: 4.5em;

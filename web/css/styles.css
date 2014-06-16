@@ -1321,56 +1321,64 @@ label {
 /* Layout styles.
  *
  * ========================================================================== */
-/* line 24, ../sass/layout/_layout.scss */
+/* Make sure the user can't scroll when overlays are active */
+/* line 26, ../sass/layout/_layout.scss */
+html.is-locked,
+html.is-locked body {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* line 33, ../sass/layout/_layout.scss */
 body {
   overflow-x: hidden;
   position: relative;
   font-size: .7em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 24, ../sass/layout/_layout.scss */
+  /* line 33, ../sass/layout/_layout.scss */
   body {
     font-size: .8em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 24, ../sass/layout/_layout.scss */
+  /* line 33, ../sass/layout/_layout.scss */
   body {
     font-size: 1em;
   }
 }
 
 /* Header */
-/* line 42, ../sass/layout/_layout.scss */
+/* line 51, ../sass/layout/_layout.scss */
 .header {
   position: fixed;
   z-index: 98;
   width: 100%;
 }
-/* line 47, ../sass/layout/_layout.scss */
+/* line 56, ../sass/layout/_layout.scss */
 .header--inner {
   position: relative;
 }
-/* line 51, ../sass/layout/_layout.scss */
+/* line 60, ../sass/layout/_layout.scss */
 .header--logo {
   position: absolute;
   top: 2em;
-  left: 1em;
+  left: 2em;
   display: block;
-  height: 3.5em;
+  height: 4.5em;
   width: 18em;
   -moz-background-size: contain;
   -o-background-size: contain;
   -webkit-background-size: contain;
   background-size: contain;
 }
-/* line 60, ../sass/layout/_layout.scss */
+/* line 69, ../sass/layout/_layout.scss */
 .header--logo .logo-text,
 .header--logo .logo-symbol {
   fill: white;
 }
 @media only screen and (min-width: 481px) {
-  /* line 51, ../sass/layout/_layout.scss */
+  /* line 60, ../sass/layout/_layout.scss */
   .header--logo {
     top: 4em;
     left: 6em;
@@ -1440,7 +1448,8 @@ body {
 /* line 8, ../sass/modules/_navigation.scss */
 .nav {
   height: 100%;
-  position: absolute;
+  overflow-y: scroll;
+  position: fixed;
   right: -200%;
   z-index: 99;
   padding-top: 3.75em;
@@ -1465,19 +1474,19 @@ body {
     width: 40em;
   }
 }
-/* line 33, ../sass/modules/_navigation.scss */
+/* line 34, ../sass/modules/_navigation.scss */
 .nav.is-visible {
   -moz-animation: toggle-nav-open 0.15s ease 1 forwards;
   -webkit-animation: toggle-nav-open 0.15s ease 1 forwards;
   animation: toggle-nav-open 0.15s ease 1 forwards;
 }
-/* line 37, ../sass/modules/_navigation.scss */
+/* line 38, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
   -moz-animation: toggle-nav-close 0.15s ease 1 forwards;
   -webkit-animation: toggle-nav-close 0.15s ease 1 forwards;
   animation: toggle-nav-close 0.15s ease 1 forwards;
 }
-/* line 44, ../sass/modules/_navigation.scss */
+/* line 45, ../sass/modules/_navigation.scss */
 .nav--header {
   border-bottom: 1px solid #cccccc;
   margin-right: 3em;
@@ -1488,44 +1497,44 @@ body {
   font-size: 3em;
   line-height: 1em;
 }
-/* line 56, ../sass/modules/_navigation.scss */
+/* line 57, ../sass/modules/_navigation.scss */
 .nav--item-wrapper {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
-/* line 62, ../sass/modules/_navigation.scss */
+/* line 63, ../sass/modules/_navigation.scss */
 .nav--item, .nav--sub-item {
   display: block;
   font-family: "bebas_neueregular";
   line-height: 1.75em;
 }
-/* line 69, ../sass/modules/_navigation.scss */
+/* line 70, ../sass/modules/_navigation.scss */
 .nav--item:link, .nav--sub-item:link {
   color: #666666;
   text-decoration: none;
 }
-/* line 74, ../sass/modules/_navigation.scss */
+/* line 75, ../sass/modules/_navigation.scss */
 .nav--item:visited, .nav--sub-item:visited {
   color: #595959;
 }
-/* line 78, ../sass/modules/_navigation.scss */
+/* line 79, ../sass/modules/_navigation.scss */
 .nav--item:hover, .nav--item:focus, .nav--sub-item:hover, .nav--sub-item:focus {
   color: #0abbef;
   text-decoration: none;
 }
-/* line 85, ../sass/modules/_navigation.scss */
+/* line 86, ../sass/modules/_navigation.scss */
 .nav--item {
   font-size: 2em;
 }
-/* line 89, ../sass/modules/_navigation.scss */
+/* line 90, ../sass/modules/_navigation.scss */
 .nav--sub-item {
   padding-left: 1.5em;
   font-size: 1.5em;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 99, ../sass/modules/_navigation.scss */
+/* line 100, ../sass/modules/_navigation.scss */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -1535,7 +1544,7 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 110, ../sass/modules/_navigation.scss */
+/* line 111, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
   -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
@@ -1544,18 +1553,18 @@ body {
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 120, ../sass/modules/_navigation.scss */
+/* line 121, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
-  right: 1em;
+  right: 2em;
   display: block;
   height: 4.5em;
   width: 5em;
   cursor: pointer;
 }
 @media only screen and (min-width: 481px) {
-  /* line 120, ../sass/modules/_navigation.scss */
+  /* line 121, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
@@ -1745,62 +1754,63 @@ body {
 .quiz-header--inner {
   position: relative;
   top: 50%;
+  padding-top: 4em;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 32, ../sass/modules/_quiz-header.scss */
+/* line 34, ../sass/modules/_quiz-header.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
   font-family: "bebas_neueregular";
 }
-/* line 40, ../sass/modules/_quiz-header.scss */
+/* line 42, ../sass/modules/_quiz-header.scss */
 .quiz-header--question {
   margin-bottom: 0;
   font-size: 2em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 40, ../sass/modules/_quiz-header.scss */
+  /* line 42, ../sass/modules/_quiz-header.scss */
   .quiz-header--question {
     font-size: 4em;
   }
 }
-/* line 51, ../sass/modules/_quiz-header.scss */
+/* line 53, ../sass/modules/_quiz-header.scss */
 .quiz-header--punchline {
   margin-bottom: .25em;
   font-size: 5em;
   line-height: 1em;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 51, ../sass/modules/_quiz-header.scss */
+  /* line 53, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline {
     font-size: 10em;
   }
 }
-/* line 63, ../sass/modules/_quiz-header.scss */
+/* line 65, ../sass/modules/_quiz-header.scss */
 .quiz-header--text {
   font-size: 2em;
   margin-bottom: 1em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 63, ../sass/modules/_quiz-header.scss */
+  /* line 65, ../sass/modules/_quiz-header.scss */
   .quiz-header--text {
     font-size: 2.5em;
   }
 }
-/* line 73, ../sass/modules/_quiz-header.scss */
+/* line 75, ../sass/modules/_quiz-header.scss */
 .quiz-header--button {
   font-size: 3.5em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 73, ../sass/modules/_quiz-header.scss */
+  /* line 75, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
     font-size: 4.5em;
   }
 }
 
-/* line 87, ../sass/modules/_quiz-header.scss */
+/* line 89, ../sass/modules/_quiz-header.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1809,7 +1819,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 95, ../sass/modules/_quiz-header.scss */
+/* line 97, ../sass/modules/_quiz-header.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;

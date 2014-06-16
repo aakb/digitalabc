@@ -26,6 +26,8 @@
     position: relative;
     top: 50%;
 
+    padding-top: 4em;
+
     @include translateY(-50%);
   }
 
