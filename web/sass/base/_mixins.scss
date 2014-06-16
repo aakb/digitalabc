@@ -5,10 +5,14 @@
  */
 
 
+/* Mixin for breakpoints */
+
 @mixin breakpoint($breakpoint) {
   @media only screen and (min-width: $breakpoint) { @content; }
 }
 
+
+/* Mixin for stripping default list styles */
 
 @mixin strip-list-styles() {
   list-style-type: none;
@@ -16,6 +20,8 @@
   padding-left: 0;
 }
 
+
+/* Mixin for stripping link styles*/
 
 @mixin strip-link-styles($color:inherit) {
   &:link {
@@ -37,4 +43,12 @@
     color: $color;
     text-decoration: none;
   }
+}
+
+
+/* Mixin for using svg images as background with fallback to png */
+
+@mixin svg-bg($name, $extension: png, $color: transparent, $position: 0 0, $repeat: no-repeat) {
+  background: url('/images/#{$name}.#{$extension}') $color $position $repeat;
+  background: url('/images/#{$name}.svg') $color $position $repeat;
 }

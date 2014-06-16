@@ -561,6 +561,10 @@
  * Mixins
  *
  */
+/* Mixin for breakpoints */
+/* Mixin for stripping default list styles */
+/* Mixin for stripping link styles*/
+/* Mixin for using svg images as background with fallback to png */
 /**
  *
  * Normalize
@@ -1419,22 +1423,22 @@ body {
 .quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover {
   background-color: rgba(0, 0, 0, 0.65);
 }
-/* line 21, ../sass/base/_mixins.scss */
+/* line 27, ../sass/base/_mixins.scss */
 .quiz--start-button:link, .quiz--button:link, .quiz-header--button:link {
   color: white;
   text-decoration: none;
 }
-/* line 26, ../sass/base/_mixins.scss */
+/* line 32, ../sass/base/_mixins.scss */
 .quiz--start-button:visited, .quiz--button:visited, .quiz-header--button:visited {
   color: white;
   text-decoration: none;
 }
-/* line 31, ../sass/base/_mixins.scss */
+/* line 37, ../sass/base/_mixins.scss */
 .quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover {
   color: white;
   text-decoration: none;
 }
-/* line 36, ../sass/base/_mixins.scss */
+/* line 42, ../sass/base/_mixins.scss */
 .quiz--start-button:focus, .quiz--button:focus, .quiz-header--button:focus {
   color: white;
   text-decoration: none;
@@ -1540,14 +1544,19 @@ body {
   left: 1em;
   height: 1em;
   width: 1em;
-  background: url("/images/arrow-icon.svg") 0/0.65em no-repeat;
   content: "";
+  background: url("/images/arrow-icon.png") transparent 0 no-repeat;
+  background: url("/images/arrow-icon.svg") transparent 0 no-repeat;
+  -moz-background-size: 0.65em;
+  -o-background-size: 0.65em;
+  -webkit-background-size: 0.65em;
+  background-size: 0.65em;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 118, ../sass/modules/_navigation.scss */
+/* line 119, ../sass/modules/_navigation.scss */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -1557,7 +1566,7 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 129, ../sass/modules/_navigation.scss */
+/* line 130, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
   -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
@@ -1566,7 +1575,7 @@ body {
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 139, ../sass/modules/_navigation.scss */
+/* line 140, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
@@ -1577,7 +1586,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 481px) {
-  /* line 139, ../sass/modules/_navigation.scss */
+  /* line 140, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;

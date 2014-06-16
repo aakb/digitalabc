@@ -104,9 +104,10 @@
       height: 1em;
       width: 1em;
 
-      background: url('/images/arrow-icon.svg') 0 / .65em no-repeat;
       content: "";
-      
+
+      @include svg-bg(arrow-icon, png, transparent, 0, no-repeat);
+      @include background-size(.65em);
       @include opacity(.5);
     }
   }
