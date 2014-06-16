@@ -29,7 +29,7 @@
   @include breakpoint($breakpoint-lap) {
     width: 40em;
   }
-  
+
 
   /* States */
 
@@ -90,9 +90,25 @@
   }
 
   &--sub-item {
-    padding-left: 1.5em;
+    position: relative;
+
+    padding-left: 2em;
 
     font-size: 1.5em;
+  
+    &:before {
+      position: absolute;
+      top: .35em;
+      left: 1em;
+
+      height: 1em;
+      width: 1em;
+
+      background: url('/images/arrow-icon.svg') 0 / .65em no-repeat;
+      content: "";
+      
+      @include opacity(.5);
+    }
   }
 }
 

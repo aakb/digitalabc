@@ -1529,12 +1529,25 @@ body {
 }
 /* line 92, ../sass/modules/_navigation.scss */
 .nav--sub-item {
-  padding-left: 1.5em;
+  position: relative;
+  padding-left: 2em;
   font-size: 1.5em;
+}
+/* line 99, ../sass/modules/_navigation.scss */
+.nav--sub-item:before {
+  position: absolute;
+  top: .35em;
+  left: 1em;
+  height: 1em;
+  width: 1em;
+  background: url("/images/arrow-icon.svg") 0/0.65em no-repeat;
+  content: "";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 102, ../sass/modules/_navigation.scss */
+/* line 118, ../sass/modules/_navigation.scss */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -1544,7 +1557,7 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 113, ../sass/modules/_navigation.scss */
+/* line 129, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
   -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
@@ -1553,7 +1566,7 @@ body {
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 123, ../sass/modules/_navigation.scss */
+/* line 139, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
@@ -1564,7 +1577,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 481px) {
-  /* line 123, ../sass/modules/_navigation.scss */
+  /* line 139, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
