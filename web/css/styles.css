@@ -1474,19 +1474,19 @@ body {
     width: 40em;
   }
 }
-/* line 34, ../sass/modules/_navigation.scss */
+/* line 36, ../sass/modules/_navigation.scss */
 .nav.is-visible {
   -moz-animation: toggle-nav-open 0.15s ease 1 forwards;
   -webkit-animation: toggle-nav-open 0.15s ease 1 forwards;
   animation: toggle-nav-open 0.15s ease 1 forwards;
 }
-/* line 38, ../sass/modules/_navigation.scss */
+/* line 40, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
   -moz-animation: toggle-nav-close 0.15s ease 1 forwards;
   -webkit-animation: toggle-nav-close 0.15s ease 1 forwards;
   animation: toggle-nav-close 0.15s ease 1 forwards;
 }
-/* line 45, ../sass/modules/_navigation.scss */
+/* line 47, ../sass/modules/_navigation.scss */
 .nav--header {
   border-bottom: 1px solid #cccccc;
   margin-right: 3em;
@@ -1497,44 +1497,44 @@ body {
   font-size: 3em;
   line-height: 1em;
 }
-/* line 57, ../sass/modules/_navigation.scss */
+/* line 59, ../sass/modules/_navigation.scss */
 .nav--item-wrapper {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
-/* line 63, ../sass/modules/_navigation.scss */
+/* line 65, ../sass/modules/_navigation.scss */
 .nav--item, .nav--sub-item {
   display: block;
   font-family: "bebas_neueregular";
   line-height: 1.75em;
 }
-/* line 70, ../sass/modules/_navigation.scss */
+/* line 72, ../sass/modules/_navigation.scss */
 .nav--item:link, .nav--sub-item:link {
   color: #666666;
   text-decoration: none;
 }
-/* line 75, ../sass/modules/_navigation.scss */
+/* line 77, ../sass/modules/_navigation.scss */
 .nav--item:visited, .nav--sub-item:visited {
   color: #595959;
 }
-/* line 79, ../sass/modules/_navigation.scss */
+/* line 81, ../sass/modules/_navigation.scss */
 .nav--item:hover, .nav--item:focus, .nav--sub-item:hover, .nav--sub-item:focus {
   color: #0abbef;
   text-decoration: none;
 }
-/* line 86, ../sass/modules/_navigation.scss */
+/* line 88, ../sass/modules/_navigation.scss */
 .nav--item {
   font-size: 2em;
 }
-/* line 90, ../sass/modules/_navigation.scss */
+/* line 92, ../sass/modules/_navigation.scss */
 .nav--sub-item {
   padding-left: 1.5em;
   font-size: 1.5em;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 100, ../sass/modules/_navigation.scss */
+/* line 102, ../sass/modules/_navigation.scss */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -1544,7 +1544,7 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 111, ../sass/modules/_navigation.scss */
+/* line 113, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
   -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
@@ -1553,7 +1553,7 @@ body {
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 121, ../sass/modules/_navigation.scss */
+/* line 123, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
@@ -1564,7 +1564,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 481px) {
-  /* line 121, ../sass/modules/_navigation.scss */
+  /* line 123, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
