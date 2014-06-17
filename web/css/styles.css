@@ -1863,3 +1863,25 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+/**
+ *
+ * Videos.
+ *
+ */
+/* line 7, ../sass/modules/_videos.scss */
+.videos {
+  position: relative;
+  height: 100%;
+  background-color: #0abbef;
+}
+/* line 14, ../sass/modules/_videos.scss */
+.videos--inner {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
