@@ -1,4 +1,7 @@
-abcApp.controller('HeaderController', function($scope) {
+abcApp.controller('HeaderController', function($scope, $location, $anchorScroll) {
+
+  // Added helper function for the menu.
+
   $scope.menuOpen = null;
 
   $scope.toggleMenu = function(){
@@ -7,4 +10,11 @@ abcApp.controller('HeaderController', function($scope) {
     }
     $scope.menuOpen = !$scope.menuOpen;
   };
+
+
+  // Create scrollTo functionality.
+  $scope.scrollTo = function(id) {
+    $location.hash(id);
+    $anchorScroll();
+  }
 });
