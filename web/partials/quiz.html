@@ -1,12 +1,13 @@
 <h4 class="quiz--progress">Spørgsmål <[step]>/<[numberOfQuestions]></h4>
 <h1 class="quiz--question"><[question.question]></h1>
+<h2 class="quiz--text" data-ng-show="challengeResult !== ''">Din modstander svarede <span class="quiz--challenger-answer" data-ng-class="{'is-correct': challengerAnswerCorrect, 'is-wrong': !challengerAnswerCorrect}"><[challengeResult]></span> på spørgsmålet</h2>
 <form class="quiz--answers" name="myForm" ng-submit="nextStep()">
-  <div class="quiz--selection" data-ng-repeat="answer in question.answers">
-    <input class="quiz--selection-input" id="selection-<[answer.id]>" type="radio" value="<[answer.id]>" ng-model="question.chosenAnswer">
+  <div class="quiz--selection" data-ng-class="{'is-checked': chosen.answer == answer.id }" data-ng-repeat="answer in question.answers">
+    <input class="quiz--selection-input" id="selection-<[answer.id]>" type="radio" value="<[answer.id]>" ng-model="chosen.answer">
     <label class="quiz--selection-label" for="selection-<[answer.id]>"><[answer.text]></label>
     <div class="quiz--selection-number"><[answer.id+1]></div>
   </div>
   <input type="button" class="quiz--button" data-ng-class="{'is-inactive': step<=1}" value="Forrige spørgsmål" ng-click="previousStep()">
-  <input type="button" class="quiz--button" data-ng-class="{'is-inactive': !question.chosenAnswer}" data-ng-show="step<numberOfQuestions" value="Næste spørgsmål" ng-click="nextStep()">
-  <input type="button" class="quiz--button" data-ng-class="{'is-inactive': !question.chosenAnswer}" data-ng-show="step==numberOfQuestions" value="Afslut quizzen !" ng-click="nextStep()">
+  <input type="button" class="quiz--button" data-ng-class="{'is-inactive': chosen.answer == null}" data-ng-show="step<numberOfQuestions" value="Næste spørgsmål" ng-click="nextStep()">
+  <input type="button" class="quiz--button" data-ng-class="{'is-inactive': chosen.answer == null}" data-ng-show="step==numberOfQuestions" value="Afslut quizzen !" ng-click="nextStep()">
 </form>

@@ -5,19 +5,13 @@
  */
 
 
-
 /* Compass */
 @import "compass/css3";
-
 
 
 // Include base vars
 @import "base/_vars";
 @import "base/_grid";
-
-
-// Theme
-@import "theme/_theme-vars";
 
 
 // Include base
@@ -27,8 +21,8 @@
 @import "base/_forms";
 
 
-// Mixins
-@import "mixins/_mixins";
+// Animations
+@import "animations/_animations";
 
 
 // Layout
@@ -37,4 +31,6 @@
 
 // Modules
 @import "modules/_buttons";
+@import "modules/_navigation";
 @import "modules/_quiz";
+@import "modules/_quiz-header";

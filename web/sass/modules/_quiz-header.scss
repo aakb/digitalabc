@@ -1,0 +1,116 @@
+/**
+ *
+ * Quiz header.
+ *
+ */
+
+
+.test {
+  @include animation(test .5s ease 1 forwards);
+}
+
+.quiz-header {
+  @extend %layout--set-background--selector;
+
+  position: relative;
+
+  background: url('/images/image-flip.jpg') no-repeat;
+
+  @include background-size(cover);
+
+  &.is-loading {
+    @extend %animate--move-left;
+  }
+
+  &--inner {
+    position: relative;
+    top: 50%;
+
+    padding-top: 6em;
+
+    @include translateY(-50%);
+  }
+
+  &--text,
+  &--question,
+  &--punchline {
+    color: $white;
+    font-family: $font-primary;
+  }
+
+
+  &--question {
+    margin-bottom: 0;
+
+    font-size: 2em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 4em;
+    }
+  }
+
+
+  &--punchline {
+    margin-bottom: .25em;
+
+    font-size: 5em;
+    line-height: 1em;
+
+    @include breakpoint($breakpoint-desk) {
+      font-size: 10em;
+    }
+  }
+
+
+  &--text {
+    font-size: 2em;
+    margin-bottom: 1em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 2.5em;
+    }
+  }
+
+
+  &--button {
+    @extend %button-transparent;
+
+    margin-bottom: 1.5em;
+
+    font-size: 3.5em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 4.5em;
+    }
+  }
+
+  &--scroll {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 3.5em;
+
+    .scroll-text {
+      @include opacity(.5);
+    }
+  }
+}
+
+
+// Layout for the quiz pages.
+
+.layout--quiz {
+  background: url('/images/quiz-bg.jpg') no-repeat;
+  @extend %layout--set-background--selector;
+
+  letter-spacing: .08em;
+
+  @include background-size(cover);
+
+  &--inner {
+    position: relative;
+    top: 50%;
+
+    @include translateY(-50%);
+  }
+}

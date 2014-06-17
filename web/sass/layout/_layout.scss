@@ -5,11 +5,52 @@
  */
 
 
+/* Silent classes related to this document.
+ *
+ * ========================================================================== */
+
+// Selector for displaying backgrounds properly.
+%layout--set-background--selector {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Layout styles.
+ *
+ * ========================================================================== */
+
+
+/* Make sure the user can't scroll when overlays are active */
+html.is-locked,
+html.is-locked  body {
+  overflow: hidden;
+
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+
+  font-size: .7em;
+
+  @include breakpoint($breakpoint-lap) {
+    font-size: .8em;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    font-size: 1em;
+  }
+}
+
+
 /* Header */
 
 .header {
   position: fixed;
-
+  z-index: 98;
   width: 100%;
 
   &--inner {
@@ -18,70 +59,23 @@
 
   &--logo {
     position: absolute;
-    top: 1.5em;
-    left: 1.5em;
+    top: 2em;
+    left: 2em;
 
     display: block;
-    max-width: 15em;
-  }
+    height: 4.5em;
+    width: 18em;
 
-  &--menu {
-    position: absolute;
-    top: 4em;
-    right: 6em;
+    .logo-text,
+    .logo-symbol {
+      fill: $white;
+    }
 
-    display: block;
-    max-width: 4em;
-  }
+    @include background-size(contain);
 
-  @include breakpoint($breakpoint-lap) {
-    &--logo {
+    @include breakpoint($breakpoint-lap) {
       top: 4em;
       left: 6em;
-
-      max-width: 23em;
     }
-  }
-}
-
-
-// Quiz header
-
-.quiz-header {
-  height: 100%;
-  width: 100%;
-
-  background: url('/images/image-flip.jpg') no-repeat;
-  text-align: center;
-
-  @include background-size(cover);
-
-  &--inner {
-    position: relative;
-    top: 50%;
-
-    @include translateY(-50%);
-  }
-
-  &--question,
-  &--punchline {
-    color: $white;
-    font-family: 'bebas_neueregular';
-  }
-
-  &--question {
-    margin-bottom: 0;
-
-    font-size: 4em;
-  }
-
-  &--punchline {
-    font-size: 10em;
-  }
-
-  &--button {
-    @extend .button-transparent;
-
-    font-size: 200%;
   }
 }

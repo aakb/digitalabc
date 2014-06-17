@@ -5,6 +5,13 @@
  */
 
 
+// Handle inline-block margin bug
+// We should move this to some other file, no idea which one at the moment so for now it stays here.
+%grid-markup-fix {
+  margin-right: -4px;
+}
+
+
 
 /* Breakpoints
    ================================================================================================================== */
@@ -19,6 +26,7 @@ $breakpoint-bigscreen:    1700px;
 /* Layout
    ================================================================================================================== */
 
+$layout-max-width: 75em;
 $border-radius:    .6em;
 
 
@@ -26,8 +34,10 @@ $border-radius:    .6em;
 /* Colors
    ================================================================================================================== */
 
+$theme-color:      #0abbef;
 $black:            #000;
 $white:            #fff;
+
 $gray-lightest:    lighten($black, 90%);
 $gray-lighter:     lighten($black, 80%);
 $gray-light:       lighten($black, 70%);
@@ -36,11 +46,14 @@ $gray-dark:        lighten($black, 50%);
 $gray-darker:      lighten($black, 40%);
 $gray-darkest:     lighten($black, 30%);
 
+$text-color-dark:  $gray-darker;
+
 
 
 /* Typograhy
    ================================================================================================================== */
 
+$font-primary:     'bebas_neueregular';
 $font-family:      "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font:             1em/1.5 $font-family;
 
@@ -49,4 +62,4 @@ $font:             1em/1.5 $font-family;
 /* Link colors
    ================================================================================================================== */
 
-$link-color:       blue;
+$link-color:       #0abbef;

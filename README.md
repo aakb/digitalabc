@@ -3,6 +3,9 @@
 ##Information
 This is the Digital ABC project. It is a Symfony2 project that utilises angularjs.
 
+To allow the AngularJS integration within a twig template the interpolation symbols have changed for angular from {{ }} to <[ ]>.
+
+
 ###Helpful commands
 To clear cache
 <pre>
