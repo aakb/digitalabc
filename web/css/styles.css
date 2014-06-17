@@ -1776,7 +1776,7 @@ body {
 .quiz-header--inner {
   position: relative;
   top: 50%;
-  padding-top: 4em;
+  padding-top: 6em;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -1823,6 +1823,7 @@ body {
 }
 /* line 75, ../sass/modules/_quiz-header.scss */
 .quiz-header--button {
+  margin-bottom: 1.5em;
   font-size: 3.5em;
 }
 @media only screen and (min-width: 481px) {
@@ -1831,8 +1832,20 @@ body {
     font-size: 4.5em;
   }
 }
+/* line 87, ../sass/modules/_quiz-header.scss */
+.quiz-header--scroll {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 3.5em;
+}
+/* line 93, ../sass/modules/_quiz-header.scss */
+.quiz-header--scroll .scroll-text {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
 
-/* line 89, ../sass/modules/_quiz-header.scss */
+/* line 102, ../sass/modules/_quiz-header.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1841,7 +1854,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 97, ../sass/modules/_quiz-header.scss */
+/* line 110, ../sass/modules/_quiz-header.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;

@@ -26,7 +26,7 @@
     position: relative;
     top: 50%;
 
-    padding-top: 4em;
+    padding-top: 6em;
 
     @include translateY(-50%);
   }
@@ -75,10 +75,23 @@
   &--button {
     @extend %button-transparent;
 
+    margin-bottom: 1.5em;
+
     font-size: 3.5em;
 
     @include breakpoint($breakpoint-lap) {
       font-size: 4.5em;
+    }
+  }
+
+  &--scroll {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 3.5em;
+
+    .scroll-text {
+      @include opacity(.5);
     }
   }
 }
