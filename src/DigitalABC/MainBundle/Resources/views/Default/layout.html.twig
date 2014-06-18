@@ -5,60 +5,60 @@
 {% block title %}Digital ABC{% endblock %}
 
 {% block meta %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
 {% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <!--[if IE 9]>
-    <link rel="stylesheet" href="{{ asset('css/ie9.css') }}">
-    <![endif]-->
-    <link rel="stylesheet" href="{{ asset('css/fonts/bebas/bebas.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+  <!--[if IE 9]>
+  <link rel="stylesheet" href="{{ asset('css/ie9.css') }}">
+  <![endif]-->
+  <link rel="stylesheet" href="{{ asset('css/fonts/bebas/bebas.css') }}">
 {% endblock %}
 
 {% block body_attr %}data-ng-class="{'is-locked': menuOpen !== null && menuOpen}"{% endblock %}
 
 
 {% block scripts %}
-    <!-- Global script imports -->
-    <script src="/js/libraries/jquery-1.11.1.min.js"></script>
-    <script src="/js/libraries/angular-1.2.16.min.js"></script>
-    <script src="/js/libraries/angular-animate-1.2.16.js"></script>
-    <script src="/js/libraries/angular-route-1.2.16.js"></script>
-    <script src="/js/libraries/angular-touch-1.2.16.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/main/controllers.js"></script>
+  <!-- Global script imports -->
+  <script src="{{ asset('js/libraries/jquery-1.11.1.min.js') }}"></script>
+  <script src="{{ asset('js/libraries/angular-1.2.16.min.js') }}"></script>
+  <script src="{{ asset('js/libraries/angular-animate-1.2.16.js') }}"></script>
+  <script src="{{ asset('js/libraries/angular-route-1.2.16.js') }}"></script>
+  <script src="{{ asset('js/libraries/angular-touch-1.2.16.js') }}"></script>
+  <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/main/controllers.js') }}"></script>
 {% endblock %}
 
 {% block body %}
-    <a class="nav-overlay" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}" data-ng-click="toggleMenu()"></a>
-    <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen, 'is-hidden': menuOpen !== null && !menuOpen}">
-        {% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'nav-toggle-icon', 'click': 'toggleMenu()'} %}
-        <h2 class="nav--header">Navigation</h2>
-        <div class="nav--item-wrapper">
-            <a href="#" class="nav--item">Ta' Quizzen!</a>
-            <a href="#" class="nav--item">Se videoerne</a>
-            <a href="#" class="nav--item">Musikvideo: "Kom med mig"</a>
-        </div>
-        <div class="nav--item-wrapper">
-            <a href="#" class="nav--item">For lærerne</a>
-            <a href="#" class="nav--sub-item">Digital parathed (1 lektion)</a>
-            <a href="#" class="nav--sub-item">Sidste omgang (2 lektioner)</a>
-            <a href="#" class="nav--sub-item">#FarvelForvaltLingo (4 lektioner)</a>
-            <a href="#" class="nav--item">Om projektet</a>
-            <a href="#" class="nav--item">Digamp.dk - Demomiljø</a>
-        </div>
-    </nav>
+  <a class="nav-overlay" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}" data-ng-click="toggleMenu()"></a>
+  <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen, 'is-hidden': menuOpen !== null && !menuOpen}">
+    {% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'nav-toggle-icon', 'click': 'toggleMenu()'} %}
+    <h2 class="nav--header">Navigation</h2>
+    <div class="nav--item-wrapper">
+      <a href="#" class="nav--item">Ta' Quizzen!</a>
+      <a href="#" class="nav--item">Se videoerne</a>
+      <a href="#" class="nav--item">Musikvideo: "Kom med mig"</a>
+    </div>
+    <div class="nav--item-wrapper">
+      <a href="#" class="nav--item">For lærerne</a>
+      <a href="#" class="nav--sub-item">Digital parathed (1 lektion)</a>
+      <a href="#" class="nav--sub-item">Sidste omgang (2 lektioner)</a>
+      <a href="#" class="nav--sub-item">#FarvelForvaltLingo (4 lektioner)</a>
+      <a href="#" class="nav--item">Om projektet</a>
+      <a href="#" class="nav--item">Digamp.dk - Demomiljø</a>
+    </div>
+  </nav>
 
-    <header class="header" role="banner">
-        <div class="header--inner">
-            <a href="{{ path('digitalabc_main_default_index') }}" title="Digital ABC" class="header--logo">
-                {% include 'DigitalABCMainBundle:Default:Includes/svg/logo.html.twig' with {'symbol': 'logo-symbol', 'text': 'logo-text'} %}
-            </a>
-            {% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon.html.twig' with {'class': 'nav-toggle-icon', 'click': 'toggleMenu()'} %}
-        </div>
-    </header>
+  <header class="header" role="banner">
+    <div class="header--inner">
+      <a href="{{ path('digitalabc_main_default_index') }}" title="Digital ABC" class="header--logo">
+        {% include 'DigitalABCMainBundle:Default:Includes/svg/logo.html.twig' with {'symbol': 'logo-symbol', 'text': 'logo-text'} %}
+      </a>
+      {% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon.html.twig' with {'class': 'nav-toggle-icon', 'click': 'toggleMenu()'} %}
+    </div>
+  </header>
 {% endblock %}

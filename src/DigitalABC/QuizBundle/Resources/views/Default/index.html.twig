@@ -1,17 +1,19 @@
-{%  extends '::base.html.twig' %}
+{% extends 'DigitalABCMainBundle:Default:layout.html.twig' %}
 
 {% block body %}
-<section class="layout--quiz">
+  {{ parent() }}
+  <section class="layout--quiz">
     <div class="layout--quiz--inner">
-        <div data-ng-view="" class="view-frame">
-        </div>
+      <div data-ng-view="" class="view-frame">
+      </div>
     </div>
-</section>
+  </section>
 {% endblock %}
 
-{% block javascripts %}
-<script src="/js/quiz/directives.js"></script>
-<script src="/js/quiz/routing.js"></script>
-<script src="/js/quiz/factory.js"></script>
-<script src="/js/quiz/controllers.js"></script>
+{% block scripts %}
+  {{ parent() }}
+  <script src="/js/quiz/directives.js"></script>
+  <script src="/js/quiz/routing.js"></script>
+  <script src="/js/quiz/factory.js"></script>
+  <script src="/js/quiz/controllers.js"></script>
 {% endblock %}
