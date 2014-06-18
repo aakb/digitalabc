@@ -1,6 +1,6 @@
 digital_abc_quiz:
     resource: "@DigitalABCQuizBundle/Resources/config/routing.yml"
-    prefix:   /quiz/
+    prefix:   /
 
 digital_abc_main:
     resource: "@DigitalABCMainBundle/Resources/config/routing.yml"
