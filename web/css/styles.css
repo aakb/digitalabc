@@ -1819,7 +1819,7 @@ body {
 @media only screen and (max-height: 800px) {
   /* line 57, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline {
-    font-size: 4em;
+    font-size: 5em;
   }
 }
 /* line 73, ../sass/modules/_quiz-header.scss */
@@ -1833,24 +1833,36 @@ body {
     font-size: 2.5em;
   }
 }
-/* line 83, ../sass/modules/_quiz-header.scss */
+@media only screen and (max-height: 800px) {
+  /* line 73, ../sass/modules/_quiz-header.scss */
+  .quiz-header--text {
+    font-size: 2em;
+  }
+}
+/* line 87, ../sass/modules/_quiz-header.scss */
 .quiz-header--button {
-  margin-bottom: 1.5em;
+  margin-bottom: 2.5em;
   font-size: 3.5em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 83, ../sass/modules/_quiz-header.scss */
+  /* line 87, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
     font-size: 4.5em;
   }
 }
-@media only screen and (max-height: 800px) {
-  /* line 83, ../sass/modules/_quiz-header.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 87, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
-    font-size: 3.5em;
+    margin-bottom: 1.25em;
   }
 }
-/* line 99, ../sass/modules/_quiz-header.scss */
+@media only screen and (max-height: 800px) {
+  /* line 87, ../sass/modules/_quiz-header.scss */
+  .quiz-header--button {
+    font-size: 1.5em;
+  }
+}
+/* line 107, ../sass/modules/_quiz-header.scss */
 .quiz-header--scroll {
   display: block;
   margin-right: auto;
@@ -1858,13 +1870,25 @@ body {
   max-width: 3.5em;
   cursor: pointer;
 }
-/* line 107, ../sass/modules/_quiz-header.scss */
+/* line 115, ../sass/modules/_quiz-header.scss */
 .quiz-header--scroll .scroll-text {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
+@media only screen and (min-width: 481px) {
+  /* line 107, ../sass/modules/_quiz-header.scss */
+  .quiz-header--scroll {
+    max-width: 2.25em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 107, ../sass/modules/_quiz-header.scss */
+  .quiz-header--scroll {
+    max-width: 3.25em;
+  }
+}
 
-/* line 116, ../sass/modules/_quiz-header.scss */
+/* line 132, ../sass/modules/_quiz-header.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1873,7 +1897,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 124, ../sass/modules/_quiz-header.scss */
+/* line 140, ../sass/modules/_quiz-header.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;

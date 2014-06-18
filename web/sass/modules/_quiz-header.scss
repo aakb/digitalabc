@@ -65,7 +65,7 @@
     }
 
     @include breakpoint(false, $breakpoint-height) {
-      font-size: 4em;
+      font-size: 5em;
     }
   }
 
@@ -77,13 +77,17 @@
     @include breakpoint($breakpoint-lap) {
       font-size: 2.5em;
     }
+
+    @include breakpoint(false, $breakpoint-height) {
+      font-size: 2em;
+    }
   }
 
 
   &--button {
     @extend %button-transparent;
 
-    margin-bottom: 1.5em;
+    margin-bottom: 2.5em;
 
     font-size: 3.5em;
 
@@ -91,8 +95,12 @@
       font-size: 4.5em;
     }
 
+    @include breakpoint($breakpoint-desk) {
+      margin-bottom: 1.25em;
+    }
+
     @include breakpoint(false, $breakpoint-height) {
-      font-size: 3.5em;
+      font-size: 1.5em;
     }
   }
 
@@ -106,6 +114,14 @@
 
     .scroll-text {
       @include opacity(.5);
+    }
+
+    @include breakpoint($breakpoint-lap) {
+      max-width: 2.25em;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      max-width: 3.25em;
     }
   }
 }
