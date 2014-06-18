@@ -44,8 +44,12 @@
 
     font-size: 2em;
 
-    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+    @include breakpoint($breakpoint-lap) {
       font-size: 4em;
+    }
+
+    @include breakpoint(false, $breakpoint-height) {
+      font-size: 2em;
     }
   }
 
