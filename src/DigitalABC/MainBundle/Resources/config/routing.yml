@@ -1,3 +1,3 @@
-digital_abc_main_homepage:
-    pattern:  /
-    defaults: { _controller: DigitalABCMainBundle:Default:index }
+controllers:
+  resource: "@DigitalABCMainBundle/Controller"
+  type: annotation
