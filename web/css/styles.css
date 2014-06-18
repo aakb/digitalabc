@@ -1423,22 +1423,22 @@ body {
 .quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover {
   background-color: rgba(0, 0, 0, 0.65);
 }
-/* line 27, ../sass/base/_mixins.scss */
+/* line 33, ../sass/base/_mixins.scss */
 .quiz--start-button:link, .quiz--button:link, .quiz-header--button:link {
   color: white;
   text-decoration: none;
 }
-/* line 32, ../sass/base/_mixins.scss */
+/* line 38, ../sass/base/_mixins.scss */
 .quiz--start-button:visited, .quiz--button:visited, .quiz-header--button:visited {
   color: white;
   text-decoration: none;
 }
-/* line 37, ../sass/base/_mixins.scss */
+/* line 43, ../sass/base/_mixins.scss */
 .quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover {
   color: white;
   text-decoration: none;
 }
-/* line 42, ../sass/base/_mixins.scss */
+/* line 48, ../sass/base/_mixins.scss */
 .quiz--start-button:focus, .quiz--button:focus, .quiz-header--button:focus {
   color: white;
   text-decoration: none;
@@ -1798,41 +1798,59 @@ body {
     font-size: 4em;
   }
 }
-/* line 53, ../sass/modules/_quiz-header.scss */
+@media only screen and (max-height: 800px) {
+  /* line 42, ../sass/modules/_quiz-header.scss */
+  .quiz-header--question {
+    font-size: 2em;
+  }
+}
+/* line 57, ../sass/modules/_quiz-header.scss */
 .quiz-header--punchline {
   margin-bottom: .25em;
   font-size: 5em;
   line-height: 1em;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 53, ../sass/modules/_quiz-header.scss */
+  /* line 57, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline {
     font-size: 10em;
   }
 }
-/* line 65, ../sass/modules/_quiz-header.scss */
+@media only screen and (max-height: 800px) {
+  /* line 57, ../sass/modules/_quiz-header.scss */
+  .quiz-header--punchline {
+    font-size: 4em;
+  }
+}
+/* line 73, ../sass/modules/_quiz-header.scss */
 .quiz-header--text {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 1em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 65, ../sass/modules/_quiz-header.scss */
+  /* line 73, ../sass/modules/_quiz-header.scss */
   .quiz-header--text {
     font-size: 2.5em;
   }
 }
-/* line 75, ../sass/modules/_quiz-header.scss */
+/* line 83, ../sass/modules/_quiz-header.scss */
 .quiz-header--button {
   margin-bottom: 1.5em;
   font-size: 3.5em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 75, ../sass/modules/_quiz-header.scss */
+  /* line 83, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
     font-size: 4.5em;
   }
 }
-/* line 87, ../sass/modules/_quiz-header.scss */
+@media only screen and (max-height: 800px) {
+  /* line 83, ../sass/modules/_quiz-header.scss */
+  .quiz-header--button {
+    font-size: 3.5em;
+  }
+}
+/* line 99, ../sass/modules/_quiz-header.scss */
 .quiz-header--scroll {
   display: block;
   margin-right: auto;
@@ -1840,13 +1858,13 @@ body {
   max-width: 3.5em;
   cursor: pointer;
 }
-/* line 95, ../sass/modules/_quiz-header.scss */
+/* line 107, ../sass/modules/_quiz-header.scss */
 .quiz-header--scroll .scroll-text {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 
-/* line 104, ../sass/modules/_quiz-header.scss */
+/* line 116, ../sass/modules/_quiz-header.scss */
 .layout--quiz {
   background: url("/images/quiz-bg.jpg") no-repeat;
   letter-spacing: .08em;
@@ -1855,7 +1873,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 112, ../sass/modules/_quiz-header.scss */
+/* line 124, ../sass/modules/_quiz-header.scss */
 .layout--quiz--inner {
   position: relative;
   top: 50%;
