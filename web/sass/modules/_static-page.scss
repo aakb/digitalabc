@@ -6,8 +6,8 @@
 
 
 .static-page {
-  &--inner {
-
+  p {
+    margin-bottom: 1em;
   }
 
   &--header {
@@ -21,7 +21,9 @@
     @include background-size(cover);
   }
 
-  &--title {
+
+  /* Headings styling */
+  &--heading {
     position: absolute;
     bottom: 0;
 
@@ -29,11 +31,23 @@
     width: 100%;
 
     color: $white;
-    font-family: $font-family-primary;
     font-size: 10em;
     line-height: .7em;
     text-align: center;
   }
+
+  &--sub-heading {
+    margin-bottom: 0;
+
+    font-size: 3em;
+  }
+
+  &--paragraph-heading {
+    font-size: 2em;
+  }
+
+
+  /* Content */
 
   &--content {
     margin-right: auto;
@@ -41,16 +55,35 @@
     max-width: $layout-max-width;
   }
 
-  &--sub-title {
-    margin-bottom: 0;
-
-    font-family: $font-family-primary;
-    font-size: 3em;
-  }
-
   &--lead {
     @extend %strong;
 
     margin-bottom: 3em;
+  }
+
+  &--summary {
+    margin-bottom: 3em;
+  }
+
+  &--section {
+    margin-bottom: 3em;
+  }
+
+
+  /* List */
+  &--list {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 1em;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &--list-item {
+    border-left: 8px solid $gray-lighter;
+    margin-bottom: 2em;
+    padding-left: 1.25em;
   }
 }
