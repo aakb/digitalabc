@@ -33,5 +33,5 @@ abcApp.controller('FrontpageController', function($scope, $location, $anchorScro
 // Static page controller.
 abcApp.controller('StaticPageController', function($scope, $location, $anchorScroll) {
   // Change layout class.
-  $scope.$emit('changeLayoutClassSuffix', 'layout');
+  $scope.$emit('changeLayoutClassSuffix', 'static-page');
 });

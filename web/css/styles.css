@@ -910,9 +910,9 @@ html {
 body {
   overflow-y: auto;
   height: 100%;
-  background-color: #4d4d4d;
+  background-color: white;
   color: #4d4d4d;
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 26, ../sass/base/_base.scss */
@@ -924,7 +924,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: .5em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   /* This fixes huge spaces when a heading wraps onto two lines */
   line-height: 1.2;
@@ -933,43 +933,41 @@ h6 {
 }
 
 /* line 46, ../sass/base/_base.scss */
-strong {
-  font-weight: bold;
+strong,
+.static-page--lead {
+  font-family: "permianseriftypefacebold";
+  font-weight: normal;
 }
 
-/* line 51, ../sass/base/_base.scss */
+/* line 53, ../sass/base/_base.scss */
 em {
   font-style: italic;
-}
-/* line 54, ../sass/base/_base.scss */
-em strong {
-  font-weight: bold;
 }
 
 /* Links
    ================================================================================================================== */
-/* line 65, ../sass/base/_base.scss */
+/* line 64, ../sass/base/_base.scss */
 a:link {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 70, ../sass/base/_base.scss */
+/* line 69, ../sass/base/_base.scss */
 a:visited {
   color: #09a8d7;
 }
-/* line 74, ../sass/base/_base.scss */
+/* line 73, ../sass/base/_base.scss */
 a:hover {
   color: #0895be;
   text-decoration: none;
 }
-/* line 79, ../sass/base/_base.scss */
+/* line 78, ../sass/base/_base.scss */
 a:focus {
   color: #0895be;
 }
 
 /* Paragraph
    ================================================================================================================== */
-/* line 88, ../sass/base/_base.scss */
+/* line 87, ../sass/base/_base.scss */
 p {
   margin-top: 0;
   margin-bottom: 0;
@@ -977,7 +975,7 @@ p {
 
 /* Image
    ================================================================================================================== */
-/* line 97, ../sass/base/_base.scss */
+/* line 96, ../sass/base/_base.scss */
 img {
   display: inline;
   height: auto;
@@ -997,7 +995,7 @@ img {
 /* line 14, ../sass/base/_forms.scss */
 input,
 textarea {
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 19, ../sass/base/_forms.scss */
@@ -1519,7 +1517,7 @@ body {
   margin-bottom: .35em;
   padding-bottom: .25em;
   color: #b3b3b3;
-  font-family: "bebas_neueregular";
+  font-family: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 3em;
   line-height: 1em;
 }
@@ -1532,7 +1530,7 @@ body {
 /* line 65, ../sass/modules/_navigation.scss */
 .nav--item, .nav--sub-item {
   display: block;
-  font-family: "bebas_neueregular";
+  font-family: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.75em;
 }
 /* line 72, ../sass/modules/_navigation.scss */
@@ -1665,7 +1663,7 @@ body {
 .quiz--progress {
   color: rgba(255, 255, 255, 0.5);
   font-size: 3em;
-  font-family: "bebas_neueregular";
+  font-family: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 68, ../sass/modules/_quiz.scss */
 .quiz--question {
@@ -1816,7 +1814,7 @@ body {
 /* line 34, ../sass/modules/_quiz-header.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
-  font-family: "bebas_neueregular";
+  font-family: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 42, ../sass/modules/_quiz-header.scss */
 .quiz-header--question {
@@ -1939,4 +1937,49 @@ body {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+/**
+ *
+ * Static page.
+ *
+ */
+/* line 13, ../sass/modules/_static-page.scss */
+.static-page--header {
+  position: relative;
+  margin-bottom: 4em;
+  min-height: 500px;
+  background: url("/images/backgrounds/table-laptop-notebook.png") center no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 24, ../sass/modules/_static-page.scss */
+.static-page--title {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+  color: white;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10em;
+  line-height: .7em;
+  text-align: center;
+}
+/* line 38, ../sass/modules/_static-page.scss */
+.static-page--content {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75em;
+}
+/* line 44, ../sass/modules/_static-page.scss */
+.static-page--sub-title {
+  margin-bottom: 0;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 3em;
+}
+/* line 51, ../sass/modules/_static-page.scss */
+.static-page--lead {
+  margin-bottom: 3em;
 }

@@ -17,9 +17,9 @@ body {
 
   height: 100%;
 
-  background-color: $gray-darkest;
+  background-color: $white;
   color: $gray-darkest;
-  font: $font;
+  font: $font-secondary;
 }
 
 
@@ -32,7 +32,7 @@ h6 {
   margin-top: 0;
   margin-bottom: .5em;
 
-  font-family: $font-family;
+  font-family: $font-family-primary;
   font-weight: normal;
 
   /* This fixes huge spaces when a heading wraps onto two lines */
@@ -43,17 +43,16 @@ h6 {
 }
 
 
-strong {
-  font-weight: bold;
+strong,
+%strong {
+  font-family: $font-secondary-bold;
+  font-weight: normal;
 }
 
 
-em {
+em,
+%em {
   font-style: italic;
-
-  strong {
-    font-weight: bold;
-  }
 }
 
 

@@ -55,9 +55,13 @@ $text-color-dark:  $gray-darker;
 /* Typograhy
    ================================================================================================================== */
 
-$font-primary:     'bebas_neueregular';
-$font-family:      "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font:             1em/1.5 $font-family;
+$font-primary:          'bebas_neueregular';
+$font-secondary:        'permianseriftypefaceregular';
+$font-secondary-bold:   'permianseriftypefacebold';
+$font-family-primary:   'bebas_neueregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-secondary: $font-secondary, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-primary:          1em/1.5 $font-family-primary;
+$font-secondary:        1em/1.5 $font-family-secondary;
 
 
 

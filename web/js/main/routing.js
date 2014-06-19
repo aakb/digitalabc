@@ -1,9 +1,9 @@
 abcApp.config(function($routeProvider) {$routeProvider
-  .when('/for-larerne', {
+  .when('/for-laererne', {
     controller: 'StaticPageController',
     templateUrl: '/partials/for-laererne/index.html'
   })
-  .when('/for-larerne/digital-parathed', {
+  .when('/for-laererne/digital-parathed', {
     controller: 'StaticPageController',
     templateUrl: '/partials/for-laererne/digital-parathed/index.html'
   })

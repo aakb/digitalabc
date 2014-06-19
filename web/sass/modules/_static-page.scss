@@ -1,0 +1,56 @@
+/**
+ *
+ * Static page.
+ *
+ */
+
+
+.static-page {
+  &--inner {
+
+  }
+
+  &--header {
+    position: relative;
+
+    margin-bottom: 4em;
+    min-height: 500px;
+
+    background: url('/images/backgrounds/table-laptop-notebook.png') center no-repeat;
+
+    @include background-size(cover);
+  }
+
+  &--title {
+    position: absolute;
+    bottom: 0;
+
+    margin-bottom: 0;
+    width: 100%;
+
+    color: $white;
+    font-family: $font-family-primary;
+    font-size: 10em;
+    line-height: .7em;
+    text-align: center;
+  }
+
+  &--content {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $layout-max-width;
+  }
+
+  &--sub-title {
+    margin-bottom: 0;
+
+    font-family: $font-family-primary;
+    font-size: 3em;
+  }
+
+  &--lead {
+    @extend %strong;
+
+    margin-bottom: 3em;
+  }
+}
