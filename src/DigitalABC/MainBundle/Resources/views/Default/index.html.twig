@@ -1,14 +1,8 @@
-{%  extends 'DigitalABCMainBundle:Default:layout.html.twig' %}
+{% extends 'DigitalABCMainBundle:Default:layout.html.twig' %}
 
 {% block body %}
-    {{ parent() }}
-
-    <div data-ng-view="" class="layout-wrapper">
-    </div>
-{% endblock %}
-
-{% block scripts %}
-    {{ parent() }}
-    <!-- Import routing -->
-    <script src="{{ asset('js/main/routing.js') }}"></script>
+  {{ parent() }}
+  <div class="<[layoutClassSuffix]>">
+    <div data-ng-view="" class="<[layoutClassSuffix]>--inner"></div>
+  </div>
 {% endblock %}

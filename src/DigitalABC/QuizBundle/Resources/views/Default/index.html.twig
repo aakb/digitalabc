@@ -2,18 +2,13 @@
 
 {% block body %}
   {{ parent() }}
-  <section class="layout--quiz">
-    <div class="layout--quiz--inner">
-      <div data-ng-view="" class="view-frame">
-      </div>
-    </div>
-  </section>
+  <div data-ng-view="" ng-class="layout" class="view-frame">
+  </div>
 {% endblock %}
 
 {% block scripts %}
   {{ parent() }}
   <script src="/js/quiz/directives.js"></script>
-  <script src="/js/quiz/routing.js"></script>
   <script src="/js/quiz/factory.js"></script>
   <script src="/js/quiz/controllers.js"></script>
 {% endblock %}

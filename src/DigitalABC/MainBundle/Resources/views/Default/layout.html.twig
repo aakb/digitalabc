@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="{{ asset('css/fonts/bebas/bebas.css') }}">
 {% endblock %}
 
-{% block body_attr %}data-ng-class="{'is-locked': menuOpen !== null && menuOpen}"{% endblock %}
+{% block body_attr %}data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" data-ng-controller="HeaderController"{% endblock %}
 
 
 {% block body %}
@@ -33,10 +33,10 @@
       <a href="#" class="nav--item">Musikvideo: "Kom med mig"</a>
     </div>
     <div class="nav--item-wrapper">
-      <a href="/for-larerne" class="nav--item">For lærerne</a>
-      <a href="/for-larerne/digital-parathed" class="nav--sub-item">Digital parathed (1 lektion)</a>
-      <a href="/for-larerne/sidste-omgang" class="nav--sub-item">Sidste omgang (2 lektioner)</a>
-      <a href="/for-larerne/farvel-forvalt-lingo" class="nav--sub-item">#FarvelForvaltLingo (4 lektioner)</a>
+      <a href="/#/for-larerne" class="nav--item">For lærerne</a>
+      <a href="/#/for-larerne/digital-parathed" class="nav--sub-item">Digital parathed (1 lektion)</a>
+      <a href="/#/for-larerne/sidste-omgang" class="nav--sub-item">Sidste omgang (2 lektioner)</a>
+      <a href="/#/for-larerne/farvel-forvalt-lingo" class="nav--sub-item">#FarvelForvaltLingo (4 lektioner)</a>
       <a href="#" class="nav--item">Om projektet</a>
       <a href="#" class="nav--item">Digamp.dk - Demomiljø</a>
     </div>
@@ -62,4 +62,8 @@
     <script src="{{ asset('js/libraries/angular-touch-1.2.16.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/main/controllers.js') }}"></script>
+    <script src="{{ asset('js/main/routing.js') }}"></script>
+    <script src="{{ asset('js/quiz/directives.js') }}"></script>
+    <script src="{{ asset('js/quiz/factory.js') }}"></script>
+    <script src="{{ asset('js/quiz/controllers.js') }}"></script>
 {% endblock %}

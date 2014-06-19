@@ -229,6 +229,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/partials\/for-laererne\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/for-laererne\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/partials\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -238,29 +247,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/partials\/quiz-finish.html": {
+	"\/partials\/quiz\/quiz-finish.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/partials\/quiz-finish.html",
+		"inputAbbreviatedPath": "\/partials\/quiz\/quiz-finish.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/partials\/quiz-start.html": {
+	"\/partials\/quiz\/quiz-start.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/partials\/quiz-start.html",
+		"inputAbbreviatedPath": "\/partials\/quiz\/quiz-start.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/partials\/quiz.html": {
+	"\/partials\/quiz\/quiz.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/partials\/quiz.html",
+		"inputAbbreviatedPath": "\/partials\/quiz\/quiz.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

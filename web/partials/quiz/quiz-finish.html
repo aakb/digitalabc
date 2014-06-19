@@ -1,8 +1,13 @@
-<h2 class="quiz--result">Du fik: <[result]> point</h2>
-<h2 class="quiz--result" data-ng-show="challengerResult !== null">Din modstander fik: <[challengerResult]> point</h2>
-<h3 class="quiz--text">Del dit resultat, igennem dette link:</h3>
-<h3 class="quiz--text"><[link]></h3>
-<h3 class="quiz--text">Eller </h3>
-<input type="button" ng-click="shareOnFacebook()" value="Del på Facebook!">
+<section class="layout--quiz">
+  <div class="layout--quiz--inner">
+    <h2 class="quiz--result">Du fik: <[result]> point</h2>
+    <h2 class="quiz--result" data-ng-show="challengerResult !== null">Din modstander fik: <[challengerResult]> point</h2>
+    <h3 class="quiz--text">Del dit resultat, igennem dette link:</h3>
+    <h3 class="quiz--text"><[link]></h3>
+    <h3 class="quiz--text">Eller </h3>
+    <input type="button" ng-click="shareOnFacebook()" value="Del på Facebook!">
 
-<h3 class="quiz--text" data-ng-show="facebookStatusText !== ''"><[facebookStatusText]></h3>
+    <h3 class="quiz--text" data-ng-show="facebookStatusText !== ''"><[facebookStatusText]></h3>
+  </div>
+</section>
+  

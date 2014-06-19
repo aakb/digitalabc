@@ -83,7 +83,20 @@ body {
 
 /* Layout */
 
-.layout-wrapper {
+%layout-inner {
+  position: relative;
+  top: 50%;
+
+  padding-top: 6em;
+
+  @include translateY(-50%);
+}
+
+.layout {
   height: 100%;
   width: 100%;
+
+  &--inner {
+    height: 100%;
+  }
 }

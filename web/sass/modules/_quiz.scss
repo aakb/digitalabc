@@ -21,6 +21,16 @@
  * ========================================================================== */
 
 .quiz {
+  @extend %layout--set-background--selector;
+
+  background: url('/images/quiz-bg.jpg') no-repeat;
+  letter-spacing: .08em;
+
+  @include background-size(cover);
+
+  &--inner {
+    @extend %layout-inner;
+  }
 
   &--start-header {
     @extend %quiz--set-font--selector;
