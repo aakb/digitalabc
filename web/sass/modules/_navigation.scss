@@ -51,7 +51,6 @@
     padding-bottom: .25em;
 
     color: $gray-light;
-    font-family: $font-primary;
     font-size: 3em;
     line-height: 1em;
   }
@@ -66,7 +65,7 @@
   &--sub-item {
     display: block;
 
-    font-family: $font-primary;
+    font-family: $font-family-primary;
     line-height: 1.75em;
 
     &:link {
