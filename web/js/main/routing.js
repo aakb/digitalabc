@@ -3,7 +3,7 @@ abcApp.config(function($routeProvider) {$routeProvider
     controller: 'StaticPageController',
     templateUrl: '/partials/for-laererne/index.html'
   })
-  .when('/for-laererne/digital-parathed', {
+  .when('/for-laererne/sidste-omgang', {
     controller: 'StaticPageController',
     templateUrl: '/partials/for-laererne/sidste-omgang/index.html'
   })
