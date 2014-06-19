@@ -5,6 +5,10 @@ abcApp.config(function($routeProvider) {$routeProvider
   })
   .when('/for-laererne/digital-parathed', {
     controller: 'StaticPageController',
+    templateUrl: '/partials/for-laererne/sidste-omgang/index.html'
+  })
+  .when('/for-laererne/digital-parathed', {
+    controller: 'StaticPageController',
     templateUrl: '/partials/for-laererne/digital-parathed/index.html'
   })
   .when('/quiz', {
