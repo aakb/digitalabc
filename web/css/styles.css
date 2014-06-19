@@ -1389,6 +1389,13 @@ body {
   }
 }
 
+/* Layout */
+/* line 86, ../sass/layout/_layout.scss */
+.layout-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
 /**
  *
  * Buttons.

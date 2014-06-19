@@ -1,23 +1,23 @@
 abcApp.config(function($routeProvider) {$routeProvider
     .when('/done/:challengeid', {
         controller: 'ShareController',
-        templateUrl: '/partials/quiz-finish.html'
+        templateUrl: '/partials/quiz/quiz-finish.html'
     })
     .when('/done', {
         controller: 'ShareController',
-        templateUrl: '/partials/quiz-finish.html'
+        templateUrl: '/partials/quiz/quiz-finish.html'
     })
     .when('/:step/:challengeid', {
         controller: 'QuizController',
-        templateUrl: '/partials/quiz.html'
+        templateUrl: '/partials/quiz/quiz.html'
     })
     .when('/:step', {
         controller: 'QuizController',
-        templateUrl: '/partials/quiz.html'
+        templateUrl: '/partials/quiz/quiz.html'
     })
     .when('/', {
         controller: 'StartController',
-        templateUrl: '/partials/quiz-start.html'
+        templateUrl: '/partials/quiz/quiz-start.html'
     })
-    .otherwise({redirectTo: '/'});
+    .otherwise({redirectTo: '/quiz/index.html'});
 });
