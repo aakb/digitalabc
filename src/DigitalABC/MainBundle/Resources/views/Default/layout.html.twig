@@ -27,7 +27,7 @@
 {% block body %}
   <a class="nav-overlay" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}" data-ng-click="toggleMenu()"></a>
   <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen, 'is-hidden': menuOpen !== null && !menuOpen}">
-    {% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'nav-toggle-icon', 'click': 'toggleMenu()'} %}
+    <div class="nav-toggle-icon-wrapper">{% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'nav-toggle-icon', 'click': 'toggleMenu()'} %}</div>
     <h2 class="nav--header">Navigation</h2>
     <div class="nav--item-wrapper">
       <a href="#" class="nav--item">Ta' Quizzen!</a>
@@ -49,7 +49,7 @@
       <a href="{{ path('digitalabc_main_default_index') }}" title="Digital ABC" class="header--logo">
         {% include 'DigitalABCMainBundle:Default:Includes/svg/logo.html.twig' with {'symbol': 'logo-symbol', 'text': 'logo-text'} %}
       </a>
-      {% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon.html.twig' with {'class': 'nav-toggle-icon', 'click': 'toggleMenu()'} %}
+      <div class="nav-toggle-icon-wrapper">{% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon.html.twig' with {'class': 'nav-toggle-icon', 'click': 'toggleMenu()'} %}</div>
     </div>
   </header>
 {% endblock %}

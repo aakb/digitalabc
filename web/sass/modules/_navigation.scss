@@ -134,6 +134,11 @@
 }
 
 
+
+/* Use a wrapper class to set width and height because Safari switches the class (svg.[object.SVGAnimatedString]) */
+
+
+
 /* Toggle icon use for opening and closing the menu */
 
 .nav-toggle-icon {

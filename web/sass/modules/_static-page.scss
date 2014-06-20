@@ -23,7 +23,7 @@
     @include background-size(cover);
 
     @include breakpoint($breakpoint-desk) {
-      min-height: 20em;
+      min-height: 16em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
@@ -35,7 +35,7 @@
   /* Headings styling */
   &--heading {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: -50%;
 
     display: none;
@@ -51,10 +51,10 @@
     @include breakpoint($breakpoint-desk) {
       display: block;
 
-      font-size: 8em;
+      font-size: 6em;
     }
 
-    @include breakpoint($layout-max-width) {
+    @include breakpoint($breakpoint-bigscreen) {
       font-size: 10em;
     }
   }
@@ -97,7 +97,7 @@
     }
 
     @include breakpoint($breakpoint-desk) {
-      padding-top: 24em;
+      padding-top: 20em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
