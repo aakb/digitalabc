@@ -73,7 +73,7 @@ body {
 
     @include background-size(contain);
 
-    @include breakpoint($breakpoint-lap) {
+    @include breakpoint($breakpoint-desk) {
       top: 4em;
       left: 6em;
     }

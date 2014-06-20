@@ -11,14 +11,24 @@
   }
 
   &--header {
-    position: relative;
+    position: fixed;
+    top: 0;
 
     margin-bottom: 4em;
-    min-height: 500px;
+    min-height: 8.5em;
+    width: 100%;
 
     background: url('/images/backgrounds/table-laptop-notebook.png') center no-repeat;
 
     @include background-size(cover);
+
+    @include breakpoint($breakpoint-desk) {
+      min-height: 20em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      min-height: 30em;
+    }
   }
 
 
@@ -26,24 +36,45 @@
   &--heading {
     position: absolute;
     bottom: 0;
+    left: -50%;
 
+    display: none;
+    height: auto;
     margin-bottom: 0;
-    width: 100%;
+    width: 200%;
 
     color: $white;
-    font-size: 10em;
+    font-size: 4em;
     line-height: .7em;
     text-align: center;
+
+    @include breakpoint($breakpoint-desk) {
+      display: block;
+
+      font-size: 8em;
+    }
+
+    @include breakpoint($layout-max-width) {
+      font-size: 10em;
+    }
   }
 
   &--sub-heading {
     margin-bottom: 0;
 
-    font-size: 3em;
+    font-size: 2em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 3em;
+    }
   }
 
   &--paragraph-heading {
-    font-size: 2em;
+    font-size: 1.75em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 2em;
+    }
   }
 
 
@@ -53,6 +84,25 @@
     margin-right: auto;
     margin-left: auto;
     max-width: $layout-max-width;
+    padding-top: 10em;
+    padding-right: 2em;
+    padding-left: 2em;
+
+    font-size: 1.25em;
+
+    @include breakpoint($breakpoint-lap) {
+      padding-top: 11em;
+
+      font-size: 1em;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      padding-top: 24em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      padding-top: 34em;
+    }
   }
 
   &--lead {

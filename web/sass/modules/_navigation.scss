@@ -147,7 +147,7 @@
 
   cursor: pointer;
 
-  @include breakpoint($breakpoint-lap) {
+  @include breakpoint($breakpoint-desk) {
     top: 4em;
     right: 6em;
   }

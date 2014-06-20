@@ -1379,7 +1379,7 @@ body {
 .header--logo .logo-symbol {
   fill: white;
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 1024px) {
   /* line 60, ../sass/layout/_layout.scss */
   .header--logo {
     top: 4em;
@@ -1604,7 +1604,7 @@ body {
   width: 5em;
   cursor: pointer;
 }
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 1024px) {
   /* line 139, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
@@ -1955,54 +1955,119 @@ body {
 }
 /* line 13, ../sass/modules/_static-page.scss */
 .static-page--header {
-  position: relative;
+  position: fixed;
+  top: 0;
   margin-bottom: 4em;
-  min-height: 500px;
+  min-height: 8.5em;
+  width: 100%;
   background: url("/images/backgrounds/table-laptop-notebook.png") center no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 26, ../sass/modules/_static-page.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 13, ../sass/modules/_static-page.scss */
+  .static-page--header {
+    min-height: 20em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 13, ../sass/modules/_static-page.scss */
+  .static-page--header {
+    min-height: 30em;
+  }
+}
+/* line 36, ../sass/modules/_static-page.scss */
 .static-page--heading {
   position: absolute;
   bottom: 0;
+  left: -50%;
+  display: none;
+  height: auto;
   margin-bottom: 0;
-  width: 100%;
+  width: 200%;
   color: white;
-  font-size: 10em;
+  font-size: 4em;
   line-height: .7em;
   text-align: center;
 }
-/* line 39, ../sass/modules/_static-page.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 36, ../sass/modules/_static-page.scss */
+  .static-page--heading {
+    display: block;
+    font-size: 8em;
+  }
+}
+@media only screen and (min-width: 75em) {
+  /* line 36, ../sass/modules/_static-page.scss */
+  .static-page--heading {
+    font-size: 10em;
+  }
+}
+/* line 62, ../sass/modules/_static-page.scss */
 .static-page--sub-heading {
   margin-bottom: 0;
-  font-size: 3em;
-}
-/* line 45, ../sass/modules/_static-page.scss */
-.static-page--paragraph-heading {
   font-size: 2em;
 }
-/* line 52, ../sass/modules/_static-page.scss */
+@media only screen and (min-width: 481px) {
+  /* line 62, ../sass/modules/_static-page.scss */
+  .static-page--sub-heading {
+    font-size: 3em;
+  }
+}
+/* line 72, ../sass/modules/_static-page.scss */
+.static-page--paragraph-heading {
+  font-size: 1.75em;
+}
+@media only screen and (min-width: 481px) {
+  /* line 72, ../sass/modules/_static-page.scss */
+  .static-page--paragraph-heading {
+    font-size: 2em;
+  }
+}
+/* line 83, ../sass/modules/_static-page.scss */
 .static-page--content {
   margin-right: auto;
   margin-left: auto;
   max-width: 75em;
+  padding-top: 10em;
+  padding-right: 2em;
+  padding-left: 2em;
+  font-size: 1.25em;
 }
-/* line 58, ../sass/modules/_static-page.scss */
+@media only screen and (min-width: 481px) {
+  /* line 83, ../sass/modules/_static-page.scss */
+  .static-page--content {
+    padding-top: 11em;
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 83, ../sass/modules/_static-page.scss */
+  .static-page--content {
+    padding-top: 24em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 83, ../sass/modules/_static-page.scss */
+  .static-page--content {
+    padding-top: 34em;
+  }
+}
+/* line 108, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 64, ../sass/modules/_static-page.scss */
+/* line 114, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 68, ../sass/modules/_static-page.scss */
+/* line 118, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 74, ../sass/modules/_static-page.scss */
+/* line 124, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2011,7 +2076,7 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 84, ../sass/modules/_static-page.scss */
+/* line 134, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
