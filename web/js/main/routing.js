@@ -12,6 +12,10 @@ abcApp.config(function($routeProvider) {
       controller: 'StaticPageController',
       templateUrl: '/partials/for-laererne/digital-parathed/index.html'
     })
+    .when('/for-laererne/farvel-forvalt-lingo', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/for-laererne/farvel-forvalt-lingo/index.html'
+    })
     .when('/quiz', {
       controller: 'StartController',
       templateUrl: '/partials/quiz/index.html'
