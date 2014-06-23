@@ -2189,40 +2189,34 @@ body {
 }
 /* line 144, ../sass/modules/_static-page.scss */
 .static-page--content, .static-page--nav {
-  font-size: 1.25em;
+  font-size: 1.2em;
   text-align: left;
-}
-@media only screen and (min-width: 481px) {
-  /* line 144, ../sass/modules/_static-page.scss */
-  .static-page--content, .static-page--nav {
-    font-size: 1em;
-  }
 }
 @media only screen and (min-width: 1024px) {
   /* line 144, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
-    padding-top: 20em;
+    padding-top: 15em;
   }
 }
 @media only screen and (min-width: 1700px) {
   /* line 144, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
-    padding-top: 34em;
+    padding-top: 29em;
   }
 }
-/* line 164, ../sass/modules/_static-page.scss */
+/* line 160, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 170, ../sass/modules/_static-page.scss */
+/* line 166, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 174, ../sass/modules/_static-page.scss */
+/* line 170, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 180, ../sass/modules/_static-page.scss */
+/* line 176, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2231,13 +2225,13 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 190, ../sass/modules/_static-page.scss */
+/* line 186, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 196, ../sass/modules/_static-page.scss */
+/* line 192, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;

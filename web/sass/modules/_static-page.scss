@@ -145,19 +145,15 @@
   &--nav {
     @extend %grid__item;
 
-    font-size: 1.25em;
+    font-size: 1.2em;
     text-align: left;
 
-    @include breakpoint($breakpoint-lap) {
-      font-size: 1em;
-    }
-
     @include breakpoint($breakpoint-desk) {
-      padding-top: 20em;
+      padding-top: 15em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
-      padding-top: 34em;
+      padding-top: 29em;
     }
   }
 
