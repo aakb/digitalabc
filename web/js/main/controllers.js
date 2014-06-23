@@ -23,8 +23,8 @@ abcApp.controller('HeaderController', function($scope, $location, $anchorScroll)
 
 // Frontpage controller.
 abcApp.controller('FrontpageController', function($scope, $location, $anchorScroll) {
-  // Set layout class.
-  $scope.layoutClassSuffix = 'layout';
+  // Change layout class.
+  $scope.$emit('changeLayoutClassSuffix', 'layout');
 
   // Make sure menu is closed.
   $scope.$emit('closeMenu');
