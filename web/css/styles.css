@@ -1953,15 +1953,16 @@ body {
  */
 /* line 8, ../sass/modules/_static-page.scss */
 .static-page {
+  padding-bottom: 3em;
   /* Headings styling */
   /* Content */
   /* List */
 }
-/* line 9, ../sass/modules/_static-page.scss */
+/* line 11, ../sass/modules/_static-page.scss */
 .static-page p {
   margin-bottom: 1em;
 }
-/* line 13, ../sass/modules/_static-page.scss */
+/* line 15, ../sass/modules/_static-page.scss */
 .static-page--header {
   position: fixed;
   top: 0;
@@ -1975,18 +1976,18 @@ body {
   background-size: cover;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 13, ../sass/modules/_static-page.scss */
+  /* line 15, ../sass/modules/_static-page.scss */
   .static-page--header {
     min-height: 16em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 13, ../sass/modules/_static-page.scss */
+  /* line 15, ../sass/modules/_static-page.scss */
   .static-page--header {
     min-height: 30em;
   }
 }
-/* line 36, ../sass/modules/_static-page.scss */
+/* line 38, ../sass/modules/_static-page.scss */
 .static-page--heading {
   position: absolute;
   bottom: -1px;
@@ -2001,40 +2002,40 @@ body {
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 36, ../sass/modules/_static-page.scss */
+  /* line 38, ../sass/modules/_static-page.scss */
   .static-page--heading {
     display: block;
     font-size: 6em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 36, ../sass/modules/_static-page.scss */
+  /* line 38, ../sass/modules/_static-page.scss */
   .static-page--heading {
     font-size: 10em;
   }
 }
-/* line 62, ../sass/modules/_static-page.scss */
+/* line 64, ../sass/modules/_static-page.scss */
 .static-page--sub-heading {
   margin-bottom: 0;
   font-size: 2em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 62, ../sass/modules/_static-page.scss */
+  /* line 64, ../sass/modules/_static-page.scss */
   .static-page--sub-heading {
     font-size: 3em;
   }
 }
-/* line 72, ../sass/modules/_static-page.scss */
+/* line 74, ../sass/modules/_static-page.scss */
 .static-page--paragraph-heading {
   font-size: 1.75em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 72, ../sass/modules/_static-page.scss */
+  /* line 74, ../sass/modules/_static-page.scss */
   .static-page--paragraph-heading {
     font-size: 2em;
   }
 }
-/* line 83, ../sass/modules/_static-page.scss */
+/* line 85, ../sass/modules/_static-page.scss */
 .static-page--content {
   margin-right: auto;
   margin-left: auto;
@@ -2045,37 +2046,37 @@ body {
   font-size: 1.25em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 83, ../sass/modules/_static-page.scss */
+  /* line 85, ../sass/modules/_static-page.scss */
   .static-page--content {
     padding-top: 11em;
     font-size: 1em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 83, ../sass/modules/_static-page.scss */
+  /* line 85, ../sass/modules/_static-page.scss */
   .static-page--content {
     padding-top: 20em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 83, ../sass/modules/_static-page.scss */
+  /* line 85, ../sass/modules/_static-page.scss */
   .static-page--content {
     padding-top: 34em;
   }
 }
-/* line 108, ../sass/modules/_static-page.scss */
+/* line 110, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 114, ../sass/modules/_static-page.scss */
+/* line 116, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 118, ../sass/modules/_static-page.scss */
+/* line 120, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 124, ../sass/modules/_static-page.scss */
+/* line 126, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2084,7 +2085,7 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 134, ../sass/modules/_static-page.scss */
+/* line 136, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
