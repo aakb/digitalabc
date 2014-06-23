@@ -131,6 +131,8 @@
     @extend %desk--two-fifths;
     @extend %bigscreen--two-fifths;
 
+    position: fixed;
+
     display: none;
 
     &-item-wrapper {

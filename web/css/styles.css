@@ -2130,14 +2130,15 @@ body {
 }
 /* line 130, ../sass/modules/_static-page.scss */
 .static-page--nav {
+  position: fixed;
   display: none;
 }
-/* line 136, ../sass/modules/_static-page.scss */
+/* line 138, ../sass/modules/_static-page.scss */
 .static-page--nav-item-wrapper {
   border-left: 8px solid #cccccc;
   padding-left: 2em;
 }
-/* line 141, ../sass/modules/_static-page.scss */
+/* line 143, ../sass/modules/_static-page.scss */
 .static-page--nav-item, .static-page--nav-sub-item {
   display: block;
   font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2162,11 +2163,11 @@ body {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 146, ../sass/modules/_static-page.scss */
+/* line 148, ../sass/modules/_static-page.scss */
 .static-page--nav-item {
   font-size: 2em;
 }
-/* line 150, ../sass/modules/_static-page.scss */
+/* line 152, ../sass/modules/_static-page.scss */
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
@@ -2195,19 +2196,19 @@ body {
     display: inline-block;
   }
 }
-/* line 159, ../sass/modules/_static-page.scss */
+/* line 161, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 165, ../sass/modules/_static-page.scss */
+/* line 167, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 169, ../sass/modules/_static-page.scss */
+/* line 171, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 175, ../sass/modules/_static-page.scss */
+/* line 177, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2216,13 +2217,13 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 185, ../sass/modules/_static-page.scss */
+/* line 187, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 191, ../sass/modules/_static-page.scss */
+/* line 193, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;
