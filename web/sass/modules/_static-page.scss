@@ -15,6 +15,7 @@
   &--header {
     position: fixed;
     top: 0;
+    z-index: 97;
 
     margin-bottom: 4em;
     min-height: 8.5em;
@@ -83,38 +84,12 @@
   /* Content and navigation */
 
   &--content-wrapper {
+    @extend %grid--rev;
+
     margin-right: auto;
     margin-left: auto;
     max-width: $layout-max-width;
   }
-
-  &--content,
-  &--nav {
-    @extend %grid__item;
-
-    margin-left: -4px;
-    padding-top: 10em;
-    padding-right: 2em;
-
-    font-size: 1.25em;
-
-    text-align: left;
-
-    @include breakpoint($breakpoint-lap) {
-      padding-top: 11em;
-
-      font-size: 1em;
-    }
-
-    @include breakpoint($breakpoint-desk) {
-      padding-top: 20em;
-    }
-
-    @include breakpoint($breakpoint-bigscreen) {
-      padding-top: 34em;
-    }
-  }
-
 
   /* Content */
   &--content {
@@ -131,13 +106,25 @@
     @extend %desk--two-fifths;
     @extend %bigscreen--two-fifths;
 
-    position: fixed;
+    z-index: 96;
 
-    display: none;
+    margin-left: -4px;
+    padding-top: 9em;
+    padding-right: 2em;
+    margin-bottom: 2em;
 
     &-item-wrapper {
-      border-left: 8px solid $gray-lighter;
-      padding-left: 2em;
+      border-bottom: 8px solid $gray-lighter;
+      padding-bottom: 2em;
+
+      @include breakpoint($breakpoint-desk) {
+        position: fixed;
+
+        border-bottom: 0;
+        padding-bottom: 0;
+        border-left: 8px solid $gray-lighter;
+        padding-left: 2em;
+      }
     }
 
     &-item,
@@ -152,9 +139,25 @@
     &-sub-item {
       @include nav-sub-item();
     }
+  }
+
+  &--content,
+  &--nav {
+    @extend %grid__item;
+
+    font-size: 1.25em;
+    text-align: left;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 1em;
+    }
 
     @include breakpoint($breakpoint-desk) {
-      display: inline-block;
+      padding-top: 20em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      padding-top: 34em;
     }
   }
 

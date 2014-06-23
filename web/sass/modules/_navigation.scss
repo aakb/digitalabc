@@ -5,65 +5,6 @@
  */
 
 
-/* Mixins */
-
-@mixin nav-base-item() {
-  display: block;
-
-  font-family: $font-family-primary;
-  line-height: 1.75em;
-
-  &:link {
-    color: $text-color-dark;
-    text-decoration: none;
-  }
-
-  &:visited {
-    color: darken($text-color-dark, 5%);
-  }
-
-  &:hover,
-  &:focus {
-    color: $link-color;
-    text-decoration: none;
-  }
-
-  &.is-active {
-    color: $link-color;
-    text-decoration: underline;
-  }
-}
-
-@mixin nav-item() {
-  font-size: 2em;
-}
-
-@mixin nav-sub-item() {
-  position: relative;
-
-  padding-left: 1em;
-
-  font-size: 1.5em;
-
-  &:before {
-    position: absolute;
-    top: .35em;
-    left: 0;
-
-    height: 1em;
-    width: 1em;
-
-    content: "";
-
-    @include svg-bg(arrow-icon, png, transparent, 0, no-repeat);
-    @include background-size(.65em);
-    @include opacity(.5);
-  }
-}
-
-
-/* Navigation */
-
 .nav {
   height: 100%;
   overflow-y: auto;

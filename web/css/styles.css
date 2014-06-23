@@ -177,6 +177,17 @@
  * Reversed grids allow you to structure your source in the opposite order to
  * how your rendered layout will appear. Extends `.grid`.
  */
+/* line 261, ../sass/base/_grid.scss */
+.static-page--content-wrapper {
+  direction: rtl;
+  text-align: left;
+}
+/* line 265, ../sass/base/_grid.scss */
+.static-page--content-wrapper > .static-page--content, .static-page--content-wrapper > .static-page--nav {
+  direction: ltr;
+  text-align: left;
+}
+
 /**
  * Gutterless grids have all the properties of regular grids, minus any spacing.
  * Extends `.grid`.
@@ -613,6 +624,7 @@
 /* Mixin for stripping default list styles */
 /* Mixin for stripping link styles*/
 /* Mixin for using svg images as background with fallback to png */
+/* Mixins for navigation */
 /**
  *
  * Normalize
@@ -1517,9 +1529,7 @@ body {
  * Navigation
  *
  */
-/* Mixins */
-/* Navigation */
-/* line 67, ../sass/modules/_navigation.scss */
+/* line 8, ../sass/modules/_navigation.scss */
 .nav {
   height: 100%;
   overflow-y: auto;
@@ -1543,24 +1553,24 @@ body {
   /* Elements */
 }
 @media only screen and (min-width: 481px) {
-  /* line 67, ../sass/modules/_navigation.scss */
+  /* line 8, ../sass/modules/_navigation.scss */
   .nav {
     width: 40em;
   }
 }
-/* line 95, ../sass/modules/_navigation.scss */
+/* line 36, ../sass/modules/_navigation.scss */
 .nav.is-visible {
   -moz-animation: toggle-nav-open 0.15s ease 1 forwards;
   -webkit-animation: toggle-nav-open 0.15s ease 1 forwards;
   animation: toggle-nav-open 0.15s ease 1 forwards;
 }
-/* line 99, ../sass/modules/_navigation.scss */
+/* line 40, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
   -moz-animation: toggle-nav-close 0.15s ease 1 forwards;
   -webkit-animation: toggle-nav-close 0.15s ease 1 forwards;
   animation: toggle-nav-close 0.15s ease 1 forwards;
 }
-/* line 106, ../sass/modules/_navigation.scss */
+/* line 47, ../sass/modules/_navigation.scss */
 .nav--header {
   border-bottom: 1px solid #cccccc;
   margin-right: 3em;
@@ -1570,48 +1580,48 @@ body {
   font-size: 3em;
   line-height: 1em;
 }
-/* line 117, ../sass/modules/_navigation.scss */
+/* line 58, ../sass/modules/_navigation.scss */
 .nav--item-wrapper {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
-/* line 123, ../sass/modules/_navigation.scss */
+/* line 64, ../sass/modules/_navigation.scss */
 .nav--item, .nav--sub-item {
   display: block;
   font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.75em;
 }
-/* line 16, ../sass/modules/_navigation.scss */
+/* line 71, ../sass/base/_mixins.scss */
 .nav--item:link, .nav--sub-item:link {
   color: #666666;
   text-decoration: none;
 }
-/* line 21, ../sass/modules/_navigation.scss */
+/* line 76, ../sass/base/_mixins.scss */
 .nav--item:visited, .nav--sub-item:visited {
   color: #595959;
 }
-/* line 25, ../sass/modules/_navigation.scss */
+/* line 80, ../sass/base/_mixins.scss */
 .nav--item:hover, .nav--item:focus, .nav--sub-item:hover, .nav--sub-item:focus {
   color: #0abbef;
   text-decoration: none;
 }
-/* line 31, ../sass/modules/_navigation.scss */
+/* line 86, ../sass/base/_mixins.scss */
 .nav--item.is-active, .nav--sub-item.is-active {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 128, ../sass/modules/_navigation.scss */
+/* line 69, ../sass/modules/_navigation.scss */
 .nav--item {
   font-size: 2em;
 }
-/* line 132, ../sass/modules/_navigation.scss */
+/* line 73, ../sass/modules/_navigation.scss */
 .nav--sub-item {
   position: relative;
   padding-left: 1em;
   font-size: 1.5em;
 }
-/* line 48, ../sass/modules/_navigation.scss */
+/* line 103, ../sass/base/_mixins.scss */
 .nav--sub-item:before {
   position: absolute;
   top: .35em;
@@ -1630,7 +1640,7 @@ body {
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 140, ../sass/modules/_navigation.scss */
+/* line 81, ../sass/modules/_navigation.scss */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -1640,7 +1650,7 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 151, ../sass/modules/_navigation.scss */
+/* line 92, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
   -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
@@ -1649,7 +1659,7 @@ body {
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 161, ../sass/modules/_navigation.scss */
+/* line 102, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
@@ -1660,7 +1670,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 161, ../sass/modules/_navigation.scss */
+  /* line 102, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
@@ -2022,6 +2032,7 @@ body {
 .static-page--header {
   position: fixed;
   top: 0;
+  z-index: 97;
   margin-bottom: 4em;
   min-height: 8.5em;
   width: 100%;
@@ -2043,7 +2054,7 @@ body {
     min-height: 30em;
   }
 }
-/* line 38, ../sass/modules/_static-page.scss */
+/* line 39, ../sass/modules/_static-page.scss */
 .static-page--heading {
   position: absolute;
   bottom: -1px;
@@ -2058,122 +2069,108 @@ body {
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 38, ../sass/modules/_static-page.scss */
+  /* line 39, ../sass/modules/_static-page.scss */
   .static-page--heading {
     display: block;
     font-size: 6em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 38, ../sass/modules/_static-page.scss */
+  /* line 39, ../sass/modules/_static-page.scss */
   .static-page--heading {
     font-size: 10em;
   }
 }
-/* line 64, ../sass/modules/_static-page.scss */
+/* line 65, ../sass/modules/_static-page.scss */
 .static-page--sub-heading {
   margin-bottom: 0;
   font-size: 2em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 64, ../sass/modules/_static-page.scss */
+  /* line 65, ../sass/modules/_static-page.scss */
   .static-page--sub-heading {
     font-size: 3em;
   }
 }
-/* line 74, ../sass/modules/_static-page.scss */
+/* line 75, ../sass/modules/_static-page.scss */
 .static-page--paragraph-heading {
   font-size: 1.75em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 74, ../sass/modules/_static-page.scss */
+  /* line 75, ../sass/modules/_static-page.scss */
   .static-page--paragraph-heading {
     font-size: 2em;
   }
 }
-/* line 85, ../sass/modules/_static-page.scss */
+/* line 86, ../sass/modules/_static-page.scss */
 .static-page--content-wrapper {
   margin-right: auto;
   margin-left: auto;
   max-width: 75em;
 }
-/* line 91, ../sass/modules/_static-page.scss */
-.static-page--content, .static-page--nav {
-  margin-left: -4px;
-  padding-top: 10em;
-  padding-right: 2em;
-  font-size: 1.25em;
-  text-align: left;
-}
-@media only screen and (min-width: 481px) {
-  /* line 91, ../sass/modules/_static-page.scss */
-  .static-page--content, .static-page--nav {
-    padding-top: 11em;
-    font-size: 1em;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  /* line 91, ../sass/modules/_static-page.scss */
-  .static-page--content, .static-page--nav {
-    padding-top: 20em;
-  }
-}
-@media only screen and (min-width: 1700px) {
-  /* line 91, ../sass/modules/_static-page.scss */
-  .static-page--content, .static-page--nav {
-    padding-top: 34em;
-  }
-}
-/* line 120, ../sass/modules/_static-page.scss */
+/* line 95, ../sass/modules/_static-page.scss */
 .static-page--content {
   padding-left: 2em;
 }
-/* line 130, ../sass/modules/_static-page.scss */
+/* line 105, ../sass/modules/_static-page.scss */
 .static-page--nav {
-  position: fixed;
-  display: none;
+  z-index: 96;
+  margin-left: -4px;
+  padding-top: 9em;
+  padding-right: 2em;
+  margin-bottom: 2em;
 }
-/* line 138, ../sass/modules/_static-page.scss */
+/* line 116, ../sass/modules/_static-page.scss */
 .static-page--nav-item-wrapper {
-  border-left: 8px solid #cccccc;
-  padding-left: 2em;
+  border-bottom: 8px solid #cccccc;
+  padding-bottom: 2em;
 }
-/* line 143, ../sass/modules/_static-page.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 116, ../sass/modules/_static-page.scss */
+  .static-page--nav-item-wrapper {
+    position: fixed;
+    border-bottom: 0;
+    padding-bottom: 0;
+    border-left: 8px solid #cccccc;
+    padding-left: 2em;
+  }
+}
+/* line 130, ../sass/modules/_static-page.scss */
 .static-page--nav-item, .static-page--nav-sub-item {
   display: block;
   font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.75em;
 }
-/* line 16, ../sass/modules/_navigation.scss */
+/* line 71, ../sass/base/_mixins.scss */
 .static-page--nav-item:link, .static-page--nav-sub-item:link {
   color: #666666;
   text-decoration: none;
 }
-/* line 21, ../sass/modules/_navigation.scss */
+/* line 76, ../sass/base/_mixins.scss */
 .static-page--nav-item:visited, .static-page--nav-sub-item:visited {
   color: #595959;
 }
-/* line 25, ../sass/modules/_navigation.scss */
+/* line 80, ../sass/base/_mixins.scss */
 .static-page--nav-item:hover, .static-page--nav-item:focus, .static-page--nav-sub-item:hover, .static-page--nav-sub-item:focus {
   color: #0abbef;
   text-decoration: none;
 }
-/* line 31, ../sass/modules/_navigation.scss */
+/* line 86, ../sass/base/_mixins.scss */
 .static-page--nav-item.is-active, .static-page--nav-sub-item.is-active {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 148, ../sass/modules/_static-page.scss */
+/* line 135, ../sass/modules/_static-page.scss */
 .static-page--nav-item {
   font-size: 2em;
 }
-/* line 152, ../sass/modules/_static-page.scss */
+/* line 139, ../sass/modules/_static-page.scss */
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
   font-size: 1.5em;
 }
-/* line 48, ../sass/modules/_navigation.scss */
+/* line 103, ../sass/base/_mixins.scss */
 .static-page--nav-sub-item:before {
   position: absolute;
   top: .35em;
@@ -2190,25 +2187,42 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-@media only screen and (min-width: 1024px) {
-  /* line 130, ../sass/modules/_static-page.scss */
-  .static-page--nav {
-    display: inline-block;
+/* line 144, ../sass/modules/_static-page.scss */
+.static-page--content, .static-page--nav {
+  font-size: 1.25em;
+  text-align: left;
+}
+@media only screen and (min-width: 481px) {
+  /* line 144, ../sass/modules/_static-page.scss */
+  .static-page--content, .static-page--nav {
+    font-size: 1em;
   }
 }
-/* line 161, ../sass/modules/_static-page.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 144, ../sass/modules/_static-page.scss */
+  .static-page--content, .static-page--nav {
+    padding-top: 20em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 144, ../sass/modules/_static-page.scss */
+  .static-page--content, .static-page--nav {
+    padding-top: 34em;
+  }
+}
+/* line 164, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 167, ../sass/modules/_static-page.scss */
+/* line 170, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 171, ../sass/modules/_static-page.scss */
+/* line 174, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 177, ../sass/modules/_static-page.scss */
+/* line 180, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2217,13 +2231,13 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 187, ../sass/modules/_static-page.scss */
+/* line 190, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 193, ../sass/modules/_static-page.scss */
+/* line 196, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;
