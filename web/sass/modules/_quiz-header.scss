@@ -60,7 +60,11 @@
     font-size: 5em;
     line-height: 1em;
 
-    @include breakpoint($breakpoint-desk) {
+    @include breakpoint($breakpoint-lap) {
+      font-size: 8em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
       font-size: 10em;
     }
 
@@ -100,7 +104,9 @@
     }
 
     @include breakpoint(false, $breakpoint-height) {
-      font-size: 1.5em;
+      margin-bottom: 1.25em;
+
+      font-size: 2.5em;
     }
   }
 

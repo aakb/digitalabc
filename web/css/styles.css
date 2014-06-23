@@ -1839,7 +1839,13 @@ body {
   font-size: 5em;
   line-height: 1em;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 481px) {
+  /* line 57, ../sass/modules/_quiz-header.scss */
+  .quiz-header--punchline {
+    font-size: 8em;
+  }
+}
+@media only screen and (min-width: 1700px) {
   /* line 57, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline {
     font-size: 10em;
@@ -1851,47 +1857,48 @@ body {
     font-size: 5em;
   }
 }
-/* line 73, ../sass/modules/_quiz-header.scss */
+/* line 77, ../sass/modules/_quiz-header.scss */
 .quiz-header--text {
   font-size: 2.5em;
   margin-bottom: 1em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 73, ../sass/modules/_quiz-header.scss */
+  /* line 77, ../sass/modules/_quiz-header.scss */
   .quiz-header--text {
     font-size: 2.5em;
   }
 }
 @media only screen and (max-height: 800px) {
-  /* line 73, ../sass/modules/_quiz-header.scss */
+  /* line 77, ../sass/modules/_quiz-header.scss */
   .quiz-header--text {
     font-size: 2em;
   }
 }
-/* line 87, ../sass/modules/_quiz-header.scss */
+/* line 91, ../sass/modules/_quiz-header.scss */
 .quiz-header--button {
   margin-bottom: 2.5em;
   font-size: 3.5em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 87, ../sass/modules/_quiz-header.scss */
+  /* line 91, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
     font-size: 4.5em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 87, ../sass/modules/_quiz-header.scss */
+  /* line 91, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
     margin-bottom: 1.25em;
   }
 }
 @media only screen and (max-height: 800px) {
-  /* line 87, ../sass/modules/_quiz-header.scss */
+  /* line 91, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
-    font-size: 1.5em;
+    margin-bottom: 1.25em;
+    font-size: 2.5em;
   }
 }
-/* line 107, ../sass/modules/_quiz-header.scss */
+/* line 113, ../sass/modules/_quiz-header.scss */
 .quiz-header--scroll {
   display: block;
   margin-right: auto;
@@ -1899,19 +1906,19 @@ body {
   max-width: 3.5em;
   cursor: pointer;
 }
-/* line 115, ../sass/modules/_quiz-header.scss */
+/* line 121, ../sass/modules/_quiz-header.scss */
 .quiz-header--scroll .scroll-text {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 @media only screen and (min-width: 481px) {
-  /* line 107, ../sass/modules/_quiz-header.scss */
+  /* line 113, ../sass/modules/_quiz-header.scss */
   .quiz-header--scroll {
     max-width: 2.25em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 107, ../sass/modules/_quiz-header.scss */
+  /* line 113, ../sass/modules/_quiz-header.scss */
   .quiz-header--scroll {
     max-width: 3.25em;
   }
