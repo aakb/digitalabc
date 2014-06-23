@@ -34,7 +34,7 @@
   }
 
 
-  /* Headings styling */
+  /* Headings */
   &--heading {
     position: absolute;
     bottom: -1px;
@@ -80,17 +80,25 @@
   }
 
 
-  /* Content */
+  /* Content and navigation */
 
-  &--content {
+  &--content-wrapper {
     margin-right: auto;
     margin-left: auto;
     max-width: $layout-max-width;
+  }
+
+  &--content,
+  &--nav {
+    @extend %grid__item;
+
+    margin-left: -4px;
     padding-top: 10em;
     padding-right: 2em;
-    padding-left: 2em;
 
     font-size: 1.25em;
+
+    text-align: left;
 
     @include breakpoint($breakpoint-lap) {
       padding-top: 11em;
@@ -104,6 +112,47 @@
 
     @include breakpoint($breakpoint-bigscreen) {
       padding-top: 34em;
+    }
+  }
+
+
+  /* Content */
+  &--content {
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %desk--three-fifths;
+    @extend %bigscreen--three-fifths;
+
+    padding-left: 2em;
+  }
+
+  /* Navigation */
+  &--nav {
+    @extend %desk--two-fifths;
+    @extend %bigscreen--two-fifths;
+
+    display: none;
+
+    &-item-wrapper {
+      border-left: 8px solid $gray-lighter;
+      padding-left: 2em;
+    }
+
+    &-item,
+    &-sub-item {
+      @include nav-base-item();
+    }
+
+    &-item {
+      @include nav-item();
+    }
+
+    &-sub-item {
+      @include nav-sub-item();
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      display: inline-block;
     }
   }
 

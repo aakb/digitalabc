@@ -155,6 +155,24 @@
  * 4. Full-width unless told to behave otherwise.
  * 5. Required to combine fluid widths and fixed gutters.
  */
+/* line 240, ../sass/base/_grid.scss */
+.static-page--content, .static-page--nav {
+  display: inline-block;
+  /* [1] */
+  padding-left: 2em;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  -webkit-box-sizing: border-box;
+  /* [5] */
+  -moz-box-sizing: border-box;
+  /* [5] */
+  box-sizing: border-box;
+  /* [5] */
+}
+
 /**
  * Reversed grids allow you to structure your source in the opposite order to
  * how your rendered layout will appear. Extends `.grid`.
@@ -223,6 +241,11 @@
   /**
    * Whole
    */
+  /* line 368, ../sass/base/_grid.scss */
+  .static-page--content {
+    width: 100%;
+  }
+
   /**
    * Halves
    */
@@ -252,6 +275,11 @@
   /**
    * Whole
    */
+  /* line 368, ../sass/base/_grid.scss */
+  .static-page--content {
+    width: 100%;
+  }
+
   /**
    * Halves
    */
@@ -322,6 +350,16 @@
   /**
    * Fifths
    */
+  /* line 396, ../sass/base/_grid.scss */
+  .static-page--nav {
+    width: 40%;
+  }
+
+  /* line 397, ../sass/base/_grid.scss */
+  .static-page--content {
+    width: 60%;
+  }
+
   /**
    * Sixths
    */
@@ -351,6 +389,16 @@
   /**
    * Fifths
    */
+  /* line 396, ../sass/base/_grid.scss */
+  .static-page--nav {
+    width: 40%;
+  }
+
+  /* line 397, ../sass/base/_grid.scss */
+  .static-page--content {
+    width: 60%;
+  }
+
   /**
    * Sixths
    */
@@ -1469,7 +1517,9 @@ body {
  * Navigation
  *
  */
-/* line 8, ../sass/modules/_navigation.scss */
+/* Mixins */
+/* Navigation */
+/* line 67, ../sass/modules/_navigation.scss */
 .nav {
   height: 100%;
   overflow-y: auto;
@@ -1493,24 +1543,24 @@ body {
   /* Elements */
 }
 @media only screen and (min-width: 481px) {
-  /* line 8, ../sass/modules/_navigation.scss */
+  /* line 67, ../sass/modules/_navigation.scss */
   .nav {
     width: 40em;
   }
 }
-/* line 36, ../sass/modules/_navigation.scss */
+/* line 95, ../sass/modules/_navigation.scss */
 .nav.is-visible {
   -moz-animation: toggle-nav-open 0.15s ease 1 forwards;
   -webkit-animation: toggle-nav-open 0.15s ease 1 forwards;
   animation: toggle-nav-open 0.15s ease 1 forwards;
 }
-/* line 40, ../sass/modules/_navigation.scss */
+/* line 99, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
   -moz-animation: toggle-nav-close 0.15s ease 1 forwards;
   -webkit-animation: toggle-nav-close 0.15s ease 1 forwards;
   animation: toggle-nav-close 0.15s ease 1 forwards;
 }
-/* line 47, ../sass/modules/_navigation.scss */
+/* line 106, ../sass/modules/_navigation.scss */
 .nav--header {
   border-bottom: 1px solid #cccccc;
   margin-right: 3em;
@@ -1520,47 +1570,52 @@ body {
   font-size: 3em;
   line-height: 1em;
 }
-/* line 58, ../sass/modules/_navigation.scss */
+/* line 117, ../sass/modules/_navigation.scss */
 .nav--item-wrapper {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
-/* line 64, ../sass/modules/_navigation.scss */
+/* line 123, ../sass/modules/_navigation.scss */
 .nav--item, .nav--sub-item {
   display: block;
   font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.75em;
 }
-/* line 71, ../sass/modules/_navigation.scss */
+/* line 16, ../sass/modules/_navigation.scss */
 .nav--item:link, .nav--sub-item:link {
   color: #666666;
   text-decoration: none;
 }
-/* line 76, ../sass/modules/_navigation.scss */
+/* line 21, ../sass/modules/_navigation.scss */
 .nav--item:visited, .nav--sub-item:visited {
   color: #595959;
 }
-/* line 80, ../sass/modules/_navigation.scss */
+/* line 25, ../sass/modules/_navigation.scss */
 .nav--item:hover, .nav--item:focus, .nav--sub-item:hover, .nav--sub-item:focus {
   color: #0abbef;
   text-decoration: none;
 }
-/* line 87, ../sass/modules/_navigation.scss */
+/* line 31, ../sass/modules/_navigation.scss */
+.nav--item.is-active, .nav--sub-item.is-active {
+  color: #0abbef;
+  text-decoration: underline;
+}
+/* line 128, ../sass/modules/_navigation.scss */
 .nav--item {
   font-size: 2em;
 }
-/* line 91, ../sass/modules/_navigation.scss */
+/* line 132, ../sass/modules/_navigation.scss */
 .nav--sub-item {
   position: relative;
-  padding-left: 2em;
+  padding-left: 1em;
   font-size: 1.5em;
 }
-/* line 98, ../sass/modules/_navigation.scss */
+/* line 48, ../sass/modules/_navigation.scss */
 .nav--sub-item:before {
   position: absolute;
   top: .35em;
-  left: 1em;
+  left: 0;
   height: 1em;
   width: 1em;
   content: "";
@@ -1575,7 +1630,7 @@ body {
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 118, ../sass/modules/_navigation.scss */
+/* line 140, ../sass/modules/_navigation.scss */
 .nav-overlay {
   position: absolute;
   top: 0;
@@ -1585,7 +1640,7 @@ body {
   width: 0;
   cursor: pointer;
 }
-/* line 129, ../sass/modules/_navigation.scss */
+/* line 151, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible {
   width: 100%;
   -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
@@ -1593,9 +1648,8 @@ body {
   animation: toggle-nav-overlay 0.15s linear 1 forwards;
 }
 
-/* Use a wrapper class to set width and height because Safari switches the class (svg.[object.SVGAnimatedString]) */
 /* Toggle icon use for opening and closing the menu */
-/* line 144, ../sass/modules/_navigation.scss */
+/* line 161, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2em;
@@ -1606,7 +1660,7 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 144, ../sass/modules/_navigation.scss */
+  /* line 161, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
@@ -1954,8 +2008,10 @@ body {
 /* line 8, ../sass/modules/_static-page.scss */
 .static-page {
   padding-bottom: 3em;
-  /* Headings styling */
+  /* Headings */
+  /* Content and navigation */
   /* Content */
+  /* Navigation */
   /* List */
 }
 /* line 11, ../sass/modules/_static-page.scss */
@@ -2036,47 +2092,122 @@ body {
   }
 }
 /* line 85, ../sass/modules/_static-page.scss */
-.static-page--content {
+.static-page--content-wrapper {
   margin-right: auto;
   margin-left: auto;
   max-width: 75em;
+}
+/* line 91, ../sass/modules/_static-page.scss */
+.static-page--content, .static-page--nav {
+  margin-left: -4px;
   padding-top: 10em;
   padding-right: 2em;
-  padding-left: 2em;
   font-size: 1.25em;
+  text-align: left;
 }
 @media only screen and (min-width: 481px) {
-  /* line 85, ../sass/modules/_static-page.scss */
-  .static-page--content {
+  /* line 91, ../sass/modules/_static-page.scss */
+  .static-page--content, .static-page--nav {
     padding-top: 11em;
     font-size: 1em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 85, ../sass/modules/_static-page.scss */
-  .static-page--content {
+  /* line 91, ../sass/modules/_static-page.scss */
+  .static-page--content, .static-page--nav {
     padding-top: 20em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 85, ../sass/modules/_static-page.scss */
-  .static-page--content {
+  /* line 91, ../sass/modules/_static-page.scss */
+  .static-page--content, .static-page--nav {
     padding-top: 34em;
   }
 }
-/* line 110, ../sass/modules/_static-page.scss */
+/* line 120, ../sass/modules/_static-page.scss */
+.static-page--content {
+  padding-left: 2em;
+}
+/* line 130, ../sass/modules/_static-page.scss */
+.static-page--nav {
+  display: none;
+}
+/* line 136, ../sass/modules/_static-page.scss */
+.static-page--nav-item-wrapper {
+  border-left: 8px solid #cccccc;
+  padding-left: 2em;
+}
+/* line 141, ../sass/modules/_static-page.scss */
+.static-page--nav-item, .static-page--nav-sub-item {
+  display: block;
+  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.75em;
+}
+/* line 16, ../sass/modules/_navigation.scss */
+.static-page--nav-item:link, .static-page--nav-sub-item:link {
+  color: #666666;
+  text-decoration: none;
+}
+/* line 21, ../sass/modules/_navigation.scss */
+.static-page--nav-item:visited, .static-page--nav-sub-item:visited {
+  color: #595959;
+}
+/* line 25, ../sass/modules/_navigation.scss */
+.static-page--nav-item:hover, .static-page--nav-item:focus, .static-page--nav-sub-item:hover, .static-page--nav-sub-item:focus {
+  color: #0abbef;
+  text-decoration: none;
+}
+/* line 31, ../sass/modules/_navigation.scss */
+.static-page--nav-item.is-active, .static-page--nav-sub-item.is-active {
+  color: #0abbef;
+  text-decoration: underline;
+}
+/* line 146, ../sass/modules/_static-page.scss */
+.static-page--nav-item {
+  font-size: 2em;
+}
+/* line 150, ../sass/modules/_static-page.scss */
+.static-page--nav-sub-item {
+  position: relative;
+  padding-left: 1em;
+  font-size: 1.5em;
+}
+/* line 48, ../sass/modules/_navigation.scss */
+.static-page--nav-sub-item:before {
+  position: absolute;
+  top: .35em;
+  left: 0;
+  height: 1em;
+  width: 1em;
+  content: "";
+  background: url("/images/arrow-icon.png") transparent 0 no-repeat;
+  background: url("/images/arrow-icon.svg") transparent 0 no-repeat;
+  -moz-background-size: 0.65em;
+  -o-background-size: 0.65em;
+  -webkit-background-size: 0.65em;
+  background-size: 0.65em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 130, ../sass/modules/_static-page.scss */
+  .static-page--nav {
+    display: inline-block;
+  }
+}
+/* line 159, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 116, ../sass/modules/_static-page.scss */
+/* line 165, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 120, ../sass/modules/_static-page.scss */
+/* line 169, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 126, ../sass/modules/_static-page.scss */
+/* line 175, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2085,13 +2216,13 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 136, ../sass/modules/_static-page.scss */
+/* line 185, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 142, ../sass/modules/_static-page.scss */
+/* line 191, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;

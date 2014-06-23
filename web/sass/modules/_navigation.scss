@@ -5,6 +5,65 @@
  */
 
 
+/* Mixins */
+
+@mixin nav-base-item() {
+  display: block;
+
+  font-family: $font-family-primary;
+  line-height: 1.75em;
+
+  &:link {
+    color: $text-color-dark;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: darken($text-color-dark, 5%);
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  &.is-active {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
+@mixin nav-item() {
+  font-size: 2em;
+}
+
+@mixin nav-sub-item() {
+  position: relative;
+
+  padding-left: 1em;
+
+  font-size: 1.5em;
+
+  &:before {
+    position: absolute;
+    top: .35em;
+    left: 0;
+
+    height: 1em;
+    width: 1em;
+
+    content: "";
+
+    @include svg-bg(arrow-icon, png, transparent, 0, no-repeat);
+    @include background-size(.65em);
+    @include opacity(.5);
+  }
+}
+
+
+/* Navigation */
+
 .nav {
   height: 100%;
   overflow-y: auto;
@@ -63,52 +122,15 @@
 
   &--item,
   &--sub-item {
-    display: block;
-
-    font-family: $font-family-primary;
-    line-height: 1.75em;
-
-    &:link {
-      color: $text-color-dark;
-      text-decoration: none;
-    }
-
-    &:visited {
-      color: darken($text-color-dark, 5%);
-    }
-
-    &:hover,
-    &:focus {
-      color: $link-color;
-      text-decoration: none;
-    }
+    @include nav-base-item();
   }
 
   &--item {
-    font-size: 2em;
+    @include nav-item();
   }
 
   &--sub-item {
-    position: relative;
-
-    padding-left: 2em;
-
-    font-size: 1.5em;
-  
-    &:before {
-      position: absolute;
-      top: .35em;
-      left: 1em;
-
-      height: 1em;
-      width: 1em;
-
-      content: "";
-
-      @include svg-bg(arrow-icon, png, transparent, 0, no-repeat);
-      @include background-size(.65em);
-      @include opacity(.5);
-    }
+    @include nav-sub-item();
   }
 }
 
@@ -132,11 +154,6 @@
     @include animation(toggle-nav-overlay .15s linear 1 forwards);
   }
 }
-
-
-
-/* Use a wrapper class to set width and height because Safari switches the class (svg.[object.SVGAnimatedString]) */
-
 
 
 /* Toggle icon use for opening and closing the menu */
