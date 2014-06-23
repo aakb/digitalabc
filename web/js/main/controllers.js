@@ -28,12 +28,6 @@ abcApp.controller('FrontpageController', function($scope, $location, $anchorScro
 
   // Make sure menu is closed.
   $scope.$emit('closeMenu');
-
-  // Create scrollTo functionality.
-  $scope.scrollTo = function(id) {
-    $location.hash(id);
-    $anchorScroll();
-  }
 });
 
 

@@ -138,4 +138,12 @@
     margin-bottom: 2em;
     padding-left: 1.25em;
   }
+
+  &--top-link {
+    border-top: 1px solid $gray-lightest;
+    display: block;
+    padding-top: 2em;
+
+    text-align: center;
+  }
 }

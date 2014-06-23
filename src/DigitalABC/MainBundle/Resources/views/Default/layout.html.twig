@@ -23,7 +23,6 @@
 
 {% block body_attr %}data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" {% endblock %}
 
-
 {% block body %}
   <a class="nav-overlay" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}" data-ng-click="toggleMenu()"></a>
   <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen, 'is-hidden': menuOpen !== null && !menuOpen}">
@@ -62,6 +61,7 @@
     <script src="{{ asset('js/libraries/angular-animate-1.2.16.js') }}"></script>
     <script src="{{ asset('js/libraries/angular-route-1.2.16.js') }}"></script>
     <script src="{{ asset('js/libraries/angular-touch-1.2.16.js') }}"></script>
+    <script src="{{ asset('js/libraries/smooth-scroll-min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/main/controllers.js') }}"></script>
     <script src="{{ asset('js/main/routing.js') }}"></script>

@@ -2091,3 +2091,10 @@ body {
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
+/* line 142, ../sass/modules/_static-page.scss */
+.static-page--top-link {
+  border-top: 1px solid #e6e6e6;
+  display: block;
+  padding-top: 2em;
+  text-align: center;
+}
