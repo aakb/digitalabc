@@ -1,6 +1,6 @@
 {% extends '::base.html.twig' %}
 
-{% block html %}data-ng-app="abcApp" data-ng-controller="HeaderController" data-ng-class="{'is-locked': menuOpen !== null && menuOpen}"{% endblock %}
+{% block html %}data-ng-app="abcApp" data-ng-controller="HeaderController" data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" {% endblock %}
 
 {% block title %}Digital ABC{% endblock %}
 
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="{{ asset('css/fonts/permianserif/permianserif-bold.css') }}">
 {% endblock %}
 
-{% block body_attr %}data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" data-ng-controller="HeaderController"{% endblock %}
+{% block body_attr %}data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" {% endblock %}
 
 
 {% block body %}

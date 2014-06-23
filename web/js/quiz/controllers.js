@@ -7,6 +7,10 @@ abcApp.controller('StartController', function($scope, $timeout) {
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'quiz');
 
+
+  // Make sure menu is closed.
+  $scope.$emit('closeMenu');
+
   // Initial choice.
   $scope.text = "dine venner";
 

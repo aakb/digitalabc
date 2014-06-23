@@ -7,7 +7,10 @@ abcApp.controller('HeaderController', function($scope, $location, $anchorScroll)
     $scope.layoutClassSuffix = data;
   });
 
-  $scope.menuOpen = null;
+  // Added helper function for the menu.
+  $scope.$on('closeMenu', function(event, data) {
+    $scope.menuOpen = false;
+  });
 
   $scope.toggleMenu = function(){
     if ($scope.menuOpen === null) {
@@ -20,7 +23,11 @@ abcApp.controller('HeaderController', function($scope, $location, $anchorScroll)
 
 // Frontpage controller.
 abcApp.controller('FrontpageController', function($scope, $location, $anchorScroll) {
+  // Set layout class.
   $scope.layoutClassSuffix = 'layout';
+
+  // Make sure menu is closed.
+  $scope.$emit('closeMenu');
 
   // Create scrollTo functionality.
   $scope.scrollTo = function(id) {
@@ -32,6 +39,9 @@ abcApp.controller('FrontpageController', function($scope, $location, $anchorScro
 
 // Static page controller.
 abcApp.controller('StaticPageController', function($scope, $location, $anchorScroll) {
+  // Make sure menu is closed.
+  $scope.$emit('closeMenu');
+
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'static-page');
 });

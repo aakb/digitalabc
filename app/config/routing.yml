@@ -1,7 +1,3 @@
-digital_abc_quiz:
-    resource: "@DigitalABCQuizBundle/Resources/config/routing.yml"
-    prefix:   /
-
 digital_abc_main:
     resource: "@DigitalABCMainBundle/Resources/config/routing.yml"
     prefix:   /
