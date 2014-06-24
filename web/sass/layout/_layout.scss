@@ -59,21 +59,21 @@ body {
 
   &--logo {
     position: absolute;
-    top: 2em;
-    left: 2em;
+    top: 2.5em;
+    left: 0;
 
     display: block;
-    height: 4.5em;
+    height: 3.5em;
     width: 18em;
-
-    .logo-text,
-    .logo-symbol {
-      fill: $white;
-    }
 
     @include background-size(contain);
 
     @include breakpoint($breakpoint-desk) {
+      top: 3em;
+      left: 2em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
       top: 4em;
       left: 6em;
     }

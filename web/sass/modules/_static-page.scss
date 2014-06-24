@@ -105,10 +105,10 @@
   &--nav {
     @extend %desk--two-fifths;
     @extend %bigscreen--two-fifths;
+    @extend %grid-markup-fix;
 
     z-index: 96;
 
-    margin-left: -4px;
     padding-top: 9em;
     padding-right: 2em;
     margin-bottom: 2em;
@@ -145,15 +145,14 @@
   &--nav {
     @extend %grid__item;
 
-    font-size: 1.2em;
     text-align: left;
 
     @include breakpoint($breakpoint-desk) {
-      padding-top: 15em;
+      padding-top: 20em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
-      padding-top: 29em;
+      padding-top: 35em;
     }
   }
 

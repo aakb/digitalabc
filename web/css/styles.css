@@ -10,6 +10,11 @@
  * Variables
  *
  */
+/* line 10, ../sass/base/_vars.scss */
+.static-page--nav {
+  margin-right: -4px;
+}
+
 /* Breakpoints
    ================================================================================================================== */
 /* Layout
@@ -1424,22 +1429,24 @@ body {
 /* line 60, ../sass/layout/_layout.scss */
 .header--logo {
   position: absolute;
-  top: 2em;
-  left: 2em;
+  top: 2.5em;
+  left: 0;
   display: block;
-  height: 4.5em;
+  height: 3.5em;
   width: 18em;
   -moz-background-size: contain;
   -o-background-size: contain;
   -webkit-background-size: contain;
   background-size: contain;
 }
-/* line 69, ../sass/layout/_layout.scss */
-.header--logo .logo-text,
-.header--logo .logo-symbol {
-  fill: white;
-}
 @media only screen and (min-width: 1024px) {
+  /* line 60, ../sass/layout/_layout.scss */
+  .header--logo {
+    top: 3em;
+    left: 2em;
+  }
+}
+@media only screen and (min-width: 1700px) {
   /* line 60, ../sass/layout/_layout.scss */
   .header--logo {
     top: 4em;
@@ -1662,18 +1669,26 @@ body {
 /* line 102, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
-  top: 2em;
+  top: 2.5em;
   right: 2em;
   display: block;
-  height: 4.5em;
-  width: 5em;
+  height: 3.5em;
+  width: 3.5em;
   cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
   /* line 102, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
+    top: 3em;
+    right: 2em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 102, ../sass/modules/_navigation.scss */
+  .nav-toggle-icon {
     top: 4em;
     right: 6em;
+    width: 5em;
   }
 }
 
@@ -2106,7 +2121,7 @@ body {
 .static-page--content-wrapper {
   margin-right: auto;
   margin-left: auto;
-  max-width: 75em;
+  max-width: 65em;
 }
 /* line 95, ../sass/modules/_static-page.scss */
 .static-page--content {
@@ -2115,7 +2130,6 @@ body {
 /* line 105, ../sass/modules/_static-page.scss */
 .static-page--nav {
   z-index: 96;
-  margin-left: -4px;
   padding-top: 9em;
   padding-right: 2em;
   margin-bottom: 2em;
@@ -2189,34 +2203,33 @@ body {
 }
 /* line 144, ../sass/modules/_static-page.scss */
 .static-page--content, .static-page--nav {
-  font-size: 1.2em;
   text-align: left;
 }
 @media only screen and (min-width: 1024px) {
   /* line 144, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
-    padding-top: 15em;
+    padding-top: 20em;
   }
 }
 @media only screen and (min-width: 1700px) {
   /* line 144, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
-    padding-top: 29em;
+    padding-top: 35em;
   }
 }
-/* line 160, ../sass/modules/_static-page.scss */
+/* line 159, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 166, ../sass/modules/_static-page.scss */
+/* line 165, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 170, ../sass/modules/_static-page.scss */
+/* line 169, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 176, ../sass/modules/_static-page.scss */
+/* line 175, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2225,13 +2238,13 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 186, ../sass/modules/_static-page.scss */
+/* line 185, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 192, ../sass/modules/_static-page.scss */
+/* line 191, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;
