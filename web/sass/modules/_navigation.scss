@@ -95,7 +95,7 @@
   }
 
   &.is-animating {
-    @include animation(slideInDown 1s ease 1 forwards);
+    @include animation(pageTransition 1s ease 1 forwards);
   }
 }
 
