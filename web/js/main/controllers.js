@@ -1,5 +1,5 @@
 // Header controller.
-abcApp.controller('HeaderController', function($scope, $location, $anchorScroll) {
+abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
   $scope.layoutClassSuffix = 'layout';
 
   // Added helper function for the menu.
@@ -18,11 +18,21 @@ abcApp.controller('HeaderController', function($scope, $location, $anchorScroll)
     }
     $scope.menuOpen = !$scope.menuOpen;
   };
+
+  $rootScope.$on('$routeChangeSuccess', function(){
+    // Add class to animation overlay and remove it when the CSS animation ends.
+    $('.js-animation-overlay')
+      .addClass('is-animating')
+      .one('webkitAnimationEnd oAnimationend animationend',
+      function() {
+        $(this).removeClass('is-animating');
+      });
+  });
 });
 
 
 // Frontpage controller.
-abcApp.controller('FrontpageController', function($scope, $location, $anchorScroll) {
+abcApp.controller('FrontpageController', function($scope, $location) {
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'layout');
 
@@ -32,7 +42,7 @@ abcApp.controller('FrontpageController', function($scope, $location, $anchorScro
 
 
 // Static page controller.
-abcApp.controller('StaticPageController', function($scope, $location, $anchorScroll) {
+abcApp.controller('StaticPageController', function($scope, $location) {
   // Make sure menu is closed.
   $scope.$emit('closeMenu');
 

@@ -5,10 +5,6 @@
  */
 
 
-.test {
-  @include animation(test .5s ease 1 forwards);
-}
-
 .quiz-header {
   @extend %layout--set-background--selector;
 
@@ -17,10 +13,6 @@
   background: url('/images/image-flip.jpg') no-repeat;
 
   @include background-size(cover);
-
-  &.is-loading {
-    @extend %animate--move-left;
-  }
 
   &--inner {
     position: relative;

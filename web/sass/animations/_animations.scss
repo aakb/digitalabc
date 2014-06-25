@@ -10,34 +10,36 @@
  *
  * ========================================================================== */
 
-%animate--move-left {
-  position: relative;
 
-  @include animation(animate-move-left .25s ease 1 forwards);
-}
-
-@include keyframes(animate-move-left) {
+@keyframes fadeOut {
   0% {
-    left: 0;
+    opacity: 1;
   }
 
   100% {
-    left: -100%;
+    opacity: 0;
   }
 }
 
-
-@include keyframes(test) {
+@keyframes slideInDown {
   0% {
-    @include scale(1);
+    right: 0;
+
+    background-color: transparentize($black, .1);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
   }
 
   100% {
-    @include scale(0);
-    @include opacity(0);
+    right: 0;
+
+    background-color: transparentize($black, .1);
+    opacity: 0;
   }
 }
-
 
 
 /* This section needs a comment, author please provide :)

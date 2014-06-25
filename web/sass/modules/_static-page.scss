@@ -12,6 +12,13 @@
     margin-bottom: 1em;
   }
 
+  &--inner {
+    .ng-enter,
+    .ng-leave {
+      @include animation(fadeOut .5s ease 1 forwards);
+    }
+  }
+
   &--header {
     position: fixed;
     top: 0;

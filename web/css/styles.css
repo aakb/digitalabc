@@ -1142,90 +1142,34 @@ label {
 /* Reusable animation classes
  *
  * ========================================================================== */
-/* line 13, ../sass/animations/_animations.scss */
-.quiz-header.is-loading {
-  position: relative;
-  -moz-animation: animate-move-left 0.25s ease 1 forwards;
-  -webkit-animation: animate-move-left 0.25s ease 1 forwards;
-  animation: animate-move-left 0.25s ease 1 forwards;
-}
-
-@-moz-keyframes animate-move-left {
-  /* line 20, ../sass/animations/_animations.scss */
+@keyframes fadeOut {
+  /* line 15, ../sass/animations/_animations.scss */
   0% {
-    left: 0;
+    opacity: 1;
   }
 
-  /* line 24, ../sass/animations/_animations.scss */
+  /* line 19, ../sass/animations/_animations.scss */
   100% {
-    left: -100%;
-  }
-}
-@-webkit-keyframes animate-move-left {
-  /* line 20, ../sass/animations/_animations.scss */
-  0% {
-    left: 0;
-  }
-
-  /* line 24, ../sass/animations/_animations.scss */
-  100% {
-    left: -100%;
-  }
-}
-@keyframes animate-move-left {
-  /* line 20, ../sass/animations/_animations.scss */
-  0% {
-    left: 0;
-  }
-
-  /* line 24, ../sass/animations/_animations.scss */
-  100% {
-    left: -100%;
-  }
-}
-@-moz-keyframes test {
-  /* line 31, ../sass/animations/_animations.scss */
-  0% {
-    -moz-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-
-  /* line 35, ../sass/animations/_animations.scss */
-  100% {
-    -moz-transform: scale(0, 0);
-    transform: scale(0, 0);
     opacity: 0;
   }
 }
-@-webkit-keyframes test {
-  /* line 31, ../sass/animations/_animations.scss */
+@keyframes slideInDown {
+  /* line 25, ../sass/animations/_animations.scss */
   0% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 1;
   }
 
-  /* line 35, ../sass/animations/_animations.scss */
-  100% {
-    -webkit-transform: scale(0, 0);
-    transform: scale(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes test {
-  /* line 31, ../sass/animations/_animations.scss */
-  0% {
-    -moz-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
+  /* line 32, ../sass/animations/_animations.scss */
+  50% {
+    opacity: 1;
   }
 
-  /* line 35, ../sass/animations/_animations.scss */
+  /* line 36, ../sass/animations/_animations.scss */
   100% {
-    -moz-transform: scale(0, 0);
-    -ms-transform: scale(0, 0);
-    -webkit-transform: scale(0, 0);
-    transform: scale(0, 0);
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
   }
 }
@@ -1233,139 +1177,139 @@ label {
  *
  * ========================================================================== */
 @-moz-keyframes spinner {
-  /* line 48, ../sass/animations/_animations.scss */
+  /* line 50, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 53, ../sass/animations/_animations.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-webkit-keyframes spinner {
-  /* line 48, ../sass/animations/_animations.scss */
+  /* line 50, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 53, ../sass/animations/_animations.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @keyframes spinner {
-  /* line 48, ../sass/animations/_animations.scss */
+  /* line 50, ../sass/animations/_animations.scss */
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
-  /* line 53, ../sass/animations/_animations.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-moz-keyframes toggle-nav-open {
-  /* line 63, ../sass/animations/_animations.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   0% {
     right: -200%;
   }
 
-  /* line 67, ../sass/animations/_animations.scss */
+  /* line 69, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-webkit-keyframes toggle-nav-open {
-  /* line 63, ../sass/animations/_animations.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   0% {
     right: -200%;
   }
 
-  /* line 67, ../sass/animations/_animations.scss */
+  /* line 69, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @keyframes toggle-nav-open {
-  /* line 63, ../sass/animations/_animations.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   0% {
     right: -200%;
   }
 
-  /* line 67, ../sass/animations/_animations.scss */
+  /* line 69, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-moz-keyframes toggle-nav-close {
-  /* line 73, ../sass/animations/_animations.scss */
+  /* line 75, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 77, ../sass/animations/_animations.scss */
+  /* line 79, ../sass/animations/_animations.scss */
   100% {
     right: -200%;
   }
 }
 @-webkit-keyframes toggle-nav-close {
-  /* line 73, ../sass/animations/_animations.scss */
+  /* line 75, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 77, ../sass/animations/_animations.scss */
+  /* line 79, ../sass/animations/_animations.scss */
   100% {
     right: -200%;
   }
 }
 @keyframes toggle-nav-close {
-  /* line 73, ../sass/animations/_animations.scss */
+  /* line 75, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 77, ../sass/animations/_animations.scss */
+  /* line 79, ../sass/animations/_animations.scss */
   100% {
     right: -200%;
   }
 }
 @-moz-keyframes toggle-nav-overlay {
-  /* line 84, ../sass/animations/_animations.scss */
+  /* line 86, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 88, ../sass/animations/_animations.scss */
+  /* line 90, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @-webkit-keyframes toggle-nav-overlay {
-  /* line 84, ../sass/animations/_animations.scss */
+  /* line 86, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 88, ../sass/animations/_animations.scss */
+  /* line 90, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @keyframes toggle-nav-overlay {
-  /* line 84, ../sass/animations/_animations.scss */
+  /* line 86, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 88, ../sass/animations/_animations.scss */
+  /* line 90, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
@@ -1648,25 +1592,33 @@ body {
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
 /* line 81, ../sass/modules/_navigation.scss */
-.nav-overlay {
+.nav-overlay,
+.animation-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 98;
-  width: 0;
   cursor: pointer;
 }
-/* line 92, ../sass/modules/_navigation.scss */
-.nav-overlay.is-visible {
+/* line 91, ../sass/modules/_navigation.scss */
+.nav-overlay.is-visible,
+.animation-overlay.is-visible {
   width: 100%;
   -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
   -webkit-animation: toggle-nav-overlay 0.15s linear 1 forwards;
   animation: toggle-nav-overlay 0.15s linear 1 forwards;
 }
+/* line 97, ../sass/modules/_navigation.scss */
+.nav-overlay.is-animating,
+.animation-overlay.is-animating {
+  -moz-animation: slideInDown 1s ease 1 forwards;
+  -webkit-animation: slideInDown 1s ease 1 forwards;
+  animation: slideInDown 1s ease 1 forwards;
+}
 
 /* Toggle icon use for opening and closing the menu */
-/* line 102, ../sass/modules/_navigation.scss */
+/* line 105, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 2.5em;
@@ -1677,14 +1629,14 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 102, ../sass/modules/_navigation.scss */
+  /* line 105, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 3em;
     right: 2em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 102, ../sass/modules/_navigation.scss */
+  /* line 105, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
@@ -1865,13 +1817,6 @@ body {
  *
  */
 /* line 8, ../sass/modules/_quiz-header.scss */
-.test {
-  -moz-animation: test 0.5s ease 1 forwards;
-  -webkit-animation: test 0.5s ease 1 forwards;
-  animation: test 0.5s ease 1 forwards;
-}
-
-/* line 12, ../sass/modules/_quiz-header.scss */
 .quiz-header {
   position: relative;
   background: url("/images/image-flip.jpg") no-repeat;
@@ -1880,7 +1825,7 @@ body {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 25, ../sass/modules/_quiz-header.scss */
+/* line 17, ../sass/modules/_quiz-header.scss */
 .quiz-header--inner {
   position: relative;
   top: 50%;
@@ -1890,94 +1835,94 @@ body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 34, ../sass/modules/_quiz-header.scss */
+/* line 26, ../sass/modules/_quiz-header.scss */
 .quiz-header--text, .quiz-header--question, .quiz-header--punchline {
   color: white;
   font-family: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 42, ../sass/modules/_quiz-header.scss */
+/* line 34, ../sass/modules/_quiz-header.scss */
 .quiz-header--question {
   margin-bottom: 0;
   font-size: 2em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 42, ../sass/modules/_quiz-header.scss */
+  /* line 34, ../sass/modules/_quiz-header.scss */
   .quiz-header--question {
     font-size: 4em;
   }
 }
 @media only screen and (max-height: 800px) {
-  /* line 42, ../sass/modules/_quiz-header.scss */
+  /* line 34, ../sass/modules/_quiz-header.scss */
   .quiz-header--question {
     font-size: 2em;
   }
 }
-/* line 57, ../sass/modules/_quiz-header.scss */
+/* line 49, ../sass/modules/_quiz-header.scss */
 .quiz-header--punchline {
   margin-bottom: .25em;
   font-size: 5em;
   line-height: 1em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 57, ../sass/modules/_quiz-header.scss */
+  /* line 49, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline {
     font-size: 8em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 57, ../sass/modules/_quiz-header.scss */
+  /* line 49, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline {
     font-size: 10em;
   }
 }
 @media only screen and (max-height: 800px) {
-  /* line 57, ../sass/modules/_quiz-header.scss */
+  /* line 49, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline {
     font-size: 5em;
   }
 }
-/* line 77, ../sass/modules/_quiz-header.scss */
+/* line 69, ../sass/modules/_quiz-header.scss */
 .quiz-header--text {
   font-size: 2.5em;
   margin-bottom: 1em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 77, ../sass/modules/_quiz-header.scss */
+  /* line 69, ../sass/modules/_quiz-header.scss */
   .quiz-header--text {
     font-size: 2.5em;
   }
 }
 @media only screen and (max-height: 800px) {
-  /* line 77, ../sass/modules/_quiz-header.scss */
+  /* line 69, ../sass/modules/_quiz-header.scss */
   .quiz-header--text {
     font-size: 2em;
   }
 }
-/* line 91, ../sass/modules/_quiz-header.scss */
+/* line 83, ../sass/modules/_quiz-header.scss */
 .quiz-header--button {
   margin-bottom: 2.5em;
   font-size: 3.5em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 91, ../sass/modules/_quiz-header.scss */
+  /* line 83, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
     font-size: 4.5em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 91, ../sass/modules/_quiz-header.scss */
+  /* line 83, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
     margin-bottom: 1.25em;
   }
 }
 @media only screen and (max-height: 800px) {
-  /* line 91, ../sass/modules/_quiz-header.scss */
+  /* line 83, ../sass/modules/_quiz-header.scss */
   .quiz-header--button {
     margin-bottom: 1.25em;
     font-size: 2.5em;
   }
 }
-/* line 113, ../sass/modules/_quiz-header.scss */
+/* line 105, ../sass/modules/_quiz-header.scss */
 .quiz-header--scroll {
   display: block;
   margin-right: auto;
@@ -1985,19 +1930,19 @@ body {
   max-width: 3.5em;
   cursor: pointer;
 }
-/* line 121, ../sass/modules/_quiz-header.scss */
+/* line 113, ../sass/modules/_quiz-header.scss */
 .quiz-header--scroll .scroll-text {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 @media only screen and (min-width: 481px) {
-  /* line 113, ../sass/modules/_quiz-header.scss */
+  /* line 105, ../sass/modules/_quiz-header.scss */
   .quiz-header--scroll {
     max-width: 2.25em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 113, ../sass/modules/_quiz-header.scss */
+  /* line 105, ../sass/modules/_quiz-header.scss */
   .quiz-header--scroll {
     max-width: 3.25em;
   }
@@ -2043,7 +1988,14 @@ body {
 .static-page p {
   margin-bottom: 1em;
 }
-/* line 15, ../sass/modules/_static-page.scss */
+/* line 16, ../sass/modules/_static-page.scss */
+.static-page--inner .ng-enter,
+.static-page--inner .ng-leave {
+  -moz-animation: fadeOut 0.5s ease 1 forwards;
+  -webkit-animation: fadeOut 0.5s ease 1 forwards;
+  animation: fadeOut 0.5s ease 1 forwards;
+}
+/* line 22, ../sass/modules/_static-page.scss */
 .static-page--header {
   position: fixed;
   top: 0;
@@ -2058,18 +2010,18 @@ body {
   background-size: cover;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 15, ../sass/modules/_static-page.scss */
+  /* line 22, ../sass/modules/_static-page.scss */
   .static-page--header {
     min-height: 16em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 15, ../sass/modules/_static-page.scss */
+  /* line 22, ../sass/modules/_static-page.scss */
   .static-page--header {
     min-height: 30em;
   }
 }
-/* line 39, ../sass/modules/_static-page.scss */
+/* line 46, ../sass/modules/_static-page.scss */
 .static-page--heading {
   position: absolute;
   bottom: -1px;
@@ -2084,63 +2036,63 @@ body {
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 39, ../sass/modules/_static-page.scss */
+  /* line 46, ../sass/modules/_static-page.scss */
   .static-page--heading {
     display: block;
     font-size: 6em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 39, ../sass/modules/_static-page.scss */
+  /* line 46, ../sass/modules/_static-page.scss */
   .static-page--heading {
     font-size: 10em;
   }
 }
-/* line 65, ../sass/modules/_static-page.scss */
+/* line 72, ../sass/modules/_static-page.scss */
 .static-page--sub-heading {
   margin-bottom: 0;
   font-size: 2em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 65, ../sass/modules/_static-page.scss */
+  /* line 72, ../sass/modules/_static-page.scss */
   .static-page--sub-heading {
     font-size: 3em;
   }
 }
-/* line 75, ../sass/modules/_static-page.scss */
+/* line 82, ../sass/modules/_static-page.scss */
 .static-page--paragraph-heading {
   font-size: 1.75em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 75, ../sass/modules/_static-page.scss */
+  /* line 82, ../sass/modules/_static-page.scss */
   .static-page--paragraph-heading {
     font-size: 2em;
   }
 }
-/* line 86, ../sass/modules/_static-page.scss */
+/* line 93, ../sass/modules/_static-page.scss */
 .static-page--content-wrapper {
   margin-right: auto;
   margin-left: auto;
   max-width: 65em;
 }
-/* line 95, ../sass/modules/_static-page.scss */
+/* line 102, ../sass/modules/_static-page.scss */
 .static-page--content {
   padding-left: 2em;
 }
-/* line 105, ../sass/modules/_static-page.scss */
+/* line 112, ../sass/modules/_static-page.scss */
 .static-page--nav {
   z-index: 96;
   padding-top: 9em;
   padding-right: 2em;
   margin-bottom: 2em;
 }
-/* line 116, ../sass/modules/_static-page.scss */
+/* line 123, ../sass/modules/_static-page.scss */
 .static-page--nav-item-wrapper {
   border-bottom: 8px solid #cccccc;
   padding-bottom: 2em;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 116, ../sass/modules/_static-page.scss */
+  /* line 123, ../sass/modules/_static-page.scss */
   .static-page--nav-item-wrapper {
     position: fixed;
     border-bottom: 0;
@@ -2149,7 +2101,7 @@ body {
     padding-left: 2em;
   }
 }
-/* line 130, ../sass/modules/_static-page.scss */
+/* line 137, ../sass/modules/_static-page.scss */
 .static-page--nav-item, .static-page--nav-sub-item {
   display: block;
   font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2174,11 +2126,11 @@ body {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 135, ../sass/modules/_static-page.scss */
+/* line 142, ../sass/modules/_static-page.scss */
 .static-page--nav-item {
   font-size: 2em;
 }
-/* line 139, ../sass/modules/_static-page.scss */
+/* line 146, ../sass/modules/_static-page.scss */
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
@@ -2201,35 +2153,35 @@ body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 144, ../sass/modules/_static-page.scss */
+/* line 151, ../sass/modules/_static-page.scss */
 .static-page--content, .static-page--nav {
   text-align: left;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 144, ../sass/modules/_static-page.scss */
+  /* line 151, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     padding-top: 20em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 144, ../sass/modules/_static-page.scss */
+  /* line 151, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     padding-top: 35em;
   }
 }
-/* line 159, ../sass/modules/_static-page.scss */
+/* line 166, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 165, ../sass/modules/_static-page.scss */
+/* line 172, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 169, ../sass/modules/_static-page.scss */
+/* line 176, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 175, ../sass/modules/_static-page.scss */
+/* line 182, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2238,13 +2190,13 @@ body {
   padding: 0;
   list-style: none;
 }
-/* line 185, ../sass/modules/_static-page.scss */
+/* line 192, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 191, ../sass/modules/_static-page.scss */
+/* line 198, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;

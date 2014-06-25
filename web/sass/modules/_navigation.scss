@@ -78,14 +78,13 @@
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
 
-.nav-overlay {
+.nav-overlay,
+.animation-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   z-index: 98;
-
-  width: 0;
 
   cursor: pointer;
 
@@ -93,6 +92,10 @@
     width: 100%;
 
     @include animation(toggle-nav-overlay .15s linear 1 forwards);
+  }
+
+  &.is-animating {
+    @include animation(slideInDown 1s ease 1 forwards);
   }
 }
 
