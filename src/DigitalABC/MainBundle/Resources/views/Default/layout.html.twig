@@ -55,17 +55,24 @@
 
 
 {% block scripts %}
-    <!-- Global script imports -->
-    <script src="{{ asset('js/libraries/jquery-1.11.1.min.js') }}"></script>
-    <script src="{{ asset('js/libraries/angular-1.2.16.min.js') }}"></script>
-    <script src="{{ asset('js/libraries/angular-animate-1.2.16.js') }}"></script>
-    <script src="{{ asset('js/libraries/angular-route-1.2.16.js') }}"></script>
-    <script src="{{ asset('js/libraries/angular-touch-1.2.16.js') }}"></script>
-    <script src="{{ asset('js/libraries/smooth-scroll-min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/main/controllers.js') }}"></script>
-    <script src="{{ asset('js/main/routing.js') }}"></script>
-    <script src="{{ asset('js/main/directives.js') }}"></script>
-    <script src="{{ asset('js/quiz/factory.js') }}"></script>
-    <script src="{{ asset('js/quiz/controllers.js') }}"></script>
+  <!-- Script imports -->
+  <script src="{{ asset('js/libraries/jquery-1.11.1.min.js') }}"></script>
+  <script src="{{ asset('js/libraries/angular-1.2.16.min.js') }}"></script>
+  <script src="{{ asset('js/libraries/angular-animate-1.2.16.js') }}"></script>
+  <script src="{{ asset('js/libraries/angular-route-1.2.16.js') }}"></script>
+  <script src="{{ asset('js/libraries/angular-touch-1.2.16.js') }}"></script>
+
+  <!-- Base -->
+  <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/main/routing.js') }}"></script>
+
+  <!-- Controllers -->
+  <script src="{{ asset('js/main/controllers.js') }}"></script>
+  <script src="{{ asset('js/quiz/controllers.js') }}"></script>
+
+  <!-- Directives -->
+  <script src="{{ asset('js/main/directives.js') }}"></script>
+
+  <!-- Services -->
+  <script src="{{ asset('js/quiz/factory.js') }}"></script>
 {% endblock %}

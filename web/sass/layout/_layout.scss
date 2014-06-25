@@ -46,6 +46,23 @@ body {
 }
 
 
+.static-page.ng-enter, .static-page.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+
+.static-page.ng-enter {
+  @include animation(fade-in 0.5s);
+}
+
+
+.static-page.ng-leave {
+  @include animation(fade-out 0.5s);
+}
+
+
 /* Header */
 
 .header {
