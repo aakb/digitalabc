@@ -32,7 +32,7 @@ abcApp.controller('FrontpageController', function($scope, $location, $anchorScro
 
 
 // Static page controller.
-abcApp.controller('StaticPageController', function($scope, $location, $anchorScroll) {
+abcApp.controller('StaticPageController', function($scope, $location, $anchorScroll, $document) {
   // Make sure menu is closed.
   $scope.$emit('closeMenu');
 
