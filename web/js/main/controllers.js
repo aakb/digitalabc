@@ -42,7 +42,7 @@ abcApp.controller('FrontpageController', function($scope, $location) {
 
 
 // Static page controller.
-abcApp.controller('StaticPageController', function($scope, $location) {
+abcApp.controller('StaticPageController', function($scope, $location, $document) {
   // Make sure menu is closed.
   $scope.$emit('closeMenu');
 
