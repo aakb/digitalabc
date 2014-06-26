@@ -21,10 +21,12 @@
  * ========================================================================== */
 
 .quiz {
-  @extend %layout--set-background--selector;
+  height: 100%;
+  width: 100%;
 
   background: url('/images/quiz-bg.jpg') no-repeat;
   letter-spacing: .08em;
+  text-align: center;
 
   @include background-size(cover);
 

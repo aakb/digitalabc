@@ -1,6 +1,6 @@
 {% extends '::base.html.twig' %}
 
-{% block html %}data-ng-app="abcApp" data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" {% endblock %}
+{% block html %}data-ng-app="abcApp" {% endblock %}
 
 {% block title %}Digital ABC{% endblock %}
 
@@ -38,6 +38,8 @@
       <a href="/#/for-laererne/digital-parathed" class="nav--sub-item">Digital parathed (1 lektion)</a>
       <a href="/#/for-laererne/sidste-omgang" class="nav--sub-item">Sidste omgang (2 lektioner)</a>
       <a href="/#/for-laererne/farvel-forvalt-lingo" class="nav--sub-item">#FarvelForvaltLingo (4 lektioner)</a>
+    </div>
+    <div class="nav--item-wrapper">
       <a href="#" class="nav--item">Om projektet</a>
       <a href="#" class="nav--item">Digamp.dk - Demomiljø</a>
     </div>

@@ -73,7 +73,7 @@
   display: block;
 
   font-family: $font-family-primary;
-  line-height: 1.75em;
+  line-height: 1.5em;
 
   &:link {
     color: $text-color-dark;
@@ -97,7 +97,7 @@
 }
 
 @mixin nav-item() {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 @mixin nav-sub-item() {
@@ -105,7 +105,7 @@
 
   padding-left: 1em;
 
-  font-size: 1.5em;
+  font-size: 1.25em;
 
   &:before {
     position: absolute;
@@ -117,8 +117,8 @@
 
     content: "";
 
-    @include svg-bg(arrow-icon, png, transparent, 0, no-repeat);
-    @include background-size(.65em);
+    @include svg-bg(arrow-icon, png, transparent, .1em 0, no-repeat);
+    @include background-size(.6em);
     @include opacity(.5);
   }
 }
