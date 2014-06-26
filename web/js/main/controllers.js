@@ -26,7 +26,7 @@ abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
 
     // Add toggle to html tag to avoid scrolling when the menu is open.
     // We add the class this way because the <html> is not in $scope.
-    $('html').toggleClass('is-locked');
+    $('html').removeClass('is-locked');
 
     // Add class to animation overlay and remove it when the CSS animation ends.
     $('.js-animation-overlay')

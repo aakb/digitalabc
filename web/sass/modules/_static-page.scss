@@ -25,7 +25,7 @@
     z-index: 97;
 
     margin-bottom: 4em;
-    min-height: 8.5em;
+    min-height: 6em;
     width: 100%;
 
     background: url('/images/backgrounds/table-laptop-notebook.png') center no-repeat;
@@ -33,11 +33,11 @@
     @include background-size(cover);
 
     @include breakpoint($breakpoint-desk) {
-      min-height: 16em;
+      min-height: 14em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
-      min-height: 30em;
+      min-height: 26em;
     }
   }
 
@@ -154,16 +154,19 @@
     @extend %grid__item;
 
     position: relative;
-    top: 10em;
+    top: 8.5em;
 
     text-align: left;
 
+    // Make sure position fixed on child element works in Chrome.
+    @include transform(translateZ(0));
+
     @include breakpoint($breakpoint-desk) {
-      top: 20em;
+      top: 17em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
-      top: 35em;
+      top: 30em;
     }
   }
 
