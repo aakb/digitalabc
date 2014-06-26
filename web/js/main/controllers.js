@@ -7,12 +7,7 @@ abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
     $scope.layoutClassSuffix = data;
   });
 
-  // Added helper function for the menu.
-  $scope.$on('closeMenu', function(event, data) {
-    $scope.menuOpen = false;
-  });
-
-  // Toggle menu.
+  // Function for open/close menu.
   $scope.toggleMenu = function() {
     if ($scope.menuOpen === null) {
       $scope.menuOpen = false;
@@ -27,7 +22,7 @@ abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
 
   $rootScope.$on('$routeChangeSuccess', function() {
     // Make sure menu is closed.
-    $scope.$emit('closeMenu');
+    $scope.menuOpen = false;
 
     // Add class to animation overlay and remove it when the CSS animation ends.
     $('.js-animation-overlay')
