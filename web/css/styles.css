@@ -1491,7 +1491,7 @@ html.is-locked body {
   padding-top: 3.75em;
   padding-right: 3em;
   padding-left: 3em;
-  width: 25em;
+  width: 20em;
   background: white;
   color: #666666;
   -moz-box-sizing: border-box;
@@ -1529,7 +1529,7 @@ html.is-locked body {
   margin-bottom: .35em;
   padding-bottom: .25em;
   color: #b3b3b3;
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1em;
 }
 /* line 58, ../sass/modules/_navigation.scss */
@@ -1538,11 +1538,15 @@ html.is-locked body {
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
-/* line 64, ../sass/modules/_navigation.scss */
+/* line 63, ../sass/modules/_navigation.scss */
+.nav--item-wrapper:last-child {
+  border-bottom: 0;
+}
+/* line 68, ../sass/modules/_navigation.scss */
 .nav--item, .nav--sub-item {
   display: block;
   font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.75em;
+  line-height: 1.5em;
 }
 /* line 78, ../sass/base/_mixins.scss */
 .nav--item:link, .nav--sub-item:link {
@@ -1563,15 +1567,15 @@ html.is-locked body {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 69, ../sass/modules/_navigation.scss */
-.nav--item {
-  font-size: 2em;
-}
 /* line 73, ../sass/modules/_navigation.scss */
+.nav--item {
+  font-size: 1.75em;
+}
+/* line 77, ../sass/modules/_navigation.scss */
 .nav--sub-item {
   position: relative;
   padding-left: 1em;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 /* line 110, ../sass/base/_mixins.scss */
 .nav--sub-item:before {
@@ -1581,18 +1585,18 @@ html.is-locked body {
   height: 1em;
   width: 1em;
   content: "";
-  background: url("/images/arrow-icon.png") transparent 0 no-repeat;
-  background: url("/images/arrow-icon.svg") transparent 0 no-repeat;
-  -moz-background-size: 0.65em;
-  -o-background-size: 0.65em;
-  -webkit-background-size: 0.65em;
-  background-size: 0.65em;
+  background: url("/images/arrow-icon.png") transparent 0.1em 0 no-repeat;
+  background: url("/images/arrow-icon.svg") transparent 0.1em 0 no-repeat;
+  -moz-background-size: 0.6em;
+  -o-background-size: 0.6em;
+  -webkit-background-size: 0.6em;
+  background-size: 0.6em;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 81, ../sass/modules/_navigation.scss */
+/* line 85, ../sass/modules/_navigation.scss */
 .nav-overlay,
 .animation-overlay {
   position: absolute;
@@ -1602,7 +1606,7 @@ html.is-locked body {
   z-index: 98;
   cursor: pointer;
 }
-/* line 91, ../sass/modules/_navigation.scss */
+/* line 95, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible,
 .animation-overlay.is-visible {
   width: 100%;
@@ -1610,7 +1614,7 @@ html.is-locked body {
   -webkit-animation: toggle-nav-overlay 0.15s linear 1 forwards;
   animation: toggle-nav-overlay 0.15s linear 1 forwards;
 }
-/* line 97, ../sass/modules/_navigation.scss */
+/* line 101, ../sass/modules/_navigation.scss */
 .nav-overlay.is-animating,
 .animation-overlay.is-animating {
   -moz-animation: pageTransition 1s ease 1 forwards;
@@ -1619,7 +1623,7 @@ html.is-locked body {
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 105, ../sass/modules/_navigation.scss */
+/* line 109, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 1.5em;
@@ -1630,13 +1634,13 @@ html.is-locked body {
   cursor: pointer;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 105, ../sass/modules/_navigation.scss */
+  /* line 109, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 3em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 105, ../sass/modules/_navigation.scss */
+  /* line 109, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
@@ -2150,7 +2154,7 @@ html.is-locked body {
 .static-page--nav-item, .static-page--nav-sub-item {
   display: block;
   font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.75em;
+  line-height: 1.5em;
 }
 /* line 78, ../sass/base/_mixins.scss */
 .static-page--nav-item:link, .static-page--nav-sub-item:link {
@@ -2173,13 +2177,13 @@ html.is-locked body {
 }
 /* line 143, ../sass/modules/_static-page.scss */
 .static-page--nav-item {
-  font-size: 2em;
+  font-size: 1.75em;
 }
 /* line 147, ../sass/modules/_static-page.scss */
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 /* line 110, ../sass/base/_mixins.scss */
 .static-page--nav-sub-item:before {
@@ -2189,12 +2193,12 @@ html.is-locked body {
   height: 1em;
   width: 1em;
   content: "";
-  background: url("/images/arrow-icon.png") transparent 0 no-repeat;
-  background: url("/images/arrow-icon.svg") transparent 0 no-repeat;
-  -moz-background-size: 0.65em;
-  -o-background-size: 0.65em;
-  -webkit-background-size: 0.65em;
-  background-size: 0.65em;
+  background: url("/images/arrow-icon.png") transparent 0.1em 0 no-repeat;
+  background: url("/images/arrow-icon.svg") transparent 0.1em 0 no-repeat;
+  -moz-background-size: 0.6em;
+  -o-background-size: 0.6em;
+  -webkit-background-size: 0.6em;
+  background-size: 0.6em;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }

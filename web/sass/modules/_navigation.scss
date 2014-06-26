@@ -15,7 +15,7 @@
   padding-top: 3.75em;
   padding-right: 3em;
   padding-left: 3em;
-  width: 25em;
+  width: 20em;
 
   background: $white;
   color: $text-color-dark;
@@ -51,7 +51,7 @@
     padding-bottom: .25em;
 
     color: $gray-light;
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1em;
   }
 
@@ -59,6 +59,10 @@
     border-bottom: 1px solid $gray-lighter;
     margin-bottom: 1em;
     padding-bottom: 1em;
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   &--item,
