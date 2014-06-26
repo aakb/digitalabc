@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfff0e2a-fe52-4827-9d5f-ab23f54b578b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/layout/_layout.scss" afterPath="$PROJECT_DIR$/web/sass/layout/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/modules/_static-page.scss" afterPath="$PROJECT_DIR$/web/sass/modules/_static-page.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/main/controllers.js" afterPath="$PROJECT_DIR$/web/js/main/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/animations/_animations.scss" afterPath="$PROJECT_DIR$/web/sass/animations/_animations.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/modules/_navigation.scss" afterPath="$PROJECT_DIR$/web/sass/modules/_navigation.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/styles.css" afterPath="$PROJECT_DIR$/web/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,10 +28,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_navigation.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_navigation.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/sass/modules/_navigation.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="40" selection-start="384" selection-end="425" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="2040">
+            <state line="12" column="0" selection-start="92" selection-end="108" vertical-scroll-proportion="0.14206788" vertical-offset="0" max-vertical-offset="2040">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_animations.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/sass/animations/_animations.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="960">
               <folding />
             </state>
           </provider>
@@ -56,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_static-page.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_static-page.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sass/modules/_static-page.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="27" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.7277032" vertical-offset="1478" max-vertical-offset="3255">
+            <state line="110" column="0" selection-start="1708" selection-end="1708" vertical-scroll-proportion="-7.1666665" vertical-offset="1478" max-vertical-offset="3255">
               <folding />
             </state>
           </provider>
@@ -68,7 +76,7 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/main/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="20" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+            <state line="32" column="29" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
@@ -95,7 +103,7 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DigitalABC/MainBundle/Resources/views/Default/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="10" selection-start="2120" selection-end="2120" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="1545">
+            <state line="39" column="10" selection-start="2007" selection-end="2007" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
@@ -131,12 +139,13 @@
         <option value="$PROJECT_DIR$/web/sass/modules/_quiz.scss" />
         <option value="$PROJECT_DIR$/web/sass/modules/_quiz-header.scss" />
         <option value="$PROJECT_DIR$/src/DigitalABC/MainBundle/Resources/views/Default/layout.html.twig" />
-        <option value="$PROJECT_DIR$/web/sass/modules/_navigation.scss" />
         <option value="$PROJECT_DIR$/web/sass/base/_mixins.scss" />
         <option value="$PROJECT_DIR$/web/sass/base/_base.scss" />
-        <option value="$PROJECT_DIR$/web/js/main/controllers.js" />
         <option value="$PROJECT_DIR$/web/sass/layout/_layout.scss" />
         <option value="$PROJECT_DIR$/web/sass/modules/_static-page.scss" />
+        <option value="$PROJECT_DIR$/web/js/main/controllers.js" />
+        <option value="$PROJECT_DIR$/web/sass/animations/_animations.scss" />
+        <option value="$PROJECT_DIR$/web/sass/modules/_navigation.scss" />
       </list>
     </option>
   </component>
@@ -286,6 +295,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="base" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="animations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -681,14 +712,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DigitalABC/MainBundle/Resources/views/Default/layout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="10" selection-start="2120" selection-end="2120" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="1545">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sass/modules/_navigation.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="40" selection-start="384" selection-end="425" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="2040">
+        <state line="39" column="10" selection-start="2007" selection-end="2007" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="1530">
           <folding />
         </state>
       </provider>
@@ -707,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/main/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="20" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/sass/layout/_layout.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="-33.75" vertical-offset="0" max-vertical-offset="1290">
@@ -723,7 +740,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sass/modules/_static-page.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="27" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.7277032" vertical-offset="1478" max-vertical-offset="3255">
+        <state line="110" column="0" selection-start="1708" selection-end="1708" vertical-scroll-proportion="-7.1666665" vertical-offset="1478" max-vertical-offset="3255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/main/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="29" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/animations/_animations.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/modules/_navigation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="92" selection-end="108" vertical-scroll-proportion="0.14206788" vertical-offset="0" max-vertical-offset="2040">
           <folding />
         </state>
       </provider>

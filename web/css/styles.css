@@ -1139,7 +1139,7 @@ label {
  * Animations
  *
  */
-@-moz-keyframes pageTransition {
+@-moz-keyframes page-transition {
   /* line 9, ../sass/animations/_animations.scss */
   0% {
     right: 0;
@@ -1159,7 +1159,7 @@ label {
     opacity: 0;
   }
 }
-@-webkit-keyframes pageTransition {
+@-webkit-keyframes page-transition {
   /* line 9, ../sass/animations/_animations.scss */
   0% {
     right: 0;
@@ -1179,7 +1179,7 @@ label {
     opacity: 0;
   }
 }
-@keyframes pageTransition {
+@keyframes page-transition {
   /* line 9, ../sass/animations/_animations.scss */
   0% {
     right: 0;
@@ -1197,145 +1197,103 @@ label {
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
     opacity: 0;
-  }
-}
-/* This section needs a comment, author please provide :)
- *
- * ========================================================================== */
-@-moz-keyframes spinner {
-  /* line 34, ../sass/animations/_animations.scss */
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  /* line 39, ../sass/animations/_animations.scss */
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes spinner {
-  /* line 34, ../sass/animations/_animations.scss */
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  /* line 39, ../sass/animations/_animations.scss */
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes spinner {
-  /* line 34, ../sass/animations/_animations.scss */
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  /* line 39, ../sass/animations/_animations.scss */
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
   }
 }
 @-moz-keyframes toggle-nav-open {
-  /* line 49, ../sass/animations/_animations.scss */
+  /* line 30, ../sass/animations/_animations.scss */
   0% {
     right: -200%;
   }
 
-  /* line 53, ../sass/animations/_animations.scss */
+  /* line 34, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-webkit-keyframes toggle-nav-open {
-  /* line 49, ../sass/animations/_animations.scss */
+  /* line 30, ../sass/animations/_animations.scss */
   0% {
     right: -200%;
   }
 
-  /* line 53, ../sass/animations/_animations.scss */
+  /* line 34, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @keyframes toggle-nav-open {
-  /* line 49, ../sass/animations/_animations.scss */
+  /* line 30, ../sass/animations/_animations.scss */
   0% {
     right: -200%;
   }
 
-  /* line 53, ../sass/animations/_animations.scss */
+  /* line 34, ../sass/animations/_animations.scss */
   100% {
     right: 0;
   }
 }
 @-moz-keyframes toggle-nav-close {
-  /* line 59, ../sass/animations/_animations.scss */
+  /* line 40, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 63, ../sass/animations/_animations.scss */
+  /* line 44, ../sass/animations/_animations.scss */
   100% {
     right: -200%;
   }
 }
 @-webkit-keyframes toggle-nav-close {
-  /* line 59, ../sass/animations/_animations.scss */
+  /* line 40, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 63, ../sass/animations/_animations.scss */
+  /* line 44, ../sass/animations/_animations.scss */
   100% {
     right: -200%;
   }
 }
 @keyframes toggle-nav-close {
-  /* line 59, ../sass/animations/_animations.scss */
+  /* line 40, ../sass/animations/_animations.scss */
   0% {
     right: 0;
   }
 
-  /* line 63, ../sass/animations/_animations.scss */
+  /* line 44, ../sass/animations/_animations.scss */
   100% {
     right: -200%;
   }
 }
 @-moz-keyframes toggle-nav-overlay {
-  /* line 70, ../sass/animations/_animations.scss */
+  /* line 51, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 74, ../sass/animations/_animations.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @-webkit-keyframes toggle-nav-overlay {
-  /* line 70, ../sass/animations/_animations.scss */
+  /* line 51, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 74, ../sass/animations/_animations.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @keyframes toggle-nav-overlay {
-  /* line 70, ../sass/animations/_animations.scss */
+  /* line 51, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 74, ../sass/animations/_animations.scss */
+  /* line 55, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
@@ -1624,9 +1582,9 @@ html.is-locked body {
 /* line 101, ../sass/modules/_navigation.scss */
 .nav-overlay.is-animating,
 .animation-overlay.is-animating {
-  -moz-animation: pageTransition 1s ease 1 forwards;
-  -webkit-animation: pageTransition 1s ease 1 forwards;
-  animation: pageTransition 1s ease 1 forwards;
+  -moz-animation: page-transition 1s ease 1 forwards;
+  -webkit-animation: page-transition 1s ease 1 forwards;
+  animation: page-transition 1s ease 1 forwards;
 }
 
 /* Toggle icon use for opening and closing the menu */

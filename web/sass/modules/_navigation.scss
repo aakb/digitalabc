@@ -99,7 +99,7 @@
   }
 
   &.is-animating {
-    @include animation(pageTransition 1s ease 1 forwards);
+    @include animation(page-transition 1s ease 1 forwards);
   }
 }
 
