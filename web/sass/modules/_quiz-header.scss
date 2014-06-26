@@ -20,7 +20,7 @@
     position: relative;
     top: 50%;
 
-    padding-top: 6em;
+    padding-top: 4em;
     padding-right: 1em;
     padding-left: 1em;
 
@@ -102,7 +102,7 @@
   &--button {
     @extend %button-transparent;
 
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 
     font-size: 2em;
 
@@ -131,16 +131,12 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
-    max-width: 3em;
+    max-width: 2em;
 
     cursor: pointer;
 
     .scroll-text {
       @include opacity(.5);
-    }
-
-    @include breakpoint($breakpoint-lap) {
-      max-width: 2em;
     }
 
     @include breakpoint($breakpoint-desk) {
