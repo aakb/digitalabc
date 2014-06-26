@@ -42,10 +42,14 @@ html.is-locked  body {
 
     @include background-size(contain);
 
+    @include breakpoint($breakpoint-lap) {
+      left: 2em;
+    }
+
     @include breakpoint($breakpoint-desk) {
       top: 3em;
 
-      width: 16em;
+      width: 12em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
