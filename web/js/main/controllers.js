@@ -12,11 +12,17 @@ abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
     $scope.menuOpen = false;
   });
 
-  $scope.toggleMenu = function(){
+  // Toggle menu.
+  $scope.toggleMenu = function() {
     if ($scope.menuOpen === null) {
       $scope.menuOpen = false;
     }
+
     $scope.menuOpen = !$scope.menuOpen;
+
+    // Add toggle to html tag to avoid scrolling when the menu is open.
+    // We add the class this way because the <html> is not in $scope.
+    $('html').toggleClass('is-locked');
   };
 
   $rootScope.$on('$routeChangeSuccess', function() {
