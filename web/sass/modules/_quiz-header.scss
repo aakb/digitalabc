@@ -25,6 +25,10 @@
     padding-left: 1em;
 
     @include translateY(-50%);
+
+    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+      padding-top: 4.5em;
+    }
   }
 
   &--text,
@@ -33,7 +37,6 @@
     color: $white;
     font-family: $font-primary;
   }
-
 
   &--question,
   &--text {
@@ -50,7 +53,11 @@
     }
 
     @include breakpoint($breakpoint-lap, $breakpoint-height) {
-      font-size: 3em;
+      font-size: 2.25em;
+    }
+
+    @media screen and (orientation: landscape) and (max-height: 287px) {
+      font-size: 1.75em;
     }
   }
 
@@ -70,24 +77,37 @@
     }
 
     @include breakpoint($breakpoint-lap, $breakpoint-height) {
-      font-size: 5em;
+      font-size: 6em;
+    }
+
+    @media screen and (orientation: landscape) and (max-height: 287px) {
+      font-size: 3em;
     }
   }
 
 
   &--text {
     margin-bottom: 1em;
+
+    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+      margin-bottom: .5em;
+    }
+
+    // Not much room when orientation: landscape so we hide the text.
+    @media screen and (orientation: landscape) and (max-height: 287px) {
+      display: none;
+    }
   }
 
   &--button {
     @extend %button-transparent;
 
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
 
     font-size: 2em;
 
     @include breakpoint($breakpoint-lap) {
-      font-size: 3em;
+      font-size: 2.75em;
     }
 
     @include breakpoint($breakpoint-desk) {
@@ -97,9 +117,13 @@
     }
 
     @include breakpoint($breakpoint-lap, $breakpoint-height) {
-      margin-bottom: 1.25em;
+      margin-bottom: 1em;
 
       font-size: 2em;
+    }
+
+    @media screen and (orientation: landscape) and (max-height: 287px) {
+      font-size: 1.75em;
     }
   }
 
@@ -107,7 +131,7 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
-    max-width: 3.5em;
+    max-width: 3em;
 
     cursor: pointer;
 
@@ -116,11 +140,16 @@
     }
 
     @include breakpoint($breakpoint-lap) {
-      max-width: 2.25em;
+      max-width: 2em;
     }
 
     @include breakpoint($breakpoint-desk) {
       max-width: 3.25em;
+    }
+
+    // Not much room when orientation: landscape so we hide the text.
+    @media screen and (orientation: landscape) and (max-height: 287px) {
+      display: none;
     }
   }
 }
