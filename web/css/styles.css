@@ -1489,8 +1489,8 @@ html.is-locked body {
   right: -200%;
   z-index: 99;
   padding-top: 3.75em;
-  padding-right: 3em;
-  padding-left: 3em;
+  padding-right: 2.5em;
+  padding-left: 2.5em;
   width: 20em;
   background: white;
   color: #666666;
@@ -1575,7 +1575,7 @@ html.is-locked body {
 .nav--sub-item {
   position: relative;
   padding-left: 1em;
-  font-size: 1.25em;
+  font-size: 1.35em;
 }
 /* line 110, ../sass/base/_mixins.scss */
 .nav--sub-item:before {
@@ -2183,7 +2183,7 @@ html.is-locked body {
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
-  font-size: 1.25em;
+  font-size: 1.35em;
 }
 /* line 110, ../sass/base/_mixins.scss */
 .static-page--nav-sub-item:before {
