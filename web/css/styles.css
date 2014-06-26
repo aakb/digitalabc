@@ -1577,7 +1577,13 @@ html.is-locked body {
   padding-left: 1em;
   font-size: 1.35em;
 }
-/* line 110, ../sass/base/_mixins.scss */
+@media only screen and (min-width: 481px) {
+  /* line 77, ../sass/modules/_navigation.scss */
+  .nav--sub-item {
+    font-size: 1.6em;
+  }
+}
+/* line 114, ../sass/base/_mixins.scss */
 .nav--sub-item:before {
   position: absolute;
   top: .35em;
@@ -2185,7 +2191,13 @@ html.is-locked body {
   padding-left: 1em;
   font-size: 1.35em;
 }
-/* line 110, ../sass/base/_mixins.scss */
+@media only screen and (min-width: 481px) {
+  /* line 147, ../sass/modules/_static-page.scss */
+  .static-page--nav-sub-item {
+    font-size: 1.6em;
+  }
+}
+/* line 114, ../sass/base/_mixins.scss */
 .static-page--nav-sub-item:before {
   position: absolute;
   top: .35em;

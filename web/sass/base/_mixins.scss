@@ -107,6 +107,10 @@
 
   font-size: 1.35em;
 
+  @include breakpoint($breakpoint-lap) {
+    font-size: 1.6em;
+  }
+
   &:before {
     position: absolute;
     top: .35em;
