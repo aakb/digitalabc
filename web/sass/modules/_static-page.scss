@@ -105,6 +105,7 @@
     @extend %desk--three-fifths;
     @extend %bigscreen--three-fifths;
 
+    padding-right: 2em;
     padding-left: 2em;
   }
 
@@ -114,22 +115,22 @@
     @extend %bigscreen--two-fifths;
     @extend %grid-markup-fix;
 
-    z-index: 96;
-
-    padding-top: 9em;
     padding-right: 2em;
     margin-bottom: 2em;
 
     &-item-wrapper {
+      position: relative;
+
       border-bottom: 8px solid $gray-lighter;
       padding-bottom: 2em;
 
       @include breakpoint($breakpoint-desk) {
         position: fixed;
+        z-index: 96;
 
         border-bottom: 0;
-        padding-bottom: 0;
         border-left: 8px solid $gray-lighter;
+        padding-bottom: .5em;
         padding-left: 2em;
       }
     }
@@ -152,14 +153,17 @@
   &--nav {
     @extend %grid__item;
 
+    position: relative;
+    top: 10em;
+
     text-align: left;
 
     @include breakpoint($breakpoint-desk) {
-      padding-top: 20em;
+      top: 20em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
-      padding-top: 35em;
+      top: 35em;
     }
   }
 
