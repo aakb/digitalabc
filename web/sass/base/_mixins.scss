@@ -8,11 +8,18 @@
 /* Mixin for breakpoints */
 
 @mixin breakpoint($breakpoint-width: false, $breakpoint-height: false) {
-  @if $breakpoint-width != false {
+  // If both is set.
+  @if $breakpoint-width != false and $breakpoint-height != false {
+    @media only screen and (min-width: $breakpoint-width) and (max-height: $breakpoint-height) { @content; }
+  }
+
+  // If only width is set.
+  @if $breakpoint-width != false and $breakpoint-height == false {
     @media only screen and (min-width: $breakpoint-width) { @content; }
   }
 
-  @if $breakpoint-height != false {
+  // If only height is set.
+  @if $breakpoint-width == false and $breakpoint-height != false {
     @media only screen and (max-height: $breakpoint-height) { @content; }
   }
 }

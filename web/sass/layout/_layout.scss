@@ -33,16 +33,6 @@ html.is-locked  body {
 body {
   overflow-x: hidden;
   position: relative;
-
-  font-size: .7em;
-
-  @include breakpoint($breakpoint-lap) {
-    font-size: .8em;
-  }
-
-  @include breakpoint($breakpoint-desk) {
-    font-size: 1em;
-  }
 }
 
 
@@ -60,22 +50,25 @@ body {
   &--logo {
     position: absolute;
     top: 2.5em;
-    left: 0;
+    left: 1em;
 
     display: block;
     height: 3.5em;
-    width: 18em;
+    width: 14em;
 
     @include background-size(contain);
 
     @include breakpoint($breakpoint-desk) {
       top: 3em;
-      left: 2em;
+
+      width: 16em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
       top: 4em;
       left: 6em;
+
+      width: 20em;
     }
   }
 }
