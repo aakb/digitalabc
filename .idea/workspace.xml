@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cfff0e2a-fe52-4827-9d5f-ab23f54b578b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/base/_mixins.scss" afterPath="$PROJECT_DIR$/web/sass/base/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/modules/_navigation.scss" afterPath="$PROJECT_DIR$/web/sass/modules/_navigation.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/main/controllers.js" afterPath="$PROJECT_DIR$/web/js/main/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/styles.css" afterPath="$PROJECT_DIR$/web/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,16 +29,16 @@
       <file leaf-file-name="_navigation.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sass/modules/_navigation.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="15" selection-start="563" selection-end="563" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="2040">
+            <state line="28" column="40" selection-start="384" selection-end="425" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="2040">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_mixins.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_mixins.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/sass/base/_mixins.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="28" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-20.916666" vertical-offset="668" max-vertical-offset="1935">
+            <state line="110" column="18" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.7750592" vertical-offset="668" max-vertical-offset="1995">
               <folding />
             </state>
           </provider>
@@ -74,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="layout.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DigitalABC/MainBundle/Resources/views/Default/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="10" selection-start="2120" selection-end="2120" vertical-scroll-proportion="0.4735596" vertical-offset="0" max-vertical-offset="1545">
+            <state line="40" column="10" selection-start="2120" selection-end="2120" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="1545">
               <folding />
             </state>
           </provider>
@@ -115,8 +112,8 @@
         <option value="$PROJECT_DIR$/web/sass/modules/_quiz-header.scss" />
         <option value="$PROJECT_DIR$/src/DigitalABC/MainBundle/Resources/views/Default/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/js/main/controllers.js" />
-        <option value="$PROJECT_DIR$/web/sass/base/_mixins.scss" />
         <option value="$PROJECT_DIR$/web/sass/modules/_navigation.scss" />
+        <option value="$PROJECT_DIR$/web/sass/base/_mixins.scss" />
       </list>
     </option>
   </component>
@@ -562,7 +559,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1414" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -570,7 +567,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297953" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6702047" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6702047" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -673,23 +670,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DigitalABC/MainBundle/Resources/views/Default/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="10" selection-start="2120" selection-end="2120" vertical-scroll-proportion="-25.0" vertical-offset="0" max-vertical-offset="1545">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/sass/modules/_navigation.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="15" selection-start="563" selection-end="563" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="2040">
+        <state line="28" column="40" selection-start="384" selection-end="425" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="2040">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sass/base/_mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="28" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-20.916666" vertical-offset="668" max-vertical-offset="1935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DigitalABC/MainBundle/Resources/views/Default/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="10" selection-start="2120" selection-end="2120" vertical-scroll-proportion="0.4735596" vertical-offset="0" max-vertical-offset="1545">
+        <state line="110" column="18" selection-start="2085" selection-end="2085" vertical-scroll-proportion="0.7750592" vertical-offset="668" max-vertical-offset="1995">
           <folding />
         </state>
       </provider>
