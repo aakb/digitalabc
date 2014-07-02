@@ -4,9 +4,14 @@ abcApp.controller('IndexController', function($scope) {});
  * Controller for the start page of the quiz.
  */
 abcApp.controller('StartController', function($scope, $timeout) {
-  // Change layout class.
-  $scope.$emit('changeLayoutClassSuffix', 'quiz');
+  // Set variables.
+  $scope.menuOpen = null;
+  $scope.layoutClassSuffix = 'layout';
 
+  // Added helper function for the menu.
+  $scope.$on('changeLayoutClassSuffix', function(event, data) {
+    $scope.layoutClassSuffix = data;
+  });
 
   // Make sure menu is closed.
   $scope.$emit('closeMenu');
@@ -120,7 +125,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
  */
 abcApp.controller('QuizController', function($scope, $routeParams, $location, $timeout, quizFactory) {
   // Change layout class.
-  $scope.$emit('changeLayoutClassSuffix', 'quiz');
+  $scope.$emit('changeLayoutClassSuffix', 'layout');
 
   // Make sure the quiz has been initialised.
   quizFactory.init().then(function() {
