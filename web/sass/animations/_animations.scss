@@ -28,21 +28,29 @@
 
 @include keyframes(toggle-nav-open) {
   0% {
-    right: -200%;
+    right: -40em;
+
+    opacity: 0;
   }
 
   100% {
     right: 0;
+
+    opacity: 1;
   }
 }
 
 @include keyframes(toggle-nav-close) {
   0% {
     right: 0;
+
+    opacity: 1;
   }
 
   100% {
-    right: -200%;
+    right: -40em;
+
+    opacity: 1;
   }
 }
 

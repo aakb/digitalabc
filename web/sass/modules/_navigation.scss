@@ -9,7 +9,7 @@
   height: 100%;
   overflow-y: auto;
   position: fixed;
-  right: -200%;
+  right: -40em;
   z-index: 99;
 
   padding-top: 3.75em;
@@ -20,6 +20,7 @@
 
   background: $white;
   color: $text-color-dark;
+  opacity: 0;
 
   @include box-sizing(border-box);
   @include box-shadow(-5px 0px 10px transparentize($black, .75));
@@ -35,11 +36,11 @@
   /* States */
 
   &.is-visible {
-    @include animation(toggle-nav-open .15s ease 1 forwards);
+    @include animation(toggle-nav-open .75s ease 1 forwards);
   }
 
   &.is-hidden {
-    @include animation(toggle-nav-close .15s ease 1 forwards);
+    @include animation(toggle-nav-close .75s ease 1 forwards);
   }
 
 
@@ -100,11 +101,11 @@
   &.is-visible {
     width: 100%;
 
-    @include animation(toggle-nav-overlay .15s linear 1 forwards);
+    @include animation(toggle-nav-overlay .75s linear 1 forwards);
   }
 
   &.is-animating {
-    @include animation(page-transition 1s ease 1 forwards);
+    @include animation(page-transition .75s ease 1 forwards);
   }
 }
 

@@ -1,5 +1,7 @@
 // Header controller.
 abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
+  // Set variables.
+  $scope.menuOpen = null;
   $scope.layoutClassSuffix = 'layout';
 
   // Added helper function for the menu.
@@ -20,9 +22,12 @@ abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
     $('html').toggleClass('is-locked');
   };
 
+  // Change route.
   $rootScope.$on('$routeChangeSuccess', function() {
     // Make sure menu is closed.
-    $scope.menuOpen = false;
+    if ($scope.menuOpen !== null) {
+      $scope.menuOpen = false;
+    }
 
     // Add toggle to html tag to avoid scrolling when the menu is open.
     // We add the class this way because the <html> is not in $scope.
