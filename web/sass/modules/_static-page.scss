@@ -8,15 +8,23 @@
 .static-page {
   padding-bottom: 3em;
 
-  p {
-    margin-bottom: 1em;
-  }
-
   &--inner {
     .ng-enter,
     .ng-leave {
       @include animation(fadeOut .5s ease 1 forwards);
     }
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  p,
+  &--lead,
+  &--summary,
+  &--list,
+  &--top-link {
+    font: $font-family-secondary;
   }
 
   &--header {
