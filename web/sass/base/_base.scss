@@ -32,7 +32,7 @@ h6 {
   margin-top: 0;
   margin-bottom: .5em;
 
-  font-family: $font-family-primary;
+  font-family: $font-primary;
   font-weight: normal;
 
   /* This fixes huge spaces when a heading wraps onto two lines */
@@ -45,7 +45,7 @@ h6 {
 
 strong,
 %strong {
-  font-family: $font-secondary-bold;
+  font-family: $font-secondary;
   font-weight: normal;
 }
 

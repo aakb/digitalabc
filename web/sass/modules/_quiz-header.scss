@@ -1,17 +1,31 @@
 /**
  *
- * Quiz header.
+ * Quiz
  *
  */
 
 
 .quiz-header {
   background: url('/images/image-flip.jpg') no-repeat;
+
+  &--inner {
+    padding-top: 4em;
+  }
+
+  @include breakpoint($breakpoint-lap, $breakpoint-height) {
+    padding-top: 4.5em;
+  }
 }
 
 .quiz,
 .quiz-start {
   background: url('/images/quiz-bg.jpg') no-repeat;
+
+  padding-top: 2em;
+
+  @include breakpoint($breakpoint-lap, $breakpoint-height) {
+    padding-top: 1em;
+  }
 }
 
 .quiz,
@@ -30,15 +44,10 @@
     position: relative;
     top: 50%;
 
-    padding-top: 4em;
     padding-right: 1em;
     padding-left: 1em;
 
     @include translateY(-50%);
-
-    @include breakpoint($breakpoint-lap, $breakpoint-height) {
-      padding-top: 4.5em;
-    }
   }
 }
 
@@ -48,7 +57,7 @@
   &--question,
   &--punchline {
     color: $white;
-    font-family: $font-primary;
+    font-family: $font-family-primary;
   }
 
   &--question,
@@ -168,42 +177,58 @@
 .quiz {
   &--progress {
     color: transparentize($white, .5);
-    font-size: 3em;
-    font-family: $font-primary;
+
+    font-size: 1.5em;
+
+    @include breakpoint($breakpoint-desk) {
+      font-size: 3em;
+    }
   }
 
 
   &--question {
-    @extend %quiz--set-font--selector;
+    margin-bottom: 0;
 
-    font-size: 4em;
+    color: $white;
+
+    @include breakpoint($breakpoint-desk) {
+      font-size: 3em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      font-size: 5em;
+    }
   }
 
+  &--answers-wrapper {
+    padding: 1em;
+  }
 
   &--answers {
-    @extend %quiz--set-font--selector;
-
-    font-size: 2em;
+    color: $white;
   }
 
 
   &--selection {
     position: relative;
 
-    height: 3em;
-    margin-top: 1em;
     margin-right: auto;
-    margin-bottom: 1em;
     margin-left: auto;
-    width: 70%;
+    max-width: 35em;
+    height: 5.5em;
 
-    @include breakpoint($breakpoint-lap) {
-      width: 30em;
+    @include breakpoint($breakpoint-bigscreen) {
+      height: 8em;
+      max-width: 50em;
+    }
+
+    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+      height: 4.5em;
     }
 
     &.is-checked {
       .quiz--selection-label {
-        @include background-image(linear-gradient(left, $theme-color, rgba(0,0,0,0.35)));
+        @include background-image(linear-gradient(left, $theme-color, transparentize($black, .35)));
       }
 
       .quiz--selection-number {
@@ -212,25 +237,43 @@
     }
   }
 
-
   &--selection-input {
     display: none;
   }
-
 
   &--selection-label {
     position: relative;
     top: 50%;
 
-    padding: 1em 2em;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: .5em;
+    padding-right: 2em;
+    padding-bottom: .75em;
+    padding-left: 2em;
 
     background-color: transparentize($black, .35);
     border: .3em solid white;
     color: $white;
-    font-size: .8em;
+    font-family: $font-secondary;
+    font-size: .9em;
+    line-height: 1.25em;
     word-wrap: break-word;
 
     @include translateY(-50%);
+
+    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+      padding-top: 1em;
+      padding-bottom: 1.25em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
 
     &:hover {
       cursor: pointer;
@@ -239,21 +282,35 @@
 
 
   &--selection-number {
-    left: -.63em;
+    left: -.75em;
     position: absolute;
     top: 50%;
-    width: 1.55em;
+    width: 1.5em;
 
     background: black;
     border: .2em solid $white;
+    line-height: 1.5em;
 
     @include border-radius(100%);
     @include translateY(-50%);
+
+    // Compensate for width of the number 1.
+    &.is-first {
+      text-indent: -1px;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      font-size: 1.5em;
+    }
   }
 
 
   &--button {
     @extend %button-transparent;
+
+    margin-right: .5em;
+    margin-left: .5em;
+    padding: .25em 1.25em;
 
     color: $white;
     font-size: 1.695em;
@@ -262,6 +319,10 @@
       cursor: default;
 
       @include opacity(.5);
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      padding: .5em 2em;
     }
   }
 
