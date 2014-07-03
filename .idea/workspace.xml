@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfff0e2a-fe52-4827-9d5f-ab23f54b578b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/images/quiz-bg.jpg" afterPath="$PROJECT_DIR$/web/images/quiz-bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/base/_base.scss" afterPath="$PROJECT_DIR$/web/sass/base/_base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/base/_forms.scss" afterPath="$PROJECT_DIR$/web/sass/base/_forms.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/base/_mixins.scss" afterPath="$PROJECT_DIR$/web/sass/base/_mixins.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/modules/_quiz-header.scss" afterPath="$PROJECT_DIR$/web/sass/modules/_quiz-header.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/modules/_quiz.scss" afterPath="$PROJECT_DIR$/web/sass/modules/_quiz.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/sass/modules/_static-page.scss" afterPath="$PROJECT_DIR$/web/sass/modules/_static-page.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/partials/quiz/quiz.html" afterPath="$PROJECT_DIR$/web/partials/quiz/quiz.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/styles.css" afterPath="$PROJECT_DIR$/web/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="htdocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +29,7 @@
       <file leaf-file-name="_quiz-header.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/sass/modules/_quiz-header.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="275" column="0" selection-start="4747" selection-end="4747" vertical-scroll-proportion="0.3774671" vertical-offset="3666" max-vertical-offset="5625">
+            <state line="183" column="20" selection-start="3091" selection-end="3091" vertical-scroll-proportion="0.16425121" vertical-offset="2541" max-vertical-offset="6030">
               <folding />
             </state>
           </provider>
@@ -79,24 +71,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/quiz/controllers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="49" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3630">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_vars.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/sass/base/_vars.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="1386" selection-end="1401" vertical-scroll-proportion="-36.25" vertical-offset="0" max-vertical-offset="1125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_forms.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sass/base/_forms.scss">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,7 +83,7 @@
       <file leaf-file-name="_mixins.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sass/base/_mixins.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="0" selection-start="1541" selection-end="1541" vertical-scroll-proportion="-16.541666" vertical-offset="713" max-vertical-offset="1980">
+            <state line="23" column="3" selection-start="673" selection-end="673" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1980">
               <folding />
             </state>
           </provider>
@@ -1053,23 +1027,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/quiz/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="49" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0" vertical-offset="2339" max-vertical-offset="3630">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/backend/questions.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="64" selection-start="593" selection-end="593" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="2760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sass/base/_vars.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1386" selection-end="1401" vertical-scroll-proportion="-36.25" vertical-offset="0" max-vertical-offset="1125">
           <folding />
         </state>
       </provider>
@@ -1095,9 +1055,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sass/base/_mixins.scss">
+    <entry file="file://$PROJECT_DIR$/web/sass/base/_vars.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="0" selection-start="1541" selection-end="1541" vertical-scroll-proportion="-16.541666" vertical-offset="713" max-vertical-offset="1980">
+        <state line="40" column="24" selection-start="880" selection-end="880" vertical-scroll-proportion="0.4735596" vertical-offset="0" max-vertical-offset="1267">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/quiz/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="49" selection-start="3700" selection-end="3700" vertical-scroll-proportion="1.4756004" vertical-offset="0" max-vertical-offset="3630">
           <folding />
         </state>
       </provider>
@@ -1109,9 +1076,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/sass/base/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="3" selection-start="673" selection-end="673" vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="1980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/sass/modules/_quiz-header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="275" column="0" selection-start="4747" selection-end="4747" vertical-scroll-proportion="0.3774671" vertical-offset="3666" max-vertical-offset="5625">
+        <state line="183" column="20" selection-start="3091" selection-end="3091" vertical-scroll-proportion="0.16425121" vertical-offset="2541" max-vertical-offset="6030">
           <folding />
         </state>
       </provider>

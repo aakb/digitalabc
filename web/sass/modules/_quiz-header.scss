@@ -180,6 +180,10 @@
 
     font-size: 1.5em;
 
+    @include breakpoint(false, 550px) {
+      display: none;
+    }
+
     @include breakpoint($breakpoint-desk) {
       font-size: 3em;
     }
@@ -191,6 +195,10 @@
 
     color: $white;
 
+    @include breakpoint(false, 550px) {
+      font-size: 1.5em;
+    }
+
     @include breakpoint($breakpoint-desk) {
       font-size: 3em;
     }
@@ -201,7 +209,7 @@
   }
 
   &--answers-wrapper {
-    padding: 1em;
+    padding: .75em;
   }
 
   &--answers {
@@ -216,6 +224,10 @@
     margin-left: auto;
     max-width: 35em;
     height: 5.5em;
+
+    @include breakpoint(false, 550px) {
+      height: 4.75em;
+    }
 
     @include breakpoint($breakpoint-bigscreen) {
       height: 8em;
@@ -262,6 +274,13 @@
 
     @include translateY(-50%);
 
+    @include breakpoint(false, 550px) {
+      padding-top: .75em;
+      padding-bottom: 1em;
+
+      font-size: .8em;
+    }
+
     @include breakpoint($breakpoint-lap, $breakpoint-height) {
       padding-top: 1em;
       padding-bottom: 1.25em;
@@ -299,6 +318,10 @@
       text-indent: -1px;
     }
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @include breakpoint($breakpoint-bigscreen) {
       font-size: 1.5em;
     }
@@ -319,6 +342,10 @@
       cursor: default;
 
       @include opacity(.5);
+    }
+
+    @include breakpoint(false, 550px) {
+      padding: .25em .75em;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
