@@ -9,11 +9,11 @@
   background: url('/images/image-flip.jpg') no-repeat;
 
   &--inner {
-    padding-top: 4em;
+    padding-top: 3em;
   }
 
   @include breakpoint($breakpoint-lap, $breakpoint-height) {
-    padding-top: 4.5em;
+    padding-top: 0;
   }
 }
 
@@ -21,7 +21,7 @@
 .quiz-start {
   background: url('/images/quiz-bg.jpg') no-repeat;
 
-  padding-top: 2em;
+  padding-top: 1em;
 
   @include breakpoint($breakpoint-lap, $breakpoint-height) {
     padding-top: 1em;
@@ -78,7 +78,7 @@
       font-size: 2.25em;
     }
 
-    @media screen and (orientation: landscape) and (max-height: 287px) {
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
       font-size: 1.75em;
     }
   }
@@ -102,7 +102,7 @@
       font-size: 6em;
     }
 
-    @media screen and (orientation: landscape) and (max-height: 287px) {
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
       font-size: 3em;
     }
   }
@@ -116,7 +116,7 @@
     }
 
     // Not much room when orientation: landscape so we hide the text.
-    @media screen and (orientation: landscape) and (max-height: 287px) {
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
       display: none;
     }
   }
@@ -144,7 +144,7 @@
       font-size: 2em;
     }
 
-    @media screen and (orientation: landscape) and (max-height: 287px) {
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
       font-size: 1.75em;
     }
   }
@@ -166,7 +166,7 @@
     }
 
     // Not much room when orientation: landscape so we hide the text.
-    @media screen and (orientation: landscape) and (max-height: 287px) {
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
       display: none;
     }
   }
@@ -191,7 +191,7 @@
 
 
   &--question {
-    margin-bottom: 0;
+    margin-bottom: .5em;
 
     color: $white;
 
@@ -209,105 +209,28 @@
   }
 
   &--answers-wrapper {
-    padding: .75em;
+    padding: .25em;
   }
 
-  &--answers {
+  &--answers-number,
+  &--answers-answer-inner {
+    display: block;
+
     color: $white;
+    cursor: pointer;
   }
 
-
-  &--selection {
-    position: relative;
-
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 35em;
-    height: 5.5em;
-
-    @include breakpoint(false, 550px) {
-      height: 4.75em;
-    }
-
-    @include breakpoint($breakpoint-bigscreen) {
-      height: 8em;
-      max-width: 50em;
-    }
-
-    @include breakpoint($breakpoint-lap, $breakpoint-height) {
-      height: 4.5em;
-    }
-
-    &.is-checked {
-      .quiz--selection-label {
-        @include background-image(linear-gradient(left, $theme-color, transparentize($black, .35)));
-      }
-
-      .quiz--selection-number {
-        background-color: $theme-color;
-      }
-    }
-  }
-
-  &--selection-input {
-    display: none;
-  }
-
-  &--selection-label {
-    position: relative;
-    top: 50%;
-
-    margin-bottom: 0;
-    margin-left: 0;
-    padding-top: .5em;
-    padding-right: 2em;
-    padding-bottom: .75em;
-    padding-left: 2em;
-
-    background-color: transparentize($black, .35);
-    border: .3em solid white;
-    color: $white;
-    font-family: $font-secondary;
-    font-size: .9em;
-    line-height: 1.25em;
-    word-wrap: break-word;
-
-    @include translateY(-50%);
-
-    @include breakpoint(false, 550px) {
-      padding-top: .75em;
-      padding-bottom: 1em;
-
-      font-size: .8em;
-    }
-
-    @include breakpoint($breakpoint-lap, $breakpoint-height) {
-      padding-top: 1em;
-      padding-bottom: 1.25em;
-    }
-
-    @include breakpoint($breakpoint-bigscreen) {
-      padding-top: 1.5em;
-      padding-bottom: 1.5em;
-
-      font-size: 1.1em;
-      line-height: 1.5em;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-
-  &--selection-number {
-    left: -.75em;
+  &--answers-number {
+    left: -.95em;
     position: absolute;
     top: 50%;
     width: 1.5em;
 
     background: black;
     border: .2em solid $white;
+    cursor: pointer;
+    font-family: $font-primary;
+    font-size: 1.25em;
     line-height: 1.5em;
 
     @include border-radius(100%);
@@ -318,8 +241,8 @@
       text-indent: -1px;
     }
 
-    &:hover {
-      cursor: pointer;
+    &.is-checked {
+      background-color: $theme-color;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
@@ -327,6 +250,43 @@
     }
   }
 
+  &--answers-answer {
+    position: relative;
+
+    border: .2em solid white;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+    height: 5em;
+    max-width: 35em;
+    padding: 0 .5em .2em 1.75em;
+
+    background-color: transparentize($black, .35);
+    cursor: pointer;
+    font-family: $font-secondary;
+
+    @include box-sizing(border-box);
+
+    &.is-checked {
+      @include background-image(linear-gradient(left, $theme-color, transparentize($black, .35)));
+    }
+
+    @include breakpoint(false, 375px) {
+      height: 4em;
+
+      font-size: .8em;
+    }
+  }
+
+  &--answers-answer-inner {
+    font-size: .9em;
+
+    @include vertical-align-element();
+  }
+
+  &--answers-input {
+    display: none;
+  }
 
   &--button {
     @extend %button-transparent;
@@ -336,7 +296,7 @@
     padding: .25em 1.25em;
 
     color: $white;
-    font-size: 1.695em;
+    font-size: 1.5em;
 
     &.is-inactive {
       cursor: default;
