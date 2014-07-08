@@ -5,10 +5,12 @@
     <h2 class="quiz--text" data-ng-show="challengeResult !== ''">Din modstander svarede <span class="quiz--challenger-answer" data-ng-class="{'is-correct': challengerAnswerCorrect, 'is-wrong': !challengerAnswerCorrect}"><[challengeResult]></span> på spørgsmålet</h2>
     <form class="quiz--answers" name="myForm" ng-submit="nextStep()">
       <div class="quiz--answers-wrapper">
-        <div class="quiz--selection" data-ng-class="{'is-checked': chosen.answer == answer.id }" data-ng-repeat="answer in question.answers">
-          <input class="quiz--selection-input" id="selection-<[answer.id]>" type="radio" value="<[answer.id]>" ng-model="chosen.answer">
-          <label class="quiz--selection-label" for="selection-<[answer.id]>"><[answer.text]></label>
-          <div class="quiz--selection-number" data-ng-class="{'is-first': answer.id == 0 }"><[answer.id+1]></div>
+        <div data-ng-repeat="answer in question.answers">
+          <label class="quiz--answers-answer" data-ng-class="{'is-checked': chosen.answer == answer.id}" for="selection-<[answer.id]>">
+            <span class="quiz--answers-number" data-ng-class="{'is-checked': chosen.answer == answer.id, 'is-first': answer.id == 0 }"><[answer.id+1]></span>
+            <span class="quiz--answers-answer-inner"><[answer.text]></span>
+          </label>
+          <input class="quiz--answers-input" id="selection-<[answer.id]>" type="radio" value="<[answer.id]>" ng-model="chosen.answer">
         </div>
       </div>
       <input type="button" class="quiz--button" data-ng-class="{'is-inactive': step<=1}" value="Tilbage" ng-click="previousStep()">
