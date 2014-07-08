@@ -257,7 +257,7 @@
     margin-right: auto;
     margin-bottom: 1em;
     margin-left: auto;
-    height: 5em;
+    height: 4em;
     max-width: 35em;
     padding: 0 .5em .2em 1.75em;
 
@@ -271,17 +271,19 @@
       @include background-image(linear-gradient(left, $theme-color, transparentize($black, .35)));
     }
 
-    @include breakpoint(false, 375px) {
-      height: 4em;
-
-      font-size: .8em;
+    @include breakpoint($breakpoint-lap) {
+      height: 5em;
     }
   }
 
   &--answers-answer-inner {
-    font-size: .9em;
+    font-size: .75em;
 
     @include vertical-align-element();
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: .9em;
+    }
   }
 
   &--answers-input {
