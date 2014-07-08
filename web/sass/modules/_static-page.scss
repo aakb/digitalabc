@@ -8,13 +8,6 @@
 .static-page {
   padding-bottom: 3em;
 
-  &--inner {
-    .ng-enter,
-    .ng-leave {
-      @include animation(fadeOut .5s ease 1 forwards);
-    }
-  }
-
   p {
     margin-bottom: 1em;
   }
