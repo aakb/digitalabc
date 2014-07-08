@@ -114,12 +114,12 @@
 
 .nav-toggle-icon {
   position: absolute;
-  top: 1.5em;
+  top: 1em;
   right: 1em;
 
   display: block;
-  height: 3em;
-  width: 3em;
+  height: 2em;
+  width: 2em;
 
   cursor: pointer;
 
@@ -129,6 +129,9 @@
 
   @include breakpoint($breakpoint-desk) {
     top: 3em;
+
+    height: 3em;
+    width: 3em;
   }
 
   @include breakpoint($breakpoint-bigscreen) {
