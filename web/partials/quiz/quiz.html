@@ -15,7 +15,7 @@
       </div>
       <input type="button" class="quiz--button" data-ng-class="{'is-inactive': step<=1}" value="Tilbage" ng-click="previousStep()">
       <input type="button" class="quiz--button" data-ng-class="{'is-inactive': chosen.answer == null}" data-ng-show="step<numberOfQuestions" value="Næste" ng-click="nextStep()">
-      <input type="button" class="quiz--button" data-ng-class="{'is-inactive': chosen.answer == null}" data-ng-show="step==numberOfQuestions" value="Afslut quizzen !" ng-click="nextStep()">
+      <input type="button" class="quiz--button" data-ng-class="{'is-inactive': chosen.answer == null}" data-ng-show="step==numberOfQuestions" value="Afslut" ng-click="nextStep()">
     </form>
   </div>
 </section>
