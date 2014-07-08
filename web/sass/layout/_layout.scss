@@ -33,12 +33,12 @@ html.is-locked  body {
 
   &--logo {
     position: absolute;
-    top: 1.5em;
+    top: 1em;
     left: 1em;
 
     display: block;
-    height: 3em;
-    width: 12em;
+    height: 2em;
+    width: 8em;
 
     @include background-size(contain);
 
