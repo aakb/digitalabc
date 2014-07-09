@@ -153,6 +153,18 @@
  * 2. Remove any margins and paddings that might affect the grid system.
  * 3. Apply a negative `margin-left` to negate the columns’ gutters.
  */
+/* line 214, ../sass/base/_grid.scss */
+.video {
+  list-style: none;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  margin-left: -2em;
+  /* [3] */
+}
+
 /**
  * 1. Cause columns to stack side-by-side.
  * 2. Space columns apart.
@@ -161,7 +173,7 @@
  * 5. Required to combine fluid widths and fixed gutters.
  */
 /* line 240, ../sass/base/_grid.scss */
-.static-page--content, .static-page--nav {
+.video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt, .static-page--content, .static-page--nav {
   display: inline-block;
   /* [1] */
   padding-left: 2em;
@@ -188,7 +200,7 @@
   text-align: left;
 }
 /* line 265, ../sass/base/_grid.scss */
-.static-page--content-wrapper > .static-page--content, .static-page--content-wrapper > .static-page--nav {
+.static-page--content-wrapper > .video--troll-painter, .static-page--content-wrapper > .video--broke-teenager, .static-page--content-wrapper > .video--slave, .static-page--content-wrapper > .video--pain-in-the-butt, .static-page--content-wrapper > .static-page--content, .static-page--content-wrapper > .static-page--nav {
   direction: ltr;
   text-align: left;
 }
@@ -258,7 +270,7 @@
    * Whole
    */
   /* line 368, ../sass/base/_grid.scss */
-  .static-page--content {
+  .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt, .static-page--content {
     width: 100%;
   }
 
@@ -299,6 +311,11 @@
   /**
    * Halves
    */
+  /* line 374, ../sass/base/_grid.scss */
+  .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt {
+    width: 50%;
+  }
+
   /**
    * Thirds
    */
@@ -357,6 +374,11 @@
   /**
    * Halves
    */
+  /* line 374, ../sass/base/_grid.scss */
+  .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt {
+    width: 50%;
+  }
+
   /**
    * Thirds
    */
@@ -396,6 +418,11 @@
   /**
    * Halves
    */
+  /* line 374, ../sass/base/_grid.scss */
+  .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt {
+    width: 50%;
+  }
+
   /**
    * Thirds
    */
@@ -2250,17 +2277,92 @@ html.is-locked body {
  * Videos.
  *
  */
-/* line 7, ../sass/modules/_videos.scss */
-.videos {
+/* Shared video section styling */
+/* line 9, ../sass/modules/_video.scss */
+.video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt {
   position: relative;
-  height: 100%;
-  background-color: #0abbef;
+  margin-left: -2px;
+  height: 50%;
 }
-/* line 14, ../sass/modules/_videos.scss */
-.videos--inner {
+
+/* line 22, ../sass/modules/_video.scss */
+.video {
+  position: relative;
+  z-index: 99;
+  height: 100%;
+}
+/* line 30, ../sass/modules/_video.scss */
+.video--inner {
+  height: 100%;
+}
+/* line 38, ../sass/modules/_video.scss */
+.video--troll-painter-header, .video--broke-teenager-header, .video--slave-header, .video--pain-in-the-butt-header {
+  position: absolute;
+  margin-bottom: 0;
+  color: white;
+  font-size: 7em;
+}
+/* line 48, ../sass/modules/_video.scss */
+.video--troll-painter {
+  background-color: #0abbef;
+  background-image: url("/images/video/troll-painter.png");
+  background-repeat: no-repeat;
+  background-position: right 0;
+  -moz-background-size: auto 100%;
+  -o-background-size: auto 100%;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+/* line 58, ../sass/modules/_video.scss */
+.video--troll-painter-header {
+  bottom: .75em;
+  left: 2.5em;
+}
+/* line 64, ../sass/modules/_video.scss */
+.video--broke-teenager {
+  background-color: #43b94a;
+  background-image: url("/images/video/broke-teenager.png");
+  background-repeat: no-repeat;
+  background-position: center -5em;
+  -moz-background-size: 53% auto;
+  -o-background-size: 53% auto;
+  -webkit-background-size: 53% auto;
+  background-size: 53% auto;
+}
+/* line 74, ../sass/modules/_video.scss */
+.video--broke-teenager-header {
+  right: 0;
+  bottom: .5em;
+  left: 0;
+  text-align: center;
+}
+/* line 83, ../sass/modules/_video.scss */
+.video--slave {
+  background-color: #fb46a2;
+  background-image: url("/images/video/slave.png");
+  background-repeat: no-repeat;
+  background-position: center 14em;
+  -moz-background-size: 60% auto;
+  -o-background-size: 60% auto;
+  -webkit-background-size: 60% auto;
+  background-size: 60% auto;
+}
+/* line 94, ../sass/modules/_video.scss */
+.video--slave-header {
+  top: .5em;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+/* line 103, ../sass/modules/_video.scss */
+.video--pain-in-the-butt {
+  background-color: black;
+}
+/* line 108, ../sass/modules/_video.scss */
+.video--pain-in-the-butt-header {
+  text-align: center;
   position: relative;
   top: 50%;
-  text-align: center;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);

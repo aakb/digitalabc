@@ -1,0 +1,114 @@
+/**
+ *
+ * Videos.
+ *
+ */
+
+
+/* Shared video section styling */
+%video-section {
+  @extend %grid__item;
+  @extend %palm--one-whole;
+  @extend %lap--one-half;
+  @extend %desk--one-half;
+  @extend %bigscreen--one-half;
+
+  position: relative;
+
+  margin-left: -2px;
+  height: 50%;
+}
+
+.video {
+  @extend %grid;
+
+  position: relative;
+  z-index: 99;
+
+  height: 100%;
+
+  &--inner {
+    height: 100%;
+  }
+
+  &--troll-painter,
+  &--broke-teenager,
+  &--slave,
+  &--pain-in-the-butt {
+    &-header {
+      position: absolute;
+
+      margin-bottom: 0;
+
+      color: $white;
+      font-size: 7em;
+    }
+  }
+
+  &--troll-painter {
+    @extend %video-section;
+
+    background-color: $theme-color;
+    background-image: url('/images/video/troll-painter.png');
+    background-repeat: no-repeat;
+    background-position: right 0;
+
+    @include background-size(auto 100%);
+
+    &-header {
+      bottom: .75em;
+      left: 2.5em;
+    }
+  }
+
+  &--broke-teenager {
+    @extend %video-section;
+
+    background-color: #43b94a;
+    background-image: url('/images/video/broke-teenager.png');
+    background-repeat: no-repeat;
+    background-position: center -5em;
+
+    @include background-size(53% auto);
+
+    &-header {
+      right: 0;
+      bottom: .5em;
+      left: 0;
+
+      text-align: center;
+    }
+  }
+
+  &--slave {
+    @extend %video-section;
+
+    background-color: #fb46a2;
+
+    background-image: url('/images/video/slave.png');
+    background-repeat: no-repeat;
+    background-position: center 14em;
+
+    @include background-size(60% auto);
+
+    &-header {
+      top: .5em;
+      right: 0;
+      left: 0;
+
+      text-align: center;
+    }
+  }
+
+  &--pain-in-the-butt {
+    @extend %video-section;
+
+    background-color: $black;
+
+    &-header {
+      text-align: center;
+
+      @include vertical-align-element;
+    }
+  }
+}
