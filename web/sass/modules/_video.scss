@@ -51,8 +51,12 @@
       margin-bottom: .25em;
 
       color: $white;
-      font-size: 5em;
+      font-size: 3em;
       text-align: center;
+
+      @include breakpoint($breakpoint-desk) {
+        font-size: 4em;
+      }
 
       @include breakpoint($breakpoint-bigscreen) {
         font-size: 7em;
