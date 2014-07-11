@@ -2345,42 +2345,44 @@ html.is-locked body {
 .video--troll-painter-image.is-animated, .video--broke-teenager-image.is-animated, .video--slave-image.is-animated, .video--pain-in-the-butt-image.is-animated {
   display: none;
 }
-/* line 86, ../sass/modules/_video.scss */
-.video--troll-painter:hover, .video--broke-teenager:hover, .video--slave:hover, .video--pain-in-the-butt:hover {
-  border: 2em solid rgba(0, 0, 0, 0.05);
-}
-/* line 89, ../sass/modules/_video.scss */
+/* line 87, ../sass/modules/_video.scss */
 .video--troll-painter:hover .is-static, .video--broke-teenager:hover .is-static, .video--slave:hover .is-static, .video--pain-in-the-butt:hover .is-static {
   display: none;
 }
-/* line 93, ../sass/modules/_video.scss */
+/* line 91, ../sass/modules/_video.scss */
 .video--troll-painter:hover .is-animated, .video--broke-teenager:hover .is-animated, .video--slave:hover .is-animated, .video--pain-in-the-butt:hover .is-animated {
   display: inline;
 }
-/* line 103, ../sass/modules/_video.scss */
+@media only screen and (min-width: 481px) {
+  /* line 101, ../sass/modules/_video.scss */
+  .video--troll-painter:hover, .video--broke-teenager:hover, .video--slave:hover, .video--pain-in-the-butt:hover {
+    border: 1em solid rgba(0, 0, 0, 0.05);
+  }
+}
+/* line 107, ../sass/modules/_video.scss */
 .video--troll-painter {
   background-color: #0abbef;
 }
-/* line 109, ../sass/modules/_video.scss */
+/* line 113, ../sass/modules/_video.scss */
 .video--broke-teenager {
   background-color: #39b54a;
 }
-/* line 115, ../sass/modules/_video.scss */
+/* line 119, ../sass/modules/_video.scss */
 .video--slave {
   background-color: #ee3d96;
 }
-/* line 121, ../sass/modules/_video.scss */
+/* line 125, ../sass/modules/_video.scss */
 .video--pain-in-the-butt {
   height: 15em;
   background-color: #fff32a;
 }
 @media only screen and (min-width: 481px) {
-  /* line 121, ../sass/modules/_video.scss */
+  /* line 125, ../sass/modules/_video.scss */
   .video--pain-in-the-butt {
     height: 50%;
   }
 }
-/* line 132, ../sass/modules/_video.scss */
+/* line 136, ../sass/modules/_video.scss */
 .video--pain-in-the-butt-header {
   color: black;
   position: relative;

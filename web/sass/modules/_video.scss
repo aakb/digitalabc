@@ -84,8 +84,6 @@
     }
 
     &:hover {
-      border: 2em solid transparentize($black, .95);
-
       .is-static {
         display: none;
       }
@@ -97,6 +95,12 @@
 
     &-inner {
       @extend %video-section-inner;
+    }
+
+    @include breakpoint($breakpoint-lap) {
+      &:hover {
+        border: 1em solid transparentize($black, .95);
+      }
     }
   }
 
