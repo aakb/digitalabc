@@ -8,7 +8,7 @@
 // Handle inline-block margin bug
 // We should move this to some other file, no idea which one at the moment so for now it stays here.
 %grid-markup-fix {
-  margin-right: -4px;
+  margin-left: -4px;
 }
 
 
