@@ -73,8 +73,9 @@
       }
 
       @include breakpoint($breakpoint-bigscreen) {
-        margin-bottom: 0;
-        max-height: 100%;
+        height: 34.5em;
+        max-height: 34.5em;
+        margin-bottom: -12.5em;
       }
 
       &.is-animated {
@@ -83,13 +84,19 @@
     }
 
     &:hover {
+      border: 2em solid transparentize($black, .95);
+
       .is-static {
         display: none;
       }
 
       .is-animated {
-        display: block;
+        display: inline;
       }
+    }
+
+    &-inner {
+      @extend %video-section-inner;
     }
   }
 
@@ -109,10 +116,6 @@
     @extend %video-section;
 
     background-color: #ee3d96;
-
-    &-inner {
-      @extend %video-section-inner;
-    }
   }
 
   &--pain-in-the-butt {

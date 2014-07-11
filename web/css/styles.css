@@ -2282,7 +2282,7 @@ html.is-locked body {
 
 @media only screen and (min-width: 481px) {
   /* line 29, ../sass/modules/_video.scss */
-  .video--slave-inner {
+  .video--troll-painter-inner, .video--broke-teenager-inner, .video--slave-inner, .video--pain-in-the-butt-inner {
     position: relative;
     top: 50%;
     -moz-transform: translateY(-50%);
@@ -2336,46 +2336,51 @@ html.is-locked body {
 @media only screen and (min-width: 1700px) {
   /* line 66, ../sass/modules/_video.scss */
   .video--troll-painter-image, .video--broke-teenager-image, .video--slave-image, .video--pain-in-the-butt-image {
-    margin-bottom: 0;
-    max-height: 100%;
+    height: 34.5em;
+    max-height: 34.5em;
+    margin-bottom: -12.5em;
   }
 }
-/* line 80, ../sass/modules/_video.scss */
+/* line 81, ../sass/modules/_video.scss */
 .video--troll-painter-image.is-animated, .video--broke-teenager-image.is-animated, .video--slave-image.is-animated, .video--pain-in-the-butt-image.is-animated {
   display: none;
 }
 /* line 86, ../sass/modules/_video.scss */
+.video--troll-painter:hover, .video--broke-teenager:hover, .video--slave:hover, .video--pain-in-the-butt:hover {
+  border: 2em solid rgba(0, 0, 0, 0.05);
+}
+/* line 89, ../sass/modules/_video.scss */
 .video--troll-painter:hover .is-static, .video--broke-teenager:hover .is-static, .video--slave:hover .is-static, .video--pain-in-the-butt:hover .is-static {
   display: none;
 }
-/* line 90, ../sass/modules/_video.scss */
+/* line 93, ../sass/modules/_video.scss */
 .video--troll-painter:hover .is-animated, .video--broke-teenager:hover .is-animated, .video--slave:hover .is-animated, .video--pain-in-the-butt:hover .is-animated {
-  display: block;
+  display: inline;
 }
-/* line 96, ../sass/modules/_video.scss */
+/* line 103, ../sass/modules/_video.scss */
 .video--troll-painter {
   background-color: #0abbef;
 }
-/* line 102, ../sass/modules/_video.scss */
+/* line 109, ../sass/modules/_video.scss */
 .video--broke-teenager {
   background-color: #39b54a;
 }
-/* line 108, ../sass/modules/_video.scss */
+/* line 115, ../sass/modules/_video.scss */
 .video--slave {
   background-color: #ee3d96;
 }
-/* line 118, ../sass/modules/_video.scss */
+/* line 121, ../sass/modules/_video.scss */
 .video--pain-in-the-butt {
   height: 15em;
   background-color: #fff32a;
 }
 @media only screen and (min-width: 481px) {
-  /* line 118, ../sass/modules/_video.scss */
+  /* line 121, ../sass/modules/_video.scss */
   .video--pain-in-the-butt {
     height: 50%;
   }
 }
-/* line 129, ../sass/modules/_video.scss */
+/* line 132, ../sass/modules/_video.scss */
 .video--pain-in-the-butt-header {
   color: black;
   position: relative;
