@@ -76,6 +76,20 @@
         margin-bottom: 0;
         max-height: 100%;
       }
+
+      &.is-animated {
+        display: none;
+      }
+    }
+
+    &:hover {
+      .is-static {
+        display: none;
+      }
+
+      .is-animated {
+        display: block;
+      }
     }
   }
 
