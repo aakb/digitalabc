@@ -5,24 +5,14 @@
     <h3 class="quiz-header--text">Ta’ quizzen og kend din Digitale ABC!</h3>
 
     <a href="/#/quiz" class="quiz-header--button">Ta' Quizzen</a>
-    <a href="#video" du-smooth-scroll du-scrollspy><img src="/images/scroll.svg" class="quiz-header--scroll"></a>
+    <a href="#video" du-smooth-scroll><img src="/images/scroll.svg" class="quiz-header--scroll"></a>
   </div>
 </section>
-<video class="example-video video-js vjs-default-skin"
-  controls preload="auto"
-  poster="http://video-js.zencoder.com/oceans-clip.png"
-  data-setup='{"width": auto}'>
-
-  <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
-  <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
-  <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
-  <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-</video>
-<div id="video" class="video" du-scrollspy>
+<div id="video" class="video">
   <div class="video--inner">
     <section class="video--troll-painter">
       <div class="video--slave-inner">
-        <h2 class="video--troll-painter-header">The Troll Painter</h2>
+        <h2 class="video--troll-painter-header" data-ng-click="playVideo('troll-painter-video')">The Troll Painter</h2>
         <img src="/images/video/troll-painter.png" class="video--troll-painter-image is-static">
         <img src="/images/video/troll-painter.gif" class="video--troll-painter-image is-animated">
       </div>
@@ -45,4 +35,15 @@
       <h2 class="video--pain-in-the-butt-header">Coming soon</h2>
     </section>
   </div>
+</div>
+<div id="video-container" class="example-video" data-ng-show="showVideo">
+  <video id="troll-painter-video" class="video-js vjs-default-skin"
+    controls preload="auto"
+    poster="http://video-js.zencoder.com/oceans-clip.png">
+
+    <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+  </video>
 </div>
