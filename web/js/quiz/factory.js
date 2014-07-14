@@ -93,7 +93,7 @@ abcApp.factory('quizFactory', function($http, $q) {
               result: factory.getResult(),
               answers: ans
           };
-          $http.post('/quiz/api/result/save', data)
+          $http.post('/api/result/save', data)
               .success(function(data, status, headers, config) {
                   resultID = data.id;
                   resultSaved = true;
@@ -111,7 +111,7 @@ abcApp.factory('quizFactory', function($http, $q) {
       if (challenger !== null) {
           defer.resolve(challenger);
       } else {
-          $http.get('/quiz/api/result/get/' + id)
+          $http.get('/api/result/' + id)
               .success(function(data, status, headers, config) {
                 challenger = data;
                 defer.resolve(challenger);
