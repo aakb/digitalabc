@@ -1,5 +1,5 @@
 // Header controller.
-abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
+abcApp.controller('HeaderController', function($scope, $document, $location, $rootScope) {
   // Set variables.
   $scope.menuOpen = null;
   $scope.layoutClassSuffix = 'layout';
@@ -41,8 +41,24 @@ abcApp.controller('HeaderController', function($scope, $location, $rootScope) {
         $(this).removeClass('is-animating');
       });
   });
-});
 
+  // Video controls.
+  $scope.showVideo = false;
+
+  $scope.playVideo = function(video) {
+    videojs(video, {"width": 'auto', "height": '100%'}, function() {
+      this.play();
+    });
+
+    // Show video container.
+    $scope.showVideo = true;
+
+    // Scroll to video.
+    setTimeout(function () {
+      $document.scrollToElement(angular.element(document.getElementById('video-container')), 0, 500);
+    }, 500);
+  }
+});
 
 // Frontpage controller.
 abcApp.controller('FrontpageController', function($scope, $location) {
