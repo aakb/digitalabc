@@ -19,4 +19,18 @@ class DefaultController extends Controller {
   public function indexAction() {
     return $this->render('DigitalABCMainBundle:Default:index.html.twig');
   }
+
+
+  /**
+   * @Route("/challenge/{id}")
+   */
+  public function challengeAction($id) {
+    $result = $this->getDoctrine()
+      ->getRepository('DigitalABCMainBundle:QuizResult')->find($id);
+
+    return $this->render('DigitalABCMainBundle:Default:challenge.html.twig', array(
+      "id" => $id,
+      'result' => $result->getResult()
+    ));
+  }
 }

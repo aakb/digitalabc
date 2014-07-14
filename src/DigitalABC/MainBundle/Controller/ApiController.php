@@ -1,7 +1,7 @@
 <?php
-namespace DigitalABC\QuizBundle\Controller;
+namespace DigitalABC\MainBundle\Controller;
 
-use DigitalABC\QuizBundle\Entity\QuizResult;
+use DigitalABC\MainBundle\Entity\QuizResult;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -48,12 +48,12 @@ class ApiController extends Controller {
    * @param $id
    *   UID of the result
    *
-   * @Route("api/result/get/{id}")
+   * @Route("/result/{id}")
    *
    * @return Response
    */
   public function getResultAction($id) {
-    $result = $this->getDoctrine()->getRepository('DigitalABCQuizBundle:QuizResult')->findOneById($id);
+    $result = $this->getDoctrine()->getRepository('DigitalABCMainBundle:QuizResult')->findOneById($id);
 
     if (!$result) {
       return new Response(null, 404);
