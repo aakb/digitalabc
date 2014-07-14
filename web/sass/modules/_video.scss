@@ -5,32 +5,14 @@
  */
 
 
-/* Shared video section styling */
-%video-section {
-  @extend %grid__item;
-  @extend %palm--one-whole;
-  @extend %lap--one-half;
-  @extend %desk--one-half;
-  @extend %bigscreen--one-half;
-  @extend %grid-markup-fix;
-
-  position: relative;
-  overflow: hidden;
-
-  padding: 2em;
-
-  text-align: center;
-
-  @include breakpoint($breakpoint-lap) {
-    height: 50%;
-  }
+.example-video {
+  width: 100%;
 }
 
-%video-section-inner {
-  @include breakpoint($breakpoint-lap) {
-    @include vertical-align-element;
-  }
-}
+
+/* Video animated gifs */
+
+@import "components/video";
 
 .video {
   position: relative;
@@ -39,87 +21,61 @@
   height: 100%;
 
   &--inner {
-
     height: 100%;
-  }
-
-  &--troll-painter,
-  &--broke-teenager,
-  &--slave,
-  &--pain-in-the-butt {
-    &-header {
-      margin-bottom: .25em;
-
-      color: $white;
-      font-size: 3em;
-      text-align: center;
-
-      @include breakpoint($breakpoint-desk) {
-        font-size: 4em;
-      }
-
-      @include breakpoint($breakpoint-bigscreen) {
-        font-size: 7em;
-      }
-    }
-
-    &-image {
-      margin-right: auto;
-      margin-left: auto;
-
-      @include breakpoint($breakpoint-lap) {
-        margin-bottom: -4.5em;
-        max-height: 15em;
-      }
-
-      @include breakpoint($breakpoint-bigscreen) {
-        height: 34.5em;
-        max-height: 34.5em;
-        margin-bottom: -12.5em;
-      }
-
-      &.is-animated {
-        display: none;
-      }
-    }
-
-    &:hover {
-      .is-static {
-        display: none;
-      }
-
-      .is-animated {
-        display: inline;
-      }
-    }
-
-    &-inner {
-      @extend %video-section-inner;
-    }
-
-    @include breakpoint($breakpoint-lap) {
-      &:hover {
-        border: 1em solid transparentize($black, .95);
-      }
-    }
   }
 
   &--troll-painter {
     @extend %video-section;
 
     background-color: $theme-color;
+
+    &-header {
+      @extend %video-section-header;
+    }
+
+    &-image {
+      @extend %video-section-image;
+    }
+
+    &-inner {
+      @extend %video-section-inner;
+    }
   }
 
   &--broke-teenager {
     @extend %video-section;
 
     background-color: #39b54a;
+
+    &-header {
+      @extend %video-section-header;
+    }
+
+    &-image {
+      @extend %video-section-image;
+    }
+
+    &-inner {
+      @extend %video-section-inner;
+    }
   }
 
   &--slave {
     @extend %video-section;
 
     background-color: #ee3d96;
+
+    &-header {
+      @extend %video-section-header;
+    }
+
+    &-image {
+      @extend %video-section-image;
+    }
+
+    &-inner {
+      @extend %video-section-inner;
+    }
   }
 
   &--pain-in-the-butt {
@@ -129,14 +85,24 @@
 
     background-color: #fff32a;
 
-    @include breakpoint($breakpoint-lap) {
-      height: 50%;
-    }
-
     &-header {
+      @extend %video-section-header;
+
       color: $black;
 
       @include vertical-align-element;
+    }
+
+    &-image {
+      @extend %video-section-image;
+    }
+
+    &-inner {
+      @extend %video-section-inner;
+    }
+
+    @include breakpoint($breakpoint-lap) {
+      height: 50%;
     }
   }
 }

@@ -1,0 +1,82 @@
+/**
+ *
+ * Videos.
+ *
+ */
+
+
+%video-section {
+  @extend %grid__item;
+  @extend %palm--one-whole;
+  @extend %lap--one-half;
+  @extend %desk--one-half;
+  @extend %bigscreen--one-half;
+  @extend %grid-markup-fix;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 2em;
+
+  text-align: center;
+
+  &:hover {
+    .is-static {
+      display: none;
+    }
+
+    .is-animated {
+      display: inline;
+    }
+  }
+
+  @include breakpoint($breakpoint-lap) {
+    height: 50%;
+
+    &:hover {
+      border: 1em solid transparentize($black, .95);
+    }
+  }
+}
+
+%video-section-inner {
+  @include breakpoint($breakpoint-lap) {
+    @include vertical-align-element;
+  }
+}
+
+%video-section-header {
+  margin-bottom: .25em;
+
+  color: $white;
+  font-size: 3em;
+  text-align: center;
+
+  @include breakpoint($breakpoint-desk) {
+    font-size: 4em;
+  }
+
+  @include breakpoint($breakpoint-bigscreen) {
+    font-size: 7em;
+  }
+}
+
+%video-section-image {
+  margin-right: auto;
+  margin-left: auto;
+
+  @include breakpoint($breakpoint-lap) {
+    margin-bottom: -4.5em;
+    max-height: 15em;
+  }
+
+  @include breakpoint($breakpoint-bigscreen) {
+    height: 34.5em;
+    max-height: 34.5em;
+    margin-bottom: -12.5em;
+  }
+
+  &.is-animated {
+    display: none;
+  }
+}
