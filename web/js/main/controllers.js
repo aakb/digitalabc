@@ -65,9 +65,9 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
       $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
     }, 1000);
   }
-  else if ($location.path() === '/video/troll-painter-video') {
+  else if ($location.path() === '/video/troll-painter') {
     $timeout(function(){
-      $scope.playVideo('troll-painter-video');
+      $scope.playVideo('troll-painter');
     }, 1000);
   }
 
