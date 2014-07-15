@@ -5,7 +5,7 @@
  */
 
 
-.example-video {
+.video-wrapper {
   position: relative;
   z-index: 98;
 
@@ -16,11 +16,13 @@
 
 /* Close icon */
 .video-close-icon {
-  fill: $white;
-
   @include nav-toggle-icon();
-}
 
+  position: fixed;
+  z-index: 99;
+
+  fill: $white;
+}
 
 
 /* Animated gifs */
