@@ -16,36 +16,9 @@
 
 /* Close icon */
 .video-close-icon {
-  position: fixed;
-  top: 1em;
-  right: 1em;
-  z-index: 99;
-
-  display: block;
-  height: 2em;
-  width: 2em;
-
-  cursor: pointer;
   fill: $white;
 
-  @include breakpoint($breakpoint-lap) {
-    right: 2em;
-  }
-
-  @include breakpoint($breakpoint-desk) {
-    top: 3em;
-
-    height: 3em;
-    width: 3em;
-  }
-
-  @include breakpoint($breakpoint-bigscreen) {
-    top: 4em;
-    right: 6em;
-
-    height: 5em;
-    width: 5em;
-  }
+  @include nav-toggle-icon();
 }
 
 
