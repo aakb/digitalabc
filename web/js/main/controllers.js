@@ -42,43 +42,34 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
       });
   });
 
+
   // Video controls.
-  $scope.currentVideo = '';
-  $scope.showVideo = function(item) {
-    if (item === $scope.currentVideo) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
-  $scope.video;
+  $scope.showVideo = false;
 
   // Play video.
   $scope.playVideo = function(video) {
-    $scope.video = $('.' + video)[0].player;
-    console.log($scope.video);
-    $scope.video.height = '100%';
-    $scope.video.play();
-    $scope.currentVideo = video;
-/*    videojs($('.' + video), {"width": 'auto', "height": '100%'}, function() {
+    videojs($('.' + video)[0], {"width": 'auto', "height": '100%'}, function() {
       $scope.video = this;
-      $scope.currentVideo = video;
       this.play();
-    });*/
+    });
+
+    // Show video container.
+    $scope.showVideo = video;
 
     // Scroll to video.
     setTimeout(function () {
-      $document.scrollToElement(angular.element(document.getElementById('video-container')), 0, 500);
+      $document.scrollToElement(angular.element(document.getElementById(video + '-wrapper')), 0, 500);
     }, 500);
   };
 
   // Stop video.
   $scope.stopVideo = function() {
     $scope.video.pause();
+
     $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
+
     $timeout(function(){
-      $scope.currentVideo = '';
+      $scope.showVideo = false;
     }, 700);
   }
 
