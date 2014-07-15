@@ -44,9 +44,11 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
 
   // Video controls.
   $scope.showVideo = false;
+  $scope.video;
 
   $scope.playVideo = function(video) {
     videojs(video, {"width": 'auto', "height": '100%'}, function() {
+      $scope.video = this;
       this.play();
     });
 
@@ -58,6 +60,14 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
       $document.scrollToElement(angular.element(document.getElementById('video-container')), 0, 500);
     }, 500);
   };
+
+  $scope.stopVideo = function() {
+    $scope.video.pause();
+    $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
+    setTimeout(function () {
+      $scope.showVideo = false;
+    }, 700);
+  }
 
 
   if ($location.path() === '/video') {
