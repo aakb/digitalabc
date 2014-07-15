@@ -2268,9 +2268,46 @@ html.is-locked body {
 /* line 8, ../sass/modules/_video.scss */
 .example-video {
   position: relative;
-  z-index: 99;
+  z-index: 98;
   height: 100%;
   width: 100%;
+}
+
+/* Close icon */
+/* line 18, ../sass/modules/_video.scss */
+.video-close-icon {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 99;
+  display: block;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  fill: white;
+}
+@media only screen and (min-width: 481px) {
+  /* line 18, ../sass/modules/_video.scss */
+  .video-close-icon {
+    right: 2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 18, ../sass/modules/_video.scss */
+  .video-close-icon {
+    top: 3em;
+    height: 3em;
+    width: 3em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 18, ../sass/modules/_video.scss */
+  .video-close-icon {
+    top: 4em;
+    right: 6em;
+    height: 5em;
+    width: 5em;
+  }
 }
 
 /* Animated gifs */
@@ -2363,34 +2400,34 @@ html.is-locked body {
   display: none;
 }
 
-/* line 21, ../sass/modules/_video.scss */
+/* line 57, ../sass/modules/_video.scss */
 .video {
   position: relative;
   z-index: 99;
   height: 100%;
 }
-/* line 27, ../sass/modules/_video.scss */
+/* line 63, ../sass/modules/_video.scss */
 .video--inner {
   height: 100%;
 }
-/* line 31, ../sass/modules/_video.scss */
+/* line 67, ../sass/modules/_video.scss */
 .video--troll-painter {
   background-color: #0abbef;
 }
-/* line 49, ../sass/modules/_video.scss */
+/* line 85, ../sass/modules/_video.scss */
 .video--broke-teenager {
   background-color: #39b54a;
 }
-/* line 67, ../sass/modules/_video.scss */
+/* line 103, ../sass/modules/_video.scss */
 .video--slave {
   background-color: #ee3d96;
 }
-/* line 85, ../sass/modules/_video.scss */
+/* line 121, ../sass/modules/_video.scss */
 .video--pain-in-the-butt {
   height: 15em;
   background-color: #fff32a;
 }
-/* line 92, ../sass/modules/_video.scss */
+/* line 128, ../sass/modules/_video.scss */
 .video--pain-in-the-butt-header {
   color: black;
   position: relative;
@@ -2401,7 +2438,7 @@ html.is-locked body {
   transform: translateY(-50%);
 }
 @media only screen and (min-width: 481px) {
-  /* line 85, ../sass/modules/_video.scss */
+  /* line 121, ../sass/modules/_video.scss */
   .video--pain-in-the-butt {
     height: 50%;
   }
