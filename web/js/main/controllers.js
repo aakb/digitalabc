@@ -1,5 +1,5 @@
 // Header controller.
-abcApp.controller('HeaderController', function($scope, $document, $location, $rootScope) {
+abcApp.controller('HeaderController', function($scope, $document, $location, $rootScope, $timeout) {
   // Set variables.
   $scope.menuOpen = null;
   $scope.layoutClassSuffix = 'layout';
@@ -57,7 +57,20 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
     setTimeout(function () {
       $document.scrollToElement(angular.element(document.getElementById('video-container')), 0, 500);
     }, 500);
+  };
+
+
+  if ($location.path() === '/video') {
+    $timeout(function(){
+      $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
+    }, 1000);
   }
+  else if ($location.path() === '/video/troll-painter-video') {
+    $timeout(function(){
+      $scope.playVideo('troll-painter-video');
+    }, 1000);
+  }
+
 });
 
 // Frontpage controller.
