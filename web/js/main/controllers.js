@@ -45,6 +45,7 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
   // Video controls.
   $scope.showVideo = false;
 
+  // Play video.
   $scope.playVideo = function(video) {
     videojs(video, {"width": 'auto', "height": '100%'}, function() {
       this.play();
@@ -59,7 +60,16 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
     }, 500);
   };
 
+  // Stop video.
+  $scope.stopVideo = function(video) {
+    videojs($('#video-container video'), {"width": 'auto', "height": '100%'}, function() {
+      this.stop();
+    });
 
+    $scope.showVideo = false;
+  }
+
+  // Handle video URLs
   if ($location.path() === '/video') {
     $timeout(function(){
       $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
