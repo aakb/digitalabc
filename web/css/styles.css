@@ -1349,7 +1349,7 @@ html.is-locked body {
 /* line 25, ../sass/layout/_layout.scss */
 .header {
   position: fixed;
-  z-index: 98;
+  z-index: 96;
   width: 100%;
 }
 /* line 30, ../sass/layout/_layout.scss */
@@ -2403,7 +2403,7 @@ html.is-locked body {
 /* line 57, ../sass/modules/_video.scss */
 .video {
   position: relative;
-  z-index: 99;
+  z-index: 97;
   height: 100%;
 }
 /* line 63, ../sass/modules/_video.scss */
