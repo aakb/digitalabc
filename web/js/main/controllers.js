@@ -43,18 +43,29 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
   });
 
   // Video controls.
-  $scope.showVideo = false;
+  $scope.currentVideo = '';
+  $scope.showVideo = function(item) {
+    if (item === $scope.currentVideo) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
   $scope.video;
 
   // Play video.
   $scope.playVideo = function(video) {
-    videojs(video, {"width": 'auto', "height": '100%'}, function() {
+    $scope.video = $('.' + video)[0].player;
+    console.log($scope.video);
+    $scope.video.height = '100%';
+    $scope.video.play();
+    $scope.currentVideo = video;
+/*    videojs($('.' + video), {"width": 'auto', "height": '100%'}, function() {
       $scope.video = this;
+      $scope.currentVideo = video;
       this.play();
-    });
-
-    // Show video container.
-    $scope.showVideo = true;
+    });*/
 
     // Scroll to video.
     setTimeout(function () {
@@ -67,7 +78,7 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
     $scope.video.pause();
     $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
     $timeout(function(){
-      $scope.showVideo = false;
+      $scope.currentVideo = '';
     }, 700);
   }
 
