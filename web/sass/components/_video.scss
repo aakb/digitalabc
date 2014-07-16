@@ -11,12 +11,10 @@
   @extend %lap--one-half;
   @extend %desk--one-half;
   @extend %bigscreen--one-half;
-  @extend %grid-markup-fix;
 
   position: relative;
   overflow: hidden;
 
-  padding: 2em;
 
   cursor: pointer;
   text-align: center;
