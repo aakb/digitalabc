@@ -137,15 +137,15 @@
 
     &-item,
     &-sub-item {
-      @include nav-base-item();
+      @include navigation--base-item();
     }
 
     &-item {
-      @include nav-item();
+      @include navigation--item();
     }
 
     &-sub-item {
-      @include nav-sub-item();
+      @include navigation--sub-item();
     }
   }
 

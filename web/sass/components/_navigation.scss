@@ -1,0 +1,64 @@
+/**
+ *
+ * Navigation components.
+ *
+ */
+
+
+
+@mixin navigation--base-item() {
+  display: block;
+
+  line-height: 1.5em;
+
+  &:link {
+    color: $text-color-dark;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: darken($text-color-dark, 5%);
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  &.is-active {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
+@mixin navigation--item() {
+  font-size: 1.75em;
+}
+
+@mixin navigation--sub-item() {
+  position: relative;
+
+  padding-left: 1em;
+
+  font-size: 1.35em;
+
+  @include breakpoint($breakpoint-lap) {
+    font-size: 1.6em;
+  }
+
+  &:before {
+    position: absolute;
+    top: .35em;
+    left: 0;
+
+    height: 1em;
+    width: 1em;
+
+    content: "";
+
+    @include svg-bg(arrow-icon, png, transparent, .1em 0, no-repeat);
+    @include background-size(.6em);
+    @include opacity(.5);
+  }
+}
