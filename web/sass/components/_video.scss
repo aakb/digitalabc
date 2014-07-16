@@ -5,7 +5,10 @@
  */
 
 
-%video-section {
+
+// Video section
+
+%video--section {
   @extend %grid__item;
   @extend %palm--one-whole;
   @extend %lap--one-half;
@@ -38,13 +41,19 @@
   }
 }
 
-%video-section-inner {
+
+// Video section inner
+
+%video--section-inner {
   @include breakpoint($breakpoint-lap) {
     @include vertical-align-element;
   }
 }
 
-%video-section-header {
+
+// Video section header
+
+%video--section-header {
   margin-bottom: .25em;
 
   color: $white;
@@ -60,7 +69,10 @@
   }
 }
 
-%video-section-image {
+
+// Video section image
+
+%video--section-image {
   margin-right: auto;
   margin-left: auto;
 

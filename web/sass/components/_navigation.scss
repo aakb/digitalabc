@@ -6,6 +6,8 @@
 
 
 
+// Navigation base item
+
 @mixin navigation--base-item() {
   display: block;
 
@@ -32,9 +34,15 @@
   }
 }
 
+
+// Navigation item
+
 @mixin navigation--item() {
   font-size: 1.75em;
 }
+
+
+// Navigation sub item
 
 @mixin navigation--sub-item() {
   position: relative;
@@ -60,5 +68,39 @@
     @include svg-bg(arrow-icon, png, transparent, .1em 0, no-repeat);
     @include background-size(.6em);
     @include opacity(.5);
+  }
+}
+
+
+// Navigation toggle icon
+
+@mixin navigation--toggle-icon() {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+
+  display: block;
+  height: 2em;
+  width: 2em;
+
+  cursor: pointer;
+
+  @include breakpoint($breakpoint-lap) {
+    right: 2em;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    top: 3em;
+
+    height: 3em;
+    width: 3em;
+  }
+
+  @include breakpoint($breakpoint-bigscreen) {
+    top: 4em;
+    right: 6em;
+
+    height: 5em;
+    width: 5em;
   }
 }

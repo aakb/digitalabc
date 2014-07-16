@@ -113,5 +113,5 @@
 /* Toggle icon use for opening and closing the menu */
 
 .nav-toggle-icon {
-  @include nav-toggle-icon();
+  @include navigation--toggle-icon();
 }

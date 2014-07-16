@@ -16,7 +16,7 @@
 
 /* Close icon */
 .video-close-icon {
-  @include nav-toggle-icon();
+  @include navigation--toggle-icon();
 
   position: fixed;
   z-index: 99;
@@ -24,10 +24,6 @@
   fill: $white;
 }
 
-
-/* Animated gifs */
-
-@import "../components/video";
 
 .video {
   @extend %grid;
@@ -44,68 +40,68 @@
   }
 
   &--troll-painter {
-    @extend %video-section;
+    @extend %video--section;
 
     background-color: $theme-color;
 
     &-header {
-      @extend %video-section-header;
+      @extend %video--section-header;
     }
 
     &-image {
-      @extend %video-section-image;
+      @extend %video--section-image;
     }
 
     &-inner {
-      @extend %video-section-inner;
+      @extend %video--section-inner;
     }
   }
 
   &--broke-teenager {
-    @extend %video-section;
+    @extend %video--section;
 
     background-color: #39b54a;
 
     &-header {
-      @extend %video-section-header;
+      @extend %video--section-header;
     }
 
     &-image {
-      @extend %video-section-image;
+      @extend %video--section-image;
     }
 
     &-inner {
-      @extend %video-section-inner;
+      @extend %video--section-inner;
     }
   }
 
   &--slave {
-    @extend %video-section;
+    @extend %video--section;
 
     background-color: #ee3d96;
 
     &-header {
-      @extend %video-section-header;
+      @extend %video--section-header;
     }
 
     &-image {
-      @extend %video-section-image;
+      @extend %video--section-image;
     }
 
     &-inner {
-      @extend %video-section-inner;
+      @extend %video--section-inner;
     }
   }
 
   &--pain-in-the-butt {
-    @extend %video-section;
+    @extend %video--section;
 
     height: 15em;
 
     background-color: #fff32a;
 
     &-header {
-      @extend %video-section-header;
+      @extend %video--section-header;
 
       color: $black;
 
@@ -113,11 +109,11 @@
     }
 
     &-image {
-      @extend %video-section-image;
+      @extend %video--section-image;
     }
 
     &-inner {
-      @extend %video-section-inner;
+      @extend %video--section-inner;
     }
 
     @include breakpoint($breakpoint-lap) {
