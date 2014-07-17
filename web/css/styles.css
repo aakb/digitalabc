@@ -1590,11 +1590,11 @@ html.is-locked body {
   cursor: pointer;
   text-align: center;
 }
-/* line 26, ../sass/components/_video.scss */
+/* line 25, ../sass/components/_video.scss */
 .video--troll-painter:hover .is-static, .video--broke-teenager:hover .is-static, .video--slave:hover .is-static, .video--pain-in-the-butt:hover .is-static {
   display: none;
 }
-/* line 30, ../sass/components/_video.scss */
+/* line 29, ../sass/components/_video.scss */
 .video--troll-painter:hover .is-animated, .video--broke-teenager:hover .is-animated, .video--slave:hover .is-animated, .video--pain-in-the-butt:hover .is-animated {
   display: inline;
 }
@@ -1603,14 +1603,14 @@ html.is-locked body {
   .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt {
     height: 50%;
   }
-  /* line 38, ../sass/components/_video.scss */
+  /* line 37, ../sass/components/_video.scss */
   .video--troll-painter:hover, .video--broke-teenager:hover, .video--slave:hover, .video--pain-in-the-butt:hover {
     border: 1em solid rgba(0, 0, 0, 0.05);
   }
 }
 
 @media only screen and (min-width: 481px) {
-  /* line 47, ../sass/components/_video.scss */
+  /* line 46, ../sass/components/_video.scss */
   .video--troll-painter-inner, .video--broke-teenager-inner, .video--slave-inner, .video--pain-in-the-butt-inner {
     position: relative;
     top: 50%;
@@ -1621,7 +1621,7 @@ html.is-locked body {
   }
 }
 
-/* line 56, ../sass/components/_video.scss */
+/* line 55, ../sass/components/_video.scss */
 .video--troll-painter-header, .video--broke-teenager-header, .video--slave-header, .video--pain-in-the-butt-header {
   margin-bottom: .25em;
   color: white;
@@ -1629,39 +1629,39 @@ html.is-locked body {
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 56, ../sass/components/_video.scss */
+  /* line 55, ../sass/components/_video.scss */
   .video--troll-painter-header, .video--broke-teenager-header, .video--slave-header, .video--pain-in-the-butt-header {
     font-size: 4em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 56, ../sass/components/_video.scss */
+  /* line 55, ../sass/components/_video.scss */
   .video--troll-painter-header, .video--broke-teenager-header, .video--slave-header, .video--pain-in-the-butt-header {
     font-size: 7em;
   }
 }
 
-/* line 75, ../sass/components/_video.scss */
+/* line 74, ../sass/components/_video.scss */
 .video--troll-painter-image, .video--broke-teenager-image, .video--slave-image, .video--pain-in-the-butt-image {
   margin-right: auto;
   margin-left: auto;
 }
 @media only screen and (min-width: 481px) {
-  /* line 75, ../sass/components/_video.scss */
+  /* line 74, ../sass/components/_video.scss */
   .video--troll-painter-image, .video--broke-teenager-image, .video--slave-image, .video--pain-in-the-butt-image {
     margin-bottom: -4.5em;
     max-height: 15em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 75, ../sass/components/_video.scss */
+  /* line 74, ../sass/components/_video.scss */
   .video--troll-painter-image, .video--broke-teenager-image, .video--slave-image, .video--pain-in-the-butt-image {
     height: 34.5em;
     max-height: 34.5em;
     margin-bottom: -12.5em;
   }
 }
-/* line 90, ../sass/components/_video.scss */
+/* line 89, ../sass/components/_video.scss */
 .is-animated.video--troll-painter-image, .is-animated.video--broke-teenager-image, .is-animated.video--slave-image, .is-animated.video--pain-in-the-butt-image {
   display: none;
 }
