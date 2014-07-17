@@ -8,6 +8,8 @@
 .quiz-header {
   background-color: $black;
 
+  overflow: hidden;
+
   &--background {
     top: 0;
     left: 0;
@@ -131,16 +133,12 @@
       left: 0;
       position: absolute;
 
-      // Breakpoints
-      @include breakpoint($breakpoint-lap) {
-        // Animations
-        &.ng-enter {
-          @include animation(header-punchline-in .5s ease-in-out 1 forwards);
-        }
+      &.ng-enter {
+        @include animation(header-punchline-in .5s ease-in-out 1 forwards);
+      }
 
-        &.ng-leave {
-          @include animation(header-punchline-out .5s ease-in-out 1 forwards);
-        }
+      &.ng-leave {
+        @include animation(header-punchline-out .5s ease-in-out 1 forwards);
       }
     }
 
