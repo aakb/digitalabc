@@ -1,8 +1,11 @@
 // Header controller.
-abcApp.controller('HeaderController', function($scope, $document, $location, $rootScope, $timeout) {
+abcApp.controller('HeaderController', function($scope, $document, $animate, $location, $rootScope, $timeout) {
   // Set variables.
   $scope.menuOpen = null;
   $scope.layoutClassSuffix = 'layout';
+
+  // Disable animation for nav element.
+  $animate.enabled(false, angular.element(document.getElementsByClassName('js-disable-animations')));
 
   // Added helper function for the menu.
   $scope.$on('changeLayoutClassSuffix', function(event, data) {

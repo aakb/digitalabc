@@ -27,26 +27,28 @@
 
 {% block body %}
   <a class="nav-overlay" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}" data-ng-click="toggleMenu()"></a>
-  <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen, 'is-hidden': menuOpen !== null && !menuOpen}">
-    <div class="nav-toggle-icon">{% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'symbol', 'click': 'toggleMenu()'} %}</div>
-    <h2 class="nav--header">Navigation</h2>
-    <div class="nav--item-wrapper">
-      <a href="/" class="nav--item" data-ng-class="setActiveMenuItem('')">Home</a>
-      <a href="/#/quiz" class="nav--item" data-ng-class="setActiveMenuItem('/quiz')">Ta' Quizzen!</a>
-      <a href="/#/video" class="nav--item" data-ng-class="setActiveMenuItem('/video')">Se videoerne</a>
-      <a href="/#/music-video" class="nav--item" data-ng-class="setActiveMenuItem('/music-video')">Musikvideo: "Kom med mig"</a>
-    </div>
-    <div class="nav--item-wrapper">
-      <a href="/#/for-laererne" class="nav--item" data-ng-class="setActiveMenuItem('/for-laererne')">For lærerne</a>
-      <a href="/#/for-laererne/digital-parathed" class="nav--sub-item" data-ng-class="setActiveMenuItem('/for-laererne/digital-parathed')">Digital parathed (1 lektion)</a>
-      <a href="/#/for-laererne/sidste-omgang" class="nav--sub-item" data-ng-class="setActiveMenuItem('/for-laererne/sidste-omgang')">Sidste omgang (2 lektioner)</a>
-      <a href="/#/for-laererne/farvel-forvalt-lingo" class="nav--sub-item" data-ng-class="setActiveMenuItem('/for-laererne/farvel-forvalt-lingo')">#FarvelForvaltLingo (4 lektioner)</a>
-    </div>
-    <div class="nav--item-wrapper">
-      <a href="/#/om-projektet" class="nav--item" data-ng-class="setActiveMenuItem('/om-projektet')">Om projektet</a>
-      <a href="http://digamb.dk/" class="nav--item" target="_blank">Digamp.dk - Demomiljø</a>
-    </div>
-  </nav>
+  <div class="js-disable-animations">
+    <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen, 'is-hidden': menuOpen !== null && !menuOpen}">
+      <div class="nav-toggle-icon">{% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'symbol', 'click': 'toggleMenu()'} %}</div>
+      <h2 class="nav--header">Navigation</h2>
+      <div class="nav--item-wrapper">
+        <a href="/" class="nav--item" data-ng-class="setActiveMenuItem('')">Home</a>
+        <a href="/#/quiz" class="nav--item" data-ng-class="setActiveMenuItem('/quiz')">Ta' Quizzen!</a>
+        <a href="/#/video" class="nav--item" data-ng-class="setActiveMenuItem('/video')">Se videoerne</a>
+        <a href="/#/music-video" class="nav--item" data-ng-class="setActiveMenuItem('/music-video')">Musikvideo: "Kom med mig"</a>
+      </div>
+      <div class="nav--item-wrapper">
+        <a href="/#/for-laererne" class="nav--item" data-ng-class="setActiveMenuItem('/for-laererne')">For lærerne</a>
+        <a href="/#/for-laererne/digital-parathed" class="nav--sub-item" data-ng-class="setActiveMenuItem('/for-laererne/digital-parathed')">Digital parathed (1 lektion)</a>
+        <a href="/#/for-laererne/sidste-omgang" class="nav--sub-item" data-ng-class="setActiveMenuItem('/for-laererne/sidste-omgang')">Sidste omgang (2 lektioner)</a>
+        <a href="/#/for-laererne/farvel-forvalt-lingo" class="nav--sub-item" data-ng-class="setActiveMenuItem('/for-laererne/farvel-forvalt-lingo')">#FarvelForvaltLingo (4 lektioner)</a>
+      </div>
+      <div class="nav--item-wrapper">
+        <a href="/#/om-projektet" class="nav--item" data-ng-class="setActiveMenuItem('/om-projektet')">Om projektet</a>
+        <a href="http://digamb.dk/" class="nav--item" target="_blank">Digamp.dk - Demomiljø</a>
+      </div>
+    </nav>
+  </div>
 
   <header class="header" role="banner">
     <div class="header--inner">
