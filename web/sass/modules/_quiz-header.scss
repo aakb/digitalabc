@@ -139,11 +139,11 @@
       @include breakpoint($breakpoint-lap) {
         // Animations
         &.ng-enter {
-          @include animation(header-punchline-in .5s ease-in 1 forwards);
+          @include animation(header-punchline-in .5s ease-in-out 1 forwards);
         }
 
         &.ng-leave {
-          @include animation(header-punchline-out .5s ease-in 1 forwards);
+          @include animation(header-punchline-out .5s ease-in-out 1 forwards);
         }
       }
     }
