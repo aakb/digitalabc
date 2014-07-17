@@ -42,7 +42,6 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
       });
   });
 
-
   // Video controls.
   $scope.showVideo = false;
 
@@ -85,6 +84,17 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
     }, 1000);
   }
 
+  // Slideshow
+  var slidesInSlideshow = 3;
+  var slidesTimeIntervalInMs = 3000;
+
+  $scope.slideshow = 1;
+
+  var slideTimer =
+    $timeout(function interval() {
+      $scope.slideshow = ($scope.slideshow % slidesInSlideshow) + 1;
+      slideTimer = $timeout(interval, slidesTimeIntervalInMs);
+    }, slidesTimeIntervalInMs);
 });
 
 // Frontpage controller.

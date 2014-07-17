@@ -1,12 +1,21 @@
-<section class="quiz-header">
+<section class="quiz-header" data-ng-switch="slideshow">
   <div class="quiz-header--inner">
     <h2 class="quiz-header--question">Tjek på din NemID OG digital postkasse?</h2>
-    <h1 class="quiz-header--punchline">Ingen stress</h1>
+    <h1 class="quiz-header--punchline">
+      <span class="quiz-header--punchline-inner" data-ng-switch-when="1">Yo!</span>
+      <span class="quiz-header--punchline-inner" data-ng-switch-when="2">Ingen stress</span>
+      <span class="quiz-header--punchline-inner" data-ng-switch-when="3">Just relax!</span>
+      <span class="quiz-header--punchline-inner" data-ng-switch-default>Ingen stress</span>
+    </h1>
     <h3 class="quiz-header--text">Ta’ quizzen og kend din Digitale ABC!</h3>
 
     <a href="/#/quiz" class="quiz-header--button">Ta' Quizzen</a>
     <a href="#video" du-smooth-scroll><img src="/images/scroll.svg" class="quiz-header--scroll"></a>
   </div>
+  <div class="quiz-header--background is-first" data-ng-switch-when="1"></div>
+  <div class="quiz-header--background is-second" data-ng-switch-when="2"></div>
+  <div class="quiz-header--background is-third" data-ng-switch-when="3"></div>
+  <div class="quiz-header--background is-first" data-ng-switch-default></div>
 </section>
 <div id="video" class="video">
   <div class="video--inner">
