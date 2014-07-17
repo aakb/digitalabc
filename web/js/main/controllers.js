@@ -22,6 +22,15 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
     $('html').toggleClass('is-locked');
   };
 
+  // Handle active menu item
+  $scope.setActiveMenuItem = function(path) {
+    if ($location.path().substr(0, path.length) == path) {
+      return "is-active";
+    } else {
+      return "";
+    }
+  }
+
   // Change route.
   $rootScope.$on('$routeChangeSuccess', function() {
     // Make sure menu is closed.
