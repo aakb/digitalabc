@@ -79,7 +79,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
     $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
 
-    $timeout(function(){
+    $timeout(function() {
       $scope.showVideo = false;
     }, 700);
   }
