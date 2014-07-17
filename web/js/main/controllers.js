@@ -24,7 +24,7 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
 
   // Handle active menu item
   $scope.setActiveMenuItem = function(path) {
-    if ($location.path().substr(0, path.length) == path) {
+    if ($location.path() === path) {
       return "is-active";
     } else {
       return "";
