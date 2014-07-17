@@ -192,6 +192,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/backgrounds\/girl-arms-out.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 219968,
+		"inputAbbreviatedPath": "\/images\/backgrounds\/girl-arms-out.jpg",
+		"outputAbbreviatedPath": "\/images\/backgrounds\/girl-arms-out.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/backgrounds\/rappers-two-up-points.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 189538,
+		"inputAbbreviatedPath": "\/images\/backgrounds\/rappers-two-up-points.jpg",
+		"outputAbbreviatedPath": "\/images\/backgrounds\/rappers-two-up-points.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/backgrounds\/skateboard-flip.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 147140,
+		"inputAbbreviatedPath": "\/images\/backgrounds\/skateboard-flip.jpg",
+		"outputAbbreviatedPath": "\/images\/backgrounds\/skateboard-flip.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/backgrounds\/table-laptop-notebook.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -210,17 +243,6 @@
 		"initialSize": 15556,
 		"inputAbbreviatedPath": "\/images\/favicon.png",
 		"outputAbbreviatedPath": "\/images\/favicon.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/image-flip.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 147140,
-		"inputAbbreviatedPath": "\/images\/image-flip.jpg",
-		"outputAbbreviatedPath": "\/images\/image-flip.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
