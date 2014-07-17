@@ -85,7 +85,7 @@ abcApp.controller('HeaderController', function($scope, $document, $location, $ro
   }
 
   // Slideshow
-  var slidesInSlideshow = 3;
+  var slidesInSlideshow = 2;
   var slidesTimeIntervalInMs = 5000;
 
   $scope.slideshow = 1;
