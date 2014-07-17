@@ -23,15 +23,11 @@
 
     // Background slides
     &.is-first {
-      background-image: url('/images/backgrounds/rappers-two-up-points.jpg');
-    }
-
-    &.is-second {
       background-image: url('/images/backgrounds/girl-arms-out.jpg');
     }
 
-    &.is-third {
-      background-image: url('/images/backgrounds/skateboard-flip.jpg');
+    &.is-second {
+      background-image: url('/images/backgrounds/rappers-two-up-points.jpg');
     }
 
     // Animations
