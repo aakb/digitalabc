@@ -2241,7 +2241,7 @@ html.is-locked body {
   height: 1em;
   margin-bottom: .25em;
   font-size: 3em;
-  line-height: 1em;
+  line-height: 1.25em;
 }
 /* line 129, ../sass/modules/_quiz-header.scss */
 .quiz-header--punchline-inner,
