@@ -2259,16 +2259,16 @@ html.is-locked body {
   /* line 141, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline-inner.ng-enter,
   .quiz-start--punchline-inner.ng-enter {
-    -moz-animation: header-punchline-in 0.5s ease-in 1 forwards;
-    -webkit-animation: header-punchline-in 0.5s ease-in 1 forwards;
-    animation: header-punchline-in 0.5s ease-in 1 forwards;
+    -moz-animation: header-punchline-in 0.5s ease-in-out 1 forwards;
+    -webkit-animation: header-punchline-in 0.5s ease-in-out 1 forwards;
+    animation: header-punchline-in 0.5s ease-in-out 1 forwards;
   }
   /* line 145, ../sass/modules/_quiz-header.scss */
   .quiz-header--punchline-inner.ng-leave,
   .quiz-start--punchline-inner.ng-leave {
-    -moz-animation: header-punchline-out 0.5s ease-in 1 forwards;
-    -webkit-animation: header-punchline-out 0.5s ease-in 1 forwards;
-    animation: header-punchline-out 0.5s ease-in 1 forwards;
+    -moz-animation: header-punchline-out 0.5s ease-in-out 1 forwards;
+    -webkit-animation: header-punchline-out 0.5s ease-in-out 1 forwards;
+    animation: header-punchline-out 0.5s ease-in-out 1 forwards;
   }
 }
 @media only screen and (min-width: 481px) {
