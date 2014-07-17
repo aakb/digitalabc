@@ -6,9 +6,47 @@
 
 
 .quiz-header {
-  background: url('/images/backgrounds/rappers-two-up-points.jpg') no-repeat;
+  background-color: $black;
+
+  &--background {
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include background-size(cover);
+
+    // Background slides
+    &.is-first {
+      background-image: url('/images/backgrounds/rappers-two-up-points.jpg');
+    }
+
+    &.is-second {
+      background-image: url('/images/backgrounds/girl-arms-out.jpg');
+    }
+
+    &.is-third {
+      background-image: url('/images/backgrounds/skateboard-flip.jpg');
+    }
+
+    // Animations
+    &.ng-enter {
+      @include animation(header-background-in .75s ease-in 1 forwards);
+    }
+
+    &.ng-leave {
+      @include animation(header-background-out .75s ease-in 1 forwards);
+    }
+  }
 
   &--inner {
+    z-index: 96;
+
     padding-top: 3em;
   }
 
@@ -37,8 +75,6 @@
   width: 100%;
 
   text-align: center;
-
-  @include background-size(cover);
 
   &--inner {
     position: relative;
@@ -83,13 +119,36 @@
     }
   }
 
-
   &--punchline {
+    position: relative;
+
+    height: 1em;
     margin-bottom: .25em;
 
     font-size: 3em;
     line-height: 1em;
 
+    &-inner {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+
+      // Breakpoints
+      @include breakpoint($breakpoint-lap) {
+        // Animations
+        &.ng-enter {
+          @include animation(header-punchline-in .5s ease-in 1 forwards);
+        }
+
+        &.ng-leave {
+          @include animation(header-punchline-out .5s ease-in 1 forwards);
+        }
+      }
+    }
+
+    // Breakpoints
     @include breakpoint($breakpoint-lap) {
       font-size: 8em;
     }
@@ -153,6 +212,7 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+    max-height: 6em;
     max-width: 2em;
 
     cursor: pointer;

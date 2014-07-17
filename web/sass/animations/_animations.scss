@@ -3,7 +3,63 @@
  * Animations
  *
  */
- 
+
+
+
+// Header animations
+
+@include keyframes(header-punchline-in) {
+  0% {
+    right: -200%;
+
+    opacity: 0;
+  }
+
+  100% {
+    right: 0;
+
+    opacity: 1;
+  }
+}
+
+
+@include keyframes(header-punchline-out) {
+  0% {
+    left: 0;
+
+    opacity: 1;
+  }
+
+  100% {
+    left: -200%;
+
+    opacity: 0;
+  }
+}
+
+@include keyframes(header-background-in) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@include keyframes(header-background-out) {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+// Page transition
 
 @include keyframes(page-transition) {
   0% {
@@ -25,6 +81,8 @@
   }
 }
 
+
+// Navigation animations
 
 @include keyframes(toggle-nav-open) {
   0% {
