@@ -86,12 +86,12 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Handle video URLs
   if ($location.path() === '/video') {
-    $timeout(function(){
+    $timeout(function() {
       $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
     }, 1000);
   }
   else if ($location.path() === '/video/troll-painter') {
-    $timeout(function(){
+    $timeout(function() {
       $scope.playVideo('troll-painter');
     }, 1000);
   }
