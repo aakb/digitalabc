@@ -2112,7 +2112,7 @@ html.is-locked body {
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
