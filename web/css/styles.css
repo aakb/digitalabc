@@ -2628,20 +2628,36 @@ html.is-locked body {
 .video--troll-painter {
   background-color: #0abbef;
 }
-/* line 67, ../sass/modules/_video.scss */
+/* line 58, ../sass/modules/_video.scss */
+.video--troll-painter-play-icon {
+  position: absolute;
+  top: 8em;
+  right: 0;
+  left: 0;
+  margin: auto;
+  max-width: 5em;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 58, ../sass/modules/_video.scss */
+  .video--troll-painter-play-icon {
+    top: 14em;
+    max-width: 10em;
+  }
+}
+/* line 83, ../sass/modules/_video.scss */
 .video--broke-teenager {
   background-color: #39b54a;
 }
-/* line 85, ../sass/modules/_video.scss */
+/* line 101, ../sass/modules/_video.scss */
 .video--slave {
   background-color: #ee3d96;
 }
-/* line 103, ../sass/modules/_video.scss */
+/* line 119, ../sass/modules/_video.scss */
 .video--pain-in-the-butt {
   height: 15em;
   background-color: #fff32a;
 }
-/* line 110, ../sass/modules/_video.scss */
+/* line 126, ../sass/modules/_video.scss */
 .video--pain-in-the-butt-header {
   color: black;
   position: relative;
@@ -2652,7 +2668,7 @@ html.is-locked body {
   transform: translateY(-50%);
 }
 @media only screen and (min-width: 481px) {
-  /* line 103, ../sass/modules/_video.scss */
+  /* line 119, ../sass/modules/_video.scss */
   .video--pain-in-the-butt {
     height: 50%;
   }
