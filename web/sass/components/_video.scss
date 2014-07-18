@@ -44,6 +44,8 @@
 // Video section inner
 
 %video--section-inner {
+  padding-top: 1em;
+
   @include breakpoint($breakpoint-lap) {
     @include vertical-align-element;
   }
