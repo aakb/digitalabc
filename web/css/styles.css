@@ -148,18 +148,6 @@
  * 2. Remove any margins and paddings that might affect the grid system.
  * 3. Apply a negative `margin-left` to negate the columns’ gutters.
  */
-/* line 214, ../sass/base/_grid.scss */
-.video {
-  list-style: none;
-  /* [1] */
-  margin: 0;
-  /* [2] */
-  padding: 0;
-  /* [2] */
-  margin-left: -2em;
-  /* [3] */
-}
-
 /**
  * 1. Cause columns to stack side-by-side.
  * 2. Space columns apart.
@@ -205,11 +193,11 @@
  * Extends `.grid`.
  */
 /* line 276, ../sass/base/_grid.scss */
-.video--inner {
+.video {
   margin-left: 0;
 }
 /* line 279, ../sass/base/_grid.scss */
-.video--inner > .video--troll-painter, .video--inner > .video--broke-teenager, .video--inner > .video--slave, .video--inner > .video--pain-in-the-butt, .video--inner > .static-page--content, .video--inner > .static-page--nav {
+.video > .video--troll-painter, .video > .video--broke-teenager, .video > .video--slave, .video > .video--pain-in-the-butt, .video > .static-page--content, .video > .static-page--nav {
   padding-left: 0;
 }
 
@@ -2636,24 +2624,24 @@ html.is-locked body {
 .video--inner {
   height: 100%;
 }
-/* line 51, ../sass/modules/_video.scss */
+/* line 49, ../sass/modules/_video.scss */
 .video--troll-painter {
   background-color: #0abbef;
 }
-/* line 69, ../sass/modules/_video.scss */
+/* line 67, ../sass/modules/_video.scss */
 .video--broke-teenager {
   background-color: #39b54a;
 }
-/* line 87, ../sass/modules/_video.scss */
+/* line 85, ../sass/modules/_video.scss */
 .video--slave {
   background-color: #ee3d96;
 }
-/* line 105, ../sass/modules/_video.scss */
+/* line 103, ../sass/modules/_video.scss */
 .video--pain-in-the-butt {
   height: 15em;
   background-color: #fff32a;
 }
-/* line 112, ../sass/modules/_video.scss */
+/* line 110, ../sass/modules/_video.scss */
 .video--pain-in-the-butt-header {
   color: black;
   position: relative;
@@ -2664,7 +2652,7 @@ html.is-locked body {
   transform: translateY(-50%);
 }
 @media only screen and (min-width: 481px) {
-  /* line 105, ../sass/modules/_video.scss */
+  /* line 103, ../sass/modules/_video.scss */
   .video--pain-in-the-butt {
     height: 50%;
   }

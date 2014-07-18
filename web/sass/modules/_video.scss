@@ -35,7 +35,7 @@
 
 
 .video {
-  @extend %grid;
+  @extend %grid--full;
 
   position: relative;
   z-index: 97;
@@ -43,8 +43,6 @@
   height: 100%;
 
   &--inner {
-    @extend %grid--full;
-
     height: 100%;
   }
 
