@@ -11,6 +11,15 @@
 
   height: 100%;
   width: 100%;
+
+  // Move video element to allow our close link to work on iOS.
+  .video-js {
+    .vjs-tech {
+      top: 10%;
+
+      height: 90%;
+    }
+  }
 }
 
 
