@@ -295,20 +295,9 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 37286,
+		"initialSize": 125443,
 		"inputAbbreviatedPath": "\/images\/video\/broke-teenager.png",
 		"outputAbbreviatedPath": "\/images\/video\/broke-teenager.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/video\/slave.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 81467,
-		"inputAbbreviatedPath": "\/images\/video\/slave.png",
-		"outputAbbreviatedPath": "\/images\/video\/slave.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -317,7 +306,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 100512,
+		"initialSize": 111847,
 		"inputAbbreviatedPath": "\/images\/video\/troll-painter.png",
 		"outputAbbreviatedPath": "\/images\/video\/troll-painter.png",
 		"outputPathIsOutsideProject": 0,
@@ -374,6 +363,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/partials\/for-laererne\/snippets\/oevelsens-placering.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/partials\/for-laererne\/snippets\/static-page-nav.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/partials\/for-laererne\/snippets\/static-page-nav.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
