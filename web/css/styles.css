@@ -1624,10 +1624,10 @@ html.is-locked body {
 
 /* line 75, ../sass/components/_video.scss */
 .video--troll-painter-image, .video--broke-teenager-image, .video--slave-image, .video--pain-in-the-butt-image {
-  height: 100%;
   margin-right: auto;
   margin-left: auto;
   max-height: 100%;
+  max-width: 100%;
 }
 @media only screen and (min-width: 481px) {
   /* line 75, ../sass/components/_video.scss */
