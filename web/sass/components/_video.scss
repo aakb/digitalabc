@@ -11,9 +11,9 @@
 %video--section {
   @extend %grid__item;
   @extend %palm--one-whole;
-  @extend %lap--one-half;
-  @extend %desk--one-half;
-  @extend %bigscreen--one-half;
+  @extend %lap--one-third;
+  @extend %desk--one-third;
+  @extend %bigscreen--one-third;
 
   position: relative;
   overflow: hidden;
@@ -30,24 +30,13 @@
       display: inline;
     }
   }
-
-  @include breakpoint($breakpoint-lap) {
-    height: 50%;
-
-    &:hover {
-      border: 1em solid transparentize($black, .95);
-    }
-  }
 }
 
 
 // Video section inner
 
 %video--section-inner {
-  padding-top: 1em;
-
-  @include breakpoint($breakpoint-lap) {
-  }
+  background: none;
 }
 
 
@@ -57,10 +46,7 @@
   position: relative;
   z-index: 95;
 
-  margin-bottom: .25em;
-
   color: $white;
-  font-size: 3em;
   text-align: center;
 
   @include breakpoint($breakpoint-desk) {
@@ -79,21 +65,9 @@
   position: relative;
   z-index: 90;
 
-  margin-right: auto;
-  margin-left: auto;
-  max-height: 100%;
-  max-width: 100%;
+  width: 100%;
 
   &.is-animated {
     display: none;
-  }
-
-  @include breakpoint($breakpoint-lap) {
-    margin-top: -1em;
-    max-width: 85%;
-  }
-
-  @include breakpoint($breakpoint-bigscreen) {
-    margin-bottom: -12.5em;
   }
 }

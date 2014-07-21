@@ -51,11 +51,7 @@
   &--troll-painter {
     @extend %video--section;
 
-    background-color: $theme-color;
-    border: 1em solid $theme-color;
-
-
-  &-header {
+    &-header {
       @extend %video--section-header;
     }
 
@@ -70,9 +66,6 @@
 
   &--broke-teenager {
     @extend %video--section;
-
-    background-color: #39b54a;
-    border: 1em solid #39b54a;
 
     &-header {
       @extend %video--section-header;
@@ -90,9 +83,6 @@
   &--slave {
     @extend %video--section;
 
-    background-color: #ee3d96;
-    border: 1em solid #ee3d96;
-
     &-header {
       @extend %video--section-header;
     }
@@ -109,11 +99,6 @@
   &--pain-in-the-butt {
     @extend %video--section;
 
-    height: 15em;
-
-    background-color: #fff32a;
-    border: 1em solid #fff32a;
-
     &-header {
       @extend %video--section-header;
 
@@ -128,10 +113,6 @@
 
     &-inner {
       @extend %video--section-inner;
-    }
-
-    @include breakpoint($breakpoint-lap) {
-      height: 50%;
     }
   }
 }
