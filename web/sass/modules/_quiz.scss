@@ -43,8 +43,6 @@
   }
 
   &--inner {
-    z-index: 96;
-
     padding-top: 3em;
   }
 
@@ -55,12 +53,19 @@
 
 .quiz,
 .quiz-start {
-  background: url('/images/quiz-bg.jpg') no-repeat;
+  &--background {
+    top: 0;
+    left: 0;
+    position: absolute;
 
-  padding-top: 1em;
+    height: 100%;
+    width: 100%;
 
-  @include breakpoint($breakpoint-lap, $breakpoint-height) {
-    padding-top: 1em;
+    background-image: url('/images/backgrounds/device-blurred.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    @include background-size(cover);
   }
 }
 
@@ -77,6 +82,7 @@
   &--inner {
     position: relative;
     top: 50%;
+    z-index: 96;
 
     padding-right: 1em;
     padding-left: 1em;
