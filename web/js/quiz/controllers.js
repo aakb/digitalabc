@@ -45,7 +45,7 @@ abcApp.controller('StartController', function($scope, $timeout) {
  */
 abcApp.controller('ShareController', function($scope, $location, $routeParams, quizFactory, settingsFactory) {
   // Change layout class.
-  $scope.$emit('changeLayoutClassSuffix', 'quiz');
+  $scope.$emit('changeLayoutClassSuffix', 'layout');
 
 
   // Redirect if the quiz has not been completed.
