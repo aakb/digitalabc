@@ -2394,21 +2394,22 @@ html.is-locked body {
 }
 /* line 381, ../sass/modules/_quiz.scss */
 .quiz--result {
-  font-size: 4em;
+  margin-bottom: .5em;
+  font-size: 3em;
 }
-/* line 385, ../sass/modules/_quiz.scss */
+/* line 387, ../sass/modules/_quiz.scss */
 .quiz--text {
   font-size: 2em;
 }
-/* line 390, ../sass/modules/_quiz.scss */
+/* line 392, ../sass/modules/_quiz.scss */
 .quiz--challenger-answer.is-correct {
   color: #0f0;
 }
-/* line 394, ../sass/modules/_quiz.scss */
+/* line 396, ../sass/modules/_quiz.scss */
 .quiz--challenger-answer.is-wrong {
   color: #f00;
 }
-/* line 400, ../sass/modules/_quiz.scss */
+/* line 402, ../sass/modules/_quiz.scss */
 .quiz--start-opponents-wrapper {
   margin-right: auto;
   margin-bottom: 2em;
@@ -2418,11 +2419,24 @@ html.is-locked body {
   font-size: 2em;
   text-align: left;
 }
-/* line 411, ../sass/modules/_quiz.scss */
+/* line 413, ../sass/modules/_quiz.scss */
 .quiz--start-opponent {
   color: #b0eafc;
 }
-/* line 415, ../sass/modules/_quiz.scss */
+/* line 417, ../sass/modules/_quiz.scss */
+.quiz--text-link, .quiz--text-alternate {
+  font-family: "permianseriftypefaceregular";
+}
+/* line 422, ../sass/modules/_quiz.scss */
+.quiz--text-alternate {
+  margin-bottom: 1em;
+  color: rgba(255, 255, 255, 0.65);
+}
+/* line 428, ../sass/modules/_quiz.scss */
+.quiz--text-link {
+  margin-bottom: 2em;
+}
+/* line 432, ../sass/modules/_quiz.scss */
 .quiz--share-button {
   margin-bottom: 1.5em;
   padding-bottom: .2em;
@@ -2434,7 +2448,7 @@ html.is-locked body {
   color: white;
   font-size: 2em;
 }
-/* line 429, ../sass/modules/_quiz.scss */
+/* line 446, ../sass/modules/_quiz.scss */
 .quiz--share-button:hover {
   background-color: rgba(58, 88, 155, 0.65);
 }
