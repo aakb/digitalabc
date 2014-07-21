@@ -91,11 +91,13 @@
   }
 }
 
+.quiz,
 .quiz-header,
 .quiz-start {
-  &--text,
   &--question,
-  &--punchline {
+  &--punchline,
+  &--result,
+  &--text {
     color: $white;
     font-family: $font-family-primary;
   }
@@ -380,7 +382,6 @@
     font-size: 4em;
   }
 
-
   &--text {
     font-size: 2em;
   }
@@ -409,5 +410,24 @@
 
   &--start-opponent {
     color: lighten($theme-color, 35%);
+  }
+
+  &--share-button {
+    @extend %button-transparent;
+
+    margin-bottom: 1.5em;
+    padding-bottom: .2em;
+    padding-left: 2.1em;
+
+    background-image: url('/images/fb-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $facebook-color;
+    color: $white;
+    font-size: 2em;
+
+    &:hover {
+      background-color: transparentize($facebook-color, .35);
+    }
   }
 }
