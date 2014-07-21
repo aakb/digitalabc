@@ -379,7 +379,9 @@
 
 
   &--result {
-    font-size: 4em;
+    margin-bottom: .5em;
+
+    font-size: 3em;
   }
 
   &--text {
@@ -410,6 +412,21 @@
 
   &--start-opponent {
     color: lighten($theme-color, 35%);
+  }
+
+  &--text-link,
+  &--text-alternate {
+    font-family: $font-secondary;
+  }
+
+  &--text-alternate {
+    margin-bottom: 1em;
+
+    color: transparentize($white, .35);
+  }
+
+  &--text-link {
+    margin-bottom: 2em;
   }
 
   &--share-button {

@@ -2,8 +2,9 @@
   <div class="quiz--inner">
     <h2 class="quiz--result">Du fik: <[result]> point</h2>
     <h2 class="quiz--result" data-ng-show="challengerResult !== null">Din modstander fik: <[challengerResult]> point</h2>
-    <h3 class="quiz--text">Del dit resultat: <[link]></h3>
-    <h3 class="quiz--text">Eller </h3>
+    <p class="quiz--text-alternate">Klik på linket for at kopiere det og send det til dine venner!</p>
+    <h3 class="quiz--text-link"><a href="<[link]>"><[link]></a></h3>
+    <p class="quiz--text-alternate">Du kan også dele det på Facebook:</p>
     <input type="button" ng-click="shareOnFacebook()" value="Del på Facebook" class="quiz--share-button">
 
     <h3 class="quiz--text" data-ng-show="facebookStatusText !== ''"><[facebookStatusText]></h3>
