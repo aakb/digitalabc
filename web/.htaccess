@@ -50,3 +50,7 @@ DirectoryIndex app_dev.php
         # RedirectTemp cannot be used instead
     </IfModule>
 </IfModule>
+
+AddType video/mp4 .mp4 .m4v
+AddType video/ogg .ogg .ogv
+AddType video/webm .webm
