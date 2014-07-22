@@ -21,13 +21,15 @@
   cursor: pointer;
   text-align: center;
 
-  &:hover {
-    .is-static {
-      display: none;
-    }
+  @include breakpoint($breakpoint-desk) {
+    &:hover {
+      .is-static {
+        display: none;
+      }
 
-    .is-animated {
-      display: inline;
+      .is-animated {
+        display: inline;
+      }
     }
   }
 }
