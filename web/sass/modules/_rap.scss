@@ -1,0 +1,37 @@
+/**
+ *
+ * Rap.
+ *
+ */
+
+
+.rap {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  background: url('/images/backgrounds/rappers-two-up-points.jpg') no-repeat;
+  text-align: center;
+
+  @include background-size(cover);
+
+  &--inner {
+    position: relative;
+    top: 50%;
+    z-index: 96;
+
+    padding-right: 1em;
+    padding-left: 1em;
+
+    @include translateY(-50%);
+  }
+
+  &--video {
+    width: 95%;
+
+    @include breakpoint($breakpoint-desk) {
+      width: 60%;
+    }
+  }
+}
