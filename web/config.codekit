@@ -302,6 +302,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/video\/broke-teenager-poster.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 395162,
+		"inputAbbreviatedPath": "\/images\/video\/broke-teenager-poster.png",
+		"outputAbbreviatedPath": "\/images\/video\/broke-teenager-poster.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/video\/broke-teenager.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -317,7 +328,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
+		"initialSize": 286213,
 		"inputAbbreviatedPath": "\/images\/video\/slave-poster.png",
 		"outputAbbreviatedPath": "\/images\/video\/slave-poster.png",
 		"outputPathIsOutsideProject": 0,
