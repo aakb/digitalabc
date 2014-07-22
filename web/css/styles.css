@@ -1913,7 +1913,7 @@ html.is-locked body {
 }
 /* line 31, ../sass/modules/_quiz.scss */
 .quiz-header--background.is-second {
-  background-image: url("/images/backgrounds/rappers-two-up-points.jpg");
+  background-image: url("/images/backgrounds/guy-horizontal.jpg");
 }
 /* line 36, ../sass/modules/_quiz.scss */
 .quiz-header--background.ng-enter {
@@ -2485,15 +2485,11 @@ html.is-locked body {
 
 /* line 37, ../sass/modules/_video.scss */
 .video {
+  overflow: hidden;
   position: relative;
   z-index: 97;
-  height: 100%;
 }
-/* line 45, ../sass/modules/_video.scss */
-.video--inner {
-  height: 100%;
-}
-/* line 102, ../sass/modules/_video.scss */
+/* line 99, ../sass/modules/_video.scss */
 .video--pain-in-the-butt-header {
   color: black;
   position: relative;
@@ -2502,6 +2498,46 @@ html.is-locked body {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+/**
+ *
+ * Rap.
+ *
+ */
+/* line 8, ../sass/modules/_rap.scss */
+.rap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url("/images/backgrounds/rappers-two-up-points.jpg") no-repeat;
+  text-align: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 19, ../sass/modules/_rap.scss */
+.rap--inner {
+  position: relative;
+  top: 50%;
+  z-index: 96;
+  padding-right: 1em;
+  padding-left: 1em;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 30, ../sass/modules/_rap.scss */
+.rap--video {
+  width: 95%;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 30, ../sass/modules/_rap.scss */
+  .rap--video {
+    width: 60%;
+  }
 }
 
 /**
