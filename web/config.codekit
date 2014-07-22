@@ -214,6 +214,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/backgrounds\/guy-horizontal.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 227507,
+		"inputAbbreviatedPath": "\/images\/backgrounds\/guy-horizontal.jpg",
+		"outputAbbreviatedPath": "\/images\/backgrounds\/guy-horizontal.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/backgrounds\/rappers-two-up-points.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -302,6 +313,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/video\/broke-teenager-poster.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 412515,
+		"inputAbbreviatedPath": "\/images\/video\/broke-teenager-poster.png",
+		"outputAbbreviatedPath": "\/images\/video\/broke-teenager-poster.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/video\/broke-teenager.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -331,6 +353,17 @@
 		"initialSize": 92519,
 		"inputAbbreviatedPath": "\/images\/video\/slave.png",
 		"outputAbbreviatedPath": "\/images\/video\/slave.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/video\/troll-painter-poster.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 355826,
+		"inputAbbreviatedPath": "\/images\/video\/troll-painter-poster.png",
+		"outputAbbreviatedPath": "\/images\/video\/troll-painter-poster.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -662,6 +695,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sass\/modules\/_quiz.scss",
 		"outputAbbreviatedPath": "\/css\/_quiz.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/sass\/modules\/_rap.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/sass\/modules\/_rap.scss",
+		"outputAbbreviatedPath": "\/css\/_rap.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
