@@ -95,6 +95,21 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
       $scope.playVideo('troll-painter');
     }, 1000);
   }
+  else if ($location.path() === '/video/slave') {
+    $timeout(function() {
+      $scope.playVideo('slave');
+    }, 1000);
+  }
+  else if ($location.path() === '/video/broke-teenager') {
+    $timeout(function() {
+      $scope.playVideo('broke-teenager');
+    }, 1000);
+  }
+  else if ($location.path() === '/video/pain-in-the-butt') {
+    $timeout(function() {
+      $scope.playVideo('troll-painter');
+    }, 1000);
+  }
 
   // Slideshow
   var slidesInSlideshow = 2;
