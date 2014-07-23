@@ -25,8 +25,9 @@ abcApp.controller('StartController', function($scope, $timeout) {
 
   // Timeout function to update the text.
   var setNewText = function() {
+    var index;
     do {
-      var index = parseInt(Math.random() * texts.length);
+      index = parseInt(Math.random() * texts.length);
     } while (texts.length > 1 && index === lastIndex);
 
     $scope.text = texts[index];
@@ -35,7 +36,7 @@ abcApp.controller('StartController', function($scope, $timeout) {
     lastIndex = index;
 
     $timeout(setNewText, timeoutMilliseconds);
-  }
+  };
 
   $timeout(setNewText, timeoutMilliseconds);
 });
@@ -43,7 +44,7 @@ abcApp.controller('StartController', function($scope, $timeout) {
 /**
  * Controller for the finish page.
  */
-abcApp.controller('ShareController', function($scope, $location, $routeParams, quizFactory, settingsFactory) {
+abcApp.controller('ShareController', function($scope, $location, $routeParams, quizFactory) {
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'layout');
 
@@ -57,14 +58,13 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
   $scope.link = "";
   $scope.challengeid = $routeParams.challengeid;
   $scope.facebookStatusText = "";
-  $scope.challengerResult = null;
+  $scope.challengerResult = false;
   $scope.result = quizFactory.getResult();
   $scope.id = "";
 
   // Test whether this is the result of a challenge and set value of challenger result.
   if ($scope.challengeid !== undefined) {
     quizFactory.getChallenge($scope.challengeid).then(function(challenger) {
-      console.log(challenger);
       if (challenger !== null) {
         $scope.challengerResult = challenger.result;
       }
@@ -85,7 +85,9 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
   // Load the SDK asynchronously
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
+    if (d.getElementById(id)) {
+      return;
+    }
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/da_DK/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
@@ -94,7 +96,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
   // Get the ID of the result.
   quizFactory.saveResult().then(function(id) {
     $scope.id = id;
-    $scope.link = settingsFactory.getServerPath() + 'quiz/challenge/' + $scope.id;
+    $scope.link = window.location.hostname + 'quiz/challenge/' + $scope.id;
   });
 
   // Function for sharing on facebook.
@@ -105,7 +107,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
           'me/tujmytestapp:complete',
           'post',
           {
-            quiz: settingsFactory.getServerPath() + "quiz/challenge/" + $scope.id
+            quiz: window.location.hostname + "quiz/challenge/" + $scope.id
           },
           function(response) {
             if (response.error) {
@@ -129,24 +131,24 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
 
   // Make sure the quiz has been initialised.
   quizFactory.init().then(function() {
-    $quizPath = 'quiz';
+    var quizPath = 'quiz';
 
     if (quizFactory.getQuizFinished()) {
-      $location.path($quizPath + '/done');
+      $location.path(quizPath + '/done');
     }
 
     $scope.challengeid = $routeParams.challengeid;
-    $scope.step = $routeParams.step;
+    $scope.step = parseInt($routeParams.step);
     $scope.numberOfQuestions = quizFactory.getNumberOfQuestions();
     $scope.highestQuestionAnswered = quizFactory.getHighestAnsweredQuestion();
 
     // Make sure we are at the right step in the quiz.
     if ($scope.step < 1 || $scope.step > $scope.highestQuestionAnswered) {
       if ($scope.challengeid !== undefined) {
-        $location.path($quizPath + '/' + parseInt($scope.highestQuestionAnswered + 1) + '/' + $scope.challengeid);
+        $location.path(quizPath + '/' + parseInt($scope.highestQuestionAnswered + 1) + '/' + $scope.challengeid);
       }
       else {
-        $location.path($quizPath + '/' + parseInt($scope.highestQuestionAnswered + 1));
+        $location.path(quizPath + '/' + parseInt($scope.highestQuestionAnswered + 1));
       }
     }
 
@@ -162,7 +164,7 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
           $scope.challengeid = undefined;
         }
         else {
-          if (challenger.answers[$scope.step - 1] == $scope.question.correctAnswer) {
+          if (challenger.answers[$scope.step - 1] === $scope.question.correctAnswer) {
             $scope.challengerAnswerCorrect = true;
             $scope.challengeResult = "rigtigt";
           } else {
@@ -178,21 +180,21 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
       if ($scope.chosen.answer !== null) {
         if ($scope.step < $scope.numberOfQuestions) {
           if ($scope.challengeid !== undefined) {
-            $location.path($quizPath + '/' + (parseInt($scope.step) + 1) + '/' + $scope.challengeid);
+            $location.path(quizPath + '/' + (parseInt($scope.step) + 1) + '/' + $scope.challengeid);
           }
           else {
-            $location.path($quizPath + '/' + (parseInt($scope.step) + 1));
+            $location.path(quizPath + '/' + (parseInt($scope.step) + 1));
           }
         }
-        else if ($scope.step == $scope.numberOfQuestions) {
+        else if ($scope.step === $scope.numberOfQuestions) {
           quizFactory.finishQuiz();
           $('body').unbind("keydown keypress");
 
           if ($scope.challengeid !== undefined) {
-            $location.path($quizPath + '/done' + '/' + $scope.challengeid);
+            $location.path(quizPath + '/done' + '/' + $scope.challengeid);
           }
           else {
-            $location.path($quizPath + '/done');
+            $location.path(quizPath + '/done');
           }
         }
       }
@@ -202,10 +204,10 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
     $scope.previousStep = function() {
       if ($scope.step > 1) {
         if ($scope.challengeid !== undefined) {
-          $location.path($quizPath + '/' + (parseInt($scope.step - 1)) + '/' + $scope.challengeid);
+          $location.path(quizPath + '/' + (parseInt($scope.step - 1)) + '/' + $scope.challengeid);
         }
         else {
-          $location.path($quizPath + '/' + (parseInt($scope.step - 1)));
+          $location.path(quizPath + '/' + (parseInt($scope.step - 1)));
         }
       }
     }
@@ -221,12 +223,12 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
         }
         event.preventDefault();
       }
-      else if (event.which == 37) {
+      else if (event.which === 37) {
         // Handles the left arrow.
         $timeout($scope.previousStep, 100);
         event.preventDefault();
       }
-      else if (event.which == 39 || event.which == 13) {
+      else if (event.which === 39 || event.which === 13) {
         // Handles the right arrow.
         $timeout($scope.nextStep, 100);
         event.preventDefault();
