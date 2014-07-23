@@ -25,8 +25,9 @@ class QuizResult
   /**
    * @ORM\Column(type="guid")
    * @ORM\Id
-   * @ORM\GeneratedValue(strategy="UUID")
-   */
+   * @ORM\GeneratedValue(strategy="CUSTOM")
+   * @ORM\CustomIdGenerator(class="DigitalABC\MainBundle\Extension\CustomIdGenerator")
+  */
   protected $id;
 
   /**
