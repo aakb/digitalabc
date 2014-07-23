@@ -335,6 +335,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/video\/pain-in-the-butt-poster.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 255023,
+		"inputAbbreviatedPath": "\/images\/video\/pain-in-the-butt-poster.jpg",
+		"outputAbbreviatedPath": "\/images\/video\/pain-in-the-butt-poster.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/video\/slave-poster.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -765,6 +776,17 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/video\/kom-med-poster.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 149542,
+		"inputAbbreviatedPath": "\/video\/kom-med-poster.jpg",
+		"outputAbbreviatedPath": "\/video\/kom-med-poster.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		}
 	},
 "hooks": [
