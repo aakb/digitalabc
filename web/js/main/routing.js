@@ -1,20 +1,20 @@
 abcApp.config(function($routeProvider) {
   $routeProvider
-    .when('/for-laererne', {
+    .when('/undervisningsmateriale', {
       controller: 'StaticPageController',
-      templateUrl: '/partials/for-laererne/index.html'
+      templateUrl: '/partials/undervisningsmateriale/index.html'
     })
-    .when('/for-laererne/sidste-omgang', {
+    .when('/undervisningsmateriale/sidste-omgang', {
       controller: 'StaticPageController',
-      templateUrl: '/partials/for-laererne/sidste-omgang/index.html'
+      templateUrl: '/partials/undervisningsmateriale/sidste-omgang/index.html'
     })
-    .when('/for-laererne/digital-parathed', {
+    .when('/undervisningsmateriale/digital-parathed', {
       controller: 'StaticPageController',
-      templateUrl: '/partials/for-laererne/digital-parathed/index.html'
+      templateUrl: '/partials/undervisningsmateriale/digital-parathed/index.html'
     })
-    .when('/for-laererne/farvel-forvalt-lingo', {
+    .when('/undervisningsmateriale/farvel-forvalt-lingo', {
       controller: 'StaticPageController',
-      templateUrl: '/partials/for-laererne/farvel-forvalt-lingo/index.html'
+      templateUrl: '/partials/undervisningsmateriale/farvel-forvalt-lingo/index.html'
     })
     .when('/quiz', {
       controller: 'StartController',
