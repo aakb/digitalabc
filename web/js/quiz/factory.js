@@ -17,7 +17,7 @@ abcApp.factory('quizFactory', function($http, $q) {
     }
 
     defer = $q.defer();
-    $http({method: 'GET', url: '/backend/quiz.php?action=questions'})
+    $http({method: 'GET', url: '/api/questions'})
     .success(function(data, status, headers, config) {
       questions = data;
       angular.forEach(questions, function(question, key) {
