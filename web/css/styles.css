@@ -2018,7 +2018,7 @@ html.is-locked body {
   .quiz-header--text,
   .quiz-start--question,
   .quiz-start--text {
-    font-size: 5em;
+    font-size: 3em;
   }
 }
 @media only screen and (min-width: 481px) and (max-height: 700px) {
@@ -2090,7 +2090,7 @@ html.is-locked body {
   .quiz--punchline,
   .quiz-header--punchline,
   .quiz-start--punchline {
-    font-size: 12em;
+    font-size: 10em;
   }
 }
 @media only screen and (min-width: 481px) and (max-height: 700px) {
