@@ -1,13 +1,15 @@
 <section class="quiz">
   <div class="quiz--inner">
-    <h2 class="quiz--result">Du fik: <[result]> point</h2>
-    <p class="quiz--text-alternate">[100%]Sådan! Du svarede rigtigt på alle spørgsmålene!</p>
-    <p class="quiz--text-alternate">[100%]Du er klar til at få dig et NemID, hvis du ikke har et endnu kan du oprette det på: <a href="http://service.nemid.nu/dk-da/bestil_nemid">NemID.nu</a></p>
-    <p class="quiz--text-alternate">[< 100%] Godt klaret, men det kan blive bedre endnu!</p>
+    <h2 class="quiz--result" data-ng-show="result === 100"><[result]> point - Sådan!</h2>
+    <h2 class="quiz--result" data-ng-show="result < 100">Du fik <[result]> point</h2>
+    <p class="quiz--text-alternate" data-ng-show="result === 100">Tillykke! Du svarede rigtigt på alle spørgsmålene!</p>
+    <p class="quiz--text-alternate" data-ng-show="result === 100">Du er klar til at få dig et NemID, hvis du ikke har et endnu kan du oprette det på: <a href="http://service.nemid.nu/dk-da/bestil_nemid">NemID.nu</a></p>
+    <p class="quiz--text-alternate" data-ng-show="result < 100">Godt klaret, men det kan blive bedre endnu!</p>
     <h2 class="quiz--result" data-ng-show="challengerResult">Din modstander fik: <[challengerResult]> point</h2>
     <p class="quiz--text-alternate">Klik på linket for at kopiere det og send det til dine venner!</p>
     <h3 class="quiz--text-link"><a href="<[link]>"><[link]></a></h3>
-    <a href="/#/quiz" class="quiz--try-again-button">Prøv igen</a>
+    <a href="/#/quiz" class="quiz--try-again-button" data-ng-show="result === 100">Opret NemID</a>
+    <a href="/#/quiz" class="quiz--try-again-button" data-ng-show="result < 100">Prøv igen</a>
     <input type="button" ng-click="shareOnFacebook()" value="Del på Facebook" class="quiz--share-button">
     <h3 class="quiz--text" data-ng-show="!facebookStatusText"><[facebookStatusText]></h3>
   </div>
