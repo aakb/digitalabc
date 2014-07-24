@@ -7,4 +7,4 @@ composer.phar
 /app/bootstrap*
 composer.lock
 .idea
-config.codekit
+web/config.codekit
