@@ -382,11 +382,13 @@
   }
 
   &--try-again-button {
-    font-size: 2em;
+    margin-bottom: 1em;
     padding-top: .23em;
-    padding-right: 2em;
+    padding-right: 2.52em;
     padding-bottom: .23em;
-    padding-left: 2em;
+    padding-left: 2.52em;
+
+    font-size: 2em;
   }
 
   &--result {
@@ -443,6 +445,7 @@
   &--share-button {
     @extend %button-transparent;
 
+    margin-bottom: 1em;
     padding-bottom: .2em;
     padding-left: 2.1em;
 
