@@ -113,7 +113,7 @@
     }
 
     @include breakpoint($breakpoint-bigscreen) {
-      font-size: 5em;
+      font-size: 3em;
     }
 
     @include breakpoint($breakpoint-lap, $breakpoint-height) {
@@ -156,7 +156,7 @@
     }
 
     @include breakpoint($breakpoint-bigscreen) {
-      font-size: 12em;
+      font-size: 10em;
     }
 
     @include breakpoint($breakpoint-lap, $breakpoint-height) {
@@ -196,7 +196,7 @@
     @include breakpoint($breakpoint-desk) {
       margin-bottom: 1.25em;
 
-      font-size: 4em;
+      font-size: 3.5em;
     }
 
     @include breakpoint($breakpoint-lap, $breakpoint-height) {
