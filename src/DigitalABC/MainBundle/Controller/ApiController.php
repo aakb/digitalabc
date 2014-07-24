@@ -382,18 +382,11 @@ class ApiController extends Controller {
       ),
     );
 
-    $picks = array();
-    $items = array();
-    while (TRUE) {
-      if (sizeof($picks) == 10) {
-        break;
-      }
-      $item = rand(0, 9);
+    shuffle($questions);
 
-      if (!in_array($item, $picks)) {
-        $picks[] = $item;
-        $items[] = $questions[$item];
-      }
+    $items = array();
+    for ($i = 0; $i < 10; $i++) {
+      $items[] = $questions[$i];
     }
 
     return new Response(json_encode($items));
