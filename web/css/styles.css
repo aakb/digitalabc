@@ -1625,7 +1625,7 @@ html.is-locked body {
 /* line 12, ../sass/modules/_buttons.scss */
 .quiz--button,
 .quiz-header--button,
-.quiz-start--button, .quiz--share-button {
+.quiz-start--button, .quiz--try-again-button, .quiz--share-button {
   display: inline-block;
   padding: .25em .75em;
   position: relative;
@@ -1636,18 +1636,18 @@ html.is-locked body {
 /* line 21, ../sass/modules/_buttons.scss */
 .quiz--button:focus,
 .quiz-header--button:focus,
-.quiz-start--button:focus, .quiz--share-button:focus, .quiz--button:hover,
+.quiz-start--button:focus, .quiz--try-again-button:focus, .quiz--share-button:focus, .quiz--button:hover,
 .quiz-header--button:hover,
-.quiz-start--button:hover, .quiz--share-button:hover, .quiz--button:active,
+.quiz-start--button:hover, .quiz--try-again-button:hover, .quiz--share-button:hover, .quiz--button:active,
 .quiz-header--button:active,
-.quiz-start--button:active, .quiz--share-button:active {
+.quiz-start--button:active, .quiz--try-again-button:active, .quiz--share-button:active {
   text-decoration: none;
 }
 
 /* line 29, ../sass/modules/_buttons.scss */
 .quiz--button,
 .quiz-header--button,
-.quiz-start--button, .quiz--share-button {
+.quiz-start--button, .quiz--try-again-button, .quiz--share-button {
   background-color: rgba(0, 0, 0, 0.35);
   border: 2px solid white;
   font-family: 'bebas_neueregular';
@@ -1657,34 +1657,34 @@ html.is-locked body {
 /* line 38, ../sass/modules/_buttons.scss */
 .quiz--button:hover,
 .quiz-header--button:hover,
-.quiz-start--button:hover, .quiz--share-button:hover {
+.quiz-start--button:hover, .quiz--try-again-button:hover, .quiz--share-button:hover {
   background-color: rgba(0, 0, 0, 0.65);
 }
 /* line 50, ../sass/base/_mixins.scss */
 .quiz--button:link,
 .quiz-header--button:link,
-.quiz-start--button:link, .quiz--share-button:link {
+.quiz-start--button:link, .quiz--try-again-button:link, .quiz--share-button:link {
   color: white;
   text-decoration: none;
 }
 /* line 55, ../sass/base/_mixins.scss */
 .quiz--button:visited,
 .quiz-header--button:visited,
-.quiz-start--button:visited, .quiz--share-button:visited {
+.quiz-start--button:visited, .quiz--try-again-button:visited, .quiz--share-button:visited {
   color: white;
   text-decoration: none;
 }
 /* line 60, ../sass/base/_mixins.scss */
 .quiz--button:hover,
 .quiz-header--button:hover,
-.quiz-start--button:hover, .quiz--share-button:hover {
+.quiz-start--button:hover, .quiz--try-again-button:hover, .quiz--share-button:hover {
   color: white;
   text-decoration: none;
 }
 /* line 65, ../sass/base/_mixins.scss */
 .quiz--button:focus,
 .quiz-header--button:focus,
-.quiz-start--button:focus, .quiz--share-button:focus {
+.quiz-start--button:focus, .quiz--try-again-button:focus, .quiz--share-button:focus {
   color: white;
   text-decoration: none;
 }
@@ -2341,49 +2341,61 @@ html.is-locked body {
   display: none;
 }
 /* line 355, ../sass/modules/_quiz.scss */
-.quiz--button {
+.quiz--button, .quiz--try-again-button {
   margin-right: .5em;
   margin-left: .5em;
   padding: .25em 1.25em;
   color: white;
-  font-size: 1.5em;
 }
 /* line 365, ../sass/modules/_quiz.scss */
-.quiz--button.is-inactive {
+.quiz--button.is-inactive, .quiz--try-again-button.is-inactive {
   cursor: default;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 @media only screen and (max-height: 550px) {
   /* line 355, ../sass/modules/_quiz.scss */
-  .quiz--button {
+  .quiz--button, .quiz--try-again-button {
     padding: .25em .75em;
   }
 }
 @media only screen and (min-width: 1700px) {
   /* line 355, ../sass/modules/_quiz.scss */
-  .quiz--button {
+  .quiz--button, .quiz--try-again-button {
     padding: .5em 2em;
   }
 }
-/* line 381, ../sass/modules/_quiz.scss */
+/* line 380, ../sass/modules/_quiz.scss */
+.quiz--button {
+  font-size: 1.5em;
+}
+/* line 384, ../sass/modules/_quiz.scss */
+.quiz--try-again-button {
+  margin-bottom: 1em;
+  padding-top: .23em;
+  padding-right: 2.52em;
+  padding-bottom: .23em;
+  padding-left: 2.52em;
+  font-size: 2em;
+}
+/* line 394, ../sass/modules/_quiz.scss */
 .quiz--result {
   margin-bottom: .5em;
   font-size: 3em;
 }
-/* line 387, ../sass/modules/_quiz.scss */
+/* line 400, ../sass/modules/_quiz.scss */
 .quiz--text {
   font-size: 2em;
 }
-/* line 392, ../sass/modules/_quiz.scss */
+/* line 405, ../sass/modules/_quiz.scss */
 .quiz--challenger-answer.is-correct {
   color: #0f0;
 }
-/* line 396, ../sass/modules/_quiz.scss */
+/* line 409, ../sass/modules/_quiz.scss */
 .quiz--challenger-answer.is-wrong {
   color: #f00;
 }
-/* line 402, ../sass/modules/_quiz.scss */
+/* line 415, ../sass/modules/_quiz.scss */
 .quiz--start-opponents-wrapper {
   margin-right: auto;
   margin-bottom: 2em;
@@ -2393,26 +2405,26 @@ html.is-locked body {
   font-size: 2em;
   text-align: left;
 }
-/* line 413, ../sass/modules/_quiz.scss */
+/* line 426, ../sass/modules/_quiz.scss */
 .quiz--start-opponent {
   color: #b0eafc;
 }
-/* line 417, ../sass/modules/_quiz.scss */
+/* line 430, ../sass/modules/_quiz.scss */
 .quiz--text-link, .quiz--text-alternate {
   font-family: "permianseriftypefaceregular";
 }
-/* line 422, ../sass/modules/_quiz.scss */
+/* line 435, ../sass/modules/_quiz.scss */
 .quiz--text-alternate {
   margin-bottom: 1em;
   color: rgba(255, 255, 255, 0.65);
 }
-/* line 428, ../sass/modules/_quiz.scss */
+/* line 441, ../sass/modules/_quiz.scss */
 .quiz--text-link {
   margin-bottom: 2em;
 }
-/* line 432, ../sass/modules/_quiz.scss */
+/* line 445, ../sass/modules/_quiz.scss */
 .quiz--share-button {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   padding-bottom: .2em;
   padding-left: 2.1em;
   background-image: url("/images/fb-icon.png");
@@ -2422,7 +2434,7 @@ html.is-locked body {
   color: white;
   font-size: 2em;
 }
-/* line 446, ../sass/modules/_quiz.scss */
+/* line 459, ../sass/modules/_quiz.scss */
 .quiz--share-button:hover {
   background-color: rgba(58, 88, 155, 0.65);
 }
