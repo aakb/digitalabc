@@ -1,5 +1,25 @@
 abcApp.config(function($routeProvider) {
   $routeProvider
+    .when('/om-projektet', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/om-projektet/index.html'
+    })
+    .when('/om-projektet/unge', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/om-projektet/unge/index.html'
+    })
+    .when('/om-projektet/laererne', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/om-projektet/laererne/index.html'
+    })
+    .when('/om-projektet/foraeldre', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/om-projektet/foraeldre/index.html'
+    })
+    .when('/om-projektet/andre-kommuner', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/om-projektet/andre-kommuner/index.html'
+    })
     .when('/undervisningsmateriale', {
       controller: 'StaticPageController',
       templateUrl: '/partials/undervisningsmateriale/index.html'
