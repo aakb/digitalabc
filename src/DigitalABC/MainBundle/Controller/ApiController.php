@@ -77,26 +77,26 @@ class ApiController extends Controller {
   public function getQuestionsAction() {
     $questions = array(
       array(
-        'question' => 'Hvad er Digital Selvbetjening?',
+        'question' => 'HVAD ER DIGITAL SELVBETJENING?',
         'answers' =>
           array(
             array(
               'id' => 0,
-              'text' => 'Når de gamle på plejehjemmet har fjernbetjening til gardinerne',
+              'text' => '	Når de gamle på plejehjemmet har fjernbetjening til gardinerne',
             ),
             array (
               'id' => 1,
-              'text' => 'Når prisen på dine varer i supermarkedet automatisk registreres i kurven',
+              'text' => '	Når prisen på dine varer i supermarkedet automatisk registreres i kurven',
             ),
             array (
               'id' => 2,
-              'text' => 'Når man kan udfylde skemaer og få fat på kommunen på nettet',
+              'text' => '	Når man kan udfylde skemaer og få fat på kommunen på nettet ',
             ),
           ),
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVORDAN FÅR MAN UNGDOMS ELLER STUDIERABAT TIL BUSSEN?',
+        'question' => 'HVORDAN FÅR DU UNGDOMS- ELLER STUDIERABAT TIL BUSSEN?',
         'answers' =>
           array (
             array (
@@ -109,7 +109,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'Du bruger bare dit NemID til at udfylde en ansøgning på nettet',
+              'text' => 'Du bruger bare dit NemID til at udfylde en ansøgning på nettet ',
             ),
           ),
         'correctAnswer' => 2,
@@ -172,12 +172,12 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVAD ER HOTLINE?',
+        'question' => 'HVAD ER Digital HOTLINE?',
         'answers' =>
           array (
             array (
               'id' => 0,
-              'text' => 'Det direkte nummer til skadestuen',
+              'text' => 'Indbakken på din e-mail',
             ),
             array (
               'id' => 1,
@@ -196,7 +196,7 @@ class ApiController extends Controller {
           array (
             array (
               'id' => 0,
-              'text' => 'Sygesikringskortet når du har vasket det sammen med dine nye jeans.',
+              'text' => 'Sygesikringskortet når du har vasket det sammen med dine nye jeans',
             ),
             array (
               'id' => 1,
@@ -215,7 +215,7 @@ class ApiController extends Controller {
           array (
             array (
               'id' => 0,
-              'text' => 'Plan for at der bliver smidt færre cykler i danske kanaler.',
+              'text' => 'Plan for at der bliver smidt færre cykler i danske kanaler',
             ),
             array (
               'id' => 1,
@@ -223,7 +223,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'DR’s plan for fordeling af licenspenge mellem radiokanalerne ',
+              'text' => 'DR’s plan for fordeling af licenspenge mellem radiokanalerne',
             ),
           ),
         'correctAnswer' => 1,
@@ -234,7 +234,7 @@ class ApiController extends Controller {
           array (
             array (
               'id' => 0,
-              'text' => 'Stemme til folketingsvalg',
+              'text' => 'Stemme til folketingsvalget',
             ),
             array (
               'id' => 1,
@@ -248,7 +248,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVORDAN MODTAGER DU I FREMTIDEN BØDER FRA BIBLIOTEKET?',
+        'question' => 'HVORDAN MODTAGER DU I FREMTIDEN REGNINGER FRA BIBLIOTEKET?',
         'answers' =>
           array (
             array (
@@ -267,7 +267,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVORDAN FÅR MAN SU PÅ SIN VIDEREGÅENDE UDDANNELSE?',
+        'question' => 'HVORDAN FÅR DU SU PÅ DIN VIDEREGÅENDE UDDANNELSE?',
         'answers' =>
           array (
             array (
@@ -280,7 +280,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'Går på Borger.dk og bruger dit NemID til at ansøge',
+              'text' => 'Går på Borger.dk og bruger dit NemID til at ansøge ',
             ),
           ),
         'correctAnswer' => 2,
@@ -295,7 +295,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 1,
-              'text' => 'Elektronisk signatur på nettet som alle over 15 år skal bestille ',
+              'text' => 'Elektronisk signatur på nettet som alle over 15 år skal bestille',
             ),
             array (
               'id' => 2,
@@ -314,7 +314,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 1,
-              'text' => 'En hjemmeside for borgmestre, der twerker som Miley',
+              'text' => 'En hjemmeside for borgmestre, der elsker at twerke',
             ),
             array (
               'id' => 2,
@@ -362,23 +362,80 @@ class ApiController extends Controller {
         'correctAnswer' => 0,
       ),
       array (
-        'question' => 'HVAD SKER DER D. 1. NOVEMBER 2014?',
+        'question' => 'HVORDAN MELDER DU FLYTNING?',
         'answers' =>
           array (
             array (
               'id' => 0,
-              'text' => 'Det offentlige begynder at sende post til din digitale postkasse',
+              'text' => 'Henter en flyttemappe på posthuset',
             ),
             array (
               'id' => 1,
-              'text' => 'Folketinget holder ”tag-dit-kæledyr-med-på-arbejde”-dag',
+              'text' => 'Ringer til Borgerservice og siger, du er flyttet',
             ),
             array (
               'id' => 2,
-              'text' => 'Det offentlige begynder at tjekke, hvor meget tid du bruger på lektier',
+              'text' => 'Bruger dit NemID til at udfylde flytteløsningen på nettet',
             ),
           ),
-        'correctAnswer' => 0,
+        'correctAnswer' => 2,
+      ),
+      array (
+        'question' => 'HVEM ER ANSVARLIG FOR INDHOLDET I DIN DIGITALE POSTKASSE?',
+        'answers' =>
+          array (
+            array (
+              'id' => 0,
+              'text' => 'Mine forældre - jeg er jo under 18 år',
+            ),
+            array (
+              'id' => 1,
+              'text' => 'Det offentlige som sender indholdet til min digitale postkasse',
+            ),
+            array (
+              'id' => 2,
+              'text' => 'Jeg er fyldt 15 år, så jeg er selv ansvarlig for indholdet i postkassen',
+            ),
+          ),
+        'correctAnswer' => 2,
+      ),
+      array (
+        'question' => 'HVAD ER ”DET OFFENTLIGE”?',
+        'answers' =>
+          array (
+            array (
+              'id' => 0,
+              'text' => 'Ord, man bruger om opdateringer på de sociale medier',
+            ),
+            array (
+              'id' => 1,
+              'text' => 'Ord, der bruges til at beskrive Stat, region og kommune samlet',
+            ),
+            array (
+              'id' => 2,
+              'text' => 'De dele af politikeres liv, som almindelige mennesker må kende til',
+            ),
+          ),
+        'correctAnswer' => 1,
+      ),
+      array (
+        'question' => 'HVEM SKAL HAVE EN DIGITAL POSTKASSE?',
+        'answers' =>
+          array (
+            array (
+              'id' => 0,
+              'text' => 'Alle, der ikke har en almindelig postkasse ',
+            ),
+            array (
+              'id' => 1,
+              'text' => 'Alle borgere over 15 år, medmindre man bliver særligt fritaget',
+            ),
+            array (
+              'id' => 2,
+              'text' => 'Alle borgere over 18 år, hvor man officielt bliver myndig',
+            ),
+          ),
+        'correctAnswer' => 1,
       ),
     );
 
