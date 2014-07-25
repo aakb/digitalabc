@@ -17,12 +17,13 @@
   <div class="video--inner">
     <section class="video--troll-painter" data-ng-click="playVideo('troll-painter')">
       <div class="video--troll-painter-inner">
-        <span picture-fill data-alt="Troll painter">
-          <span pf-src="/images/video/troll-painter-poster.jpg"></span>
-          <span pf-src="/images/video/troll-painter-poster-1.png" data-media="(min-width: 1px)"></span>
-          <span pf-src="/images/video/troll-painter-poster-1200.png" data-media="(min-width: 1200px)"></span>
+        <span picture-fill data-alt="Troll Painter" class="video--troll-painter-image is-static">
+          <span pf-src="/images/video/small/troll-painter-poster.jpg" data-media="(min-width: 1px)"></span>
+          <span pf-src="/images/video/big/troll-painter-poster.jpg" data-media="(min-width: 1200px)"></span>
         </span>
-        <img src="/images/video/troll-painter-poster.gif" class="video--troll-painter-image is-animated">
+        <span picture-fill data-alt="Troll Painter" class="video--troll-painter-image is-animated">
+          <span pf-src="/images/video/big/troll-painter-poster.gif" data-media="(min-width: 1200px)"></span>
+        </span>
       </div>
     </section><!--
 --><section class="video--slave" data-ng-click="playVideo('slave')">
