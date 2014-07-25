@@ -82,15 +82,15 @@ class ApiController extends Controller {
           array(
             array(
               'id' => 0,
-              'text' => '	Når de gamle på plejehjemmet har fjernbetjening til gardinerne',
+              'text' => 'Når de gamle på plejehjemmet har fjernbetjening til gardinerne',
             ),
             array (
               'id' => 1,
-              'text' => '	Når prisen på dine varer i supermarkedet automatisk registreres i kurven',
+              'text' => 'Når prisen på dine varer i supermarkedet automatisk registreres i kurven',
             ),
             array (
               'id' => 2,
-              'text' => '	Når man kan udfylde skemaer og få fat på kommunen på nettet ',
+              'text' => 'Når man kan udfylde skemaer og få fat på kommunen på nettet',
             ),
           ),
         'correctAnswer' => 2,
@@ -109,7 +109,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'Du bruger bare dit NemID til at udfylde en ansøgning på nettet ',
+              'text' => 'Du bruger bare dit NemID til at udfylde en ansøgning på nettet',
             ),
           ),
         'correctAnswer' => 2,
@@ -177,11 +177,11 @@ class ApiController extends Controller {
           array (
             array (
               'id' => 0,
-              'text' => 'Indbakken på din e-mail',
+              'text' => 'Det direkte nummer til skadestuen',
             ),
             array (
               'id' => 1,
-              'text' => 'Et nummer, du kan ringe til, hvis du ikke fatter digital selvbetjening',
+              'text' => 'Et nummer, hvor du kan få hjælp til digital selvbetjening',
             ),
             array (
               'id' => 2,
@@ -196,7 +196,7 @@ class ApiController extends Controller {
           array (
             array (
               'id' => 0,
-              'text' => 'Sygesikringskortet når du har vasket det sammen med dine nye jeans',
+              'text' => 'Sygesikringskortet, når du har vasket det sammen med dine nye jeans',
             ),
             array (
               'id' => 1,
@@ -204,7 +204,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'Sygesikringskort som skal bruges, hvis du rejser i Østen',
+              'text' => 'Sygesikringskort, som skal bruges, hvis du rejser i Østen',
             ),
           ),
         'correctAnswer' => 1,
@@ -215,7 +215,7 @@ class ApiController extends Controller {
           array (
             array (
               'id' => 0,
-              'text' => 'Plan for at der bliver smidt færre cykler i danske kanaler',
+              'text' => 'Plan for at der bliver smidt færre cykler i de danske kanaler',
             ),
             array (
               'id' => 1,
@@ -223,13 +223,13 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'DR’s plan for fordeling af licenspenge mellem radiokanalerne',
+              'text' => 'DR’s plan for fordelingen af licenspenge mellem radiokanalerne',
             ),
           ),
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVAD KAN DU KLARE MED DIGITAL SELVBETJENING?',
+        'question' => 'HVAD KAN DU MED DIGITAL SELVBETJENING?',
         'answers' =>
           array (
             array (
@@ -291,15 +291,15 @@ class ApiController extends Controller {
           array (
             array (
               'id' => 0,
-              'text' => 'Et elektronisk ID-kort man kan vise til dørmænd',
+              'text' => 'Et elektronisk ID-kort, man kan vise til dørmænd',
             ),
             array (
               'id' => 1,
-              'text' => 'Elektronisk signatur på nettet som alle over 15 år skal bestille',
+              'text' => 'Elektronisk signatur på nettet, som alle over 15 år skal bestille',
             ),
             array (
               'id' => 2,
-              'text' => 'En app der identificerer berømtheder i nærheden',
+              'text' => 'En app, der identificerer berømtheder i nærheden',
             ),
           ),
         'correctAnswer' => 1,
@@ -314,7 +314,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 1,
-              'text' => 'En hjemmeside for borgmestre, der elsker at twerke',
+              'text' => 'En hjemmeside for borgmestre, der twerker som Miley',
             ),
             array (
               'id' => 2,
@@ -343,7 +343,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVAD SKER DER D. 1. NOVEMBER 2014?',
+        'question' => 'HVAD SKER DER 1. NOVEMBER 2014?',
         'answers' =>
           array (
             array (
@@ -390,11 +390,11 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 1,
-              'text' => 'Det offentlige som sender indholdet til min digitale postkasse',
+              'text' => 'Det offentlige, som sender indholdet til min digitale postkasse',
             ),
             array (
               'id' => 2,
-              'text' => 'Jeg er fyldt 15 år, så jeg er selv ansvarlig for indholdet i postkassen',
+              'text' => 'Jeg er fyldt 15 år, så jeg er selv ansvarlig for indholdet',
             ),
           ),
         'correctAnswer' => 2,
