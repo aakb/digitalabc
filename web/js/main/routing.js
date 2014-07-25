@@ -56,6 +56,10 @@ abcApp.config(function($routeProvider) {
       controller: 'QuizController',
       templateUrl: '/partials/quiz/quiz.html'
     })
+    .when('/siden-blev-ikke-fundet', {
+      controller: 'QuizController',
+      templateUrl: '/partials/siden-blev-ikke-fundet.html'
+    })
     .otherwise({
       controller: 'FrontpageController',
       templateUrl: '/partials/index.html'
