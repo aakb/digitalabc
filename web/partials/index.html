@@ -17,7 +17,11 @@
   <div class="video--inner">
     <section class="video--troll-painter" data-ng-click="playVideo('troll-painter')">
       <div class="video--slave-inner">
-        <img src="/images/video/troll-painter-poster.png" class="video--troll-painter-image is-static">
+        <span picture-fill data-alt="Troll">
+          <span pf-src="/images/video/troll-painter-poster.png"></span>
+          <span pf-src="/images/video/troll-painter-poster-1.png" data-media="(min-width: 1px)"></span>
+          <span pf-src="/images/video/troll-painter-poster-1200.png" data-media="(min-width: 1200px)"></span>
+        </span>
         <img src="/images/video/troll-painter-poster.gif" class="video--troll-painter-image is-animated">
       </div>
     </section><!--
