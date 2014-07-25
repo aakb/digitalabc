@@ -77,7 +77,7 @@ class ApiController extends Controller {
   public function getQuestionsAction() {
     $questions = array(
       array(
-        'question' => 'HVAD ER DIGITAL SELVBETJENING?',
+        'question' => 'Hvad er digital selvbetjening?',
         'answers' =>
           array(
             array(
@@ -96,7 +96,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVORDAN FÅR DU UNGDOMS- ELLER STUDIERABAT TIL BUSSEN?',
+        'question' => 'Hvordan får du ungdoms- eller studierabat til bussen?',
         'answers' =>
           array (
             array (
@@ -115,7 +115,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVAD ER NemBS?',
+        'question' => 'Hvad er NemBS?',
         'answers' =>
           array (
             array (
@@ -134,7 +134,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVAD ER ET NØGLEKORT?',
+        'question' => 'Hvad er et nøglekort?',
         'answers' =>
           array (
             array (
@@ -153,7 +153,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVAD ER DIGITAL POSTKASSE?',
+        'question' => 'Hvad er digital postkasse?',
         'answers' =>
           array (
             array (
@@ -172,7 +172,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVAD ER Digital HOTLINE?',
+        'question' => 'Hvad er digital hotline?',
         'answers' =>
           array (
             array (
@@ -191,7 +191,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVAD ER DET BLÅ SYGESIKRINGSBEVIS?',
+        'question' => 'Hvad er det blå sygesikringsbevis?',
         'answers' =>
           array (
             array (
@@ -210,7 +210,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVAD ER FÆLLESOFFENTLIG KANALSTRATEGI?',
+        'question' => 'Hvad er fællesoffentlig kanalstrategi?',
         'answers' =>
           array (
             array (
@@ -229,7 +229,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVAD KAN DU MED DIGITAL SELVBETJENING?',
+        'question' => 'Hvad kan du med digital selvbetjening?',
         'answers' =>
           array (
             array (
@@ -248,7 +248,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVORDAN MODTAGER DU I FREMTIDEN REGNINGER FRA BIBLIOTEKET?',
+        'question' => 'Hvordan modtager du i fremtiden regninger fra biblioteket?',
         'answers' =>
           array (
             array (
@@ -267,7 +267,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVORDAN FÅR DU SU PÅ DIN VIDEREGÅENDE UDDANNELSE?',
+        'question' => 'Hvordan får du su på din videregående uddannelse?',
         'answers' =>
           array (
             array (
@@ -280,13 +280,13 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'Går på Borger.dk og bruger dit NemID til at ansøge ',
+              'text' => 'Går på Borger.dk og bruger dit NemID til at ansøge',
             ),
           ),
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVAD ER NemID?',
+        'question' => 'Hvad er NemID?',
         'answers' =>
           array (
             array (
@@ -305,7 +305,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVAD ER BORGER.DK',
+        'question' => 'Hvad er borger.dk?',
         'answers' =>
           array (
             array (
@@ -324,7 +324,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVAD ER INKASSO?',
+        'question' => 'Hvad er inkasso?',
         'answers' =>
           array (
             array (
@@ -343,7 +343,7 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVAD SKER DER 1. NOVEMBER 2014?',
+        'question' => 'Hvad sker der 1. november 2014?',
         'answers' =>
           array (
             array (
@@ -362,7 +362,7 @@ class ApiController extends Controller {
         'correctAnswer' => 0,
       ),
       array (
-        'question' => 'HVORDAN MELDER DU FLYTNING?',
+        'question' => 'Hvordan melder du flytning?',
         'answers' =>
           array (
             array (
@@ -381,7 +381,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVEM ER ANSVARLIG FOR INDHOLDET I DIN DIGITALE POSTKASSE?',
+        'question' => 'Hvem er ansvarlig for indholdet i din digitale postkasse?',
         'answers' =>
           array (
             array (
@@ -400,7 +400,7 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'HVAD ER ”DET OFFENTLIGE”?',
+        'question' => 'Hvad er ”det offentlige”?',
         'answers' =>
           array (
             array (
@@ -419,12 +419,12 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'HVEM SKAL HAVE EN DIGITAL POSTKASSE?',
+        'question' => 'Hvem skal have en digital postkasse?',
         'answers' =>
           array (
             array (
               'id' => 0,
-              'text' => 'Alle, der ikke har en almindelig postkasse ',
+              'text' => 'Alle, der ikke har en almindelig postkasse',
             ),
             array (
               'id' => 1,
