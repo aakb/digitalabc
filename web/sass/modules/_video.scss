@@ -45,63 +45,16 @@
     @extend %grid--full;
   }
 
-  &--troll-painter {
+  &--troll-painter,
+  &--broke-teenager,
+  &--slave,
+  &--pain-in-the-butt,
+  &--moving-out,
+  &--your-movie {
     @extend %video--section;
 
     &-header {
       @extend %video--section-header;
-    }
-
-    &-image {
-      @extend %video--section-image;
-    }
-
-    &-inner {
-      @extend %video--section-inner;
-    }
-  }
-
-  &--broke-teenager {
-    @extend %video--section;
-
-    &-header {
-      @extend %video--section-header;
-    }
-
-    &-image {
-      @extend %video--section-image;
-    }
-
-    &-inner {
-      @extend %video--section-inner;
-    }
-  }
-
-  &--slave {
-    @extend %video--section;
-
-    &-header {
-      @extend %video--section-header;
-    }
-
-    &-image {
-      @extend %video--section-image;
-    }
-
-    &-inner {
-      @extend %video--section-inner;
-    }
-  }
-
-  &--pain-in-the-butt {
-    @extend %video--section;
-
-    &-header {
-      @extend %video--section-header;
-
-      color: $black;
-
-      @include vertical-align-element;
     }
 
     &-image {
