@@ -2533,7 +2533,7 @@ html.is-locked body {
 }
 /* line 30, ../sass/modules/_rap.scss */
 .rap--video {
-  width: 95%;
+  width: 100%;
 }
 @media only screen and (min-width: 1024px) {
   /* line 30, ../sass/modules/_rap.scss */
