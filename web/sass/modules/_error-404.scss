@@ -1,0 +1,26 @@
+/**
+ *
+ * Error 404
+ *
+ */
+
+.error-404 {
+  position: relative;
+  z-index: 99;
+
+  min-height: 100%;
+
+  background-image: url('/images/backgrounds/device-blurred.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @include background-size(cover);
+
+  &--inner {
+    padding: 4em;
+
+    text-align: center;
+
+    @include box-sizing(border-box);
+  }
+}

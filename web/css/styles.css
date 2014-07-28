@@ -2785,3 +2785,30 @@ html.is-locked body {
   padding-top: 2em;
   text-align: center;
 }
+
+/**
+ *
+ * Error 404
+ *
+ */
+/* line 7, ../sass/modules/_error-404.scss */
+.error-404 {
+  position: relative;
+  z-index: 99;
+  min-height: 100%;
+  background-image: url("/images/backgrounds/device-blurred.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 19, ../sass/modules/_error-404.scss */
+.error-404--inner {
+  padding: 4em;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

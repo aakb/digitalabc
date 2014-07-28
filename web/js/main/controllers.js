@@ -136,3 +136,10 @@ abcApp.controller('StaticPageController', function($scope, $location, $document)
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'static-page');
 });
+
+// Error 404 controller.
+abcApp.controller('Error404Controller', function($scope, $location, $document) {
+  // Change layout class.
+  $scope.$emit('changeLayoutClassSuffix', 'error-404');
+});
+
