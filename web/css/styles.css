@@ -2806,7 +2806,7 @@ html.is-locked body {
 }
 /* line 19, ../sass/modules/_error-404.scss */
 .error-404--inner {
-  padding: 4em;
+  padding: 2em;
   text-align: center;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
