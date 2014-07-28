@@ -28,7 +28,7 @@
   }
 
   &--video {
-    width: 95%;
+    width: 100%;
 
     @include breakpoint($breakpoint-desk) {
       width: 60%;
