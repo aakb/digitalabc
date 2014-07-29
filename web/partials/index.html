@@ -38,8 +38,13 @@
     </section><!--
 --><section class="video--broke-teenager" data-ng-click="playVideo('broke-teenager')">
       <div class="video--broke-teenager-inner">
-        <img src="/images/video/broke-teenager-poster.jpg" class="video--broke-teenager-image is-static">
-        <img src="/images/video/broke-teenager-poster.gif" class="video--broke-teenager-image is-animated">
+        <span picture-fill data-alt="The Broke Teenager" class="video--broke-teenager-image is-static">
+          <span pf-src="/images/video/small/broke-teenager-poster.jpg" data-media="(min-width: 1px)"></span>
+          <span pf-src="/images/video/big/broke-teenager-poster.jpg" data-media="(min-width: 1200px)"></span>
+        </span>
+        <span picture-fill data-alt="The Broke Teenager" class="video--broke-teenager-image is-animated">
+          <span pf-src="/images/video/big/broke-teenager-poster.gif" data-media="(min-width: 1200px)"></span>
+        </span>
       </div>
     </section><!--
 --><section class="video--pain-in-the-butt" data-ng-click="playVideo('pain-in-the-butt')">
