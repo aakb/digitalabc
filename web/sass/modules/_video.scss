@@ -35,14 +35,18 @@
 
 
 .video {
-  @extend %grid--full;
-
   overflow: hidden;
   position: relative;
   z-index: 97;
 
-  &--inner {
-    @extend %grid--full;
+  @include breakpoint($breakpoint-lap) {
+    padding: 2em;
+
+    background-color: $black;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    padding: 4em;
   }
 
   &--troll-painter,

@@ -11,12 +11,14 @@
 %video--section {
   @extend %grid__item;
   @extend %palm--one-whole;
-  @extend %lap--one-third;
+  @extend %lap--one-half;
   @extend %desk--one-third;
   @extend %bigscreen--one-third;
 
   position: relative;
   overflow: hidden;
+
+  padding-left: 0;
 
   cursor: pointer;
   text-align: center;
