@@ -1609,7 +1609,12 @@ html.is-locked body {
   z-index: 90;
   width: 100%;
 }
-/* line 72, ../sass/components/_video.scss */
+/* line 73, ../sass/components/_video.scss */
+.video--troll-painter-image img, .video--broke-teenager-image img, .video--slave-image img, .video--pain-in-the-butt-image img, .video--moving-out-image img, .video--your-movie-image img {
+  height: auto;
+  width: 100%;
+}
+/* line 78, ../sass/components/_video.scss */
 .is-animated.video--troll-painter-image, .is-animated.video--broke-teenager-image, .is-animated.video--slave-image, .is-animated.video--pain-in-the-butt-image, .is-animated.video--moving-out-image, .is-animated.video--your-movie-image {
   display: none;
 }

@@ -69,6 +69,12 @@
 
   width: 100%;
 
+  // Add styling directly to the image tag because of our reponsive image solution.
+  img {
+    height: auto;
+    width: 100%;
+  }
+
   &.is-animated {
     display: none;
   }
