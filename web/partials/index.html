@@ -27,8 +27,13 @@
     </section><!--
 --><section class="video--slave" data-ng-click="playVideo('slave')">
       <div class="video--slave-inner">
-        <img src="/images/video/slave-poster.png" class="video--slave-image is-static">
-        <img src="/images/video/slave-poster.gif" class="video--slave-image is-animated">
+        <span picture-fill data-alt="Father's Slave" class="video--slave-image is-static">
+          <span pf-src="/images/video/small/slave-poster.jpg" data-media="(min-width: 1px)"></span>
+          <span pf-src="/images/video/big/slave-poster.jpg" data-media="(min-width: 1200px)"></span>
+        </span>
+        <span picture-fill data-alt="Father's Slave" class="video--troll-painter-image is-animated">
+          <span pf-src="/images/video/big/slave-poster.gif" data-media="(min-width: 1200px)"></span>
+        </span>
       </div>
     </section><!--
 --><section class="video--broke-teenager" data-ng-click="playVideo('broke-teenager')">
