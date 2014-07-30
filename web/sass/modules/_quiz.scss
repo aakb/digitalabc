@@ -25,11 +25,31 @@
 
     // Background slides
     &.is-first {
-      background-image: url('/images/backgrounds/girl-arms-out.jpg');
+      background-image: url('/images/backgrounds/small/girl-arms-out.jpg');
     }
 
     &.is-second {
-      background-image: url('/images/backgrounds/guy-horizontal.jpg');
+      background-image: url('/images/backgrounds/small/guy-horizontal.jpg');
+    }
+
+    @include breakpoint($breakpoint-lap) {
+      &.is-first {
+        background-image: url('/images/backgrounds/medium/girl-arms-out.jpg');
+      }
+
+      &.is-second {
+        background-image: url('/images/backgrounds/medium/guy-horizontal.jpg');
+      }
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      &.is-first {
+        background-image: url('/images/backgrounds/big/girl-arms-out.jpg');
+      }
+
+      &.is-second {
+        background-image: url('/images/backgrounds/big/guy-horizontal.jpg');
+      }
     }
 
     // Animations
@@ -61,7 +81,7 @@
     height: 100%;
     width: 100%;
 
-    background-image: url('/images/backgrounds/guy-jumping.jpg');
+    background-image: url('/images/big/backgrounds/guy-jumping.jpg');
     background-repeat: no-repeat;
     background-position: center top;
 
