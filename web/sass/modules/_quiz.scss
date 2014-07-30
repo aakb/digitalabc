@@ -44,11 +44,11 @@
 
     @include breakpoint($breakpoint-desk) {
       &.is-first {
-        background-image: url('/images/backgrounds/big/girl-arms-out.jpg');
+        background-image: url('/images/backgrounds/large/girl-arms-out.jpg');
       }
 
       &.is-second {
-        background-image: url('/images/backgrounds/big/guy-horizontal.jpg');
+        background-image: url('/images/backgrounds/large/guy-horizontal.jpg');
       }
     }
 
