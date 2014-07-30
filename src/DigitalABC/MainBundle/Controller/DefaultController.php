@@ -22,7 +22,7 @@ class DefaultController extends Controller {
 
 
   /**
-   * @Route("/challenge/{id}")
+   * @Route("/quiz/challenge/{id}")
    */
   public function challengeAction($id) {
     $result = $this->getDoctrine()

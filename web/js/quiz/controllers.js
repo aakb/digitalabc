@@ -96,7 +96,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
   // Get the ID of the result.
   quizFactory.saveResult().then(function(id) {
     $scope.id = id;
-    $scope.link = window.location.hostname + 'quiz/challenge/' + $scope.id;
+    $scope.link = "http://" + window.location.hostname + '/quiz/challenge/' + $scope.id;
   });
 
   // Function for sharing on facebook.
@@ -107,7 +107,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
           'me/tujmytestapp:complete',
           'post',
           {
-            quiz: window.location.hostname + "quiz/challenge/" + $scope.id
+            quiz: $scope.link
           },
           function(response) {
             if (response.error) {
@@ -152,28 +152,8 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
       }
     }
 
-    $scope.challengeResult = "";
-    $scope.challengerAnswerCorrect = false;
     $scope.question = quizFactory.getQuestion($scope.step);
     $scope.chosen = quizFactory.getAnswer($scope.step);
-
-    // Setup the challenge.
-    if ($scope.challengeid !== undefined) {
-      quizFactory.getChallenge($scope.challengeid).then(function(challenger) {
-        if (challenger === null) {
-          $scope.challengeid = undefined;
-        }
-        else {
-          if (challenger.answers[$scope.step - 1] === $scope.question.correctAnswer) {
-            $scope.challengerAnswerCorrect = true;
-            $scope.challengeResult = "rigtigt";
-          } else {
-            $scope.challengerAnswerCorrect = false;
-            $scope.challengeResult = "forkert";
-          }
-        }
-      });
-    }
 
     // Function for moving to the next step in the quiz.
     $scope.nextStep = function() {
