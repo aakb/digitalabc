@@ -4,11 +4,21 @@
 
 {% block title %}Digital ABC{% endblock %}
 
+{% block head_attr %}data-ng-controller="HeadController"{% endblock %}
+
 {% block meta %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+
+  <meta data-ng-show="showFacebookMetaData" property="fb:app_id"                  content="672101806188225" />
+  <meta data-ng-show="showFacebookMetaData" property="og:title"                   content="testQuiz" />
+  <meta data-ng-show="showFacebookMetaData" property="og:type"                    content="tujmytestapp:quiz" />
+  <meta data-ng-show="showFacebookMetaData" property="og:locale"                  content="da_DK">
+  <meta data-ng-show="showFacebookMetaData" property="og:url"                     content="<[challengeUrl]>" />
+  <meta data-ng-show="showFacebookMetaData" property="og:image"                   content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" />
+  <meta data-ng-show="showFacebookMetaData" property="tujmytestapp:result"        content="<[challengeResult.result]>" />
 {% endblock %}
 
 {% block stylesheets %}

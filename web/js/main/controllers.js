@@ -143,3 +143,25 @@ abcApp.controller('Error404Controller', function($scope, $location, $document) {
   $scope.$emit('changeLayoutClassSuffix', 'error-404');
 });
 
+// Controls the head element of the page.
+abcApp.controller('HeadController', function($scope, $location, $http) {
+  if ($location.path().indexOf("/quiz/challenge/") === 0) {
+    $scope.$emit('changeLayoutClassSuffix', 'error-404');
+
+    var id = $location.path().substr(16);
+
+    $http.get('/api/result/' + id)
+      .success(function(data, status, headers, config) {
+        $scope.showFacebookMetaData = true;
+        $scope.challengeResult = data;
+
+        $scope.challengeUrl = "http://" + window.location.hostname + "/#/quiz/challenge/" + id;
+      })
+      .error(function() {
+        $scope.showFacebookMetaData = false;
+      });
+  }
+  else {
+    $scope.showFacebookMetaData = false;
+  }
+});
