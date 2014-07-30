@@ -4,8 +4,9 @@
     <h2 class="quiz--result" data-ng-show="result < 100">Du fik <[result]> point</h2>
     <p class="quiz--text-alternate" data-ng-show="result === 100">Tillykke! Du svarede rigtigt på alle spørgsmålene!</p>
     <p class="quiz--text-alternate" data-ng-show="result === 100">Du er klar til at få dig et NemID, hvis du ikke har et endnu kan du oprette det på: <a href="http://service.nemid.nu/dk-da/bestil_nemid">NemID.nu</a></p>
-    <p class="quiz--text-alternate" data-ng-show="result < 100">Godt klaret, men det kan blive bedre endnu!</p>
-    <h2 class="quiz--result" data-ng-show="challengerResult">Din modstander fik: <[challengerResult]> point</h2>
+    <p class="quiz--text-alternate" data-ng-show="result > 0 && result < 100">Godt klaret, men det kan blive bedre endnu!</p>
+    <p class="quiz--text-alternate" data-ng-show="result === 0">Ahh det kan du vist gøre bedre, prøv igen!</p>
+    <h2 class="quiz--result" data-ng-show="">Din modstander fik <[challengerResult]> point</h2>
     <p class="quiz--text-alternate">Klik på linket for at kopiere det og send det til dine venner!</p>
     <h3 class="quiz--text-link"><a href="<[link]>"><[link]></a></h3>
     <a href="/#/quiz" class="quiz--try-again-button" data-ng-show="result === 100">Opret NemID</a>
