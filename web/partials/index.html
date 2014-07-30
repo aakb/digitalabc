@@ -7,7 +7,7 @@
     </h1>
     <h3 class="quiz-header--text">Ta’ quizzen og kend din Digitale ABC!</h3>
     <a href="/#/quiz" class="quiz-header--button">Ta' Quizzen</a>
-    <a href="#video" du-smooth-scroll><img src="/images/scroll.svg" class="quiz-header--scroll"></a>
+    <a href="#video" class="quiz-header--scroll" du-smooth-scroll><img src="/images/scroll.svg"></a>
   </div>
   <div class="quiz-header--background is-first" data-ng-switch-when="1"></div>
   <div class="quiz-header--background is-second" data-ng-switch-when="2"></div>
@@ -27,14 +27,24 @@
     </section><!--
 --><section class="video--slave" data-ng-click="playVideo('slave')">
       <div class="video--slave-inner">
-        <img src="/images/video/slave-poster.png" class="video--slave-image is-static">
-        <img src="/images/video/slave-poster.gif" class="video--slave-image is-animated">
+        <span picture-fill data-alt="Father's Slave" class="video--slave-image is-static">
+          <span pf-src="/images/video/small/slave-poster.jpg" data-media="(min-width: 1px)"></span>
+          <span pf-src="/images/video/big/slave-poster.jpg" data-media="(min-width: 1200px)"></span>
+        </span>
+        <span picture-fill data-alt="Father's Slave" class="video--slave-image is-animated">
+          <span pf-src="/images/video/big/slave-poster.gif" data-media="(min-width: 1200px)"></span>
+        </span>
       </div>
     </section><!--
 --><section class="video--broke-teenager" data-ng-click="playVideo('broke-teenager')">
       <div class="video--broke-teenager-inner">
-        <img src="/images/video/broke-teenager-poster.jpg" class="video--broke-teenager-image is-static">
-        <img src="/images/video/broke-teenager-poster.gif" class="video--broke-teenager-image is-animated">
+        <span picture-fill data-alt="The Broke Teenager" class="video--broke-teenager-image is-static">
+          <span pf-src="/images/video/small/broke-teenager-poster.jpg" data-media="(min-width: 1px)"></span>
+          <span pf-src="/images/video/big/broke-teenager-poster.jpg" data-media="(min-width: 1200px)"></span>
+        </span>
+        <span picture-fill data-alt="The Broke Teenager" class="video--broke-teenager-image is-animated">
+          <span pf-src="/images/video/big/broke-teenager-poster.gif" data-media="(min-width: 1200px)"></span>
+        </span>
       </div>
     </section><!--
 --><section class="video--pain-in-the-butt" data-ng-click="playVideo('pain-in-the-butt')">
@@ -50,13 +60,21 @@
   </section><!--
 --><section class="video--moving-out" data-ng-click="playVideo('moving-out')">
     <div class="video--moving-out-inner">
-      <img src="/images/video/moving-out-poster.jpg" class="video--moving-out-image is-static">
-      <img src="/images/video/moving-out-poster.gif" class="video--moving-out-image is-animated">
+        <span picture-fill data-alt="Living With His Parents" class="video--moving-out-image is-static">
+          <span pf-src="/images/video/small/moving-out-poster.jpg" data-media="(min-width: 1px)"></span>
+          <span pf-src="/images/video/big/moving-out-poster.jpg" data-media="(min-width: 1200px)"></span>
+        </span>
+        <span picture-fill data-alt="Living With His Parents" class="video--moving-out-image is-animated">
+          <span pf-src="/images/video/big/moving-out-poster.gif" data-media="(min-width: 1200px)"></span>
+        </span>
     </div>
   </section><!--
 --><section class="video--your-movie">
     <div class="video--your-movie-inner">
-      <img src="/images/video/your-movie-poster.jpg" class="video--your-movie-image">
+      <span picture-fill data-alt="Your movie" class="video--your-movie-image">
+        <span pf-src="/images/video/small/your-movie-poster.jpg" data-media="(min-width: 1px)"></span>
+        <span pf-src="/images/video/big/your-movie-poster.jpg" data-media="(min-width: 1200px)"></span>
+      </span>
     </div>
   </section>
   </div>

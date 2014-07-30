@@ -11,12 +11,14 @@
 %video--section {
   @extend %grid__item;
   @extend %palm--one-whole;
-  @extend %lap--one-third;
+  @extend %lap--one-half;
   @extend %desk--one-third;
   @extend %bigscreen--one-third;
 
   position: relative;
   overflow: hidden;
+
+  padding-left: 0;
 
   cursor: pointer;
   text-align: center;
@@ -68,6 +70,12 @@
   z-index: 90;
 
   width: 100%;
+
+  // Add styling directly to the image tag because of our reponsive image solution.
+  img {
+    height: auto;
+    width: 100%;
+  }
 
   &.is-animated {
     display: none;
