@@ -116,7 +116,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
           }
         );
       } else {
-        $scope.facebookStatusText = "Du er ikke logget ind i facebook. Login for at dele dit resultat.";
+        $scope.facebookStatusText = "Du er ikke logget ind på Facebook. Log ind for at dele dit resultat.";
       }
     }, {scope: 'publish_actions'});
   }
