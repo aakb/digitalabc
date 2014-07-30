@@ -86,6 +86,14 @@
     background-position: center top;
 
     @include background-size(cover);
+
+    @include breakpoint($breakpoint-lap) {
+      background-image: url('/images/backgrounds/medium/guy-jumping.jpg');
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      background-image: url('/images/backgrounds/large/guy-jumping.jpg');
+    }
   }
 }
 

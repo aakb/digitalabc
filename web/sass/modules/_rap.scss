@@ -16,6 +16,14 @@
 
   @include background-size(cover);
 
+  @include breakpoint($breakpoint-lap) {
+    background: url('/images/backgrounds/medium/rappers-two-up-points.jpg') no-repeat;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    background: url('/images/backgrounds/large/rappers-two-up-points.jpg') no-repeat;
+  }
+
   &--inner {
     position: relative;
     top: 50%;

@@ -16,6 +16,14 @@
 
   @include background-size(cover);
 
+  @include breakpoint($breakpoint-lap) {
+    background-image: url('/images/backgrounds/medium/device-blurred.jpg');
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    background-image: url('/images/backgrounds/large/device-blurred.jpg');
+  }
+
   &--inner {
     padding: 2em;
 

@@ -35,10 +35,14 @@
 
     @include breakpoint($breakpoint-desk) {
       min-height: 14em;
+
+      background: url('/images/backgrounds/medium/table-laptop-notebook.jpg') center no-repeat;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
       min-height: 26em;
+
+      background: url('/images/backgrounds/large/table-laptop-notebook.jpg') center no-repeat;
     }
   }
 
