@@ -96,7 +96,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
   // Get the ID of the result.
   quizFactory.saveResult().then(function(id) {
     $scope.id = id;
-    $scope.link = window.location.hostname + 'quiz/challenge/' + $scope.id;
+    $scope.link = "http://" + window.location.hostname + '/quiz/challenge/' + $scope.id;
   });
 
   // Function for sharing on facebook.
@@ -107,7 +107,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
           'me/tujmytestapp:complete',
           'post',
           {
-            quiz: window.location.hostname + "quiz/challenge/" + $scope.id
+            quiz: $scope.link
           },
           function(response) {
             if (response.error) {
