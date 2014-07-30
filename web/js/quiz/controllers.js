@@ -152,28 +152,8 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
       }
     }
 
-    $scope.challengeResult = "";
-    $scope.challengerAnswerCorrect = false;
     $scope.question = quizFactory.getQuestion($scope.step);
     $scope.chosen = quizFactory.getAnswer($scope.step);
-
-    // Setup the challenge.
-    if ($scope.challengeid !== undefined) {
-      quizFactory.getChallenge($scope.challengeid).then(function(challenger) {
-        if (challenger === null) {
-          $scope.challengeid = undefined;
-        }
-        else {
-          if (challenger.answers[$scope.step - 1] === $scope.question.correctAnswer) {
-            $scope.challengerAnswerCorrect = true;
-            $scope.challengeResult = "rigtigt";
-          } else {
-            $scope.challengerAnswerCorrect = false;
-            $scope.challengeResult = "forkert";
-          }
-        }
-      });
-    }
 
     // Function for moving to the next step in the quiz.
     $scope.nextStep = function() {
