@@ -1963,7 +1963,7 @@ html.is-locked body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("/images/big/backgrounds/small/guy-jumping.jpg");
+  background-image: url("/images/backgrounds/small/guy-jumping.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   -moz-background-size: cover;
@@ -2542,7 +2542,7 @@ html.is-locked body {
   position: relative;
   height: 100%;
   width: 100%;
-  background: url("/images/backgrounds/big/rappers-two-up-points.jpg") no-repeat;
+  background: url("/images/backgrounds/small/rappers-two-up-points.jpg") no-repeat;
   text-align: center;
   -moz-background-size: cover;
   -o-background-size: cover;
