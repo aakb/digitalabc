@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {# Put your html attributes here. #}
 <html {% block html %}{% endblock %}>
-<head>
+<head {% block head_attr %}{% endblock %}>
     {# Set the title. #}
     <title>{% block title %}{% endblock %}</title>
 
