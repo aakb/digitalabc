@@ -29,6 +29,16 @@ abcApp.factory('quizFactory', function($http, $q) {
     return defer.promise;
   };
 
+  factory.resetQuiz = function() {
+    questions = [];
+    quizFinished = false;
+    initialized = false;
+    resultSaved = false;
+    resultID = null;
+    answers = [];
+    challenger = null;
+  };
+
   factory.finishQuiz = function() {
     quizFinished = true;
   };

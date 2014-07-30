@@ -3,7 +3,7 @@ abcApp.controller('IndexController', function($scope) {});
 /**
  * Controller for the start page of the quiz.
  */
-abcApp.controller('StartController', function($scope, $timeout) {
+abcApp.controller('StartController', function($scope, $timeout, quizFactory) {
   // Set variables.
   $scope.menuOpen = null;
   $scope.layoutClassSuffix = 'layout';
@@ -16,10 +16,12 @@ abcApp.controller('StartController', function($scope, $timeout) {
   // Make sure menu is closed.
   $scope.$emit('closeMenu');
 
+  quizFactory.resetQuiz();
+
   // Initial choice.
   $scope.text = "dine venner";
 
-  var texts = ["raske penge", "dine venner", "din mor", "Helle Thorning-Scmidt"];
+  var texts = ["raske penge", "dine venner", "din mor", "Helle Thorning-Schmidt"];
   var timeoutMilliseconds = 1000;
   var lastIndex = 1;
 
