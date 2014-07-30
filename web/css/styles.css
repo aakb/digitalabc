@@ -1963,7 +1963,7 @@ html.is-locked body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("/images/big/backgrounds/guy-jumping.jpg");
+  background-image: url("/images/big/backgrounds/small/guy-jumping.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   -moz-background-size: cover;
@@ -2602,7 +2602,7 @@ html.is-locked body {
   margin-bottom: 4em;
   min-height: 6em;
   width: 100%;
-  background: url("/images/backgrounds/big/table-laptop-notebook.png") center no-repeat;
+  background: url("/images/backgrounds/small/table-laptop-notebook.png") center no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -2826,7 +2826,7 @@ html.is-locked body {
   position: relative;
   z-index: 99;
   min-height: 100%;
-  background-image: url("/images/backgrounds/big/device-blurred.jpg");
+  background-image: url("/images/backgrounds/small/device-blurred.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   -moz-background-size: cover;
