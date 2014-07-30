@@ -1925,11 +1925,11 @@ html.is-locked body {
 @media only screen and (min-width: 1024px) {
   /* line 46, ../sass/modules/_quiz.scss */
   .quiz-header--background.is-first {
-    background-image: url("/images/backgrounds/big/girl-arms-out.jpg");
+    background-image: url("/images/backgrounds/large/girl-arms-out.jpg");
   }
   /* line 50, ../sass/modules/_quiz.scss */
   .quiz-header--background.is-second {
-    background-image: url("/images/backgrounds/big/guy-horizontal.jpg");
+    background-image: url("/images/backgrounds/large/guy-horizontal.jpg");
   }
 }
 /* line 56, ../sass/modules/_quiz.scss */
