@@ -1010,7 +1010,7 @@ h6 {
 /* line 46, ../sass/base/_base.scss */
 strong,
 .static-page--lead {
-  font-family: "permianseriftypefaceregular";
+  font-family: "permianseriftypefacebold";
   font-weight: normal;
 }
 
@@ -2629,7 +2629,7 @@ html.is-locked body {
 }
 /* line 73, ../sass/modules/_static-page.scss */
 .static-page--sub-heading {
-  margin-bottom: 0;
+  margin-bottom: .25em;
   font-size: 2em;
 }
 @media only screen and (min-width: 481px) {
