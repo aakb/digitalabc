@@ -16,6 +16,10 @@
 
   @include background-size(cover);
 
+  @include breakpoint($breakpoint-lap, false, true) {
+    background-image: url('/images/backgrounds/medium/device-blurred.jpg');
+  }
+
   @include breakpoint($breakpoint-lap) {
     background-image: url('/images/backgrounds/medium/device-blurred.jpg');
   }
