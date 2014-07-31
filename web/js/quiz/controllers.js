@@ -140,7 +140,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
             }
             else {
               $scope.shareComplete = false;
-              $scope.facebookStatusText = "";
+              $scope.facebookStatusText = "Resultatet er fjernet fra Facebook igen.";
             }
           }
         );

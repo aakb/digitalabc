@@ -9,8 +9,10 @@
   <meta property="og:url"                     content="{{ server_path }}quiz/challenge/{{ id }}" />
   <meta property="og:image"                   content="https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" />
   <meta property="digitalabc:result"          content="{{ result }}" />
-
 {% endblock %}
+
+{% block head_attr %}{% endblock %}
+{% block title %}Digital ABC{% endblock %}
 
 {% block body %}
   {{ parent() }}
