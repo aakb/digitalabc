@@ -2697,7 +2697,9 @@ html.is-locked body {
   margin-bottom: 4em;
   min-height: 6em;
   width: 100%;
-  background: url("/images/backgrounds/small/table-laptop-notebook.jpg") center no-repeat;
+  background-image: url("/images/backgrounds/small/table-laptop-notebook.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -2706,30 +2708,30 @@ html.is-locked body {
 @media only screen and (min-width: 481px) {
   /* line 23, ../sass/modules/_static-page.scss */
   .static-page--header {
-    background: url("/images/backgrounds/medium/table-laptop-notebook.jpg") center no-repeat;
+    background-image: url("/images/backgrounds/medium/table-laptop-notebook.jpg");
   }
 }
 @media only screen and (min-resolution: 2dppx) and (max-width: 481px) {
   /* line 23, ../sass/modules/_static-page.scss */
   .static-page--header {
-    background: url("/images/backgrounds/medium/table-laptop-notebook.jpg") center no-repeat;
+    background-image: url("/images/backgrounds/medium/table-laptop-notebook.jpg");
   }
 }
 @media only screen and (min-width: 1024px) {
   /* line 23, ../sass/modules/_static-page.scss */
   .static-page--header {
     min-height: 14em;
-    background: url("/images/backgrounds/medium/table-laptop-notebook.jpg") center no-repeat;
+    background-image: url("/images/backgrounds/medium/table-laptop-notebook.jpg");
   }
 }
 @media only screen and (min-width: 1700px) {
   /* line 23, ../sass/modules/_static-page.scss */
   .static-page--header {
     min-height: 26em;
-    background: url("/images/backgrounds/large/table-laptop-notebook.jpg") center no-repeat;
+    background-image: url("/images/backgrounds/large/table-laptop-notebook.jpg");
   }
 }
-/* line 55, ../sass/modules/_static-page.scss */
+/* line 57, ../sass/modules/_static-page.scss */
 .static-page--heading {
   position: absolute;
   bottom: -1px;
@@ -2744,63 +2746,63 @@ html.is-locked body {
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 55, ../sass/modules/_static-page.scss */
+  /* line 57, ../sass/modules/_static-page.scss */
   .static-page--heading {
     display: block;
     font-size: 6em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 55, ../sass/modules/_static-page.scss */
+  /* line 57, ../sass/modules/_static-page.scss */
   .static-page--heading {
     font-size: 10em;
   }
 }
-/* line 81, ../sass/modules/_static-page.scss */
+/* line 83, ../sass/modules/_static-page.scss */
 .static-page--sub-heading {
   margin-bottom: .25em;
   font-size: 2em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 81, ../sass/modules/_static-page.scss */
+  /* line 83, ../sass/modules/_static-page.scss */
   .static-page--sub-heading {
     font-size: 3em;
   }
 }
-/* line 91, ../sass/modules/_static-page.scss */
+/* line 93, ../sass/modules/_static-page.scss */
 .static-page--paragraph-heading {
   font-size: 1.75em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 91, ../sass/modules/_static-page.scss */
+  /* line 93, ../sass/modules/_static-page.scss */
   .static-page--paragraph-heading {
     font-size: 2em;
   }
 }
-/* line 102, ../sass/modules/_static-page.scss */
+/* line 104, ../sass/modules/_static-page.scss */
 .static-page--content-wrapper {
   margin-right: auto;
   margin-left: auto;
   max-width: 65em;
 }
-/* line 111, ../sass/modules/_static-page.scss */
+/* line 113, ../sass/modules/_static-page.scss */
 .static-page--content {
   padding-right: 2em;
   padding-left: 2em;
 }
-/* line 122, ../sass/modules/_static-page.scss */
+/* line 124, ../sass/modules/_static-page.scss */
 .static-page--nav {
   padding-right: 2em;
   margin-bottom: 2em;
 }
-/* line 129, ../sass/modules/_static-page.scss */
+/* line 131, ../sass/modules/_static-page.scss */
 .static-page--nav-item-wrapper {
   position: relative;
   border-bottom: 8px solid #cccccc;
   padding-bottom: 2em;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 129, ../sass/modules/_static-page.scss */
+  /* line 131, ../sass/modules/_static-page.scss */
   .static-page--nav-item-wrapper {
     position: fixed;
     z-index: 96;
@@ -2810,7 +2812,7 @@ html.is-locked body {
     padding-left: 2em;
   }
 }
-/* line 146, ../sass/modules/_static-page.scss */
+/* line 148, ../sass/modules/_static-page.scss */
 .static-page--nav-item, .static-page--nav-sub-item {
   display: block;
   line-height: 1.5em;
@@ -2834,18 +2836,18 @@ html.is-locked body {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 151, ../sass/modules/_static-page.scss */
+/* line 153, ../sass/modules/_static-page.scss */
 .static-page--nav-item {
   font-size: 1.75em;
 }
-/* line 155, ../sass/modules/_static-page.scss */
+/* line 157, ../sass/modules/_static-page.scss */
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
   font-size: 1.35em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 155, ../sass/modules/_static-page.scss */
+  /* line 157, ../sass/modules/_static-page.scss */
   .static-page--nav-sub-item {
     font-size: 1.6em;
   }
@@ -2867,7 +2869,7 @@ html.is-locked body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 160, ../sass/modules/_static-page.scss */
+/* line 162, ../sass/modules/_static-page.scss */
 .static-page--content, .static-page--nav {
   position: relative;
   top: 8.5em;
@@ -2878,30 +2880,30 @@ html.is-locked body {
   transform: translateZ(0);
 }
 @media only screen and (min-width: 1024px) {
-  /* line 160, ../sass/modules/_static-page.scss */
+  /* line 162, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     top: 17em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 160, ../sass/modules/_static-page.scss */
+  /* line 162, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     top: 30em;
   }
 }
-/* line 181, ../sass/modules/_static-page.scss */
+/* line 183, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 187, ../sass/modules/_static-page.scss */
+/* line 189, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 191, ../sass/modules/_static-page.scss */
+/* line 193, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 197, ../sass/modules/_static-page.scss */
+/* line 199, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2910,13 +2912,13 @@ html.is-locked body {
   padding: 0;
   list-style: none;
 }
-/* line 207, ../sass/modules/_static-page.scss */
+/* line 209, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 213, ../sass/modules/_static-page.scss */
+/* line 215, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;
