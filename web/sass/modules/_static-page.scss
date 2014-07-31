@@ -29,16 +29,24 @@
     min-height: 6em;
     width: 100%;
 
-    background: url('/images/backgrounds/table-laptop-notebook.png') center no-repeat;
+    background: url('/images/backgrounds/small/table-laptop-notebook.jpg') center no-repeat;
 
     @include background-size(cover);
 
+    @include breakpoint($breakpoint-lap, false, true) {
+      background: url('/images/backgrounds/medium/table-laptop-notebook.jpg') center no-repeat;
+    }
+
     @include breakpoint($breakpoint-desk) {
       min-height: 14em;
+
+      background: url('/images/backgrounds/medium/table-laptop-notebook.jpg') center no-repeat;
     }
 
     @include breakpoint($breakpoint-bigscreen) {
       min-height: 26em;
+
+      background: url('/images/backgrounds/large/table-laptop-notebook.jpg') center no-repeat;
     }
   }
 

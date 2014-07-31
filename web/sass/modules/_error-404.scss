@@ -10,11 +10,23 @@
 
   min-height: 100%;
 
-  background-image: url('/images/backgrounds/device-blurred.jpg');
+  background-image: url('/images/backgrounds/small/device-blurred.jpg');
   background-repeat: no-repeat;
   background-position: center top;
 
   @include background-size(cover);
+
+  @include breakpoint($breakpoint-lap, false, true) {
+    background-image: url('/images/backgrounds/medium/device-blurred.jpg');
+  }
+
+  @include breakpoint($breakpoint-lap) {
+    background-image: url('/images/backgrounds/medium/device-blurred.jpg');
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    background-image: url('/images/backgrounds/large/device-blurred.jpg');
+  }
 
   &--inner {
     padding: 2em;

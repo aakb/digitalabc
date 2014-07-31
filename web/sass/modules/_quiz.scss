@@ -23,13 +23,46 @@
 
     @include background-size(cover);
 
-    // Background slides
+    // Background slides.
     &.is-first {
-      background-image: url('/images/backgrounds/girl-arms-out.jpg');
+      background-image: url('/images/backgrounds/small/girl-arms-out.jpg');
     }
 
     &.is-second {
-      background-image: url('/images/backgrounds/guy-horizontal.jpg');
+      background-image: url('/images/backgrounds/small/guy-horizontal.jpg');
+    }
+
+    // Small devices retina.
+    @include breakpoint($breakpoint-lap, false, true) {
+      &.is-first {
+        background-image: url('/images/backgrounds/medium/girl-arms-out.jpg');
+      }
+
+      &.is-second {
+        background-image: url('/images/backgrounds/medium/guy-horizontal.jpg');
+      }
+    }
+
+    // Medium devices non-retina.
+    @include breakpoint($breakpoint-lap) {
+      &.is-first {
+        background-image: url('/images/backgrounds/medium/girl-arms-out.jpg');
+      }
+
+      &.is-second {
+        background-image: url('/images/backgrounds/medium/guy-horizontal.jpg');
+      }
+    }
+
+    // Large devices non-retina.
+    @include breakpoint($breakpoint-desk) {
+      &.is-first {
+        background-image: url('/images/backgrounds/large/girl-arms-out.jpg');
+      }
+
+      &.is-second {
+        background-image: url('/images/backgrounds/large/guy-horizontal.jpg');
+      }
     }
 
     // Animations
@@ -61,11 +94,24 @@
     height: 100%;
     width: 100%;
 
-    background-image: url('/images/backgrounds/guy-jumping.jpg');
+    background-image: url('/images/backgrounds/small/guy-jumping.jpg');
     background-repeat: no-repeat;
     background-position: center top;
 
     @include background-size(cover);
+
+    // Small devices retina.
+    @include breakpoint($breakpoint-lap, false, true) {
+      background-image: url('/images/backgrounds/medium/guy-jumping.jpg');
+    }
+
+    @include breakpoint($breakpoint-lap) {
+      background-image: url('/images/backgrounds/medium/guy-jumping.jpg');
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      background-image: url('/images/backgrounds/large/guy-jumping.jpg');
+    }
   }
 }
 

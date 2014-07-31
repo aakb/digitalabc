@@ -11,10 +11,22 @@
   height: 100%;
   width: 100%;
 
-  background: url('/images/backgrounds/rappers-two-up-points.jpg') no-repeat;
+  background: url('/images/backgrounds/small/rappers-two-up-points.jpg') no-repeat;
   text-align: center;
 
   @include background-size(cover);
+
+  @include breakpoint($breakpoint-lap, false, true) {
+    background: url('/images/backgrounds/medium/rappers-two-up-points.jpg') no-repeat;
+  }
+
+  @include breakpoint($breakpoint-lap) {
+    background: url('/images/backgrounds/medium/rappers-two-up-points.jpg') no-repeat;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    background: url('/images/backgrounds/large/rappers-two-up-points.jpg') no-repeat;
+  }
 
   &--inner {
     position: relative;
