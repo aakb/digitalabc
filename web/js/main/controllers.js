@@ -52,6 +52,20 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
       function() {
         $(this).removeClass('is-animating');
       });
+
+    // Change title on route change.
+    if ($location.path().indexOf("/quiz") === 0) {
+      window.document.title = 'Digital ABC - Quiz';
+    }
+    else if ($location.path().indexOf("/undervisningsmateriale") === 0) {
+      window.document.title = 'Digital ABC - Undervisningsmateriale';
+    }
+    else if ($location.path().indexOf("/om-projektet") === 0) {
+      window.document.title = 'Digital ABC - Om projektet';
+    }
+    else {
+      window.document.title = 'Digital ABC';
+    }
   });
 
   // Video controls.
@@ -141,23 +155,4 @@ abcApp.controller('StaticPageController', function($scope, $location, $document)
 abcApp.controller('Error404Controller', function($scope, $location, $document) {
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'error-404');
-});
-
-// Controls the head element of the page.
-abcApp.controller('HeadController', function($scope, $location, $rootScope) {
-  // Change route.
-  $rootScope.$on('$routeChangeSuccess', function() {
-    if ($location.path().indexOf("/quiz") === 0) {
-      $scope.pageTitle = ' - Quiz';
-    }
-    else if ($location.path().indexOf("/undervisningsmateriale") === 0) {
-      $scope.pageTitle = ' - Undervisningsmateriale';
-    }
-    else if ($location.path().indexOf("/om-projektet") === 0) {
-      $scope.pageTitle = ' - Om projektet';
-    }
-    else {
-      $scope.pageTitle = '';
-    }
-  });
 });
