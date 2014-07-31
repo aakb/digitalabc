@@ -9,36 +9,42 @@
 @import "compass/css3";
 
 
+// Fonts
+@import "fonts/bebas-neue";
+@import "fonts/permianserif-regular";
+@import "fonts/permianserif-bold";
+
+
 // Include base vars
-@import "base/_vars";
-@import "base/_grid";
+@import "base/vars";
+@import "base/grid";
 
 
 // Include base
-@import "base/_mixins";
-@import "base/_normalize";
-@import "base/_base";
-@import "base/_forms";
+@import "base/mixins";
+@import "base/normalize";
+@import "base/base";
+@import "base/forms";
 
 
 // Animations
-@import "animations/_animations";
+@import "animations/animations";
 
 
 // Layout
-@import "layout/_layout";
+@import "layout/layout";
 
 
 // Components
-@import "components/_navigation";
-@import "components/_video";
+@import "components/navigation";
+@import "components/video";
 
 
 // Modules
-@import "modules/_buttons";
-@import "modules/_navigation";
-@import "modules/_quiz";
-@import "modules/_video";
-@import "modules/_rap";
-@import "modules/_static-page";
-@import "modules/_error-404";
+@import "modules/buttons";
+@import "modules/navigation";
+@import "modules/quiz";
+@import "modules/video";
+@import "modules/rap";
+@import "modules/static-page";
+@import "modules/error-404";
