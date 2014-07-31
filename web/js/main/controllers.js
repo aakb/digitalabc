@@ -144,6 +144,20 @@ abcApp.controller('Error404Controller', function($scope, $location, $document) {
 });
 
 // Controls the head element of the page.
-abcApp.controller('HeadController', function($scope, $location, $http) {
-
+abcApp.controller('HeadController', function($scope, $location, $rootScope) {
+  // Change route.
+  $rootScope.$on('$routeChangeSuccess', function() {
+    if ($location.path().indexOf("/quiz") === 0) {
+      $scope.pageTitle = ' - Quiz';
+    }
+    else if ($location.path().indexOf("/undervisningsmateriale") === 0) {
+      $scope.pageTitle = ' - Undervisningsmateriale';
+    }
+    else if ($location.path().indexOf("/om-projektet") === 0) {
+      $scope.pageTitle = ' - Om projektet';
+    }
+    else {
+      $scope.pageTitle = '';
+    }
+  });
 });
