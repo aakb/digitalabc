@@ -1,0 +1,21 @@
+{% extends 'DigitalABCMainBundle:Default:layout.html.twig' %}
+
+{% block html %}{% endblock %}
+
+{% block title %}Siden blev ikke fundet{% endblock %}
+
+{% block head_attr %}{% endblock %}
+
+{% block meta %}{% endblock %}
+
+{% block stylesheets %}{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <a href="/" title="Siden blev ikke fundet"><span picture-fill data-alt="Siden blev ikke fundet">
+      <span pf-src="/images/small/poster-404.jpg" data-media="(min-width: 1px)"></span>
+      <span pf-src="/images/large/poster-404.jpg" data-media="(min-width: 1200px)"></span>
+    </span></a>
+{% endblock %}
+
+{% block scripts %}{% endblock %}
