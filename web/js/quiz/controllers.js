@@ -106,19 +106,52 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
     FB.login(function(response) {
       if (response.status === 'connected') {
         FB.api(
-          'me/tujmytestapp:complete',
+          'me/digitalabc:complete',
           'post',
           {
             quiz: $scope.link
           },
           function(response) {
             if (response.error) {
+              if (window.console) {
+                console.log(response);
+              }
               $scope.facebookStatusText = "Der skete en fejl. Prøv igen.";
+            }
+            else {
+              $scope.shareComplete = true;
+              $scope.shareId = "";
+              if (window.console) {
+                console.log(response);
+              }
             }
           }
         );
       } else {
-        $scope.facebookStatusText = "Du er ikke logget ind på Facebook. Log ind for at dele dit resultat.";
+        $scope.facebookStatusText = "Du er ikke logget på Facebook. Log ind for at dele dit resultat.";
+      }
+    }, {scope: 'publish_actions'});
+  }
+
+  $scope.unshareOnFacebook = function() {
+    FB.login(function(response) {
+      if (response.status === 'connected') {
+        FB.api(
+          $scope.shareId,
+          'delete',
+          function(response) {
+            if (response.error) {
+              $scope.shareComplete = true;
+              $scope.facebookStatusText = "Det lykkedes ikke at fjerne dit opslag fra facebook. Prøv igen."
+            }
+            else {
+              $scope.shareComplete = false;
+              $scope.facebookStatusText = "";
+            }
+          }
+        );
+      } else {
+        $scope.facebookStatusText = "Du er ikke logget på Facebook. Log ind for at fjerne dit opslag.";
       }
     }, {scope: 'publish_actions'});
   }

@@ -13,10 +13,19 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller {
 
   /**
+   * @param $request
+   *   The request object.
+   *
    * @Route("/")
    * @return \Symfony\Component\HttpFoundation\Response
    */
-  public function indexAction() {
-    return $this->render('DigitalABCMainBundle:Default:index.html.twig');
+  public function indexAction(Request $request) {
+    $response = $this->render('DigitalABCMainBundle:Default:index.html.twig');
+
+    $response->setETag(md5($response->getContent()));
+    $response->setPublic();
+    $response->isNotModified($request);
+
+    return $response;
   }
 }
