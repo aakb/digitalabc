@@ -9,7 +9,15 @@ To allow the AngularJS integration within a twig template the interpolation symb
 ###Helpful commands
 To clear cache
 <pre>
-php app/console cache:clear
+app/console cache:clear
+</pre>
+To build asssets
+<pre>
+app/console assets:install
+</pre>
+Remove cache on live
+<pre>
+rm -R app/cache/*
 </pre>
 
 ##Installation instructions
@@ -49,7 +57,6 @@ $ cp app/config/parameters.yml.dist app/config/parameters.yml
 </pre>
 
 Fill in relevant settings.
-
 
 ###Setup DB and after changing an entity
 <pre>
