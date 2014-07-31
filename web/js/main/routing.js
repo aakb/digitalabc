@@ -48,10 +48,6 @@ abcApp.config(function($routeProvider) {
       controller: 'StartController',
       templateUrl: '/partials/quiz/index.html'
     })
-    .when('/quiz/challenge/:challengeId', {
-      controller: 'QuizChallengeController',
-      templateUrl: '/partials/quiz/challenge.html'
-    })
     .when('/quiz/done/:challengeid', {
       controller: 'ShareController',
       templateUrl: '/partials/quiz/quiz-finish.html'
