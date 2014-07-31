@@ -146,8 +146,6 @@ abcApp.controller('Error404Controller', function($scope, $location, $document) {
 // Controls the head element of the page.
 abcApp.controller('HeadController', function($scope, $location, $http) {
   if ($location.path().indexOf("/quiz/challenge/") === 0) {
-    $scope.$emit('changeLayoutClassSuffix', 'error-404');
-
     var id = $location.path().substr(16);
 
     $http.get('/api/result/' + id)
