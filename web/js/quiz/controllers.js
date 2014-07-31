@@ -98,7 +98,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
   // Get the ID of the result.
   quizFactory.saveResult().then(function(id) {
     $scope.id = id;
-    $scope.link = "http://" + window.location.hostname + '/#/quiz/challenge/' + $scope.id;
+    $scope.link = "http://" + window.location.hostname + '/quiz/challenge/' + $scope.id;
   });
 
   // Function for sharing on facebook.
@@ -113,17 +113,11 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
           },
           function(response) {
             if (response.error) {
-              if (window.console) {
-                console.log(response);
-              }
               $scope.facebookStatusText = "Der skete en fejl. Prøv igen.";
             }
             else {
               $scope.shareComplete = true;
-              $scope.shareId = "";
-              if (window.console) {
-                console.log(response);
-              }
+              $scope.shareId = response.id;
             }
           }
         );
@@ -249,16 +243,5 @@ abcApp.controller('QuizController', function($scope, $routeParams, $location, $t
         event.preventDefault();
       }
     });
-  });
-});
-
-/**
- * Controller for the quiz.
- */
-abcApp.controller('QuizChallengeController', function($scope, $routeParams, quizFactory) {
-  $scope.id = $routeParams.challengeId;
-
-  quizFactory.getChallenge($scope.id).then(function(data) {
-    $scope.result = data;
   });
 });
