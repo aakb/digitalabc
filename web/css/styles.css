@@ -2590,7 +2590,8 @@ html.is-locked body {
   position: relative;
   height: 100%;
   width: 100%;
-  background: url("/images/backgrounds/small/rappers-two-up-points.jpg") no-repeat;
+  background-image: url("/images/backgrounds/small/rappers-two-up-points.jpg");
+  background-repeat: no-repeat;
   text-align: center;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2600,28 +2601,28 @@ html.is-locked body {
 @media only screen and (min-width: 481px) {
   /* line 8, ../sass/modules/_rap.scss */
   .rap {
-    background: url("/images/backgrounds/medium/rappers-two-up-points.jpg") no-repeat;
+    background-image: url("/images/backgrounds/medium/rappers-two-up-points.jpg");
   }
 }
 @media only screen and (min-resolution: 2dppx) and (max-width: 481px) {
   /* line 8, ../sass/modules/_rap.scss */
   .rap {
-    background: url("/images/backgrounds/medium/rappers-two-up-points.jpg") no-repeat;
+    background-image: url("/images/backgrounds/medium/rappers-two-up-points.jpg");
   }
 }
 @media only screen and (min-width: 481px) {
   /* line 8, ../sass/modules/_rap.scss */
   .rap {
-    background: url("/images/backgrounds/medium/rappers-two-up-points.jpg") no-repeat;
+    background-image: url("/images/backgrounds/medium/rappers-two-up-points.jpg");
   }
 }
 @media only screen and (min-width: 1024px) {
   /* line 8, ../sass/modules/_rap.scss */
   .rap {
-    background: url("/images/backgrounds/large/rappers-two-up-points.jpg") no-repeat;
+    background-image: url("/images/backgrounds/large/rappers-two-up-points.jpg");
   }
 }
-/* line 31, ../sass/modules/_rap.scss */
+/* line 32, ../sass/modules/_rap.scss */
 .rap--inner {
   position: relative;
   top: 50%;
@@ -2633,12 +2634,12 @@ html.is-locked body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 42, ../sass/modules/_rap.scss */
+/* line 43, ../sass/modules/_rap.scss */
 .rap--video {
   width: 100%;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 42, ../sass/modules/_rap.scss */
+  /* line 43, ../sass/modules/_rap.scss */
   .rap--video {
     width: 60%;
   }
