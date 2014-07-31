@@ -12,7 +12,8 @@
     <a href="/#/quiz" class="quiz--try-again-button" data-ng-show="result === 100">Opret NemID</a>
     <a href="/#/quiz" class="quiz--try-again-button" data-ng-show="result < 100">Prøv igen</a>
     <input type="button" ng-click="shareOnFacebook()" value="Del på Facebook" class="quiz--share-button">
-    <h3 class="quiz--text" data-ng-show="!facebookStatusText"><[facebookStatusText]></h3>
+    <h3 class="quiz--text" data-ng-show="facebookStatusText"><[facebookStatusText]></h3>
+    <h3 class="quiz--text" data-ng-show="shareComplete">Du har delt dit result på Facebook. Tryk <span data-ng-click="unshareOnFacebook()">her</span> for at fjerne den igen.</h3>
   </div>
   <div class="quiz--background"></div>
 </section>
