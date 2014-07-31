@@ -2933,6 +2933,7 @@ html.is-locked body {
 .error-404 {
   position: relative;
   z-index: 99;
+  height: 100%;
   min-height: 100%;
   background-image: url("/images/backgrounds/small/device-blurred.jpg");
   background-repeat: no-repeat;
@@ -2966,11 +2967,16 @@ html.is-locked body {
     background-image: url("/images/backgrounds/large/device-blurred.jpg");
   }
 }
-/* line 31, ../sass/modules/_error-404.scss */
+/* line 32, ../sass/modules/_error-404.scss */
 .error-404--inner {
+  height: 100%;
   padding: 2em;
   text-align: center;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+/* line 41, ../sass/modules/_error-404.scss */
+.error-404--image {
+  max-height: 100%;
 }
