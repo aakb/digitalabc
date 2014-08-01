@@ -327,6 +327,10 @@
 
     color: $white;
     cursor: pointer;
+
+    pointer-events: none;
+
+    @include user-select('none');
   }
 
   &--answers-number {
