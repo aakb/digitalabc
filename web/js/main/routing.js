@@ -44,6 +44,10 @@ abcApp.config(function($routeProvider) {
       controller: 'StaticPageController',
       templateUrl: '/partials/undervisningsmateriale/farvel-forvalt-lingo/index.html'
     })
+    .when('/undervisningsmateriale/lav-din-egen-film', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/undervisningsmateriale/lav-din-egen-film/index.html'
+    })
     .when('/quiz', {
       controller: 'StartController',
       templateUrl: '/partials/quiz/index.html'
