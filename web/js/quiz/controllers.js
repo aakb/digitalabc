@@ -4,14 +4,8 @@ abcApp.controller('IndexController', function($scope) {});
  * Controller for the start page of the quiz.
  */
 abcApp.controller('StartController', function($scope, $timeout, quizFactory) {
-  // Set variables.
-  $scope.menuOpen = null;
-  $scope.layoutClassSuffix = 'layout';
-
-  // Added helper function for the menu.
-  $scope.$on('changeLayoutClassSuffix', function(event, data) {
-    $scope.layoutClassSuffix = data;
-  });
+  // Change layout class.
+  $scope.$emit('changeLayoutClassSuffix', 'layout');
 
   // Make sure menu is closed.
   $scope.$emit('closeMenu');
@@ -50,13 +44,13 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'layout');
 
-
   // Redirect if the quiz has not been completed.
   if (!quizFactory.getQuizFinished()) {
     $location.path('/quiz');
     return;
   }
 
+  // Set scope variables
   $scope.link = "";
   $scope.challengeid = $routeParams.challengeid;
   $scope.facebookStatusText = "";
