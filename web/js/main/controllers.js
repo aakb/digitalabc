@@ -34,12 +34,49 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     }
   }
 
+  var scrollToPosition = function() {
+    // Handle video URLs
+    if ($location.path() === '/video') {
+      $timeout(function() {
+        $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
+      }, 1000);
+    }
+    else if ($location.path() === '/video/troll-painter') {
+      $timeout(function() {
+        $scope.playVideo('troll-painter');
+      }, 1000);
+    }
+    else if ($location.path() === '/video/slave') {
+      $timeout(function() {
+        $scope.playVideo('slave');
+      }, 1000);
+    }
+    else if ($location.path() === '/video/broke-teenager') {
+      $timeout(function() {
+        $scope.playVideo('broke-teenager');
+      }, 1000);
+    }
+    else if ($location.path() === '/video/pain-in-the-butt') {
+      $timeout(function() {
+        $scope.playVideo('troll-painter');
+      }, 1000);
+    }
+    else if ($location.path() == '/music-video') {
+      $timeout(function() {
+        $document.scrollToElement(angular.element(document.getElementById('rap')), 0, 500);
+      }, 1000);
+    }
+  }
+  scrollToPosition();
+
   // Change route.
   $rootScope.$on('$routeChangeSuccess', function() {
     // Make sure menu is closed.
     if ($scope.menuOpen !== null) {
       $scope.menuOpen = false;
     }
+
+    scrollToPosition();
 
     // Add toggle to html tag to avoid scrolling when the menu is open.
     // We add the class this way because the <html> is not in $scope.
@@ -62,6 +99,12 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     }
     else if ($location.path().indexOf("/om-projektet") === 0) {
       window.document.title = 'Digital ABC - Om projektet';
+    }
+    else if ($location.path().indexOf("/music-video") === 0) {
+      window.document.title = 'Digital ABC - Musikvideo';
+    }
+    else if ($location.path().indexOf("/video") === 0) {
+      window.document.title = 'Digital ABC - Videoer';
     }
     else {
       window.document.title = 'Digital ABC';
@@ -98,32 +141,6 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     }, 700);
   }
 
-  // Handle video URLs
-  if ($location.path() === '/video') {
-    $timeout(function() {
-      $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
-    }, 1000);
-  }
-  else if ($location.path() === '/video/troll-painter') {
-    $timeout(function() {
-      $scope.playVideo('troll-painter');
-    }, 1000);
-  }
-  else if ($location.path() === '/video/slave') {
-    $timeout(function() {
-      $scope.playVideo('slave');
-    }, 1000);
-  }
-  else if ($location.path() === '/video/broke-teenager') {
-    $timeout(function() {
-      $scope.playVideo('broke-teenager');
-    }, 1000);
-  }
-  else if ($location.path() === '/video/pain-in-the-butt') {
-    $timeout(function() {
-      $scope.playVideo('troll-painter');
-    }, 1000);
-  }
 
   // Slideshow
   var slidesInSlideshow = 2;
