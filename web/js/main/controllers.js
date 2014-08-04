@@ -1,6 +1,6 @@
 // Header controller.
 abcApp.controller('HeaderController', function($scope, $document, $animate, $location, $rootScope, $timeout) {
-  // Set variables.
+  // Initialise variables.
   $scope.menuOpen = null;
   $scope.layoutClassSuffix = 'layout';
 
@@ -34,6 +34,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     }
   }
 
+  // Function to scroll to the position of the different elements on the frontpage.
   var scrollToPosition = function() {
     // Handle video URLs
     if ($location.path() === '/video') {
@@ -76,6 +77,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
       $scope.menuOpen = false;
     }
 
+    // Scroll to the correct position.
     scrollToPosition();
 
     // Add toggle to html tag to avoid scrolling when the menu is open.
@@ -90,7 +92,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
         $(this).removeClass('is-animating');
       });
 
-    // Change title on route change.
+    // Change title dependant on current url.
     if ($location.path().indexOf("/quiz") === 0) {
       window.document.title = 'Digital ABC - Quiz';
     }
