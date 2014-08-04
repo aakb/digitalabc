@@ -2047,17 +2047,17 @@ html.is-locked body {
 .quiz-start {
   position: relative;
   height: 100%;
+  padding-top: 3em;
   width: 100%;
   text-align: center;
 }
-/* line 128, ../sass/modules/_quiz.scss */
+/* line 129, ../sass/modules/_quiz.scss */
 .quiz--inner,
 .quiz-header--inner,
 .quiz-start--inner {
   position: relative;
   top: 50%;
   z-index: 96;
-  padding-top: 3em;
   padding-right: 1em;
   padding-left: 1em;
   -moz-transform: translateY(-50%);
