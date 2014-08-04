@@ -8,13 +8,4 @@ composer.phar
 composer.lock
 .idea
 web/config.codekit
-web/js/1*
-web/js/2*
-web/js/3*
-web/js/4*
-web/js/5*
-web/js/6*
-web/js/7*
-web/js/8*
-web/js/9*
-web/js/0*
+web/js/compiled
