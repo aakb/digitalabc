@@ -15,7 +15,7 @@ abcApp.controller('StartController', function($scope, $timeout, quizFactory) {
   // Initial choice.
   $scope.text = "dine venner";
 
-  var texts = ["raske penge", "dine venner", "din mor", "Helle Thorning-Schmidt"];
+  var texts = ["Raske Penge", "dine venner", "din mor", "Helle Thorning-Schmidt"];
   var timeoutMilliseconds = 1000;
   var lastIndex = 1;
 
