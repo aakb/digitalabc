@@ -6,4 +6,5 @@ var abcApp = angular.module('abcApp', ['ngRoute', 'ngAnimate', 'duScroll', 'angu
   .value('duScrollDuration', 800)
   .run(function() {
     FastClick.attach(document.body);
+    $('body').cookieChecker();
   });

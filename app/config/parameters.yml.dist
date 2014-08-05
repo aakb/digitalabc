@@ -21,4 +21,4 @@ parameters:
 twig:
     globals:
         server_path: http://digitalabc.vm/
-        facebook_app_namespace: tujmytestapp
+        ga_id: ~
