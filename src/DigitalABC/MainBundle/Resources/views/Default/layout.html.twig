@@ -23,6 +23,7 @@
 {% block body_attr %}data-ng-controller="HeaderController" data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" {% endblock %}
 
 {% block body %}
+  <div id="js-cookieterms" class="cookieterms"></div>
   <a class="nav-overlay" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}" data-ng-click="toggleMenu()"></a>
   <div class="js-disable-animations">
     <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen, 'is-hidden': menuOpen !== null && !menuOpen}">
@@ -42,6 +43,7 @@
         <a href="/#/om-projektet/andre-kommuner" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/til-andre-kommuner')">Til andre kommuner</a>
         <a href="/#/om-projektet/credits" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/credits')">Credits</a>
         <a href="/#/om-projektet/kontakt" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/kontakt')">Kontakt</a>
+        <a href="/#/om-projektet/privatlivspolitik" class="nav--sub-item" target="_blank">Privatlivspolitik</a>
       </div>
       <div class="nav--item-wrapper">
         <a href="/#/undervisningsmateriale" class="nav--item" data-ng-class="setActiveMenuItem('/undervisningsmateriale')">Undervisningsmateriale</a>
@@ -55,6 +57,7 @@
         <a href="https://service.nemid.nu/dk-da/bestil_nemid" class="nav--sub-item" target="_blank">Opret NemID - Husk pas!</a>
         <a href="https://www.borger.dk/Sider/Er-du-tilmeldt-Digital-Post.aspx" class="nav--sub-item" target="_blank">Tilmeld Digital Postkasse - Kræver NemID!</a>
         <a href="http://digamb.dk/" class="nav--sub-item" target="_blank">Digamb.dk - Demomiljø</a>
+        <a href="/#/privatlivspolitik" class="nav--sub-item" target="_blank">Privatlivspolitik</a>
       </div>
     </nav>
   </div>
@@ -71,7 +74,6 @@
   <div class="animation-overlay js-animation-overlay"></div>
 
   <div class="video-close-icon" data-ng-show="showVideo" data-ng-click="stopVideo()">{% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'symbol', 'click': ''} %}</div>
-
 {% endblock %}
 
 {% block scripts %}
@@ -83,6 +85,7 @@
   'js/libraries/fastclick*.js'
   'js/libraries/picturefill.js'
   'js/libraries/video.js'
+  'js/libraries/cookieChecker.js'
   'js/app.js'
   'js/main/*'
   'js/quiz/*'

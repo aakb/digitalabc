@@ -2694,7 +2694,7 @@ html.is-locked body {
 }
 /* line 15, ../sass/modules/_static-page.scss */
 .static-page p, .static-page--lead, .static-page--summary, .static-page--list, .static-page--top-link {
-  font-family: "permianseriftypefaceregular";
+  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, serif;
 }
 /* line 23, ../sass/modules/_static-page.scss */
 .static-page--header {
@@ -2989,4 +2989,38 @@ html.is-locked body {
 /* line 41, ../sass/modules/_error-404.scss */
 .error-404--image {
   max-height: 100%;
+}
+
+/* line 1, ../sass/modules/_cookieterms.scss */
+.cookieterms {
+  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, serif;
+  z-index: 99;
+  position: fixed;
+  background: white;
+  width: 100%;
+  bottom: 0;
+  -moz-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* line 13, ../sass/modules/_cookieterms.scss */
+.cookieterms--inner {
+  text-align: center;
+  padding: 1em;
+  line-height: 2.2em;
+}
+
+/* line 19, ../sass/modules/_cookieterms.scss */
+.cookieterms--text {
+  margin-right: 3em;
+}
+
+/* line 23, ../sass/modules/_cookieterms.scss */
+.cookieterms--button {
+  background: #0abbef;
+  color: #fff;
+  font: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: .4em 1.5em;
+  cursor: pointer;
 }

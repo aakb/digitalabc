@@ -1,0 +1,29 @@
+.cookieterms {
+  font: $font-family-secondary;
+  z-index: 99;
+  position: fixed;
+  background: white;
+
+  width: 100%;
+  bottom: 0;
+
+  @include box-shadow(0px -5px 10px transparentize($black, .75));
+}
+
+.cookieterms--inner {
+  text-align: center;
+  padding: 1em;
+  line-height: 2.2em;
+}
+
+.cookieterms--text {
+  margin-right: 3em;
+}
+
+.cookieterms--button {
+  background: #0abbef;
+  color: #fff;
+  font: $font-family-primary;
+  padding: .4em 1.5em;
+  cursor: pointer;
+}
