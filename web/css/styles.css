@@ -2538,19 +2538,21 @@ html.is-locked body {
  */
 /* line 8, ../sass/modules/_video.scss */
 .video-wrapper {
-  position: relative;
+  position: fixed;
   z-index: 98;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
 }
-/* line 17, ../sass/modules/_video.scss */
+/* line 19, ../sass/modules/_video.scss */
 .video-wrapper .video-js .vjs-tech {
   top: 10%;
   height: 90%;
 }
 
 /* Close icon */
-/* line 27, ../sass/modules/_video.scss */
+/* line 29, ../sass/modules/_video.scss */
 .video-close-icon {
   position: absolute;
   top: 1em;
@@ -2564,13 +2566,13 @@ html.is-locked body {
   fill: white;
 }
 @media only screen and (min-width: 481px) {
-  /* line 27, ../sass/modules/_video.scss */
+  /* line 29, ../sass/modules/_video.scss */
   .video-close-icon {
     right: 2em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 27, ../sass/modules/_video.scss */
+  /* line 29, ../sass/modules/_video.scss */
   .video-close-icon {
     top: 3em;
     height: 3em;
@@ -2578,7 +2580,7 @@ html.is-locked body {
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 27, ../sass/modules/_video.scss */
+  /* line 29, ../sass/modules/_video.scss */
   .video-close-icon {
     top: 4em;
     right: 6em;
@@ -2587,21 +2589,21 @@ html.is-locked body {
   }
 }
 
-/* line 37, ../sass/modules/_video.scss */
+/* line 39, ../sass/modules/_video.scss */
 .video {
   overflow: hidden;
   position: relative;
   z-index: 97;
 }
 @media only screen and (min-width: 481px) {
-  /* line 37, ../sass/modules/_video.scss */
+  /* line 39, ../sass/modules/_video.scss */
   .video {
     padding: 2em;
     background-color: black;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 37, ../sass/modules/_video.scss */
+  /* line 39, ../sass/modules/_video.scss */
   .video {
     padding: 4em;
   }

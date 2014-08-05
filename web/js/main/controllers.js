@@ -59,7 +59,12 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     }
     else if ($location.path() === '/video/pain-in-the-butt') {
       $timeout(function() {
-        $scope.playVideo('troll-painter');
+        $scope.playVideo('pain-in-the-butt');
+      }, 1000);
+    }
+    else if ($location.path() === '/video/moving-out') {
+      $timeout(function() {
+        $scope.playVideo('moving-out');
       }, 1000);
     }
     else if ($location.path() == '/music-video') {
@@ -116,20 +121,23 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
   // Video controls.
   $scope.showVideo = false;
 
+  $scope.videos = [];
+
   // Play video.
   $scope.playVideo = function(video) {
-    videojs($('.' + video)[0], {"width": 'auto', "height": '100%'}, function() {
-      $scope.video = this;
-      this.play();
-    });
+    if (!$scope.videos[video]) {
+      videojs($('.' + video)[0], {"width": 'auto', "height": '100%'}, function() {
+        $scope.videos[video] = this;
+        $scope.video = this;
+        this.play();
+      });
+    } else {
+      $scope.videos[video].play();
+      $scope.video = $scope.videos[video];
+    }
 
     // Show video container.
     $scope.showVideo = video;
-
-    // Scroll to video.
-    setTimeout(function () {
-      $document.scrollToElement(angular.element(document.getElementById(video + '-wrapper')), 0, 500);
-    }, 500);
   };
 
   // Stop video.
@@ -138,9 +146,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
     $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
 
-    $timeout(function() {
-      $scope.showVideo = false;
-    }, 700);
+    $scope.showVideo = '';
   }
 
 
