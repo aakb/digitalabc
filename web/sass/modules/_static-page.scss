@@ -141,12 +141,17 @@
 
       @include breakpoint($breakpoint-desk) {
         position: fixed;
+        top: 17em;
         z-index: 96;
 
         border-bottom: 0;
         border-left: 8px solid $gray-lighter;
         padding-bottom: .5em;
         padding-left: 2em;
+      }
+
+      @include breakpoint($breakpoint-bigscreen) {
+        top: 30em;
       }
     }
 
@@ -172,9 +177,6 @@
     top: 8.5em;
 
     text-align: left;
-
-    // Make sure position fixed on child element works in Chrome.
-    @include transform(translateZ(0));
 
     @include breakpoint($breakpoint-desk) {
       top: 17em;
