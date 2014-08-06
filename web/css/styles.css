@@ -2685,6 +2685,7 @@ html.is-locked body {
   /* Headings */
   /* Content and navigation */
   /* Content */
+  /* Top anchor */
   /* Navigation */
   /* List */
 }
@@ -2798,18 +2799,22 @@ html.is-locked body {
   padding-left: 2em;
 }
 /* line 124, ../sass/modules/_static-page.scss */
+.static-page .static-page--page-top {
+  position: absolute;
+}
+/* line 129, ../sass/modules/_static-page.scss */
 .static-page--nav {
   padding-right: 2em;
   margin-bottom: 2em;
 }
-/* line 131, ../sass/modules/_static-page.scss */
+/* line 136, ../sass/modules/_static-page.scss */
 .static-page--nav-item-wrapper {
   position: relative;
   border-bottom: 8px solid #cccccc;
   padding-bottom: 2em;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 131, ../sass/modules/_static-page.scss */
+  /* line 136, ../sass/modules/_static-page.scss */
   .static-page--nav-item-wrapper {
     position: fixed;
     z-index: 96;
@@ -2819,7 +2824,7 @@ html.is-locked body {
     padding-left: 2em;
   }
 }
-/* line 148, ../sass/modules/_static-page.scss */
+/* line 153, ../sass/modules/_static-page.scss */
 .static-page--nav-item, .static-page--nav-sub-item {
   display: block;
   line-height: 1.5em;
@@ -2843,18 +2848,18 @@ html.is-locked body {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 153, ../sass/modules/_static-page.scss */
+/* line 158, ../sass/modules/_static-page.scss */
 .static-page--nav-item {
   font-size: 1.75em;
 }
-/* line 157, ../sass/modules/_static-page.scss */
+/* line 162, ../sass/modules/_static-page.scss */
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
   font-size: 1.35em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 157, ../sass/modules/_static-page.scss */
+  /* line 162, ../sass/modules/_static-page.scss */
   .static-page--nav-sub-item {
     font-size: 1.6em;
   }
@@ -2876,7 +2881,7 @@ html.is-locked body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 162, ../sass/modules/_static-page.scss */
+/* line 167, ../sass/modules/_static-page.scss */
 .static-page--content, .static-page--nav {
   position: relative;
   top: 8.5em;
@@ -2887,30 +2892,30 @@ html.is-locked body {
   transform: translateZ(0);
 }
 @media only screen and (min-width: 1024px) {
-  /* line 162, ../sass/modules/_static-page.scss */
+  /* line 167, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     top: 17em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 162, ../sass/modules/_static-page.scss */
+  /* line 167, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     top: 30em;
   }
 }
-/* line 183, ../sass/modules/_static-page.scss */
+/* line 188, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 189, ../sass/modules/_static-page.scss */
+/* line 194, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 193, ../sass/modules/_static-page.scss */
+/* line 198, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 199, ../sass/modules/_static-page.scss */
+/* line 204, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2919,13 +2924,13 @@ html.is-locked body {
   padding: 0;
   list-style: none;
 }
-/* line 209, ../sass/modules/_static-page.scss */
+/* line 214, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 215, ../sass/modules/_static-page.scss */
+/* line 220, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;
