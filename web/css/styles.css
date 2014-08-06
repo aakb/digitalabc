@@ -1508,7 +1508,7 @@ html.is-locked body {
 /* line 25, ../sass/layout/_layout.scss */
 .header {
   position: fixed;
-  z-index: 96;
+  z-index: 98;
   width: 100%;
 }
 /* line 30, ../sass/layout/_layout.scss */
