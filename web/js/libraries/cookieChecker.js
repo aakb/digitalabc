@@ -27,7 +27,7 @@
       }
 
       if(readCookie(cName) != null) {
-        console.info('we have cookies');
+        // console.info('we have cookies');
         } else {
         $('#js-cookieterms').load(msgFile, function(){
           $(this).slideDown();
