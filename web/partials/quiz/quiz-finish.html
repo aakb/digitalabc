@@ -13,8 +13,8 @@
     <a href="http://service.nemid.nu/dk-da/bestil_nemid" class="quiz--try-again-button" data-ng-show="result === 100">Opret NemID</a>
     <a href="/#/quiz" class="quiz--try-again-button" data-ng-show="result < 100">Prøv igen</a>
     <input type="button" ng-click="shareOnFacebook()" value="Del på Facebook" class="quiz--share-button">
-    <h3 class="quiz--text" data-ng-show="facebookStatusText"><[facebookStatusText]></h3>
-    <h3 class="quiz--text" data-ng-show="shareComplete">Du har delt dit result på Facebook. Tryk <span data-ng-click="unshareOnFacebook()">her</span> for at fjerne det igen.</h3>
+    <p class="quiz--text-alternate" data-ng-show="facebookStatusText"><[facebookStatusText]></p>
+    <p class="quiz--text-alternate" data-ng-show="shareComplete">Du har delt dit resultat på Facebook. <a data-ng-click="unshareOnFacebook()">Fortryd</a>.</p>
   </div>
   <div class="quiz--background"></div>
 </section>
