@@ -120,6 +120,11 @@
     padding-left: 2em;
   }
 
+  /* Top anchor */
+  .static-page--page-top {
+    position: absolute;
+  }
+
   /* Navigation */
   &--nav {
     @extend %desk--two-fifths;
