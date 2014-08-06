@@ -107,6 +107,9 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
           },
           function(response) {
             if (response.error) {
+              if (typeof console !== "undefined"){
+                console.log(response);
+              }
               $scope.facebookStatusText = "Der skete en fejl. Prøv igen.";
             }
             else {
@@ -129,6 +132,9 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
           'delete',
           function(response) {
             if (response.error) {
+              if (typeof console !== "undefined"){
+                console.log(response);
+              }
               $scope.shareComplete = true;
               $scope.facebookStatusText = "Det lykkedes ikke at fjerne dit opslag fra facebook. Prøv igen."
             }
