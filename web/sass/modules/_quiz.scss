@@ -484,7 +484,8 @@
   }
 
   &--text-alternate {
-    margin-bottom: 1em;
+    margin: 0 auto 1em;
+    max-width: 60em;
 
     color: transparentize($white, .35);
   }
