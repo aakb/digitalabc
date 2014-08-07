@@ -52,6 +52,10 @@ abcApp.config(function($routeProvider) {
       controller: 'StaticPageController',
       templateUrl: '/partials/undervisningsmateriale/lav-din-egen-film/index.html'
     })
+    .when('/nyttige-links', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/nyttige-links/index.html'
+    })
     .when('/quiz', {
       controller: 'StartController',
       templateUrl: '/partials/quiz/index.html'
