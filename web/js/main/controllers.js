@@ -104,11 +104,47 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     if ($location.path().indexOf("/quiz") === 0) {
       window.document.title = 'Quiz - Digital ABC';
     }
+    else if ($location.path().indexOf("/undervisningsmateriale/sidste-omgang") === 0) {
+      window.document.title = 'Sidste omgang - Digital ABC';
+    }
+    else if ($location.path().indexOf("/undervisningsmateriale/digital-parathed") === 0) {
+      window.document.title = 'Digital parathed - Digital ABC';
+    }
+    else if ($location.path().indexOf("/undervisningsmateriale/farvel-forvalt-lingo") === 0) {
+      window.document.title = '#FarvelForvaltLingo - Digital ABC';
+    }
+    else if ($location.path().indexOf("/undervisningsmateriale/lav-din-egen-film") === 0) {
+      window.document.title = 'Lav din egen film - Digital ABC';
+    }
     else if ($location.path().indexOf("/undervisningsmateriale") === 0) {
       window.document.title = 'Undervisningsmateriale - Digital ABC';
     }
+    else if ($location.path().indexOf("/om-projektet/unge") === 0) {
+      window.document.title = 'Til de unge - Digital ABC';
+    }
+    else if ($location.path().indexOf("/om-projektet/laererne") === 0) {
+      window.document.title = 'Til lærerne - Digital ABC';
+    }
+    else if ($location.path().indexOf("/om-projektet/foraeldre") === 0) {
+      window.document.title = 'Til forældrene - Digital ABC';
+    }
+    else if ($location.path().indexOf("/om-projektet/andre-kommuner") === 0) {
+      window.document.title = 'Til andre kommuner - Digital ABC';
+    }
+    else if ($location.path().indexOf("/om-projektet/credits") === 0) {
+      window.document.title = 'Credits - Digital ABC';
+    }
+    else if ($location.path().indexOf("/om-projektet/kontakt") === 0) {
+      window.document.title = 'Kontakt - Digital ABC';
+    }
+    else if ($location.path().indexOf("/om-projektet/privatlivspolitik") === 0) {
+      window.document.title = 'Cookie- og privatlivspolitik - Digital ABC';
+    }
     else if ($location.path().indexOf("/om-projektet") === 0) {
       window.document.title = 'Om projektet - Digital ABC';
+    }
+    else if ($location.path().indexOf("/nyttige-links") === 0) {
+      window.document.title = 'Nyttige links - Digital ABC';
     }
     else if ($location.path().indexOf("/music-video") === 0) {
       window.document.title = 'Musikvideo - Digital ABC';
