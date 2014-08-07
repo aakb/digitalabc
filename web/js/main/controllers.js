@@ -32,6 +32,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     } else {
       return "";
     }
+
   }
 
   // Function to scroll to the position of the different elements on the frontpage.
