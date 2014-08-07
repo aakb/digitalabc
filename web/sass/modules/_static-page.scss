@@ -167,6 +167,16 @@
     &-sub-item {
       @include navigation--sub-item();
     }
+
+
+  }
+
+
+  /* PDF link on static pages */
+  &--pdf-link { // margin and padding top since it's a unique last child element inside another block
+    border-top: 1px solid $gray;
+    margin-top: 1em;
+    padding-top: 1em;
   }
 
   &--content,
