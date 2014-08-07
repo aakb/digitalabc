@@ -71,6 +71,8 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
       $timeout(function() {
         $document.scrollToElement(angular.element(document.getElementById('rap')), 0, 500);
       }, 1000);
+    } else {
+      $document.scrollTop(0);
     }
   }
   scrollToPosition();
@@ -99,24 +101,36 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
     // Change title dependant on current url.
     if ($location.path().indexOf("/quiz") === 0) {
-      window.document.title = 'Digital ABC - Quiz';
+      window.document.title = 'Quiz - Digital ABC';
     }
     else if ($location.path().indexOf("/undervisningsmateriale") === 0) {
-      window.document.title = 'Digital ABC - Undervisningsmateriale';
+      window.document.title = 'Undervisningsmateriale - Digital ABC';
     }
     else if ($location.path().indexOf("/om-projektet") === 0) {
-      window.document.title = 'Digital ABC - Om projektet';
+      window.document.title = 'Om projektet - Digital ABC';
     }
     else if ($location.path().indexOf("/music-video") === 0) {
-      window.document.title = 'Digital ABC - Musikvideo';
+      window.document.title = 'Musikvideo - Digital ABC';
     }
     else if ($location.path().indexOf("/video") === 0) {
-      window.document.title = 'Digital ABC - Videoer';
+      window.document.title = 'Videoer - Digital ABC';
     }
     else {
       window.document.title = 'Digital ABC';
     }
   });
+
+  // Slideshow
+  var slidesInSlideshow = 2;
+  var slidesTimeIntervalInMs = 5000;
+
+  $scope.slideshow = 1;
+
+  var slideTimer =
+    $timeout(function interval() {
+      $scope.slideshow = ($scope.slideshow % slidesInSlideshow) + 1;
+      slideTimer = $timeout(interval, slidesTimeIntervalInMs);
+    }, slidesTimeIntervalInMs);
 
   // Video controls.
   $scope.showVideo = false;
@@ -148,19 +162,6 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
     $scope.showVideo = '';
   }
-
-
-  // Slideshow
-  var slidesInSlideshow = 2;
-  var slidesTimeIntervalInMs = 5000;
-
-  $scope.slideshow = 1;
-
-  var slideTimer =
-    $timeout(function interval() {
-      $scope.slideshow = ($scope.slideshow % slidesInSlideshow) + 1;
-      slideTimer = $timeout(interval, slidesTimeIntervalInMs);
-    }, slidesTimeIntervalInMs);
 });
 
 // Frontpage controller.
