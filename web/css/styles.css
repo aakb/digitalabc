@@ -2507,14 +2507,15 @@ html.is-locked body {
 }
 /* line 486, ../sass/modules/_quiz.scss */
 .quiz--text-alternate {
-  margin-bottom: 1em;
+  margin: 0 auto 1em;
+  max-width: 60em;
   color: rgba(255, 255, 255, 0.65);
 }
-/* line 492, ../sass/modules/_quiz.scss */
+/* line 493, ../sass/modules/_quiz.scss */
 .quiz--text-link {
   margin-bottom: 2em;
 }
-/* line 496, ../sass/modules/_quiz.scss */
+/* line 497, ../sass/modules/_quiz.scss */
 .quiz--share-button {
   margin-bottom: 1em;
   padding-bottom: .2em;
@@ -2526,7 +2527,7 @@ html.is-locked body {
   color: white;
   font-size: 2em;
 }
-/* line 510, ../sass/modules/_quiz.scss */
+/* line 511, ../sass/modules/_quiz.scss */
 .quiz--share-button:hover {
   background-color: rgba(58, 88, 155, 0.65);
 }
