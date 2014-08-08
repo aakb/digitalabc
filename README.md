@@ -5,8 +5,17 @@ This is the Digital ABC project. It is a Symfony2 project that utilises angularj
 
 To allow the AngularJS integration within a twig template the interpolation symbols have changed for angular from {{ }} to <[ ]>.
 
+We use uglifyjs to compile the javascripts into one file. See Helpful commands for the command to compile the scripts.
 
 ###Helpful commands
+To compile the javascripts
+<pre>
+app/console assetic:dump
+</pre>
+To watch for changes in the javascripts
+<pre>
+app/console assetic:dump --watch
+</pre>
 To clear cache
 <pre>
 app/console cache:clear
