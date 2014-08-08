@@ -135,12 +135,17 @@
     padding-left: 1em;
 
     @include translateY(-50%);
+  }
+}
 
+.quiz {
+  &--inner {
     @include breakpoint(false, $breakpoint-iphone-3-5-height) {
       padding-top: 10em;
     }
   }
 }
+
 
 .quiz,
 .quiz-header,
