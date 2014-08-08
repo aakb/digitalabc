@@ -2515,7 +2515,7 @@ html.is-locked body {
 .quiz--text-link {
   margin-bottom: 2em;
 }
-/* line 497, ../sass/modules/_quiz.scss */
+/* line 501, ../sass/modules/_quiz.scss */
 .quiz--share-button {
   margin-bottom: 1em;
   padding-bottom: .2em;
@@ -2527,7 +2527,7 @@ html.is-locked body {
   color: white;
   font-size: 2em;
 }
-/* line 511, ../sass/modules/_quiz.scss */
+/* line 515, ../sass/modules/_quiz.scss */
 .quiz--share-button:hover {
   background-color: rgba(58, 88, 155, 0.65);
 }
