@@ -2622,11 +2622,25 @@ html.is-locked body {
   }
 }
 /* line 83, ../sass/modules/_video.scss */
-.video--coming-soon {
+.video--coming-soon-wrapper {
+  bottom: 0;
   position: absolute;
   z-index: 97;
   top: 0;
-  left: 0;
+  cursor: default;
+  height: 100%;
+}
+/* line 92, ../sass/modules/_video.scss */
+.video--coming-soon {
+  top: 50%;
+  width: 80%;
+  position: relative;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
 
 /**
