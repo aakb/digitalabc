@@ -439,11 +439,18 @@
   &--try-again-button {
     margin-bottom: 1em;
     padding-top: .23em;
-    padding-right: 2.52em;
     padding-bottom: .23em;
-    padding-left: 2.52em;
+    width: 90%;
 
     font-size: 2em;
+
+    @include box-sizing(border-box);
+
+    @include breakpoint($breakpoint-lap) {
+      padding-right: 2.52em;
+      padding-left: 2.52em;
+      width: auto;
+    }
   }
 
   &--result {
