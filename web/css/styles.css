@@ -2638,8 +2638,9 @@ html.is-locked body {
   top: 0;
   cursor: default;
   height: 100%;
+  width: 100%;
 }
-/* line 92, ../sass/modules/_video.scss */
+/* line 93, ../sass/modules/_video.scss */
 .video--coming-soon {
   top: 50%;
   width: 80%;
