@@ -184,6 +184,10 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Play video.
   $scope.playVideo = function(video) {
+    if (video === 'troll-painter' || video === 'slave' || video === 'broke-teenager' || video === 'pain-in-the-butt' || video === 'moving-out') {
+      return;
+    }
+
     if (!$scope.videos[video]) {
       videojs($('.' + video)[0], {"width": 'auto', "height": '100%'}, function() {
         $scope.videos[video] = this;

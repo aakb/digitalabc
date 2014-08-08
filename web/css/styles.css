@@ -2621,6 +2621,13 @@ html.is-locked body {
     padding: 4em;
   }
 }
+/* line 83, ../sass/modules/_video.scss */
+.video--coming-soon {
+  position: absolute;
+  z-index: 97;
+  top: 0;
+  left: 0;
+}
 
 /**
  *
