@@ -89,7 +89,7 @@
   &--background {
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
 
     height: 100%;
     width: 100%;
@@ -121,7 +121,6 @@
   position: relative;
 
   height: 100%;
-  padding-top: 3em;
   width: 100%;
 
   text-align: center;
@@ -131,10 +130,15 @@
     top: 50%;
     z-index: 96;
 
+    padding-top: 4em;
     padding-right: 1em;
     padding-left: 1em;
 
     @include translateY(-50%);
+
+    @include breakpoint(false, $breakpoint-iphone-3-5-height) {
+      padding-top: 10em;
+    }
   }
 }
 
