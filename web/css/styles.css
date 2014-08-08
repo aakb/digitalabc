@@ -2515,6 +2515,10 @@ html.is-locked body {
 .quiz--text-link {
   margin-bottom: 2em;
 }
+/* line 496, ../sass/modules/_quiz.scss */
+.quiz--text-link a {
+  word-break: break-all;
+}
 /* line 501, ../sass/modules/_quiz.scss */
 .quiz--share-button {
   margin-bottom: 1em;
