@@ -32,7 +32,15 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     } else {
       return "";
     }
+  }
 
+  // Handle active menu item
+  $scope.setPdfLink = function(path) {
+    if ($location.path() === path) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   // Function to scroll to the position of the different elements on the frontpage.
