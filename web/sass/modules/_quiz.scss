@@ -492,6 +492,10 @@
 
   &--text-link {
     margin-bottom: 2em;
+
+    a {
+      word-break: break-all;
+    }
   }
 
   &--share-button {

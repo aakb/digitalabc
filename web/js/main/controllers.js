@@ -34,6 +34,15 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     }
   }
 
+  // Handle active menu item
+  $scope.setPdfLink = function(path) {
+    if ($location.path() === path) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   // Function to scroll to the position of the different elements on the frontpage.
   var scrollToPosition = function() {
     // Handle video URLs
@@ -182,6 +191,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
         this.play();
       });
     } else {
+      $scope.videos[video].currentTime(0);
       $scope.videos[video].play();
       $scope.video = $scope.videos[video];
     }
