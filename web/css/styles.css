@@ -2099,7 +2099,7 @@ html.is-locked body {
 .quiz-start--result,
 .quiz-start--text {
   color: white;
-  font-family: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* line 168, ../sass/modules/_quiz.scss */
 .quiz--question, .quiz--text,
