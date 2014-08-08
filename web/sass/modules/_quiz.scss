@@ -89,7 +89,7 @@
   &--background {
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
 
     height: 100%;
     width: 100%;
@@ -121,7 +121,6 @@
   position: relative;
 
   height: 100%;
-  padding-top: 3em;
   width: 100%;
 
   text-align: center;
@@ -131,12 +130,22 @@
     top: 50%;
     z-index: 96;
 
+    padding-top: 4em;
     padding-right: 1em;
     padding-left: 1em;
 
     @include translateY(-50%);
   }
 }
+
+.quiz {
+  &--inner {
+    @include breakpoint(false, $breakpoint-iphone-3-5-height) {
+      padding-top: 10em;
+    }
+  }
+}
+
 
 .quiz,
 .quiz-header,
@@ -435,11 +444,18 @@
   &--try-again-button {
     margin-bottom: 1em;
     padding-top: .23em;
-    padding-right: 2.52em;
     padding-bottom: .23em;
-    padding-left: 2.52em;
+    width: 90%;
 
     font-size: 2em;
+
+    @include box-sizing(border-box);
+
+    @include breakpoint($breakpoint-lap) {
+      padding-right: 2.52em;
+      padding-left: 2.52em;
+      width: auto;
+    }
   }
 
   &--result {
@@ -478,7 +494,6 @@
     color: lighten($theme-color, 35%);
   }
 
-  &--text-link,
   &--text-alternate {
     font-family: $font-secondary;
   }
@@ -488,14 +503,6 @@
     max-width: 60em;
 
     color: transparentize($white, .35);
-  }
-
-  &--text-link {
-    margin-bottom: 2em;
-
-    a {
-      word-break: break-all;
-    }
   }
 
   &--share-button {

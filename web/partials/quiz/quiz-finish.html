@@ -9,14 +9,13 @@
     <p class="quiz--text-alternate" data-ng-show="result < 50">Det var rimelig nederen, du fik under 50% rigtige – heldigvis kan du bare prøve igen lige <a href="/#/quiz">her</a>.</br>Du kan også besøge os på Facebook på <a href="http://facebook.com/tjekpaanemid">www.facebook.com/tjekpaanemid</a> - du kan kun blive klogere!</p>
     <p class="quiz--text-alternate" data-ng-show="result === 50">Du fik halvdelen rigtige – det er okay, men kan sagtens blive bedre.</br>Tryk <a href="/#/quiz">her</a> for at prøve igen. Du kan også besøge os på Facebook på <a href="http://facebook.com/tjekpaanemid">www.facebook.com/tjekpaanemid</a> - måske bliver du klogere!</p>
     <h2 class="quiz--result" data-ng-show="challengerResult">Din modstander fik <[challengerResult]> point</h2>
-    <p class="quiz--text-alternate">Kopiér linket for at sende en udfordring:</p>
-    <h3 class="quiz--text-link"><a href="<[link]>"><[link]></a></h3>
     <p class="quiz--text-alternate">Eller del dit resultat på Facebook.</p>
     <a href="http://service.nemid.nu/dk-da/bestil_nemid" class="quiz--try-again-button" data-ng-show="result === 100">Opret NemID</a>
     <a href="/#/quiz" class="quiz--try-again-button" data-ng-show="result < 100">Prøv igen</a>
     <input type="button" ng-click="shareOnFacebook()" value="Del på Facebook" class="quiz--share-button">
     <p class="quiz--text-alternate" data-ng-show="facebookStatusText"><[facebookStatusText]></p>
     <p class="quiz--text-alternate" data-ng-show="shareComplete">Du har delt dit resultat på Facebook. <a data-ng-click="unshareOnFacebook()">Fortryd</a>.</p>
+    <p class="quiz--text-alternate">Del dit resultat: <a href="<[link]>"><[link]></a></p>
   </div>
   <div class="quiz--background"></div>
 </section>
