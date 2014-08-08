@@ -489,7 +489,6 @@
     color: lighten($theme-color, 35%);
   }
 
-  &--text-link,
   &--text-alternate {
     font-family: $font-secondary;
   }
@@ -499,14 +498,6 @@
     max-width: 60em;
 
     color: transparentize($white, .35);
-  }
-
-  &--text-link {
-    margin-bottom: 2em;
-
-    a {
-      word-break: break-all;
-    }
   }
 
   &--share-button {
