@@ -2551,9 +2551,17 @@ html.is-locked body {
   top: 10%;
   height: 90%;
 }
+/* line 26, ../sass/modules/_video.scss */
+.video-wrapper.ng-hide {
+  /* this is just another form of hiding an element */
+  display: block !important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
 
 /* Close icon */
-/* line 29, ../sass/modules/_video.scss */
+/* line 37, ../sass/modules/_video.scss */
 .video-close-icon {
   position: absolute;
   top: 1em;
@@ -2567,13 +2575,13 @@ html.is-locked body {
   fill: white;
 }
 @media only screen and (min-width: 481px) {
-  /* line 29, ../sass/modules/_video.scss */
+  /* line 37, ../sass/modules/_video.scss */
   .video-close-icon {
     right: 2em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 29, ../sass/modules/_video.scss */
+  /* line 37, ../sass/modules/_video.scss */
   .video-close-icon {
     top: 3em;
     height: 3em;
@@ -2581,7 +2589,7 @@ html.is-locked body {
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 29, ../sass/modules/_video.scss */
+  /* line 37, ../sass/modules/_video.scss */
   .video-close-icon {
     top: 4em;
     right: 6em;
@@ -2590,21 +2598,21 @@ html.is-locked body {
   }
 }
 
-/* line 39, ../sass/modules/_video.scss */
+/* line 47, ../sass/modules/_video.scss */
 .video {
   overflow: hidden;
   position: relative;
   z-index: 97;
 }
 @media only screen and (min-width: 481px) {
-  /* line 39, ../sass/modules/_video.scss */
+  /* line 47, ../sass/modules/_video.scss */
   .video {
     padding: 2em;
     background-color: black;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 39, ../sass/modules/_video.scss */
+  /* line 47, ../sass/modules/_video.scss */
   .video {
     padding: 4em;
   }

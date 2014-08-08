@@ -182,6 +182,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
         this.play();
       });
     } else {
+      $scope.videos[video].currentTime(0);
       $scope.videos[video].play();
       $scope.video = $scope.videos[video];
     }
