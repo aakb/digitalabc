@@ -179,6 +179,12 @@
     padding-top: 1em;
   }
 
+  &--pdf-icon {
+    height: 1em;
+    vertical-align: middle;
+    padding-left: .5em;
+  }
+
   &--content,
   &--nav {
     @extend %grid__item;
