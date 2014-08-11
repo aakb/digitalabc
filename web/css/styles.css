@@ -2876,6 +2876,8 @@ html.is-locked body {
   .static-page--nav-item-wrapper {
     position: fixed;
     top: 17em;
+    bottom: 2em;
+    overflow: auto;
     z-index: 96;
     border-bottom: 0;
     border-left: 8px solid #cccccc;
@@ -2889,7 +2891,7 @@ html.is-locked body {
     top: 30em;
   }
 }
-/* line 158, ../sass/modules/_static-page.scss */
+/* line 160, ../sass/modules/_static-page.scss */
 .static-page--nav-item, .static-page--nav-sub-item {
   display: block;
   line-height: 1.5em;
@@ -2913,18 +2915,18 @@ html.is-locked body {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 163, ../sass/modules/_static-page.scss */
+/* line 165, ../sass/modules/_static-page.scss */
 .static-page--nav-item {
   font-size: 1.75em;
 }
-/* line 167, ../sass/modules/_static-page.scss */
+/* line 169, ../sass/modules/_static-page.scss */
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
   font-size: 1.35em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 167, ../sass/modules/_static-page.scss */
+  /* line 169, ../sass/modules/_static-page.scss */
   .static-page--nav-sub-item {
     font-size: 1.6em;
   }
@@ -2946,49 +2948,49 @@ html.is-locked body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 176, ../sass/modules/_static-page.scss */
+/* line 178, ../sass/modules/_static-page.scss */
 .static-page--pdf-link {
   border-top: 1px solid #999999;
   margin-top: 1em;
   padding-top: 1em;
 }
-/* line 182, ../sass/modules/_static-page.scss */
+/* line 184, ../sass/modules/_static-page.scss */
 .static-page--pdf-icon {
   height: 1em;
   vertical-align: middle;
   padding-left: .5em;
 }
-/* line 188, ../sass/modules/_static-page.scss */
+/* line 190, ../sass/modules/_static-page.scss */
 .static-page--content, .static-page--nav {
   position: relative;
   top: 8.5em;
   text-align: left;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 188, ../sass/modules/_static-page.scss */
+  /* line 190, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     top: 17em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 188, ../sass/modules/_static-page.scss */
+  /* line 190, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     top: 30em;
   }
 }
-/* line 206, ../sass/modules/_static-page.scss */
+/* line 208, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 212, ../sass/modules/_static-page.scss */
+/* line 214, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 216, ../sass/modules/_static-page.scss */
+/* line 218, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 222, ../sass/modules/_static-page.scss */
+/* line 224, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2997,13 +2999,13 @@ html.is-locked body {
   padding: 0;
   list-style: none;
 }
-/* line 232, ../sass/modules/_static-page.scss */
+/* line 234, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 238, ../sass/modules/_static-page.scss */
+/* line 240, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;
