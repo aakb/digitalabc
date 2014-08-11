@@ -469,36 +469,18 @@
     margin-bottom: .5em;
 
     font-size: 3em;
+    line-height: 1.25em;
   }
 
   &--text {
     font-size: 2em;
   }
 
-  &--challenger-answer {
-    &.is-correct {
-      color: #0f0;
-    }
+  &--challenge-text {
+    margin-bottom: 3em;
 
-    &.is-wrong {
-      color: #f00;
-    }
-  }
-
-
-  &--start-opponents-wrapper {
-    margin-right: auto;
-    margin-bottom: 2em;
-    margin-left: auto;
-    padding-left: 6em;
-    width: 16em;
-
-    font-size: 2em;
-    text-align: left;
-  }
-
-  &--start-opponent {
-    color: lighten($theme-color, 35%);
+    color: $white;
+    font: $font-family-secondary;
   }
 
   &--text-alternate {
