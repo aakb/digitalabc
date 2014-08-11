@@ -7,6 +7,20 @@ To allow the AngularJS integration within a twig template the interpolation symb
 
 We use uglifyjs to compile the javascripts into one file. See Helpful commands for the command to compile the scripts.
 
+###To update the project on the server
+Pull from git (from root of project)
+<pre>
+git pull
+</pre>
+Clear cache
+<pre>
+rm -rf app/cache/*
+</pre>
+Run the uglifyjs script (To compile the javascripts to one file)
+<pre>
+php app/console assetic:dump
+</pre>
+
 ###Helpful commands
 To compile the javascripts
 <pre>

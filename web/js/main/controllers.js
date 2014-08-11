@@ -46,34 +46,9 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
   // Function to scroll to the position of the different elements on the frontpage.
   var scrollToPosition = function() {
     // Handle video URLs
-    if ($location.path() === '/video') {
+    if ($location.path().indexOf('/video') === 0) {
       $timeout(function() {
         $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
-      }, 1000);
-    }
-    else if ($location.path() === '/video/troll-painter') {
-      $timeout(function() {
-        $scope.playVideo('troll-painter');
-      }, 1000);
-    }
-    else if ($location.path() === '/video/slave') {
-      $timeout(function() {
-        $scope.playVideo('slave');
-      }, 1000);
-    }
-    else if ($location.path() === '/video/broke-teenager') {
-      $timeout(function() {
-        $scope.playVideo('broke-teenager');
-      }, 1000);
-    }
-    else if ($location.path() === '/video/pain-in-the-butt') {
-      $timeout(function() {
-        $scope.playVideo('pain-in-the-butt');
-      }, 1000);
-    }
-    else if ($location.path() === '/video/moving-out') {
-      $timeout(function() {
-        $scope.playVideo('moving-out');
       }, 1000);
     }
     else if ($location.path() == '/music-video') {
@@ -81,7 +56,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
         $document.scrollToElement(angular.element(document.getElementById('rap')), 0, 500);
       }, 1000);
     } else {
-      $document.scrollTop(0);
+      $(window).scrollTop(0);
     }
   }
   scrollToPosition();
