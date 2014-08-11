@@ -155,7 +155,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
       window.document.title = 'Nyttige links - Digital ABC';
     }
     else if ($location.path().indexOf("/music-video") === 0) {
-      window.document.title = 'Musikvideo - Digital ABC';
+      window.document.title = 'Musikvideo: Kom med mig (ingen stress) - Digital ABC';
     }
     else if ($location.path().indexOf("/video") === 0) {
       window.document.title = 'Videoer - Digital ABC';
