@@ -1,0 +1,3 @@
+controllers:
+  resource: "@DigitalABCMainBundle/Controller"
+  type: annotation

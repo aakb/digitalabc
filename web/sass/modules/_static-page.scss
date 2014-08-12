@@ -1,0 +1,248 @@
+/**
+ *
+ * Static page.
+ *
+ */
+
+
+.static-page {
+  padding-bottom: 3em;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  p,
+  &--lead,
+  &--summary,
+  &--list,
+  &--top-link {
+    font: $font-family-secondary;
+  }
+
+  &--header {
+    position: fixed;
+    top: 0;
+    z-index: 95;
+
+    margin-bottom: 4em;
+    min-height: 6em;
+    width: 100%;
+
+    background-image: url('/images/backgrounds/small/table-laptop-notebook.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include background-size(cover);
+
+    @include breakpoint($breakpoint-lap, false, true) {
+      background-image: url('/images/backgrounds/medium/table-laptop-notebook.jpg');
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      min-height: 14em;
+
+      background-image: url('/images/backgrounds/medium/table-laptop-notebook.jpg');
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      min-height: 26em;
+
+      background-image: url('/images/backgrounds/large/table-laptop-notebook.jpg');
+    }
+  }
+
+
+  /* Headings */
+  &--heading {
+    position: absolute;
+    bottom: -1px;
+    left: -50%;
+
+    display: none;
+    height: auto;
+    margin-bottom: 0;
+    width: 200%;
+
+    color: $white;
+    font-size: 4em;
+    line-height: .7em;
+    text-align: center;
+
+    @include breakpoint($breakpoint-desk) {
+      display: block;
+
+      font-size: 6em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      font-size: 10em;
+    }
+  }
+
+  &--sub-heading {
+    margin-bottom: .25em;
+
+    font-size: 2em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 3em;
+    }
+  }
+
+  &--paragraph-heading {
+    font-size: 1.75em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 2em;
+    }
+  }
+
+
+  /* Content and navigation */
+
+  &--content-wrapper {
+    @extend %grid--rev;
+
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $layout-max-width;
+  }
+
+  /* Content */
+  &--content {
+    @extend %palm--one-whole;
+    @extend %lap--one-whole;
+    @extend %desk--three-fifths;
+    @extend %bigscreen--three-fifths;
+
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+
+  /* Top anchor */
+  .static-page--page-top {
+    position: absolute;
+  }
+
+  /* Navigation */
+  &--nav {
+    @extend %desk--two-fifths;
+    @extend %bigscreen--two-fifths;
+
+    padding-right: 2em;
+    margin-bottom: 2em;
+
+    &-item-wrapper {
+      position: relative;
+
+      border-bottom: 8px solid $gray-lighter;
+      padding-bottom: 2em;
+
+      @include breakpoint($breakpoint-desk) {
+        position: fixed;
+        top: 17em;
+        bottom: 2em;
+        overflow: auto;
+        z-index: 96;
+
+        border-bottom: 0;
+        border-left: 8px solid $gray-lighter;
+        padding-bottom: .5em;
+        padding-left: 2em;
+      }
+
+      @include breakpoint($breakpoint-bigscreen) {
+        top: 30em;
+      }
+    }
+
+    &-item,
+    &-sub-item {
+      @include navigation--base-item();
+    }
+
+    &-item {
+      @include navigation--item();
+    }
+
+    &-sub-item {
+      @include navigation--sub-item();
+    }
+
+
+  }
+
+
+  /* PDF link on static pages */
+  &--pdf-link { // margin and padding top since it's a unique last child element inside another block
+    border-top: 1px solid $gray;
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+  &--pdf-icon {
+    height: 1em;
+    vertical-align: middle;
+    padding-left: .5em;
+  }
+
+  &--content,
+  &--nav {
+    @extend %grid__item;
+
+    position: relative;
+    top: 8.5em;
+
+    text-align: left;
+
+    @include breakpoint($breakpoint-desk) {
+      top: 17em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      top: 30em;
+    }
+  }
+
+  &--lead {
+    @extend %strong;
+
+    margin-bottom: 3em;
+  }
+
+  &--summary {
+    margin-bottom: 3em;
+  }
+
+  &--section {
+    margin-bottom: 3em;
+  }
+
+
+  /* List */
+  &--list {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 1em;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &--list-item {
+    border-left: 8px solid $gray-lighter;
+    margin-bottom: 2em;
+    padding-left: 1.25em;
+  }
+
+  &--top-link {
+    border-top: 1px solid $gray-lightest;
+    display: block;
+    margin-bottom: 3em;
+    padding-top: 2em;
+
+    text-align: center;
+  }
+}

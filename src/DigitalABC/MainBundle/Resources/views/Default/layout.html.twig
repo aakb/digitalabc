@@ -1,0 +1,114 @@
+{% extends '::base.html.twig' %}
+
+{% block html %}data-ng-app="abcApp" {% endblock %}
+
+{% block title %}Digital ABC{% endblock %}
+
+{% block meta %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+  <!--[if IE 9]>
+  <link rel="stylesheet" href="{{ asset('css/ie9.css') }}">
+  <![endif]-->
+  <link href="{{ asset('css/video-js.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block body_attr %}data-ng-controller="HeaderController" data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" {% endblock %}
+
+{% block body %}
+  <div id="js-cookieterms" class="cookieterms"></div>
+  <a class="nav-overlay" data-ng-class="{'is-visible': menuOpen !== null && menuOpen}" data-ng-click="toggleMenu()"></a>
+  <div class="js-disable-animations">
+    <nav class="nav" data-ng-class="{'is-visible': menuOpen !== null && menuOpen, 'is-hidden': menuOpen !== null && !menuOpen}">
+      <div class="nav-toggle-icon">{% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'symbol', 'click': 'toggleMenu()'} %}</div>
+      <h2 class="nav--header">Navigation</h2>
+      <div class="nav--item-wrapper">
+        <a href="/" class="nav--item" data-ng-class="setActiveMenuItem('')">Home</a>
+        <a href="/#/quiz" class="nav--item" data-ng-class="setActiveMenuItem('/quiz')">Ta' Quizzen!</a>
+        <a href="/#/video" class="nav--item" data-ng-class="setActiveMenuItem('/video')">Se videoerne</a>
+        <a href="/#/music-video" class="nav--item" data-ng-class="setActiveMenuItem('/music-video')">Musikvideo: "Kom med mig"</a>
+        <a href="https://www.facebook.com/tjekpaanemid" class="nav--item" target="_blank">Facebook.com/TjekPaaNemID</a>
+        <a href="http://www.youtube.com/user/TjekPaaNemID" class="nav--item" target="_blank">Youtube.com/user/TjekPaaNemID</a>
+      </div>
+      <div class="nav--item-wrapper">
+        <a href="/#/om-projektet" class="nav--item" data-ng-class="setActiveMenuItem('/om-projektet')">Om projektet</a>
+        <a href="/#/om-projektet/unge" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/til-de-unge')">Til de unge</a>
+        <a href="/#/om-projektet/laererne" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/til-laererne')">Til lærerne</a>
+        <a href="/#/om-projektet/foraeldre" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/til-foraeldrene')">Til forældrene</a>
+        <a href="/#/om-projektet/andre-kommuner" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/til-andre-kommuner')">Til andre kommuner</a>
+        <a href="/#/om-projektet/credits" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/credits')">Credits</a>
+        <a href="/#/om-projektet/kontakt" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/kontakt')">Kontakt</a>
+        <a href="/#/om-projektet/privatlivspolitik" class="nav--sub-item" data-ng-class="setActiveMenuItem('/om-projektet/privatlivspolitik')">Privatlivspolitik</a>
+      </div>
+      <div class="nav--item-wrapper">
+        <a href="/#/undervisningsmateriale" class="nav--item" data-ng-class="setActiveMenuItem('/undervisningsmateriale')">Undervisningsmateriale</a>
+        <a href="/#/undervisningsmateriale/digital-parathed" class="nav--sub-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale/digital-parathed')">Digital parathed (1 lektion)</a>
+        <a href="/#/undervisningsmateriale/sidste-omgang" class="nav--sub-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale/sidste-omgang')">Sidste omgang (2 lektioner)</a>
+        <a href="/#/undervisningsmateriale/farvel-forvalt-lingo" class="nav--sub-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale/farvel-forvalt-lingo')">#FarvelForvaltLingo (4 lektioner)</a>
+        <a href="/#/undervisningsmateriale/lav-din-egen-film" class="static-page--nav-sub-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale/lav-din-egen-film')">Lav din egen film (4 lektioner)</a>
+      </div>
+      <div class="nav--item-wrapper">
+        <a href="/#/nyttige-links" class="nav--item" data-ng-class="setActiveMenuItem('/nyttige-links')">Nyttige links</a>
+        <a href="https://service.nemid.nu/dk-da/bestil_nemid" class="nav--sub-item" target="_blank">Opret NemID - Husk pas!</a>
+        <a href="https://www.borger.dk/Sider/Er-du-tilmeldt-Digital-Post.aspx" class="nav--sub-item" target="_blank">Tilmeld Digital Postkasse - Kræver NemID!</a>
+      </div>
+      <div class="nav--item-wrapper">
+        <a href="/#/digital-ambassadoer" class="nav--item" data-ng-class="setActiveMenuItem('/digital-ambassadoer')">Digital ambassadør</a>
+        <a href="http://www.digamb.dk/www.aarhus.dk/" class="nav--sub-item" target="_blank">aarhus.dk - Demomiljø</a>
+        <a href="http://borger.digamb.dk/" class="nav--sub-item" target="_blank">borger.dk - Demomiljø</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="header" role="banner">
+    <div class="header--inner">
+      <a href="{{ path('digitalabc_main_default_index') }}" title="Digital ABC" class="header--logo">
+        {% include 'DigitalABCMainBundle:Default:Includes/svg/logo.html.twig' with {'symbol': 'logo-symbol', 'text': 'logo-text'} %}
+      </a>
+      <div class="nav-toggle-icon">{% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon.html.twig' with {'class': 'symbol', 'click': 'toggleMenu()'} %}</div>
+    </div>
+  </header>
+
+  <div class="animation-overlay js-animation-overlay"></div>
+
+  <div class="video-close-icon" data-ng-show="showVideo" data-ng-click="stopVideo()">{% include 'DigitalABCMainBundle:Default:Includes/svg/menu-icon-close.html.twig' with {'class': 'symbol', 'click': ''} %}</div>
+{% endblock %}
+
+{% block scripts %}
+  <!-- Script imports -->
+  {% javascripts
+  'js/libraries/angular-1.*.js'
+  'js/libraries/jquery-1.*.js'
+  'js/libraries/angular-angulartics*.js'
+  'js/libraries/matchMedia.js'
+  'js/libraries/angular-animate*.js'
+  'js/libraries/angular-picturefill*.js'
+  'js/libraries/angular-route*.js'
+  'js/libraries/angular-scroll*.js'
+  'js/libraries/fastclick*.js'
+  'js/libraries/picturefill.js'
+  'js/libraries/video.js'
+  'js/libraries/cookieChecker.js'
+  'js/app.js'
+  'js/main/*'
+  'js/quiz/*'
+  filter='?uglifyjs2' output='js/compiled/main.js' %}
+    <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '{{ga_id}}', 'auto');
+  </script>
+{% endblock %}

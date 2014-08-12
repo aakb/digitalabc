@@ -1,0 +1,19 @@
+<section class="quiz">
+  <div class="quiz--inner">
+    <h2 class="quiz--result" data-ng-show="result === 100"><[result]> point - Sådan!<span data-ng-show="challengerResult"> - din ven fik <[challengerResult]> point</span></h2>
+    <h2 class="quiz--result" data-ng-show="result < 100">Du fik <[result]> point<span data-ng-show="challengerResult"> - din ven fik <[challengerResult]> point</span></h2>
+
+    <p class="quiz--text-alternate" data-ng-show="result === 100">Du fik 100 point – fedt! Du er maks klar til at få NemID  - bestil det på <a href="http://service.nemid.nu/dk-da/bestil_nemid">NemID.nu</a>.</p>
+    <p class="quiz--text-alternate" data-ng-show="result === 100">Besøg os på Facebook på <a href="http://facebook.com/tjekpaanemid">www.facebook.com/tjekpaanemid</a></p>
+    <p class="quiz--text-alternate" data-ng-show="result > 50 && result < 100">Du fik over halvdelen rigtige – det er okay, men kan sagtens blive bedre.</br>Tryk <a href="/#/quiz">her</a> for at prøve igen. Besøg os på <a href="http://facebook.com/tjekpaanemid">Facebook</a> - måske bliver du klogere!</p>
+    <p class="quiz--text-alternate" data-ng-show="result < 50">Det var rimelig nederen, du fik under 50% rigtige – heldigvis kan du bare prøve igen lige <a href="/#/quiz">her</a>.</br>Besøg os på <a href="http://facebook.com/tjekpaanemid">Facebook</a> - du kan kun blive klogere!</p>
+    <p class="quiz--text-alternate" data-ng-show="result === 50">Du fik halvdelen rigtige – det er okay, men kan sagtens blive bedre.</br>Tryk <a href="/#/quiz">her</a> for at prøve igen. Besøg os på <a href="http://facebook.com/tjekpaanemid">Facebook</a> - måske bliver du klogere!</p>
+    <a href="http://service.nemid.nu/dk-da/bestil_nemid" class="quiz--try-again-button" data-ng-show="result === 100">Opret NemID</a>
+    <a href="/#/quiz" class="quiz--try-again-button" data-ng-show="result < 100">Prøv igen</a>
+    <input type="button" ng-click="shareOnFacebook()" value="Del på Facebook" class="quiz--share-button">
+    <p class="quiz--text-alternate" data-ng-show="facebookStatusText"><[facebookStatusText]></p>
+    <p class="quiz--text-alternate" data-ng-show="shareComplete">Du har delt dit resultat på Facebook. <a data-ng-click="unshareOnFacebook()">Fortryd</a>.</p>
+    <p class="quiz--text-link">Del dit resultat: <a href="<[link]>"><[link]></a></p>
+  </div>
+  <div class="quiz--background"></div>
+</section>

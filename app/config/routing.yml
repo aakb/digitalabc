@@ -1,0 +1,4 @@
+digital_abc_main:
+    resource: "@DigitalABCMainBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,117 @@
+/**
+ *
+ * Navigation
+ *
+ */
+
+
+.nav {
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  right: -40em;
+  z-index: 99;
+
+  padding-top: 3.75em;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  max-width: 90%;
+  width: 20em;
+
+  background: $white;
+  color: $text-color-dark;
+  opacity: 0;
+
+  @include box-sizing(border-box);
+  @include box-shadow(-5px 0px 10px transparentize($black, .75));
+
+
+  /* Breakpoints */
+
+  @include breakpoint($breakpoint-lap) {
+    width: 40em;
+  }
+
+
+  /* States */
+
+  &.is-visible {
+    @include animation(toggle-nav-open .75s ease 1 forwards);
+  }
+
+  &.is-hidden {
+    @include animation(toggle-nav-close .75s ease 1 forwards);
+  }
+
+
+  /* Elements */
+
+  &--header {
+    border-bottom: 1px solid $gray-lighter;
+    margin-right: 2em;
+    margin-bottom: .35em;
+    padding-bottom: .25em;
+
+    color: $gray-light;
+    font-size: 2em;
+    line-height: 1em;
+
+    @include breakpoint($breakpoint-desk) {
+      margin-right: 6em;
+    }
+  }
+
+  &--item-wrapper {
+    border-bottom: 1px solid $gray-lighter;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &--item,
+  &--sub-item {
+    @include navigation--base-item();
+  }
+
+  &--item {
+    @include navigation--item();
+  }
+
+  &--sub-item {
+    @include navigation--sub-item();
+  }
+}
+
+
+/* Invisible close element that allows the user to close the menu by clicking outside it */
+
+.nav-overlay,
+.animation-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 98;
+
+  cursor: pointer;
+
+  &.is-visible {
+    width: 100%;
+
+    @include animation(toggle-nav-overlay .75s linear 1 forwards);
+  }
+
+  &.is-animating {
+    @include animation(page-transition .75s ease 1 forwards);
+  }
+}
+
+
+/* Toggle icon use for opening and closing the menu */
+
+.nav-toggle-icon {
+  @include navigation--toggle-icon();
+}

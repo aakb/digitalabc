@@ -1,0 +1,82 @@
+/**
+ *
+ * Mixins
+ *
+ */
+
+
+/* Mixin for breakpoints */
+
+@mixin breakpoint($breakpoint-width: false, $breakpoint-height: false, $retina: false) {
+  // If both is set.
+  @if $breakpoint-width != false and $breakpoint-height != false {
+    @media only screen and (min-width: $breakpoint-width) and (max-height: $breakpoint-height) { @content; }
+  }
+
+  // If only width is set.
+  @if $breakpoint-width != false and $breakpoint-height == false {
+    @media only screen and (min-width: $breakpoint-width) { @content; }
+  }
+
+  // If only height is set.
+  @if $breakpoint-width == false and $breakpoint-height != false {
+    @media only screen and (max-height: $breakpoint-height) { @content; }
+  }
+
+  // If $retina is set.
+  @if $breakpoint-width != false and $retina != false {
+    @media only screen and (min-resolution: 2dppx) and (max-width: $breakpoint-width) { @content; }
+  }
+}
+
+
+/* Vertical align element */
+
+@mixin vertical-align-element() {
+  position: relative;
+  top: 50%;
+
+  @include translateY(-50%);
+}
+
+
+/* Mixin for stripping default list styles */
+
+@mixin strip-list-styles() {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+
+/* Mixin for stripping link styles*/
+
+@mixin strip-link-styles($color:inherit) {
+  &:link {
+    color: $color;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+
+/* Mixin for using svg images as background with fallback to png */
+
+@mixin svg-bg($name, $extension: png, $color: transparent, $position: 0 0, $repeat: no-repeat) {
+  background: url('/images/#{$name}.#{$extension}') $color $position $repeat;
+  background: url('/images/#{$name}.svg') $color $position $repeat;
+}

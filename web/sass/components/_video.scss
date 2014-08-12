@@ -1,0 +1,83 @@
+/**
+ *
+ * Videos components.
+ *
+ */
+
+
+
+// Video section
+
+%video--section {
+  @extend %grid__item;
+  @extend %palm--one-whole;
+  @extend %lap--one-half;
+  @extend %desk--one-third;
+  @extend %bigscreen--one-third;
+
+  position: relative;
+  overflow: hidden;
+
+  padding-left: 0;
+
+  cursor: pointer;
+  text-align: center;
+
+  @include breakpoint($breakpoint-desk) {
+    &:hover {
+      .is-static {
+        display: none;
+      }
+
+      .is-animated {
+        display: inline;
+      }
+    }
+  }
+}
+
+
+// Video section inner
+
+%video--section-inner {
+  background: none;
+}
+
+
+// Video section header
+
+%video--section-header {
+  position: relative;
+  z-index: 95;
+
+  color: $white;
+  text-align: center;
+
+  @include breakpoint($breakpoint-desk) {
+    font-size: 4em;
+  }
+
+  @include breakpoint($breakpoint-bigscreen) {
+    font-size: 7em;
+  }
+}
+
+
+// Video section image
+
+%video--section-image {
+  position: relative;
+  z-index: 90;
+
+  width: 100%;
+
+  // Add styling directly to the image tag because of our reponsive image solution.
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  &.is-animated {
+    display: none;
+  }
+}

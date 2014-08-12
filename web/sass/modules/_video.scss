@@ -1,0 +1,101 @@
+/**
+ *
+ * Videos.
+ *
+ */
+
+
+.video-wrapper {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+
+  // Move video element to allow our close link to work on iOS.
+  .video-js {
+    .vjs-tech {
+      top: 10%;
+
+      height: 90%;
+    }
+  }
+
+  &.ng-hide {
+    /* this is just another form of hiding an element */
+    display:block!important;
+    position:absolute;
+    top:-9999px;
+    left:-9999px;
+  }
+}
+
+
+/* Close icon */
+.video-close-icon {
+  @include navigation--toggle-icon();
+
+  position: fixed;
+  z-index: 99;
+
+  fill: $white;
+}
+
+
+.video {
+  overflow: hidden;
+  position: relative;
+  z-index: 97;
+
+  @include breakpoint($breakpoint-lap) {
+    padding: 2em;
+
+    background-color: $black;
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    padding: 4em;
+  }
+
+  &--troll-painter,
+  &--broke-teenager,
+  &--slave,
+  &--pain-in-the-butt,
+  &--moving-out,
+  &--your-movie {
+    @extend %video--section;
+
+    &-header {
+      @extend %video--section-header;
+    }
+
+    &-image {
+      @extend %video--section-image;
+    }
+
+    &-inner {
+      @extend %video--section-inner;
+    }
+  }
+
+  &--coming-soon-wrapper {
+    bottom: 0;
+    position: absolute;
+    z-index: 97;
+    top: 0;
+    cursor: default;
+    height: 100%;
+    width: 100%;
+  }
+
+  &--coming-soon {
+    top: 50%;
+    width: 80%;
+    position: relative;
+
+    @include translateY(-50%);
+    @include opacity(.5);
+  }
+}

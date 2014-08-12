@@ -1,0 +1,64 @@
+/**
+ *
+ * Variables
+ *
+ */
+
+
+
+/* Breakpoints
+   ================================================================================================================== */
+
+
+$breakpoint-lap:              481px;
+$breakpoint-desk:             1024px;
+$breakpoint-bigscreen:        1700px;
+
+$breakpoint-height:           700px;
+$breakpoint-landscape-height: 287px;
+
+
+
+/* Layout
+   ================================================================================================================== */
+
+$layout-max-width: 65em;
+$border-radius:    .6em;
+
+
+
+/* Colors
+   ================================================================================================================== */
+
+$theme-color:      #0abbef;
+$facebook-color:   #3a589b;
+$black:            #000;
+$white:            #fff;
+
+$gray-lightest:    lighten($black, 90%);
+$gray-lighter:     lighten($black, 80%);
+$gray-light:       lighten($black, 70%);
+$gray:             lighten($black, 60%);
+$gray-dark:        lighten($black, 50%);
+$gray-darker:      lighten($black, 40%);
+$gray-darkest:     lighten($black, 30%);
+
+$text-color-dark:  $gray-darker;
+
+
+
+/* Typograhy
+   ================================================================================================================== */
+
+$font-primary:          "bebas_neueregular";
+$font-secondary:        "permianseriftypefaceregular";
+$font-secondary-bold:   "permianseriftypefacebold";
+$font-family-primary:   1em/1.5 $font-primary, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-secondary: 1em/1.5 $font-secondary, "Helvetica Neue", Helvetica, Arial, serif;
+
+
+
+/* Link colors
+   ================================================================================================================== */
+
+$link-color:       #0abbef;

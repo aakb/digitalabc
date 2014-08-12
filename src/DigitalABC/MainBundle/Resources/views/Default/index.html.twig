@@ -1,0 +1,9 @@
+{% extends 'DigitalABCMainBundle:Default:layout.html.twig' %}
+
+{% block body %}
+  {{ parent() }}
+  <div class="<[layoutClassSuffix]>">
+    <div data-ng-view="" class="<[layoutClassSuffix]>--inner"></div>
+  </div>
+
+{% endblock %}

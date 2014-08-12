@@ -1,0 +1,30 @@
+{% extends 'DigitalABCMainBundle:Default:layout.html.twig' %}
+
+{% block meta %}
+  {{ parent() }}
+  <meta property="fb:app_id"                  content="672101806188225" />
+  <meta property="og:title"                   content="Digital ABC Quiz" />
+  <meta property="og:type"                    content="digitalabc:quiz" />
+  <meta property="og:locale"                  content="da_DK">
+  <meta property="og:url"                     content="{{ server_path }}quiz/challenge/{{ id }}" />
+  <meta property="og:image"                   content="{{ server_path }}images/facebook-app.png" />
+  <meta property="digitalabc:result"          content="{{ result }}" />
+{% endblock %}
+
+{% block head_attr %}{% endblock %}
+{% block title %}Digital ABC{% endblock %}
+
+{% block body %}
+  {{ parent() }}
+  <section class="quiz">
+    <div class="quiz--inner">
+      <h2 class="quiz--result">Ta' quizzen<br>- og få styr på din digitale ABC</h2>
+      <p class="quiz--challenge-text">
+        Din ven tog Digitalparathedsquizzen og fik <strong>{{result}} point</strong>, kan du slå det?<br>
+        Start quizzen og se om du er klogere!
+      </p>
+      <a href="/#/quiz/1/{{ id }}" class="quiz-header--button">Ta' Quizzen</a>
+    </div>
+    <div class="quiz--background"></div>
+  </section>
+{% endblock %}

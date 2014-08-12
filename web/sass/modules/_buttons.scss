@@ -1,0 +1,44 @@
+/**
+ *
+ * Buttons.
+ *
+ */
+
+
+/* Silent classes related to this document.
+ *
+ * ========================================================================== */
+
+%button {
+  display: inline-block;
+  padding: .25em .75em;
+  position: relative;
+
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+
+%button-transparent {
+  @extend %button;
+
+  background-color: transparentize($black, .65);
+  border: 2px solid $white;
+  font-family: 'bebas_neueregular';
+  font-size: 1em;
+  line-height: 100%;
+
+  &:hover {
+    background-color: transparentize($black, .35);
+  }
+
+  @include strip-link-styles($white);
+}
+

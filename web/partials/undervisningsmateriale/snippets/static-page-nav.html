@@ -1,0 +1,16 @@
+<div class="static-page--page-top" id="top"></div>
+<nav class="static-page--nav">
+  <div class="static-page--nav-item-wrapper">
+    <a href="/#/undervisningsmateriale" class="static-page--nav-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale')">Undervisningsmateriale</a>
+    <a href="/#/undervisningsmateriale/digital-parathed" class="static-page--nav-sub-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale/digital-parathed')">Digital parathed (1 lektion)</a>
+    <a href="/#/undervisningsmateriale/sidste-omgang" class="static-page--nav-sub-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale/sidste-omgang')">Sidste omgang (2 lektioner)</a>
+    <a href="/#/undervisningsmateriale/farvel-forvalt-lingo" class="static-page--nav-sub-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale/farvel-forvalt-lingo')">#FarvelForvaltLingo (4 lektioner)</a>
+    <a href="/#/undervisningsmateriale/lav-din-egen-film" class="static-page--nav-sub-item" data-ng-class="setActiveMenuItem('/undervisningsmateriale/lav-din-egen-film')">Lav din egen film (4 lektioner)</a>
+    <div class="static-page--pdf-link">
+      <a href="/partials/undervisningsmateriale/digital-parathed.pdf" target="_blank" class="static-page--nav-sub-item" data-ng-if="setPdfLink('/undervisningsmateriale/digital-parathed')" title="Download pdf">Digital parathed<img class="static-page--pdf-icon" src="/images/pdf-icon.png"/></a>
+      <a href="/partials/undervisningsmateriale/sidste-omgang.pdf" target="_blank" class="static-page--nav-sub-item" data-ng-if="setPdfLink('/undervisningsmateriale/sidste-omgang')" title="Download pdf">Sidste omgang<img class="static-page--pdf-icon" src="/images/pdf-icon.png"/></a>
+      <a href="/partials/undervisningsmateriale/farvelforvaltlingo.pdf" target="_blank" class="static-page--nav-sub-item" data-ng-if="setPdfLink('/undervisningsmateriale/farvel-forvalt-lingo')" title="Download pdf">#FarvelForvaltLingo<img class="static-page--pdf-icon" src="/images/pdf-icon.png"/></a>
+      <a href="/partials/undervisningsmateriale/lav-din-egen-film.pdf" target="_blank" class="static-page--nav-sub-item" data-ng-if="setPdfLink('/undervisningsmateriale/lav-din-egen-film')" title="Download pdf">Lav din egen film<img class="static-page--pdf-icon" src="/images/pdf-icon.png"/></a>
+    </div>
+  </div>
+</nav>

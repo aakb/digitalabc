@@ -1,0 +1,50 @@
+/**
+ *
+ * Rap.
+ *
+ */
+
+
+.rap {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  background-image: url('/images/backgrounds/small/rappers-two-up-points.jpg');
+  background-repeat: no-repeat;
+  text-align: center;
+
+  @include background-size(cover);
+
+  @include breakpoint($breakpoint-lap, false, true) {
+    background-image: url('/images/backgrounds/medium/rappers-two-up-points.jpg');
+  }
+
+  @include breakpoint($breakpoint-lap) {
+    background-image: url('/images/backgrounds/medium/rappers-two-up-points.jpg');
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    background-image: url('/images/backgrounds/large/rappers-two-up-points.jpg');
+  }
+
+  &--inner {
+    position: relative;
+    top: 50%;
+    z-index: 96;
+
+    padding-right: 1em;
+    padding-left: 1em;
+
+    @include translateY(-50%);
+  }
+
+  &--video {
+    width: 100%;
+
+    @include breakpoint($breakpoint-desk) {
+      width: 60%;
+    }
+  }
+}
