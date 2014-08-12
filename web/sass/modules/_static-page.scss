@@ -142,6 +142,8 @@
       @include breakpoint($breakpoint-desk) {
         position: fixed;
         top: 17em;
+        bottom: 2em;
+        overflow: auto;
         z-index: 96;
 
         border-bottom: 0;

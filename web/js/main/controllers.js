@@ -36,7 +36,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Handle active menu item
   $scope.setPdfLink = function(path) {
-    if ($location.path() === path) {
+    if ($location.path() === path || $location.path() === '/undervisningsmateriale' ) {
       return true;
     } else {
       return false;
