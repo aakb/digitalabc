@@ -2,8 +2,6 @@ http://www.digitalabc.dk/
 http://www.digitalabc.dk/#/quiz
 http://www.digitalabc.dk/#/video
 http://www.digitalabc.dk/#/music-video
-https://www.facebook.com/TjekPaaNemID
-http://www.youtube.com/user/TjekPaaNemID
 http://www.digitalabc.dk/#/om-projektet
 http://www.digitalabc.dk/#/om-projektet/unge
 http://www.digitalabc.dk/#/om-projektet/laererne
@@ -18,8 +16,4 @@ http://www.digitalabc.dk/#/undervisningsmateriale/sidste-omgang
 http://www.digitalabc.dk/#/undervisningsmateriale/farvel-forvalt-lingo
 http://www.digitalabc.dk/#/undervisningsmateriale/lav-din-egen-film
 http://www.digitalabc.dk/#/nyttige-links
-https://service.nemid.nu/dk-da/bestil_nemid
-https://www.borger.dk/Sider/Er-du-tilmeldt-Digital-Post.aspx
 http://www.digitalabc.dk/#/digital-ambassadoer
-http://www.digamb.dk/www.aarhus.dk/
-http://borger.digamb.dk/
