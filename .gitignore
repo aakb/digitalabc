@@ -1,6 +1,7 @@
 .sass-cache
 /app/cache/*
 /app/config/parameters.yml
+/app/config/config.yml
 /app/logs/*
 /vendor/
 composer.phar
