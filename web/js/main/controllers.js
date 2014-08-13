@@ -155,14 +155,15 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
   // Video controls.
   $scope.showVideo = false;
 
+
   $scope.videos = [];
 
   // Play video.
   $scope.playVideo = function(video) {
-    if (video === 'troll-painter' || video === 'slave' || video === 'broke-teenager' || video === 'pain-in-the-butt' || video === 'moving-out') {
+    if (video === 'slave' || video === 'pain-in-the-butt' || video === 'moving-out') {
       return;
     }
-
+    /*
     if (!$scope.videos[video]) {
       videojs($('.' + video)[0], {"width": 'auto', "height": '100%'}, function() {
         $scope.videos[video] = this;
@@ -174,6 +175,11 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
       $scope.videos[video].play();
       $scope.video = $scope.videos[video];
     }
+    */
+    console.log(video);
+    $('#' + video +'-wrapper iframe').each(function(){
+      this.src += '&autoplay=1';
+    });
 
     // Show video container.
     $scope.showVideo = video;
@@ -181,7 +187,11 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Stop video.
   $scope.stopVideo = function() {
-    $scope.video.pause();
+    //$scope.video.pause();
+
+    $('.video iframe').each(function(){
+      this.src = this.src.replace('&autoplay=1','');
+    });
 
     $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
 
