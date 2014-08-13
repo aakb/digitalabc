@@ -10,7 +10,7 @@
   z-index: 98;
   top: 0;
   left: 0;
-
+  background-color: $black;
   height: 100%;
   width: 100%;
 
@@ -45,18 +45,26 @@
 
 
 .video {
+  padding-bottom: 56.25%; /* 16:9 */
   overflow: hidden;
   position: relative;
   z-index: 97;
+  top: 50%;
+  margin: 0 auto;
 
+  /* The videos embedded have these dimensions so this should be max. */
+  max-height: 720px;
+  max-width: 1280px;
+
+  @include transform(translateY(-50%));
   @include breakpoint($breakpoint-lap) {
-    padding: 2em;
+    //padding: 2em;
 
     background-color: $black;
   }
 
   @include breakpoint($breakpoint-desk) {
-    padding: 4em;
+    //padding: 4em;
   }
 
   &--troll-painter,
@@ -97,5 +105,15 @@
 
     @include translateY(-50%);
     @include opacity(.5);
+  }
+
+  &--frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
   }
 }

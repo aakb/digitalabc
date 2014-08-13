@@ -47,4 +47,12 @@
       width: 60%;
     }
   }
+
+  &--video-wrapper {
+    padding-bottom: 56.25%; /* 16:9 */
+    overflow: hidden;
+    position: relative;
+    z-index: 97;
+    margin: 0 auto;
+  }
 }
