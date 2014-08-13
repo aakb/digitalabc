@@ -2569,6 +2569,7 @@ html.is-locked body {
   z-index: 98;
   top: 0;
   left: 0;
+  background-color: black;
   height: 100%;
   width: 100%;
 }
@@ -2626,24 +2627,28 @@ html.is-locked body {
 
 /* line 47, ../sass/modules/_video.scss */
 .video {
+  padding-bottom: 56.25%;
+  /* 16:9 */
   overflow: hidden;
   position: relative;
   z-index: 97;
+  top: 50%;
+  margin: 0 auto;
+  /* The videos embedded have these dimensions so this should be max. */
+  max-height: 720px;
+  max-width: 1280px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 @media only screen and (min-width: 481px) {
   /* line 47, ../sass/modules/_video.scss */
   .video {
-    padding: 2em;
     background-color: black;
   }
 }
-@media only screen and (min-width: 1024px) {
-  /* line 47, ../sass/modules/_video.scss */
-  .video {
-    padding: 4em;
-  }
-}
-/* line 83, ../sass/modules/_video.scss */
+/* line 91, ../sass/modules/_video.scss */
 .video--coming-soon-wrapper {
   bottom: 0;
   position: absolute;
@@ -2653,7 +2658,7 @@ html.is-locked body {
   height: 100%;
   width: 100%;
 }
-/* line 93, ../sass/modules/_video.scss */
+/* line 101, ../sass/modules/_video.scss */
 .video--coming-soon {
   top: 50%;
   width: 80%;
@@ -2664,6 +2669,16 @@ html.is-locked body {
   transform: translateY(-50%);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
+}
+/* line 110, ../sass/modules/_video.scss */
+.video--frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 /**
@@ -2729,6 +2744,15 @@ html.is-locked body {
   .rap--video {
     width: 60%;
   }
+}
+/* line 51, ../sass/modules/_rap.scss */
+.rap--video-wrapper {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  overflow: hidden;
+  position: relative;
+  z-index: 97;
+  margin: 0 auto;
 }
 
 /**
