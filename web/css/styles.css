@@ -2679,6 +2679,7 @@ html.is-locked body {
   width: 90%;
   height: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 
 /**
@@ -2724,28 +2725,23 @@ html.is-locked body {
   }
 }
 /* line 32, ../sass/modules/_rap.scss */
-.rap--inner {
-  position: relative;
-  top: 50%;
-  z-index: 96;
-  padding-right: 1em;
-  padding-left: 1em;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-/* line 43, ../sass/modules/_rap.scss */
 .rap--video {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
 }
-@media only screen and (min-width: 1024px) {
-  /* line 43, ../sass/modules/_rap.scss */
+@media only screen and (min-width: 1350px) {
+  /* line 32, ../sass/modules/_rap.scss */
   .rap--video {
-    width: 60%;
+    height: inherit;
+    width: inherit;
   }
 }
-/* line 51, ../sass/modules/_rap.scss */
+/* line 48, ../sass/modules/_rap.scss */
 .rap--video-wrapper {
   padding-bottom: 56.25%;
   /* 16:9 */
@@ -2753,6 +2749,23 @@ html.is-locked body {
   position: relative;
   z-index: 97;
   margin: 0 auto;
+  max-height: 720px;
+  max-width: 1280px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media only screen and (min-width: 1350px) {
+  /* line 48, ../sass/modules/_rap.scss */
+  .rap--video-wrapper {
+    height: inherit;
+    width: inherit;
+    max-width: 1280px;
+    max-height: 720px;
+    padding-bottom: 0;
+  }
 }
 
 /**
