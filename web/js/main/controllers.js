@@ -160,25 +160,33 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Play video.
   $scope.playVideo = function(video) {
-    if (video === 'slave' || video === 'pain-in-the-butt' || video === 'moving-out') {
+    if (video === 'troll-painter' || video === 'slave' || video === 'pain-in-the-butt' || video === 'moving-out' || video === 'broke-teenager') {
       return;
     }
-    /*
-    if (!$scope.videos[video]) {
-      videojs($('.' + video)[0], {"width": 'auto', "height": '100%'}, function() {
-        $scope.videos[video] = this;
-        $scope.video = this;
-        this.play();
-      });
-    } else {
-      $scope.videos[video].currentTime(0);
-      $scope.videos[video].play();
-      $scope.video = $scope.videos[video];
+
+    // Set video src.
+    switch (video) {
+      case 'troll-painter':
+        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        break;
+      case 'slave':
+        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        break;
+      case 'pain-in-the-butt':
+        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        break;
+      case 'moving-out':
+        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        break;
+      case 'broke-teenager':
+        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        break;
+      default:
+        return;
     }
-    */
-    console.log(video);
+
     $('#' + video +'-wrapper iframe').each(function(){
-      this.src += '&autoplay=1';
+      this.src = url;
     });
 
     // Show video container.
@@ -187,10 +195,8 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Stop video.
   $scope.stopVideo = function() {
-    //$scope.video.pause();
-
     $('.video iframe').each(function(){
-      this.src = this.src.replace('&autoplay=1','');
+      this.src = '';
     });
 
     $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
