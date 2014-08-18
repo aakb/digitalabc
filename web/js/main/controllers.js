@@ -160,26 +160,22 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Play video.
   $scope.playVideo = function(video) {
-    if (video === 'troll-painter' || video === 'slave' || video === 'pain-in-the-butt' || video === 'moving-out' || video === 'broke-teenager') {
-      return;
-    }
-
     // Set video src.
     switch (video) {
       case 'troll-painter':
-        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        var url = '//www.youtube.com/embed/z8MVCt4cZsk?showinfo=0';
         break;
       case 'slave':
-        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        var url = '//www.youtube.com/embed/n7vUo1oZG08?showinfo=0';
         break;
       case 'pain-in-the-butt':
-        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        var url = '//www.youtube.com/embed/zsyeqhbKnFw?showinfo=0';
         break;
       case 'moving-out':
-        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        var url = '//www.youtube.com/embed/M9Ede-GQI30?showinfo=0';
         break;
       case 'broke-teenager':
-        var url = '//www.youtube.com/embed/vOT7l5caSCw?showinfo=0';
+        return;
         break;
       default:
         return;
