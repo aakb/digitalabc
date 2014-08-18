@@ -12,7 +12,7 @@
   <div class="quiz-header--background is-first" data-ng-switch-when="1"></div>
   <div class="quiz-header--background is-second" data-ng-switch-when="2"></div>
 </section>
-<div id="video" class="video" du-scrollspy>
+<div id="video" du-scrollspy>
   <div class="video--inner">
     <section class="video--troll-painter" data-ng-click="playVideo('troll-painter')">
       <div class="video--troll-painter-inner">
@@ -97,64 +97,37 @@
   </div>
 </div>
 <div id="rap" class="rap">
-  <div class="rap--inner">
-    <div class="rap--video-wrapper">
-      <video class="rap--video video-js vjs-default-skin" controls preload="auto" poster="/video/kom-med-poster.jpg">
-        <source src="/video/kom-med.mp4" type="video/mp4" />
-        <source src="/video/kom-med.webm" type="video/webm" />
-        <source src="/video/kom-med.ogg" type="video/ogg" />
-      </video>
-    </div>
+  <div class="rap--video-wrapper">
+    <iframe class="rap--video" width="1280" height="720" src="//www.youtube.com/embed/vOT7l5caSCw?showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
 <div class="video-wrapper" id="troll-painter-wrapper" data-ng-show="showVideo === 'troll-painter'">
-  <!--
-    <video class="video troll-painter video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-      <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-      <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-      <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-    </video>
-  -->
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
 <div class="video-wrapper" id="broke-teenager-wrapper" data-ng-show="showVideo === 'broke-teenager'">
-  <!--
-    <video class="video broke-teenager video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-      <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-      <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-      <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-    </video>
--->
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
 <div class="video-wrapper" id="slave-wrapper" data-ng-show="showVideo === 'slave'">
-  <!--
-      <video class="video slave video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-        <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-      </video>
-  -->
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
 <div class="video-wrapper" id="pain-in-the-butt-wrapper" data-ng-show="showVideo === 'pain-in-the-butt'">
-  <!--
-      <video class="video pain-in-the-butt video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-        <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-      </video>
-  -->
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
 <div class="video-wrapper" id="moving-out-wrapper" data-ng-show="showVideo === 'moving-out'">
-  <!--
-      <video class="video moving-out video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-        <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-      </video>
-  -->
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>

@@ -29,22 +29,41 @@
     background-image: url('/images/backgrounds/large/rappers-two-up-points.jpg');
   }
 
-  &--inner {
-    position: relative;
-    top: 50%;
-    z-index: 96;
+  &--video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
 
-    padding-right: 1em;
-    padding-left: 1em;
-
-    @include translateY(-50%);
+    // When we hit 1350 we should stop expanding the video. This could be 1280px breakpoint as that is the iframe width, but we want a bit of padding too.
+    @include breakpoint(1350px) {
+      height: inherit;
+      width: inherit;
+    }
   }
 
-  &--video {
-    width: 100%;
+  &--video-wrapper {
+    padding-bottom: 56.25%; /* 16:9 */
+    overflow: hidden;
+    position: relative;
+    z-index: 97;
+    margin: 0 auto;
+    max-height: 720px;
+    max-width: 1280px;
+    top: 50%;
 
-    @include breakpoint($breakpoint-desk) {
-      width: 60%;
+    @include translateY(-50%);
+
+    // When we hit 1350 we should stop expanding the video. This could be 1280px breakpoint as that is the iframe width, but we want a bit of padding too.
+    @include breakpoint(1350px) {
+      height: inherit;
+      width: inherit;
+      max-width: 1280px;
+      max-height: 720px;
+      padding-bottom: 0;
     }
   }
 }
