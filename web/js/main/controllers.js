@@ -181,7 +181,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
         return;
     }
 
-    $('#' + video +'-wrapper iframe').each(function(){
+    $('#' + video +'-wrapper .video iframe').each(function(){
       this.src = url;
     });
 
