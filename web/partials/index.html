@@ -14,7 +14,7 @@
 </section>
 <div id="video" du-scrollspy>
   <div class="video--inner">
-    <section class="video--troll-painter" data-ng-click="playVideo('troll-painter')">
+    <section class="video--troll-painter" id="video-troll-painter" data-ng-click="playVideo('troll-painter')">
       <div class="video--troll-painter-inner">
         <span picture-fill data-alt="Troll Painter" class="video--troll-painter-image is-static">
           <span pf-src="/images/video/small/troll-painter-poster.jpg" data-media="(min-width: 1px)"></span>
@@ -25,7 +25,7 @@
         </span>
       </div>
     </section><!--
---><section class="video--slave" data-ng-click="playVideo('slave')">
+--><section class="video--slave" id="video-slave" data-ng-click="playVideo('slave')">
     <div class="video--slave-inner">
       <span picture-fill data-alt="Father's Slave" class="video--slave-image is-static">
         <span pf-src="/images/video/small/slave-poster.jpg" data-media="(min-width: 1px)"></span>
@@ -86,35 +86,43 @@
 </div>
 <div id="rap" class="rap">
   <div class="rap--video-wrapper">
+    <div class="rap--fb-wrapper">
+      <div class="fb-like rap--fb-like" data-href="https://digitalabc.dk#rap" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+    </div>
     <iframe class="rap--video" width="1280" height="720" src="//www.youtube.com/embed/vOT7l5caSCw?showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
 <div class="video-wrapper" id="troll-painter-wrapper" data-ng-show="showVideo === 'troll-painter'">
+  <div class="fb-like video--fb-like" data-href="https://digitalabc.dk#troll-painter" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/z8MVCt4cZsk" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
 <div class="video-wrapper" id="broke-teenager-wrapper" data-ng-show="showVideo === 'broke-teenager'">
+  <div class="fb-like video--fb-like" data-href="https://digitalabc.dk#broke-teenager" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
 <div class="video-wrapper" id="slave-wrapper" data-ng-show="showVideo === 'slave'">
+  <div class="fb-like video--fb-like" data-href="https://digitalabc.dk#slave" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/n7vUo1oZG08" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
 <div class="video-wrapper" id="pain-in-the-butt-wrapper" data-ng-show="showVideo === 'pain-in-the-butt'">
+  <div class="fb-like video--fb-like" data-href="https://digitalabc.dk#pain" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/zsyeqhbKnFw" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
 <div class="video-wrapper" id="moving-out-wrapper" data-ng-show="showVideo === 'moving-out'">
+  <div class="fb-like video--fb-like" data-href="https://digitalabc.dk#moving-out" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" src="//www.youtube.com/embed/M9Ede-GQI30" height="720" frameborder="0" allowfullscreen></iframe>
   </div>
