@@ -47,7 +47,6 @@
 
   &--video-wrapper {
     padding-bottom: 56.25%; /* 16:9 */
-    overflow: hidden;
     position: relative;
     z-index: 97;
     margin: 0 auto;
@@ -65,5 +64,14 @@
       max-height: 720px;
       padding-bottom: 0;
     }
+  }
+
+
+  &--fb-wrapper { // We need fb wrapper to position properly.
+    position: relative;
+    top: -30px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
   }
 }
