@@ -2811,6 +2811,12 @@ html.is-locked body {
   margin: 0 auto;
   text-align: left;
 }
+@media only screen and (min-width: 1350px) {
+  /* line 70, ../sass/modules/_rap.scss */
+  .rap--fb-wrapper {
+    width: 100%;
+  }
+}
 
 /**
  *
