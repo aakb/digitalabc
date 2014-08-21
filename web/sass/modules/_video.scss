@@ -116,5 +116,30 @@
     height: 100%;
     margin: 0 auto;
     text-align: center;
+
+
+    @include breakpoint(1300px) {
+      top: 50%;
+      width: 1280px;
+      height: 720px;
+
+      @include translateY(-50%);
+    }
+  }
+
+  &--fb-like {
+    z-index: 98;
+    top: 1em;
+    left: 1em;
+    position: absolute;
+
+    @media only screen and (min-width: 481px) {
+      left: 2em;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      top: 3em;
+    }
+
   }
 }
