@@ -2702,6 +2702,7 @@ html.is-locked body {
 }
 /* line 130, ../sass/modules/_video.scss */
 .video--fb-like {
+  z-index: 98;
   top: 1em;
   left: 1em;
   position: absolute;
