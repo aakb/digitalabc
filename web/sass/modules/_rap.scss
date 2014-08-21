@@ -73,5 +73,9 @@
     width: 90%;
     margin: 0 auto;
     text-align: left;
+
+    @include breakpoint(1350px) {
+      width: 100%;
+    }
   }
 }
