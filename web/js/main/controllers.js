@@ -175,7 +175,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
         var url = '//www.youtube.com/embed/M9Ede-GQI30?showinfo=0';
         break;
       case 'broke-teenager':
-        return;
+        var url = '//www.youtube.com/embed/XFQycqWNcSM?showinfo=0';
         break;
       default:
         return;
