@@ -12,9 +12,9 @@
   <div class="quiz-header--background is-first" data-ng-switch-when="1"></div>
   <div class="quiz-header--background is-second" data-ng-switch-when="2"></div>
 </section>
-<div id="video" class="video" du-scrollspy>
+<div id="video" du-scrollspy>
   <div class="video--inner">
-    <section class="video--troll-painter" data-ng-click="playVideo('troll-painter')">
+    <section class="video--troll-painter" id="video-troll-painter" data-ng-click="playVideo('troll-painter')">
       <div class="video--troll-painter-inner">
         <span picture-fill data-alt="Troll Painter" class="video--troll-painter-image is-static">
           <span pf-src="/images/video/small/troll-painter-poster.jpg" data-media="(min-width: 1px)"></span>
@@ -23,12 +23,9 @@
         <span picture-fill data-alt="Troll Painter" class="video--troll-painter-image is-animated">
           <span pf-src="/images/video/large/troll-painter-poster.gif" data-media="(min-width: 1024px)"></span>
         </span>
-        <div class="video--coming-soon-wrapper">
-          <img src="/images/coming-soon.png" class="video--coming-soon">
-        </div>
       </div>
     </section><!--
---><section class="video--slave" data-ng-click="playVideo('slave')">
+--><section class="video--slave" id="video-slave" data-ng-click="playVideo('slave')">
     <div class="video--slave-inner">
       <span picture-fill data-alt="Father's Slave" class="video--slave-image is-static">
         <span pf-src="/images/video/small/slave-poster.jpg" data-media="(min-width: 1px)"></span>
@@ -37,9 +34,6 @@
       <span picture-fill data-alt="Father's Slave" class="video--slave-image is-animated">
         <span pf-src="/images/video/large/slave-poster.gif" data-media="(min-width: 1024px)"></span>
       </span>
-      <div class="video--coming-soon-wrapper">
-        <img src="/images/coming-soon.png" class="video--coming-soon">
-      </div>
     </div>
   </section><!--
 --><section class="video--broke-teenager" data-ng-click="playVideo('broke-teenager')">
@@ -51,9 +45,6 @@
       <span picture-fill data-alt="The Broke Teenager" class="video--broke-teenager-image is-animated">
         <span pf-src="/images/video/large/broke-teenager-poster.gif" data-media="(min-width: 1024px)"></span>
       </span>
-      <div class="video--coming-soon-wrapper">
-        <img src="/images/coming-soon.png" class="video--coming-soon">
-      </div>
     </div>
   </section><!--
 --><section class="video--pain-in-the-butt" data-ng-click="playVideo('pain-in-the-butt')">
@@ -65,23 +56,17 @@
       <span picture-fill data-alt="A Pain in the Butt" class="video--pain-in-the-butt-image is-animated">
         <span pf-src="/images/video/large/pain-in-the-butt-poster.gif" data-media="(min-width: 1024px)"></span>
       </span>
-      <div class="video--coming-soon-wrapper">
-        <img src="/images/coming-soon.png" class="video--coming-soon">
-      </div>
     </div>
   </section><!--
 --><section class="video--moving-out" data-ng-click="playVideo('moving-out')">
     <div class="video--moving-out-inner">
-        <span picture-fill data-alt="Living With His Parents" class="video--moving-out-image is-static">
-          <span pf-src="/images/video/small/moving-out-poster.jpg" data-media="(min-width: 1px)"></span>
-          <span pf-src="/images/video/large/moving-out-poster.jpg" data-media="(min-width: 1024px)"></span>
-        </span>
-        <span picture-fill data-alt="Living With His Parents" class="video--moving-out-image is-animated">
-          <span pf-src="/images/video/large/moving-out-poster.gif" data-media="(min-width: 1024px)"></span>
-        </span>
-      <div class="video--coming-soon-wrapper">
-        <img src="/images/coming-soon.png" class="video--coming-soon">
-      </div>
+      <span picture-fill data-alt="Living With His Parents" class="video--moving-out-image is-static">
+        <span pf-src="/images/video/small/moving-out-poster.jpg" data-media="(min-width: 1px)"></span>
+        <span pf-src="/images/video/large/moving-out-poster.jpg" data-media="(min-width: 1024px)"></span>
+      </span>
+      <span picture-fill data-alt="Living With His Parents" class="video--moving-out-image is-animated">
+        <span pf-src="/images/video/large/moving-out-poster.gif" data-media="(min-width: 1024px)"></span>
+      </span>
     </div>
   </section><!--
 --><section class="video--your-movie">
@@ -97,64 +82,45 @@
   </div>
 </div>
 <div id="rap" class="rap">
-  <div class="rap--inner">
-    <div class="rap--video-wrapper">
-      <video class="rap--video video-js vjs-default-skin" controls preload="auto" poster="/video/kom-med-poster.jpg">
-        <source src="/video/kom-med.mp4" type="video/mp4" />
-        <source src="/video/kom-med.webm" type="video/webm" />
-        <source src="/video/kom-med.ogg" type="video/ogg" />
-      </video>
+  <div class="rap--video-wrapper">
+    <div class="rap--fb-wrapper">
+      <div class="fb-like rap--fb-like" data-href="http://digitalabc.dk/share/music-video" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
     </div>
+    <iframe class="rap--video" width="1280" height="720" src="//www.youtube.com/embed/vOT7l5caSCw?showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
 <div class="video-wrapper" id="troll-painter-wrapper" data-ng-show="showVideo === 'troll-painter'">
-  <!--
-    <video class="video troll-painter video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-      <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-      <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-      <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-    </video>
-  -->
+  <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/z8MVCt4cZsk" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
 <div class="video-wrapper" id="broke-teenager-wrapper" data-ng-show="showVideo === 'broke-teenager'">
-  <!--
-    <video class="video broke-teenager video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-      <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-      <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-      <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-    </video>
--->
+  <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/XFQycqWNcSM" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
 <div class="video-wrapper" id="slave-wrapper" data-ng-show="showVideo === 'slave'">
-  <!--
-      <video class="video slave video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-        <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-      </video>
-  -->
+  <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/n7vUo1oZG08" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
 <div class="video-wrapper" id="pain-in-the-butt-wrapper" data-ng-show="showVideo === 'pain-in-the-butt'">
-  <!--
-      <video class="video pain-in-the-butt video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-        <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-      </video>
-  -->
+  <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  <div class="video">
+    <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/zsyeqhbKnFw" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>
+
 <div class="video-wrapper" id="moving-out-wrapper" data-ng-show="showVideo === 'moving-out'">
-  <!--
-      <video class="video moving-out video-js vjs-default-skin" controls preload="none" poster="http://video-js.zencoder.com/oceans-clip.png">
-        <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
-        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
-        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
-      </video>
-  -->
+  <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  <div class="video">
+    <iframe class="video--frame" width="1280" src="//www.youtube.com/embed/M9Ede-GQI30" height="720" frameborder="0" allowfullscreen></iframe>
+  </div>
 </div>

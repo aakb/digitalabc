@@ -1755,7 +1755,7 @@ html.is-locked body {
   -webkit-animation: toggle-nav-close 0.75s ease 1 forwards;
   animation: toggle-nav-close 0.75s ease 1 forwards;
 }
-/* line 49, ../sass/modules/_navigation.scss */
+/* line 48, ../sass/modules/_navigation.scss */
 .nav--header {
   border-bottom: 1px solid #cccccc;
   margin-right: 2em;
@@ -1766,22 +1766,22 @@ html.is-locked body {
   line-height: 1em;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 49, ../sass/modules/_navigation.scss */
+  /* line 48, ../sass/modules/_navigation.scss */
   .nav--header {
     margin-right: 6em;
   }
 }
-/* line 64, ../sass/modules/_navigation.scss */
+/* line 63, ../sass/modules/_navigation.scss */
 .nav--item-wrapper {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
-/* line 69, ../sass/modules/_navigation.scss */
+/* line 68, ../sass/modules/_navigation.scss */
 .nav--item-wrapper:last-child {
   border-bottom: 0;
 }
-/* line 74, ../sass/modules/_navigation.scss */
+/* line 73, ../sass/modules/_navigation.scss */
 .nav--item, .nav--sub-item {
   display: block;
   line-height: 1.5em;
@@ -1805,18 +1805,18 @@ html.is-locked body {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 79, ../sass/modules/_navigation.scss */
+/* line 78, ../sass/modules/_navigation.scss */
 .nav--item {
   font-size: 1.75em;
 }
-/* line 83, ../sass/modules/_navigation.scss */
+/* line 82, ../sass/modules/_navigation.scss */
 .nav--sub-item {
   position: relative;
   padding-left: 1em;
   font-size: 1.35em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 83, ../sass/modules/_navigation.scss */
+  /* line 82, ../sass/modules/_navigation.scss */
   .nav--sub-item {
     font-size: 1.6em;
   }
@@ -1840,7 +1840,7 @@ html.is-locked body {
 }
 
 /* Invisible close element that allows the user to close the menu by clicking outside it */
-/* line 91, ../sass/modules/_navigation.scss */
+/* line 90, ../sass/modules/_navigation.scss */
 .nav-overlay,
 .animation-overlay {
   position: fixed;
@@ -1850,7 +1850,7 @@ html.is-locked body {
   z-index: 98;
   cursor: pointer;
 }
-/* line 101, ../sass/modules/_navigation.scss */
+/* line 100, ../sass/modules/_navigation.scss */
 .nav-overlay.is-visible,
 .animation-overlay.is-visible {
   width: 100%;
@@ -1858,7 +1858,7 @@ html.is-locked body {
   -webkit-animation: toggle-nav-overlay 0.75s linear 1 forwards;
   animation: toggle-nav-overlay 0.75s linear 1 forwards;
 }
-/* line 107, ../sass/modules/_navigation.scss */
+/* line 106, ../sass/modules/_navigation.scss */
 .nav-overlay.is-animating,
 .animation-overlay.is-animating {
   -moz-animation: page-transition 0.75s ease 1 forwards;
@@ -1867,7 +1867,7 @@ html.is-locked body {
 }
 
 /* Toggle icon use for opening and closing the menu */
-/* line 115, ../sass/modules/_navigation.scss */
+/* line 114, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
   top: 1em;
@@ -1878,13 +1878,13 @@ html.is-locked body {
   cursor: pointer;
 }
 @media only screen and (min-width: 481px) {
-  /* line 115, ../sass/modules/_navigation.scss */
+  /* line 114, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     right: 2em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  /* line 115, ../sass/modules/_navigation.scss */
+  /* line 114, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 3em;
     height: 3em;
@@ -1892,13 +1892,20 @@ html.is-locked body {
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 115, ../sass/modules/_navigation.scss */
+  /* line 114, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 4em;
     right: 6em;
     height: 5em;
     width: 5em;
   }
+}
+
+/* Nesting to override facebooks default.*/
+/* line 119, ../sass/modules/_navigation.scss */
+.nav .nav--fb-like {
+  position: absolute;
+  top: 20px;
 }
 
 /**
@@ -2569,6 +2576,7 @@ html.is-locked body {
   z-index: 98;
   top: 0;
   left: 0;
+  background-color: black;
   height: 100%;
   width: 100%;
 }
@@ -2626,24 +2634,28 @@ html.is-locked body {
 
 /* line 47, ../sass/modules/_video.scss */
 .video {
+  padding-bottom: 56.25%;
+  /* 16:9 */
   overflow: hidden;
   position: relative;
   z-index: 97;
+  top: 50%;
+  margin: 0 auto;
+  /* The videos embedded have these dimensions so this should be max. */
+  max-height: 720px;
+  max-width: 1280px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 @media only screen and (min-width: 481px) {
   /* line 47, ../sass/modules/_video.scss */
   .video {
-    padding: 2em;
     background-color: black;
   }
 }
-@media only screen and (min-width: 1024px) {
-  /* line 47, ../sass/modules/_video.scss */
-  .video {
-    padding: 4em;
-  }
-}
-/* line 83, ../sass/modules/_video.scss */
+/* line 91, ../sass/modules/_video.scss */
 .video--coming-soon-wrapper {
   bottom: 0;
   position: absolute;
@@ -2653,7 +2665,7 @@ html.is-locked body {
   height: 100%;
   width: 100%;
 }
-/* line 93, ../sass/modules/_video.scss */
+/* line 101, ../sass/modules/_video.scss */
 .video--coming-soon {
   top: 50%;
   width: 80%;
@@ -2664,6 +2676,48 @@ html.is-locked body {
   transform: translateY(-50%);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
+}
+/* line 110, ../sass/modules/_video.scss */
+.video--frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+@media only screen and (min-width: 1300px) {
+  /* line 110, ../sass/modules/_video.scss */
+  .video--frame {
+    top: 50%;
+    width: 1280px;
+    height: 720px;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+/* line 130, ../sass/modules/_video.scss */
+.video--fb-like {
+  z-index: 98;
+  top: 1em;
+  left: 1em;
+  position: absolute;
+}
+@media only screen and (min-width: 481px) {
+  /* line 130, ../sass/modules/_video.scss */
+  .video--fb-like {
+    left: 2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 130, ../sass/modules/_video.scss */
+  .video--fb-like {
+    top: 3em;
+  }
 }
 
 /**
@@ -2709,25 +2763,59 @@ html.is-locked body {
   }
 }
 /* line 32, ../sass/modules/_rap.scss */
-.rap--inner {
+.rap--video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
+@media only screen and (min-width: 1350px) {
+  /* line 32, ../sass/modules/_rap.scss */
+  .rap--video {
+    height: inherit;
+    width: inherit;
+  }
+}
+/* line 48, ../sass/modules/_rap.scss */
+.rap--video-wrapper {
+  padding-bottom: 56.25%;
+  /* 16:9 */
   position: relative;
+  z-index: 97;
+  margin: 0 auto;
+  max-height: 720px;
+  max-width: 1280px;
   top: 50%;
-  z-index: 96;
-  padding-right: 1em;
-  padding-left: 1em;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 43, ../sass/modules/_rap.scss */
-.rap--video {
-  width: 100%;
+@media only screen and (min-width: 1350px) {
+  /* line 48, ../sass/modules/_rap.scss */
+  .rap--video-wrapper {
+    height: inherit;
+    width: inherit;
+    max-width: 1280px;
+    max-height: 720px;
+    padding-bottom: 0;
+  }
 }
-@media only screen and (min-width: 1024px) {
-  /* line 43, ../sass/modules/_rap.scss */
-  .rap--video {
-    width: 60%;
+/* line 70, ../sass/modules/_rap.scss */
+.rap--fb-wrapper {
+  position: relative;
+  top: -30px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+}
+@media only screen and (min-width: 1350px) {
+  /* line 70, ../sass/modules/_rap.scss */
+  .rap--fb-wrapper {
+    width: 100%;
   }
 }
 

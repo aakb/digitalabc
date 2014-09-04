@@ -103,7 +103,8 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
           'me/digitalabc:complete',
           'post',
           {
-            quiz: $scope.link
+            quiz: $scope.link,
+            'fb:explicitly_shared': 'true'
           },
           function(response) {
             if (response.error) {

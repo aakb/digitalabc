@@ -155,25 +155,35 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
   // Video controls.
   $scope.showVideo = false;
 
+
   $scope.videos = [];
 
   // Play video.
   $scope.playVideo = function(video) {
-    if (video === 'troll-painter' || video === 'slave' || video === 'broke-teenager' || video === 'pain-in-the-butt' || video === 'moving-out') {
-      return;
+    // Set video src.
+    switch (video) {
+      case 'troll-painter':
+        var url = '//www.youtube.com/embed/z8MVCt4cZsk?showinfo=0';
+        break;
+      case 'slave':
+        var url = '//www.youtube.com/embed/n7vUo1oZG08?showinfo=0';
+        break;
+      case 'pain-in-the-butt':
+        var url = '//www.youtube.com/embed/zsyeqhbKnFw?showinfo=0';
+        break;
+      case 'moving-out':
+        var url = '//www.youtube.com/embed/M9Ede-GQI30?showinfo=0';
+        break;
+      case 'broke-teenager':
+        var url = '//www.youtube.com/embed/XFQycqWNcSM?showinfo=0';
+        break;
+      default:
+        return;
     }
 
-    if (!$scope.videos[video]) {
-      videojs($('.' + video)[0], {"width": 'auto', "height": '100%'}, function() {
-        $scope.videos[video] = this;
-        $scope.video = this;
-        this.play();
-      });
-    } else {
-      $scope.videos[video].currentTime(0);
-      $scope.videos[video].play();
-      $scope.video = $scope.videos[video];
-    }
+    $('#' + video +'-wrapper .video iframe').each(function(){
+      this.src = url;
+    });
 
     // Show video container.
     $scope.showVideo = video;
@@ -181,7 +191,9 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Stop video.
   $scope.stopVideo = function() {
-    $scope.video.pause();
+    $('.video iframe').each(function(){
+      this.src = '';
+    });
 
     $document.scrollToElement(angular.element(document.getElementById('video')), 0, 500);
 
