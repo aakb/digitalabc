@@ -43,7 +43,6 @@
     @include animation(toggle-nav-close .75s ease 1 forwards);
   }
 
-
   /* Elements */
 
   &--header {
@@ -114,4 +113,10 @@
 
 .nav-toggle-icon {
   @include navigation--toggle-icon();
+}
+
+/* Nesting to override facebooks default.*/
+.nav .nav--fb-like {
+  position: absolute;
+  top: 20px;
 }
