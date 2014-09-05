@@ -45,6 +45,21 @@
     }
   }
 
+  &--video-inner-wrapper {
+    height: 100%;
+
+    @include breakpoint($breakpoint-lap) {
+      height: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      width: 80%;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      width: 100%;
+    }
+  }
+
   &--video-wrapper {
     padding-bottom: 56.25%; /* 16:9 */
     position: relative;
@@ -65,7 +80,6 @@
       padding-bottom: 0;
     }
   }
-
 
   &--fb-wrapper { // We need fb wrapper to position properly.
     position: relative;
