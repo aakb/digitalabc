@@ -129,6 +129,9 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     else if ($location.path().indexOf("/nyttige-links") === 0) {
       window.document.title = 'Nyttige links - Digital ABC';
     }
+    else if ($location.path().indexOf("/grafisk-materiale") === 0) {
+      window.document.title = 'Grafisk materiale - Digital ABC';
+    }
     else if ($location.path().indexOf("/music-video") === 0) {
       window.document.title = 'Musikvideo: Kom med mig (ingen stress) - Digital ABC';
     }
