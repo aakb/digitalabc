@@ -245,7 +245,7 @@ class ApiController extends Controller {
               'text' => 'Bestille et pas',
             ),
           ),
-        'correctAnswer' => 2,
+        'correctAnswer' => 1,
       ),
       array (
         'question' => 'Hvordan modtager du i fremtiden regninger fra biblioteket?',
