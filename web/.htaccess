@@ -8,6 +8,10 @@ DirectoryIndex app_dev.php
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    RewriteRule ^share/videos /#/videos [NE,R=301,L]
+
+    RewriteRule ^share/music-video /#/music-video [NE,R=301,L]
+
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the
     # project in a subdirectory, the base path will be prepended to allow proper
@@ -38,7 +42,8 @@ DirectoryIndex app_dev.php
     RewriteRule .? - [L]
 
     # Rewrite all other queries to the front controller.
-    RewriteRule .? %{ENV:BASE}/app_dev.php [L]
+    RewriteRule .? %{ENV:BASE}/app.php [L]
+
 </IfModule>
 
 <IfModule !mod_rewrite.c>
@@ -46,7 +51,38 @@ DirectoryIndex app_dev.php
         # When mod_rewrite is not available, we instruct a temporary redirect of
         # the start page to the front controller explicitly so that the website
         # and the generated links can still be used.
-        RedirectMatch 302 ^/$ /app_dev.php/
+        RedirectMatch 302 ^/$ /app.php/
         # RedirectTemp cannot be used instead
     </IfModule>
 </IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+# favicon (cannot be renamed)
+  ExpiresByType image/x-icon              "access plus 1 week"
+
+# media: images, video, audio
+  ExpiresByType image/gif                 "access plus 1 week"
+  ExpiresByType image/png                 "access plus 1 week"
+  ExpiresByType image/jpg                 "access plus 1 week"
+  ExpiresByType image/jpeg                "access plus 1 week"
+  ExpiresByType video/ogg                 "access plus 1 week"
+  ExpiresByType audio/ogg                 "access plus 1 week"
+  ExpiresByType video/mp4                 "access plus 1 week"
+  ExpiresByType video/webm                "access plus 1 week"
+
+# css and javascript
+  ExpiresByType text/css                  "access plus 1 week"
+  ExpiresByType application/javascript    "access plus 1 week"
+  ExpiresByType text/javascript           "access plus 1 week"
+
+  <IfModule mod_headers.c>
+    Header append Cache-Control "public"
+  </IfModule>
+
+</IfModule>
+
+AddType video/mp4 .mp4 .m4v
+AddType video/ogg .ogg .ogv
+AddType video/webm .webm

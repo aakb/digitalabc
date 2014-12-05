@@ -1,201 +1,526 @@
 /**
  *
- * Quiz.
+ * Quiz
  *
  */
 
 
-/* Silent classes related to this document.
- *
- * ========================================================================== */
+.quiz-header {
+  background-color: $black;
 
-// Selector for displaying backgrounds properly.
-%quiz--set-font--selector {
-  color: $white;
-  font-family: 'bebas_neueregular';
+  overflow: hidden;
+
+  &--background {
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    @include background-size(cover);
+
+    // Background slides.
+    &.is-first {
+      background-image: url('/images/backgrounds/small/girl-arms-out.jpg');
+    }
+
+    &.is-second {
+      background-image: url('/images/backgrounds/small/guy-horizontal.jpg');
+    }
+
+    // Small devices retina.
+    @include breakpoint($breakpoint-lap, false, true) {
+      &.is-first {
+        background-image: url('/images/backgrounds/medium/girl-arms-out.jpg');
+      }
+
+      &.is-second {
+        background-image: url('/images/backgrounds/medium/guy-horizontal.jpg');
+      }
+    }
+
+    // Medium devices non-retina.
+    @include breakpoint($breakpoint-lap) {
+      &.is-first {
+        background-image: url('/images/backgrounds/medium/girl-arms-out.jpg');
+      }
+
+      &.is-second {
+        background-image: url('/images/backgrounds/medium/guy-horizontal.jpg');
+      }
+    }
+
+    // Large devices non-retina.
+    @include breakpoint($breakpoint-desk) {
+      &.is-first {
+        background-image: url('/images/backgrounds/large/girl-arms-out.jpg');
+      }
+
+      &.is-second {
+        background-image: url('/images/backgrounds/large/guy-horizontal.jpg');
+      }
+    }
+
+    // Animations
+    &.ng-enter {
+      @include animation(header-background-in .75s ease-in 1 forwards);
+    }
+
+    &.ng-leave {
+      @include animation(header-background-out .75s ease-in 1 forwards);
+    }
+  }
+
+  &--inner {
+    padding-top: 3em;
+  }
+
+  @include breakpoint($breakpoint-lap, $breakpoint-height) {
+    padding-top: 0;
+  }
 }
 
+.quiz,
+.quiz-start {
+  &--background {
+    top: 0;
+    left: 0;
+    position: fixed;
 
-/* Quiz styles.
- *
- * ========================================================================== */
+    height: 100%;
+    width: 100%;
 
-.quiz {
+    background-image: url('/images/backgrounds/small/guy-jumping.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    @include background-size(cover);
+
+    // Small devices retina.
+    @include breakpoint($breakpoint-lap, false, true) {
+      background-image: url('/images/backgrounds/medium/guy-jumping.jpg');
+    }
+
+    @include breakpoint($breakpoint-lap) {
+      background-image: url('/images/backgrounds/medium/guy-jumping.jpg');
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      background-image: url('/images/backgrounds/large/guy-jumping.jpg');
+    }
+  }
+}
+
+.quiz,
+.quiz-header,
+.quiz-start {
+  position: relative;
+
   height: 100%;
   width: 100%;
 
-  background: url('/images/quiz-bg.jpg') no-repeat;
-  letter-spacing: .08em;
   text-align: center;
 
-  @include background-size(cover);
-
   &--inner {
-    @extend %layout-inner;
+    z-index: 96;
+
+    padding-top: 4em;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}
+
+.quiz-header,
+.quiz-start {
+  &--inner {
+    @include vertical-align-element;
+  }
+}
+
+.quiz {
+  &--inner {
+    position: relative;
+
+    padding-top: 5em;
+
+    @include breakpoint($breakpoint-lap) {           
+      @include vertical-align-element;
+    }
+  }
+}
+
+
+.quiz,
+.quiz-header,
+.quiz-start {
+  &--question,
+  &--punchline,
+  &--result,
+  &--text {
+    color: $white;
+    font: $font-family-primary;
   }
 
-  &--start-header {
-    @extend %quiz--set-font--selector;
+  &--question,
+  &--text {
+    margin-bottom: 0;
 
-    font-size: 6em;
-    line-height: 1em;
-  }
-
-
-  &--start-subtitle {
-    @extend %quiz--set-font--selector;
-
-    font-size: 3em;
-    line-height: 1em;
-  }
-
-  &--start-button {
-    @extend %button-transparent;
-
-    font-size: 3.5em;
+    font-size: 1.5em;
 
     @include breakpoint($breakpoint-lap) {
-      font-size: 4.5em;
+      font-size: 2.5em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      font-size: 3em;
+    }
+
+    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+      font-size: 2.25em;
+    }
+
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
+      font-size: 1.75em;
+    }
+  }
+
+  &--punchline {
+    position: relative;
+
+    height: 1em;
+    margin-bottom: .25em;
+
+    font-size: 3em;
+    line-height: 1.25em;
+
+    &-inner {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+
+      &.ng-enter {
+        @include animation(header-punchline-in .5s ease-in-out 1 forwards);
+      }
+
+      &.ng-leave {
+        @include animation(header-punchline-out .5s ease-in-out 1 forwards);
+      }
+    }
+
+    // Breakpoints
+    @include breakpoint($breakpoint-lap) {
+      font-size: 8em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      font-size: 10em;
+    }
+
+    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+      font-size: 6em;
+    }
+
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
+      font-size: 3em;
     }
   }
 
 
+  &--text {
+    margin-bottom: 1em;
+
+    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+      margin-bottom: .5em;
+    }
+
+    // Not much room when orientation: landscape so we hide the text.
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
+      display: none;
+    }
+  }
+
+  &--button {
+    @extend %button-transparent;
+
+    margin-bottom: 1.5em;
+
+    font-size: 2em;
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: 2.75em;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      margin-bottom: 1.25em;
+
+      font-size: 3.5em;
+    }
+
+    @include breakpoint($breakpoint-lap, $breakpoint-height) {
+      margin-bottom: 1em;
+
+      font-size: 2em;
+    }
+
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
+      font-size: 1.75em;
+    }
+  }
+
+  &--scroll {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-height: 6em;
+    max-width: 2em;
+
+    cursor: pointer;
+
+    .scroll-text {
+      @include opacity(.5);
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      max-width: 3.25em;
+    }
+
+    // Not much room when orientation: landscape so we hide the text.
+    @media screen and (orientation: landscape) and (max-height: $breakpoint-landscape-height) {
+      display: none;
+    }
+  }
+}
+
+
+
+.quiz {
   &--progress {
     color: transparentize($white, .5);
-    font-size: 3em;
-    font-family: $font-primary;
+
+    font-size: 1.5em;
+
+    @include breakpoint(false, 550px) {
+      display: none;
+    }
+
+    @include breakpoint($breakpoint-desk) {
+      font-size: 3em;
+    }
   }
 
 
   &--question {
-    @extend %quiz--set-font--selector;
-
-    font-size: 4em;
-  }
-
-
-  &--answers {
-    @extend %quiz--set-font--selector;
-
-    font-size: 2em;
-  }
-
-
-  &--selection {
-    margin: 1em auto;
-    height: 2.9em;
-    padding: .5em 1em;
-    position: relative;
-    width: 70%;
-
-    background-color: rgba(0,0,0,0.35);
-    border: 0.3em solid white;
-    font-size: 0.8em;
-
-    @include breakpoint($breakpoint-lap) {
-      width: 30em;
-    }
-
-    &.is-checked {
-      @include background-image(linear-gradient(left, $theme-color, rgba(0,0,0,0.35)));
-
-      .quiz--selection-number {
-        background-color: $theme-color;
-      }
-    }
-  }
-
-
-  &--selection-input {
-    display: none;
-  }
-
-
-  &--selection-label {
-    position: relative;
-    top: 50%;
-
-    margin: 0;
+    margin-bottom: .5em;
 
     color: $white;
-    word-wrap: break-word;
 
-    @include translateY(-50%);
+    @include breakpoint(false, 550px) {
+      font-size: 1.5em;
+    }
 
-    &:hover {
-      cursor: pointer;
+    @include breakpoint($breakpoint-desk) {
+      font-size: 3em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      font-size: 5em;
     }
   }
 
+  &--answers-wrapper {
+    padding: .25em;
+  }
 
-  &--selection-number {
-    height: 1.5em;
-    left: -1.1em;
-    line-height: 1.5em;
+  &--answers-number,
+  &--answers-answer-inner {
+    display: block;
+
+    color: $white;
+    cursor: pointer;
+
+    pointer-events: none;
+
+    @include user-select('none');
+  }
+
+  &--answers-number {
+    left: -.95em;
     position: absolute;
     top: 50%;
     width: 1.5em;
 
     background: black;
     border: .2em solid $white;
+    cursor: pointer;
+    font-family: $font-primary;
+    font-size: 1.25em;
+    line-height: 1.5em;
 
     @include border-radius(100%);
     @include translateY(-50%);
+
+    // Compensate for width of the number 1.
+    &.is-first {
+      text-indent: -1px;
+    }
+
+    &.is-checked {
+      background-color: $theme-color;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      font-size: 1.5em;
+    }
   }
 
+  &--answers-answer {
+    position: relative;
 
-  &--button {
+    border: .2em solid white;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-left: auto;
+    height: 4em;
+    max-width: 35em;
+    padding: 0 .5em .2em 1.75em;
+
+    background-color: transparentize($black, .35);
+    cursor: pointer;
+    font-family: $font-secondary;
+
+    @include box-sizing(border-box);
+
+    &.is-checked {
+      @include background-image(linear-gradient(left, $theme-color, transparentize($black, .35)));
+    }
+
+    @include breakpoint($breakpoint-lap) {
+      height: 5em;
+    }
+  }
+
+  &--answers-answer-inner {
+    font-size: .75em;
+
+    @include vertical-align-element();
+
+    @include breakpoint($breakpoint-lap) {
+      font-size: .9em;
+    }
+  }
+
+  &--answers-input {
+    display: none;
+  }
+
+  &--button,
+  &--try-again-button {
     @extend %button-transparent;
 
+    margin-right: .5em;
+    margin-left: .5em;
+    padding: .25em 1.25em;
+
     color: $white;
-    font-size: 1.695em;
 
     &.is-inactive {
       cursor: default;
 
       @include opacity(.5);
     }
+
+    @include breakpoint(false, 550px) {
+      padding: .25em .75em;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      padding: .5em 2em;
+    }
   }
 
+  &--button {
+    font-size: 1.5em;
+  }
+
+  &--try-again-button {
+    margin-bottom: 1em;
+    padding-top: .23em;
+    padding-bottom: .23em;
+    width: 90%;
+
+    font-size: 2em;
+
+    @include box-sizing(border-box);
+
+    @include breakpoint($breakpoint-lap) {
+      padding-right: 2.52em;
+      padding-left: 2.52em;
+      width: auto;
+    }
+  }
 
   &--result {
-    @extend %quiz--set-font--selector;
+    margin-bottom: .5em;
 
-    font-size: 4em;
+    font-size: 3em;
+    line-height: 1.25em;
   }
-
 
   &--text {
-    @extend %quiz--set-font--selector;
-
     font-size: 2em;
   }
 
-  &--challenger-answer {
-    &.is-correct {
-      color: #0f0;
-    }
+  &--challenge-text {
+    margin-bottom: 3em;
 
-    &.is-wrong {
-      color: #f00;
-    }
+    color: $white;
+    font: $font-family-secondary;
   }
 
+  &--text-alternate {
+    margin: 0 auto 1em;
+    max-width: 60em;
 
-  &--start-opponents-wrapper {
-    @extend %quiz--set-font--selector;
+    color: transparentize($white, .35);
+    font-family: $font-secondary;
+  }
 
-    margin-right: auto;
-    margin-bottom: 2em;
-    margin-left: auto;
-    padding-left: 6em;
-    width: 16em;
+  &--text-link {
+    padding-bottom: 2em;
 
+    color: $white;
+    font-family: $font-secondary;
+  }
+
+  &--share-button {
+    @extend %button-transparent;
+
+    margin-bottom: 1em;
+    padding-bottom: .2em;
+    padding-left: 2.1em;
+    width: 90%;
+
+    background-image: url('/images/fb-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $facebook-color;
+    color: $white;
     font-size: 2em;
-    text-align: left;
-  }
 
-  &--start-opponent {
-    color: lighten($theme-color, 35%);
+    &:hover {
+      background-color: transparentize($facebook-color, .35);
+    }
+
+    @include box-sizing(border-box);
+
+    @include breakpoint($breakpoint-lap) {
+      width: auto;
+    }
   }
 }

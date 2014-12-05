@@ -33,12 +33,12 @@ html.is-locked  body {
 
   &--logo {
     position: absolute;
-    top: 1.5em;
+    top: 1em;
     left: 1em;
 
     display: block;
-    height: 3em;
-    width: 12em;
+    height: 2em;
+    width: 8em;
 
     @include background-size(contain);
 
@@ -66,12 +66,9 @@ html.is-locked  body {
 /* Layout */
 
 %layout-inner {
-  position: relative;
-  top: 50%;
-
   padding-top: 6em;
 
-  @include translateY(-50%);
+  @include vertical-align-element;
 }
 
 .layout {

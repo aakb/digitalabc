@@ -21,10 +21,9 @@
 /* Navigation */
 /* line 14, ../sass/ie9.scss */
 .nav.is-visible {
-  right: 0;
-}
+  opacity: 1;
+  right: 0; }
 
-/* line 20, ../sass/ie9.scss */
+/* line 21, ../sass/ie9.scss */
 .nav-overlay.is-visible {
-  background-color: rgba(0, 0, 0, 0.65);
-}
+  background-color: rgba(0, 0, 0, 0.65); }

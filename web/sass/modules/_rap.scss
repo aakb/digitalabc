@@ -1,0 +1,95 @@
+/**
+ *
+ * Rap.
+ *
+ */
+
+
+.rap {
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  background-image: url('/images/backgrounds/small/rappers-two-up-points.jpg');
+  background-repeat: no-repeat;
+  text-align: center;
+
+  @include background-size(cover);
+
+  @include breakpoint($breakpoint-lap, false, true) {
+    background-image: url('/images/backgrounds/medium/rappers-two-up-points.jpg');
+  }
+
+  @include breakpoint($breakpoint-lap) {
+    background-image: url('/images/backgrounds/medium/rappers-two-up-points.jpg');
+  }
+
+  @include breakpoint($breakpoint-desk) {
+    background-image: url('/images/backgrounds/large/rappers-two-up-points.jpg');
+  }
+
+  &--video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+
+    // When we hit 1350 we should stop expanding the video. This could be 1280px breakpoint as that is the iframe width, but we want a bit of padding too.
+    @include breakpoint(1350px) {
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  &--video-inner-wrapper {
+    height: 100%;
+
+    @include breakpoint($breakpoint-lap) {
+      height: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      width: 80%;
+    }
+
+    @include breakpoint($breakpoint-bigscreen) {
+      width: 100%;
+    }
+  }
+
+  &--video-wrapper {
+    padding-bottom: 56.25%; /* 16:9 */
+    position: relative;
+    z-index: 97;
+    margin: 0 auto;
+    max-height: 720px;
+    max-width: 1280px;
+    top: 50%;
+
+    @include translateY(-50%);
+
+    // When we hit 1350 we should stop expanding the video. This could be 1280px breakpoint as that is the iframe width, but we want a bit of padding too.
+    @include breakpoint(1350px) {
+      height: inherit;
+      width: inherit;
+      max-width: 1280px;
+      max-height: 720px;
+      padding-bottom: 0;
+    }
+  }
+
+  &--fb-wrapper { // We need fb wrapper to position properly.
+    position: relative;
+    top: -30px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+
+    @include breakpoint(1350px) {
+      width: 100%;
+    }
+  }
+}

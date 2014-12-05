@@ -7,7 +7,7 @@
 
 /* Mixin for breakpoints */
 
-@mixin breakpoint($breakpoint-width: false, $breakpoint-height: false) {
+@mixin breakpoint($breakpoint-width: false, $breakpoint-height: false, $retina: false) {
   // If both is set.
   @if $breakpoint-width != false and $breakpoint-height != false {
     @media only screen and (min-width: $breakpoint-width) and (max-height: $breakpoint-height) { @content; }
@@ -22,6 +22,21 @@
   @if $breakpoint-width == false and $breakpoint-height != false {
     @media only screen and (max-height: $breakpoint-height) { @content; }
   }
+
+  // If $retina is set.
+  @if $breakpoint-width != false and $retina != false {
+    @media only screen and (min-resolution: 2dppx) and (max-width: $breakpoint-width) { @content; }
+  }
+}
+
+
+/* Vertical align element */
+
+@mixin vertical-align-element() {
+  position: relative;
+  top: 50%;
+
+  @include translateY(-50%);
 }
 
 
@@ -64,65 +79,4 @@
 @mixin svg-bg($name, $extension: png, $color: transparent, $position: 0 0, $repeat: no-repeat) {
   background: url('/images/#{$name}.#{$extension}') $color $position $repeat;
   background: url('/images/#{$name}.svg') $color $position $repeat;
-}
-
-
-/* Mixins for navigation */
-
-@mixin nav-base-item() {
-  display: block;
-
-  font-family: $font-family-primary;
-  line-height: 1.5em;
-
-  &:link {
-    color: $text-color-dark;
-    text-decoration: none;
-  }
-
-  &:visited {
-    color: darken($text-color-dark, 5%);
-  }
-
-  &:hover,
-  &:focus {
-    color: $link-color;
-    text-decoration: none;
-  }
-
-  &.is-active {
-    color: $link-color;
-    text-decoration: underline;
-  }
-}
-
-@mixin nav-item() {
-  font-size: 1.75em;
-}
-
-@mixin nav-sub-item() {
-  position: relative;
-
-  padding-left: 1em;
-
-  font-size: 1.35em;
-
-  @include breakpoint($breakpoint-lap) {
-    font-size: 1.6em;
-  }
-
-  &:before {
-    position: absolute;
-    top: .35em;
-    left: 0;
-
-    height: 1em;
-    width: 1em;
-
-    content: "";
-
-    @include svg-bg(arrow-icon, png, transparent, .1em 0, no-repeat);
-    @include background-size(.6em);
-    @include opacity(.5);
-  }
 }

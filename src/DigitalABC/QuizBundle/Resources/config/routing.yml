@@ -1,3 +1,0 @@
-DigitalABCQuizBundle:
-  resource: "@DigitalABCQuizBundle/Controller"
-  type: annotation

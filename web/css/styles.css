@@ -5,16 +5,32 @@
  *
  */
 /* Compass */
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url("fonts/bebas-neue/BebasNeue-webfont.eot");
+  src: url("fonts/bebas-neue/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/bebas-neue/BebasNeue-webfont.woff") format("woff"), url("fonts/bebas-neue/BebasNeue-webfont.ttf") format("truetype"), url("fonts/bebas-neue/BebasNeue-webfont.svg#bebas_neueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'permianseriftypefaceregular';
+  src: url("fonts/permianserif/PermianSerifTypeface-webfont.eot");
+  src: url("fonts/permianserif/PermianSerifTypeface-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/permianserif/PermianSerifTypeface-webfont.woff") format("woff"), url("fonts/permianserif/PermianSerifTypeface-webfont.ttf") format("truetype"), url("fonts/permianserif/PermianSerifTypeface-webfont.svg#permianseriftypefaceregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'permianseriftypefacebold';
+  src: url("fonts/permianserif/PermianSerifTypeface-Bold-webfont.eot");
+  src: url("fonts/permianserif/PermianSerifTypeface-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/permianserif/PermianSerifTypeface-Bold-webfont.woff") format("woff"), url("fonts/permianserif/PermianSerifTypeface-Bold-webfont.ttf") format("truetype"), url("fonts/permianserif/PermianSerifTypeface-Bold-webfont.svg#permianseriftypefaceregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /**
  *
  * Variables
  *
  */
-/* line 10, ../sass/base/_vars.scss */
-.static-page--nav {
-  margin-right: -4px;
-}
-
 /* Breakpoints
    ================================================================================================================== */
 /* Layout
@@ -161,7 +177,7 @@
  * 5. Required to combine fluid widths and fixed gutters.
  */
 /* line 240, ../sass/base/_grid.scss */
-.static-page--content, .static-page--nav {
+.video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt, .video--moving-out, .video--your-movie, .static-page--content, .static-page--nav {
   display: inline-block;
   /* [1] */
   padding-left: 2em;
@@ -188,7 +204,7 @@
   text-align: left;
 }
 /* line 265, ../sass/base/_grid.scss */
-.static-page--content-wrapper > .static-page--content, .static-page--content-wrapper > .static-page--nav {
+.static-page--content-wrapper > .video--troll-painter, .static-page--content-wrapper > .video--broke-teenager, .static-page--content-wrapper > .video--slave, .static-page--content-wrapper > .video--pain-in-the-butt, .static-page--content-wrapper > .video--moving-out, .static-page--content-wrapper > .video--your-movie, .static-page--content-wrapper > .static-page--content, .static-page--content-wrapper > .static-page--nav {
   direction: ltr;
   text-align: left;
 }
@@ -258,7 +274,7 @@
    * Whole
    */
   /* line 368, ../sass/base/_grid.scss */
-  .static-page--content {
+  .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt, .video--moving-out, .video--your-movie, .static-page--content {
     width: 100%;
   }
 
@@ -299,6 +315,11 @@
   /**
    * Halves
    */
+  /* line 374, ../sass/base/_grid.scss */
+  .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt, .video--moving-out, .video--your-movie {
+    width: 50%;
+  }
+
   /**
    * Thirds
    */
@@ -360,6 +381,11 @@
   /**
    * Thirds
    */
+  /* line 380, ../sass/base/_grid.scss */
+  .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt, .video--moving-out, .video--your-movie {
+    width: 33.333%;
+  }
+
   /**
    * Quarters
    */
@@ -399,6 +425,11 @@
   /**
    * Thirds
    */
+  /* line 380, ../sass/base/_grid.scss */
+  .video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt, .video--moving-out, .video--your-movie {
+    width: 33.333%;
+  }
+
   /**
    * Quarters
    */
@@ -626,10 +657,10 @@
  *
  */
 /* Mixin for breakpoints */
+/* Vertical align element */
 /* Mixin for stripping default list styles */
 /* Mixin for stripping link styles*/
 /* Mixin for using svg images as background with fallback to png */
-/* Mixins for navigation */
 /**
  *
  * Normalize
@@ -977,7 +1008,7 @@ body {
   height: 100%;
   background-color: white;
   color: #4d4d4d;
-  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* line 26, ../sass/base/_base.scss */
@@ -989,7 +1020,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: .5em;
-  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "bebas_neueregular";
   font-weight: normal;
   /* This fixes huge spaces when a heading wraps onto two lines */
   line-height: 1.2;
@@ -1060,7 +1091,7 @@ img {
 /* line 14, ../sass/base/_forms.scss */
 input,
 textarea {
-  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "permianseriftypefaceregular";
 }
 
 /* line 19, ../sass/base/_forms.scss */
@@ -1139,20 +1170,164 @@ label {
  * Animations
  *
  */
+@-moz-keyframes header-punchline-in {
+  /* line 12, ../sass/animations/_animations.scss */
+  0% {
+    right: -200%;
+    opacity: 0;
+  }
+
+  /* line 18, ../sass/animations/_animations.scss */
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes header-punchline-in {
+  /* line 12, ../sass/animations/_animations.scss */
+  0% {
+    right: -200%;
+    opacity: 0;
+  }
+
+  /* line 18, ../sass/animations/_animations.scss */
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes header-punchline-in {
+  /* line 12, ../sass/animations/_animations.scss */
+  0% {
+    right: -200%;
+    opacity: 0;
+  }
+
+  /* line 18, ../sass/animations/_animations.scss */
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@-moz-keyframes header-punchline-out {
+  /* line 27, ../sass/animations/_animations.scss */
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+
+  /* line 33, ../sass/animations/_animations.scss */
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes header-punchline-out {
+  /* line 27, ../sass/animations/_animations.scss */
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+
+  /* line 33, ../sass/animations/_animations.scss */
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@keyframes header-punchline-out {
+  /* line 27, ../sass/animations/_animations.scss */
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+
+  /* line 33, ../sass/animations/_animations.scss */
+  100% {
+    left: -200%;
+    opacity: 0;
+  }
+}
+@-moz-keyframes header-background-in {
+  /* line 41, ../sass/animations/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 45, ../sass/animations/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes header-background-in {
+  /* line 41, ../sass/animations/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 45, ../sass/animations/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes header-background-in {
+  /* line 41, ../sass/animations/_animations.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 45, ../sass/animations/_animations.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes header-background-out {
+  /* line 52, ../sass/animations/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 56, ../sass/animations/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes header-background-out {
+  /* line 52, ../sass/animations/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 56, ../sass/animations/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes header-background-out {
+  /* line 52, ../sass/animations/_animations.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 56, ../sass/animations/_animations.scss */
+  100% {
+    opacity: 0;
+  }
+}
 @-moz-keyframes page-transition {
-  /* line 9, ../sass/animations/_animations.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   0% {
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
     opacity: 1;
   }
 
-  /* line 16, ../sass/animations/_animations.scss */
+  /* line 72, ../sass/animations/_animations.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 20, ../sass/animations/_animations.scss */
+  /* line 76, ../sass/animations/_animations.scss */
   100% {
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
@@ -1160,19 +1335,19 @@ label {
   }
 }
 @-webkit-keyframes page-transition {
-  /* line 9, ../sass/animations/_animations.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   0% {
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
     opacity: 1;
   }
 
-  /* line 16, ../sass/animations/_animations.scss */
+  /* line 72, ../sass/animations/_animations.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 20, ../sass/animations/_animations.scss */
+  /* line 76, ../sass/animations/_animations.scss */
   100% {
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
@@ -1180,19 +1355,19 @@ label {
   }
 }
 @keyframes page-transition {
-  /* line 9, ../sass/animations/_animations.scss */
+  /* line 65, ../sass/animations/_animations.scss */
   0% {
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
     opacity: 1;
   }
 
-  /* line 16, ../sass/animations/_animations.scss */
+  /* line 72, ../sass/animations/_animations.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 20, ../sass/animations/_animations.scss */
+  /* line 76, ../sass/animations/_animations.scss */
   100% {
     right: 0;
     background-color: rgba(0, 0, 0, 0.9);
@@ -1200,100 +1375,112 @@ label {
   }
 }
 @-moz-keyframes toggle-nav-open {
-  /* line 30, ../sass/animations/_animations.scss */
+  /* line 88, ../sass/animations/_animations.scss */
   0% {
-    right: -200%;
+    right: -40em;
+    opacity: 0;
   }
 
-  /* line 34, ../sass/animations/_animations.scss */
+  /* line 94, ../sass/animations/_animations.scss */
   100% {
     right: 0;
+    opacity: 1;
   }
 }
 @-webkit-keyframes toggle-nav-open {
-  /* line 30, ../sass/animations/_animations.scss */
+  /* line 88, ../sass/animations/_animations.scss */
   0% {
-    right: -200%;
+    right: -40em;
+    opacity: 0;
   }
 
-  /* line 34, ../sass/animations/_animations.scss */
+  /* line 94, ../sass/animations/_animations.scss */
   100% {
     right: 0;
+    opacity: 1;
   }
 }
 @keyframes toggle-nav-open {
-  /* line 30, ../sass/animations/_animations.scss */
+  /* line 88, ../sass/animations/_animations.scss */
   0% {
-    right: -200%;
+    right: -40em;
+    opacity: 0;
   }
 
-  /* line 34, ../sass/animations/_animations.scss */
+  /* line 94, ../sass/animations/_animations.scss */
   100% {
     right: 0;
+    opacity: 1;
   }
 }
 @-moz-keyframes toggle-nav-close {
-  /* line 40, ../sass/animations/_animations.scss */
+  /* line 102, ../sass/animations/_animations.scss */
   0% {
     right: 0;
+    opacity: 1;
   }
 
-  /* line 44, ../sass/animations/_animations.scss */
+  /* line 108, ../sass/animations/_animations.scss */
   100% {
-    right: -200%;
+    right: -40em;
+    opacity: 1;
   }
 }
 @-webkit-keyframes toggle-nav-close {
-  /* line 40, ../sass/animations/_animations.scss */
+  /* line 102, ../sass/animations/_animations.scss */
   0% {
     right: 0;
+    opacity: 1;
   }
 
-  /* line 44, ../sass/animations/_animations.scss */
+  /* line 108, ../sass/animations/_animations.scss */
   100% {
-    right: -200%;
+    right: -40em;
+    opacity: 1;
   }
 }
 @keyframes toggle-nav-close {
-  /* line 40, ../sass/animations/_animations.scss */
+  /* line 102, ../sass/animations/_animations.scss */
   0% {
     right: 0;
+    opacity: 1;
   }
 
-  /* line 44, ../sass/animations/_animations.scss */
+  /* line 108, ../sass/animations/_animations.scss */
   100% {
-    right: -200%;
+    right: -40em;
+    opacity: 1;
   }
 }
 @-moz-keyframes toggle-nav-overlay {
-  /* line 51, ../sass/animations/_animations.scss */
+  /* line 117, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 55, ../sass/animations/_animations.scss */
+  /* line 121, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @-webkit-keyframes toggle-nav-overlay {
-  /* line 51, ../sass/animations/_animations.scss */
+  /* line 117, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 55, ../sass/animations/_animations.scss */
+  /* line 121, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
 }
 @keyframes toggle-nav-overlay {
-  /* line 51, ../sass/animations/_animations.scss */
+  /* line 117, ../sass/animations/_animations.scss */
   0% {
     background-color: transparent;
   }
 
-  /* line 55, ../sass/animations/_animations.scss */
+  /* line 121, ../sass/animations/_animations.scss */
   100% {
     background-color: rgba(0, 0, 0, 0.65);
   }
@@ -1331,11 +1518,11 @@ html.is-locked body {
 /* line 34, ../sass/layout/_layout.scss */
 .header--logo {
   position: absolute;
-  top: 1.5em;
+  top: 1em;
   left: 1em;
   display: block;
-  height: 3em;
-  width: 12em;
+  height: 2em;
+  width: 8em;
   -moz-background-size: contain;
   -o-background-size: contain;
   -webkit-background-size: contain;
@@ -1365,25 +1552,84 @@ html.is-locked body {
 }
 
 /* Layout */
-/* line 68, ../sass/layout/_layout.scss */
-.quiz--inner {
-  position: relative;
-  top: 50%;
-  padding-top: 6em;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-/* line 77, ../sass/layout/_layout.scss */
+/* line 74, ../sass/layout/_layout.scss */
 .layout {
   height: 100%;
   width: 100%;
 }
-/* line 81, ../sass/layout/_layout.scss */
+/* line 78, ../sass/layout/_layout.scss */
 .layout--inner {
   height: 100%;
+}
+
+/**
+ *
+ * Navigation components.
+ *
+ */
+/**
+ *
+ * Videos components.
+ *
+ */
+/* line 11, ../sass/components/_video.scss */
+.video--troll-painter, .video--broke-teenager, .video--slave, .video--pain-in-the-butt, .video--moving-out, .video--your-movie {
+  position: relative;
+  overflow: hidden;
+  padding-left: 0;
+  cursor: pointer;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 28, ../sass/components/_video.scss */
+  .video--troll-painter:hover .is-static, .video--broke-teenager:hover .is-static, .video--slave:hover .is-static, .video--pain-in-the-butt:hover .is-static, .video--moving-out:hover .is-static, .video--your-movie:hover .is-static {
+    display: none;
+  }
+  /* line 32, ../sass/components/_video.scss */
+  .video--troll-painter:hover .is-animated, .video--broke-teenager:hover .is-animated, .video--slave:hover .is-animated, .video--pain-in-the-butt:hover .is-animated, .video--moving-out:hover .is-animated, .video--your-movie:hover .is-animated {
+    display: inline;
+  }
+}
+
+/* line 42, ../sass/components/_video.scss */
+.video--troll-painter-inner, .video--broke-teenager-inner, .video--slave-inner, .video--pain-in-the-butt-inner, .video--moving-out-inner, .video--your-movie-inner {
+  background: none;
+}
+
+/* line 49, ../sass/components/_video.scss */
+.video--troll-painter-header, .video--broke-teenager-header, .video--slave-header, .video--pain-in-the-butt-header, .video--moving-out-header, .video--your-movie-header {
+  position: relative;
+  z-index: 95;
+  color: white;
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 49, ../sass/components/_video.scss */
+  .video--troll-painter-header, .video--broke-teenager-header, .video--slave-header, .video--pain-in-the-butt-header, .video--moving-out-header, .video--your-movie-header {
+    font-size: 4em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 49, ../sass/components/_video.scss */
+  .video--troll-painter-header, .video--broke-teenager-header, .video--slave-header, .video--pain-in-the-butt-header, .video--moving-out-header, .video--your-movie-header {
+    font-size: 7em;
+  }
+}
+
+/* line 68, ../sass/components/_video.scss */
+.video--troll-painter-image, .video--broke-teenager-image, .video--slave-image, .video--pain-in-the-butt-image, .video--moving-out-image, .video--your-movie-image {
+  position: relative;
+  z-index: 90;
+  width: 100%;
+}
+/* line 75, ../sass/components/_video.scss */
+.video--troll-painter-image img, .video--broke-teenager-image img, .video--slave-image img, .video--pain-in-the-butt-image img, .video--moving-out-image img, .video--your-movie-image img {
+  height: auto;
+  width: 100%;
+}
+/* line 80, ../sass/components/_video.scss */
+.is-animated.video--troll-painter-image, .is-animated.video--broke-teenager-image, .is-animated.video--slave-image, .is-animated.video--pain-in-the-butt-image, .is-animated.video--moving-out-image, .is-animated.video--your-movie-image {
+  display: none;
 }
 
 /**
@@ -1395,7 +1641,9 @@ html.is-locked body {
  *
  * ========================================================================== */
 /* line 12, ../sass/modules/_buttons.scss */
-.quiz--start-button, .quiz--button, .quiz-header--button {
+.quiz--button,
+.quiz-header--button,
+.quiz-start--button, .quiz--try-again-button, .quiz--share-button {
   display: inline-block;
   padding: .25em .75em;
   position: relative;
@@ -1404,12 +1652,20 @@ html.is-locked body {
   vertical-align: middle;
 }
 /* line 21, ../sass/modules/_buttons.scss */
-.quiz--start-button:focus, .quiz--button:focus, .quiz-header--button:focus, .quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover, .quiz--start-button:active, .quiz--button:active, .quiz-header--button:active {
+.quiz--button:focus,
+.quiz-header--button:focus,
+.quiz-start--button:focus, .quiz--try-again-button:focus, .quiz--share-button:focus, .quiz--button:hover,
+.quiz-header--button:hover,
+.quiz-start--button:hover, .quiz--try-again-button:hover, .quiz--share-button:hover, .quiz--button:active,
+.quiz-header--button:active,
+.quiz-start--button:active, .quiz--try-again-button:active, .quiz--share-button:active {
   text-decoration: none;
 }
 
 /* line 29, ../sass/modules/_buttons.scss */
-.quiz--start-button, .quiz--button, .quiz-header--button {
+.quiz--button,
+.quiz-header--button,
+.quiz-start--button, .quiz--try-again-button, .quiz--share-button {
   background-color: rgba(0, 0, 0, 0.35);
   border: 2px solid white;
   font-family: 'bebas_neueregular';
@@ -1417,26 +1673,36 @@ html.is-locked body {
   line-height: 100%;
 }
 /* line 38, ../sass/modules/_buttons.scss */
-.quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover {
+.quiz--button:hover,
+.quiz-header--button:hover,
+.quiz-start--button:hover, .quiz--try-again-button:hover, .quiz--share-button:hover {
   background-color: rgba(0, 0, 0, 0.65);
 }
-/* line 40, ../sass/base/_mixins.scss */
-.quiz--start-button:link, .quiz--button:link, .quiz-header--button:link {
-  color: white;
-  text-decoration: none;
-}
-/* line 45, ../sass/base/_mixins.scss */
-.quiz--start-button:visited, .quiz--button:visited, .quiz-header--button:visited {
-  color: white;
-  text-decoration: none;
-}
-/* line 50, ../sass/base/_mixins.scss */
-.quiz--start-button:hover, .quiz--button:hover, .quiz-header--button:hover {
-  color: white;
-  text-decoration: none;
-}
 /* line 55, ../sass/base/_mixins.scss */
-.quiz--start-button:focus, .quiz--button:focus, .quiz-header--button:focus {
+.quiz--button:link,
+.quiz-header--button:link,
+.quiz-start--button:link, .quiz--try-again-button:link, .quiz--share-button:link {
+  color: white;
+  text-decoration: none;
+}
+/* line 60, ../sass/base/_mixins.scss */
+.quiz--button:visited,
+.quiz-header--button:visited,
+.quiz-start--button:visited, .quiz--try-again-button:visited, .quiz--share-button:visited {
+  color: white;
+  text-decoration: none;
+}
+/* line 65, ../sass/base/_mixins.scss */
+.quiz--button:hover,
+.quiz-header--button:hover,
+.quiz-start--button:hover, .quiz--try-again-button:hover, .quiz--share-button:hover {
+  color: white;
+  text-decoration: none;
+}
+/* line 70, ../sass/base/_mixins.scss */
+.quiz--button:focus,
+.quiz-header--button:focus,
+.quiz-start--button:focus, .quiz--try-again-button:focus, .quiz--share-button:focus {
   color: white;
   text-decoration: none;
 }
@@ -1451,7 +1717,7 @@ html.is-locked body {
   height: 100%;
   overflow-y: auto;
   position: fixed;
-  right: -200%;
+  right: -40em;
   z-index: 99;
   padding-top: 3.75em;
   padding-right: 1.5em;
@@ -1460,6 +1726,7 @@ html.is-locked body {
   width: 20em;
   background: white;
   color: #666666;
+  opacity: 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1476,17 +1743,17 @@ html.is-locked body {
     width: 40em;
   }
 }
-/* line 37, ../sass/modules/_navigation.scss */
+/* line 38, ../sass/modules/_navigation.scss */
 .nav.is-visible {
-  -moz-animation: toggle-nav-open 0.15s ease 1 forwards;
-  -webkit-animation: toggle-nav-open 0.15s ease 1 forwards;
-  animation: toggle-nav-open 0.15s ease 1 forwards;
+  -moz-animation: toggle-nav-open 0.75s ease 1 forwards;
+  -webkit-animation: toggle-nav-open 0.75s ease 1 forwards;
+  animation: toggle-nav-open 0.75s ease 1 forwards;
 }
-/* line 41, ../sass/modules/_navigation.scss */
+/* line 42, ../sass/modules/_navigation.scss */
 .nav.is-hidden {
-  -moz-animation: toggle-nav-close 0.15s ease 1 forwards;
-  -webkit-animation: toggle-nav-close 0.15s ease 1 forwards;
-  animation: toggle-nav-close 0.15s ease 1 forwards;
+  -moz-animation: toggle-nav-close 0.75s ease 1 forwards;
+  -webkit-animation: toggle-nav-close 0.75s ease 1 forwards;
+  animation: toggle-nav-close 0.75s ease 1 forwards;
 }
 /* line 48, ../sass/modules/_navigation.scss */
 .nav--header {
@@ -1517,24 +1784,23 @@ html.is-locked body {
 /* line 73, ../sass/modules/_navigation.scss */
 .nav--item, .nav--sub-item {
   display: block;
-  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5em;
 }
-/* line 78, ../sass/base/_mixins.scss */
+/* line 16, ../sass/components/_navigation.scss */
 .nav--item:link, .nav--sub-item:link {
   color: #666666;
   text-decoration: none;
 }
-/* line 83, ../sass/base/_mixins.scss */
+/* line 21, ../sass/components/_navigation.scss */
 .nav--item:visited, .nav--sub-item:visited {
   color: #595959;
 }
-/* line 87, ../sass/base/_mixins.scss */
+/* line 25, ../sass/components/_navigation.scss */
 .nav--item:hover, .nav--item:focus, .nav--sub-item:hover, .nav--sub-item:focus {
   color: #0abbef;
   text-decoration: none;
 }
-/* line 93, ../sass/base/_mixins.scss */
+/* line 31, ../sass/components/_navigation.scss */
 .nav--item.is-active, .nav--sub-item.is-active {
   color: #0abbef;
   text-decoration: underline;
@@ -1555,7 +1821,7 @@ html.is-locked body {
     font-size: 1.6em;
   }
 }
-/* line 114, ../sass/base/_mixins.scss */
+/* line 58, ../sass/components/_navigation.scss */
 .nav--sub-item:before {
   position: absolute;
   top: .35em;
@@ -1577,7 +1843,7 @@ html.is-locked body {
 /* line 90, ../sass/modules/_navigation.scss */
 .nav-overlay,
 .animation-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1588,27 +1854,27 @@ html.is-locked body {
 .nav-overlay.is-visible,
 .animation-overlay.is-visible {
   width: 100%;
-  -moz-animation: toggle-nav-overlay 0.15s linear 1 forwards;
-  -webkit-animation: toggle-nav-overlay 0.15s linear 1 forwards;
-  animation: toggle-nav-overlay 0.15s linear 1 forwards;
+  -moz-animation: toggle-nav-overlay 0.75s linear 1 forwards;
+  -webkit-animation: toggle-nav-overlay 0.75s linear 1 forwards;
+  animation: toggle-nav-overlay 0.75s linear 1 forwards;
 }
 /* line 106, ../sass/modules/_navigation.scss */
 .nav-overlay.is-animating,
 .animation-overlay.is-animating {
-  -moz-animation: page-transition 1s ease 1 forwards;
-  -webkit-animation: page-transition 1s ease 1 forwards;
-  animation: page-transition 1s ease 1 forwards;
+  -moz-animation: page-transition 0.75s ease 1 forwards;
+  -webkit-animation: page-transition 0.75s ease 1 forwards;
+  animation: page-transition 0.75s ease 1 forwards;
 }
 
 /* Toggle icon use for opening and closing the menu */
 /* line 114, ../sass/modules/_navigation.scss */
 .nav-toggle-icon {
   position: absolute;
-  top: 1.5em;
+  top: 1em;
   right: 1em;
   display: block;
-  height: 3em;
-  width: 3em;
+  height: 2em;
+  width: 2em;
   cursor: pointer;
 }
 @media only screen and (min-width: 481px) {
@@ -1621,6 +1887,8 @@ html.is-locked body {
   /* line 114, ../sass/modules/_navigation.scss */
   .nav-toggle-icon {
     top: 3em;
+    height: 3em;
+    width: 3em;
   }
 }
 @media only screen and (min-width: 1700px) {
@@ -1633,126 +1901,495 @@ html.is-locked body {
   }
 }
 
-/**
- *
- * Quiz.
- *
- */
-/* Silent classes related to this document.
- *
- * ========================================================================== */
-/* line 13, ../sass/modules/_quiz.scss */
-.quiz--start-header, .quiz--start-subtitle, .quiz--question, .quiz--answers, .quiz--result, .quiz--text, .quiz--start-opponents-wrapper {
-  color: white;
-  font-family: 'bebas_neueregular';
+/* Nesting to override facebooks default.*/
+/* line 119, ../sass/modules/_navigation.scss */
+.nav .nav--fb-like {
+  position: absolute;
+  top: 20px;
 }
 
-/* Quiz styles.
+/**
  *
- * ========================================================================== */
-/* line 23, ../sass/modules/_quiz.scss */
-.quiz {
+ * Quiz
+ *
+ */
+/* line 8, ../sass/modules/_quiz.scss */
+.quiz-header {
+  background-color: black;
+  overflow: hidden;
+}
+/* line 13, ../sass/modules/_quiz.scss */
+.quiz-header--background {
+  top: 0;
+  left: 0;
+  position: absolute;
   height: 100%;
   width: 100%;
-  background: url("/images/quiz-bg.jpg") no-repeat;
-  letter-spacing: .08em;
-  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center top;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 37, ../sass/modules/_quiz.scss */
-.quiz--start-header {
-  font-size: 6em;
-  line-height: 1em;
+/* line 27, ../sass/modules/_quiz.scss */
+.quiz-header--background.is-first {
+  background-image: url("/images/backgrounds/small/girl-arms-out.jpg");
 }
-/* line 45, ../sass/modules/_quiz.scss */
-.quiz--start-subtitle {
-  font-size: 3em;
-  line-height: 1em;
-}
-/* line 52, ../sass/modules/_quiz.scss */
-.quiz--start-button {
-  font-size: 3.5em;
+/* line 31, ../sass/modules/_quiz.scss */
+.quiz-header--background.is-second {
+  background-image: url("/images/backgrounds/small/guy-horizontal.jpg");
 }
 @media only screen and (min-width: 481px) {
+  /* line 37, ../sass/modules/_quiz.scss */
+  .quiz-header--background.is-first {
+    background-image: url("/images/backgrounds/medium/girl-arms-out.jpg");
+  }
+  /* line 41, ../sass/modules/_quiz.scss */
+  .quiz-header--background.is-second {
+    background-image: url("/images/backgrounds/medium/guy-horizontal.jpg");
+  }
+}
+@media only screen and (min-resolution: 2dppx) and (max-width: 481px) {
+  /* line 37, ../sass/modules/_quiz.scss */
+  .quiz-header--background.is-first {
+    background-image: url("/images/backgrounds/medium/girl-arms-out.jpg");
+  }
+  /* line 41, ../sass/modules/_quiz.scss */
+  .quiz-header--background.is-second {
+    background-image: url("/images/backgrounds/medium/guy-horizontal.jpg");
+  }
+}
+@media only screen and (min-width: 481px) {
+  /* line 48, ../sass/modules/_quiz.scss */
+  .quiz-header--background.is-first {
+    background-image: url("/images/backgrounds/medium/girl-arms-out.jpg");
+  }
   /* line 52, ../sass/modules/_quiz.scss */
-  .quiz--start-button {
-    font-size: 4.5em;
+  .quiz-header--background.is-second {
+    background-image: url("/images/backgrounds/medium/guy-horizontal.jpg");
   }
 }
-/* line 63, ../sass/modules/_quiz.scss */
-.quiz--progress {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 3em;
-  font-family: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@media only screen and (min-width: 1024px) {
+  /* line 59, ../sass/modules/_quiz.scss */
+  .quiz-header--background.is-first {
+    background-image: url("/images/backgrounds/large/girl-arms-out.jpg");
+  }
+  /* line 63, ../sass/modules/_quiz.scss */
+  .quiz-header--background.is-second {
+    background-image: url("/images/backgrounds/large/guy-horizontal.jpg");
+  }
 }
-/* line 70, ../sass/modules/_quiz.scss */
-.quiz--question {
-  font-size: 4em;
+/* line 69, ../sass/modules/_quiz.scss */
+.quiz-header--background.ng-enter {
+  -moz-animation: header-background-in 0.75s ease-in 1 forwards;
+  -webkit-animation: header-background-in 0.75s ease-in 1 forwards;
+  animation: header-background-in 0.75s ease-in 1 forwards;
 }
-/* line 77, ../sass/modules/_quiz.scss */
-.quiz--answers {
-  font-size: 2em;
+/* line 73, ../sass/modules/_quiz.scss */
+.quiz-header--background.ng-leave {
+  -moz-animation: header-background-out 0.75s ease-in 1 forwards;
+  -webkit-animation: header-background-out 0.75s ease-in 1 forwards;
+  animation: header-background-out 0.75s ease-in 1 forwards;
 }
-/* line 84, ../sass/modules/_quiz.scss */
-.quiz--selection {
-  margin: 1em auto;
-  height: 2.9em;
-  padding: .5em 1em;
-  position: relative;
-  width: 70%;
-  background-color: rgba(0, 0, 0, 0.35);
-  border: 0.3em solid white;
-  font-size: 0.8em;
+/* line 78, ../sass/modules/_quiz.scss */
+.quiz-header--inner {
+  padding-top: 3em;
+}
+@media only screen and (min-width: 481px) and (max-height: 700px) {
+  /* line 8, ../sass/modules/_quiz.scss */
+  .quiz-header {
+    padding-top: 0;
+  }
+}
+
+/* line 89, ../sass/modules/_quiz.scss */
+.quiz--background,
+.quiz-start--background {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/backgrounds/small/guy-jumping.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 @media only screen and (min-width: 481px) {
-  /* line 84, ../sass/modules/_quiz.scss */
-  .quiz--selection {
-    width: 30em;
+  /* line 89, ../sass/modules/_quiz.scss */
+  .quiz--background,
+  .quiz-start--background {
+    background-image: url("/images/backgrounds/medium/guy-jumping.jpg");
   }
 }
-/* line 99, ../sass/modules/_quiz.scss */
-.quiz--selection.is-checked {
-  background-image: -moz-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.35));
-  background-image: -webkit-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.35));
-  background-image: linear-gradient(to right, #0abbef, rgba(0, 0, 0, 0.35));
+@media only screen and (min-resolution: 2dppx) and (max-width: 481px) {
+  /* line 89, ../sass/modules/_quiz.scss */
+  .quiz--background,
+  .quiz-start--background {
+    background-image: url("/images/backgrounds/medium/guy-jumping.jpg");
+  }
 }
-/* line 102, ../sass/modules/_quiz.scss */
-.quiz--selection.is-checked .quiz--selection-number {
-  background-color: #0abbef;
+@media only screen and (min-width: 481px) {
+  /* line 89, ../sass/modules/_quiz.scss */
+  .quiz--background,
+  .quiz-start--background {
+    background-image: url("/images/backgrounds/medium/guy-jumping.jpg");
+  }
 }
-/* line 109, ../sass/modules/_quiz.scss */
-.quiz--selection-input {
-  display: none;
+@media only screen and (min-width: 1024px) {
+  /* line 89, ../sass/modules/_quiz.scss */
+  .quiz--background,
+  .quiz-start--background {
+    background-image: url("/images/backgrounds/large/guy-jumping.jpg");
+  }
 }
-/* line 114, ../sass/modules/_quiz.scss */
-.quiz--selection-label {
+
+/* line 118, ../sass/modules/_quiz.scss */
+.quiz,
+.quiz-header,
+.quiz-start {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+/* line 128, ../sass/modules/_quiz.scss */
+.quiz--inner,
+.quiz-header--inner,
+.quiz-start--inner {
+  z-index: 96;
+  padding-top: 4em;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+/* line 139, ../sass/modules/_quiz.scss */
+.quiz-header--inner,
+.quiz-start--inner {
   position: relative;
   top: 50%;
-  margin: 0;
-  color: white;
-  word-wrap: break-word;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 125, ../sass/modules/_quiz.scss */
-.quiz--selection-label:hover {
+
+/* line 145, ../sass/modules/_quiz.scss */
+.quiz--inner {
+  position: relative;
+  padding-top: 5em;
+}
+@media only screen and (min-width: 481px) {
+  /* line 145, ../sass/modules/_quiz.scss */
+  .quiz--inner {
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+/* line 160, ../sass/modules/_quiz.scss */
+.quiz--question, .quiz--punchline, .quiz--result, .quiz--text,
+.quiz-header--question,
+.quiz-header--punchline,
+.quiz-header--result,
+.quiz-header--text,
+.quiz-start--question,
+.quiz-start--punchline,
+.quiz-start--result,
+.quiz-start--text {
+  color: white;
+  font: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 168, ../sass/modules/_quiz.scss */
+.quiz--question, .quiz--text,
+.quiz-header--question,
+.quiz-header--text,
+.quiz-start--question,
+.quiz-start--text {
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+@media only screen and (min-width: 481px) {
+  /* line 168, ../sass/modules/_quiz.scss */
+  .quiz--question, .quiz--text,
+  .quiz-header--question,
+  .quiz-header--text,
+  .quiz-start--question,
+  .quiz-start--text {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 168, ../sass/modules/_quiz.scss */
+  .quiz--question, .quiz--text,
+  .quiz-header--question,
+  .quiz-header--text,
+  .quiz-start--question,
+  .quiz-start--text {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-height: 700px) {
+  /* line 168, ../sass/modules/_quiz.scss */
+  .quiz--question, .quiz--text,
+  .quiz-header--question,
+  .quiz-header--text,
+  .quiz-start--question,
+  .quiz-start--text {
+    font-size: 2.25em;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 287px) {
+  /* line 168, ../sass/modules/_quiz.scss */
+  .quiz--question, .quiz--text,
+  .quiz-header--question,
+  .quiz-header--text,
+  .quiz-start--question,
+  .quiz-start--text {
+    font-size: 1.75em;
+  }
+}
+/* line 191, ../sass/modules/_quiz.scss */
+.quiz--punchline,
+.quiz-header--punchline,
+.quiz-start--punchline {
+  position: relative;
+  height: 1em;
+  margin-bottom: .25em;
+  font-size: 3em;
+  line-height: 1.25em;
+}
+/* line 200, ../sass/modules/_quiz.scss */
+.quiz--punchline-inner,
+.quiz-header--punchline-inner,
+.quiz-start--punchline-inner {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+/* line 207, ../sass/modules/_quiz.scss */
+.quiz--punchline-inner.ng-enter,
+.quiz-header--punchline-inner.ng-enter,
+.quiz-start--punchline-inner.ng-enter {
+  -moz-animation: header-punchline-in 0.5s ease-in-out 1 forwards;
+  -webkit-animation: header-punchline-in 0.5s ease-in-out 1 forwards;
+  animation: header-punchline-in 0.5s ease-in-out 1 forwards;
+}
+/* line 211, ../sass/modules/_quiz.scss */
+.quiz--punchline-inner.ng-leave,
+.quiz-header--punchline-inner.ng-leave,
+.quiz-start--punchline-inner.ng-leave {
+  -moz-animation: header-punchline-out 0.5s ease-in-out 1 forwards;
+  -webkit-animation: header-punchline-out 0.5s ease-in-out 1 forwards;
+  animation: header-punchline-out 0.5s ease-in-out 1 forwards;
+}
+@media only screen and (min-width: 481px) {
+  /* line 191, ../sass/modules/_quiz.scss */
+  .quiz--punchline,
+  .quiz-header--punchline,
+  .quiz-start--punchline {
+    font-size: 8em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 191, ../sass/modules/_quiz.scss */
+  .quiz--punchline,
+  .quiz-header--punchline,
+  .quiz-start--punchline {
+    font-size: 10em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-height: 700px) {
+  /* line 191, ../sass/modules/_quiz.scss */
+  .quiz--punchline,
+  .quiz-header--punchline,
+  .quiz-start--punchline {
+    font-size: 6em;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 287px) {
+  /* line 191, ../sass/modules/_quiz.scss */
+  .quiz--punchline,
+  .quiz-header--punchline,
+  .quiz-start--punchline {
+    font-size: 3em;
+  }
+}
+/* line 235, ../sass/modules/_quiz.scss */
+.quiz--text,
+.quiz-header--text,
+.quiz-start--text {
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 481px) and (max-height: 700px) {
+  /* line 235, ../sass/modules/_quiz.scss */
+  .quiz--text,
+  .quiz-header--text,
+  .quiz-start--text {
+    margin-bottom: .5em;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 287px) {
+  /* line 235, ../sass/modules/_quiz.scss */
+  .quiz--text,
+  .quiz-header--text,
+  .quiz-start--text {
+    display: none;
+  }
+}
+/* line 248, ../sass/modules/_quiz.scss */
+.quiz--button,
+.quiz-header--button,
+.quiz-start--button {
+  margin-bottom: 1.5em;
+  font-size: 2em;
+}
+@media only screen and (min-width: 481px) {
+  /* line 248, ../sass/modules/_quiz.scss */
+  .quiz--button,
+  .quiz-header--button,
+  .quiz-start--button {
+    font-size: 2.75em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 248, ../sass/modules/_quiz.scss */
+  .quiz--button,
+  .quiz-header--button,
+  .quiz-start--button {
+    margin-bottom: 1.25em;
+    font-size: 3.5em;
+  }
+}
+@media only screen and (min-width: 481px) and (max-height: 700px) {
+  /* line 248, ../sass/modules/_quiz.scss */
+  .quiz--button,
+  .quiz-header--button,
+  .quiz-start--button {
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 287px) {
+  /* line 248, ../sass/modules/_quiz.scss */
+  .quiz--button,
+  .quiz-header--button,
+  .quiz-start--button {
+    font-size: 1.75em;
+  }
+}
+/* line 276, ../sass/modules/_quiz.scss */
+.quiz--scroll,
+.quiz-header--scroll,
+.quiz-start--scroll {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 6em;
+  max-width: 2em;
   cursor: pointer;
 }
-/* line 131, ../sass/modules/_quiz.scss */
-.quiz--selection-number {
-  height: 1.5em;
-  left: -1.1em;
-  line-height: 1.5em;
+/* line 285, ../sass/modules/_quiz.scss */
+.quiz--scroll .scroll-text,
+.quiz-header--scroll .scroll-text,
+.quiz-start--scroll .scroll-text {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 276, ../sass/modules/_quiz.scss */
+  .quiz--scroll,
+  .quiz-header--scroll,
+  .quiz-start--scroll {
+    max-width: 3.25em;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 287px) {
+  /* line 276, ../sass/modules/_quiz.scss */
+  .quiz--scroll,
+  .quiz-header--scroll,
+  .quiz-start--scroll {
+    display: none;
+  }
+}
+
+/* line 303, ../sass/modules/_quiz.scss */
+.quiz--progress {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5em;
+}
+@media only screen and (max-height: 550px) {
+  /* line 303, ../sass/modules/_quiz.scss */
+  .quiz--progress {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 303, ../sass/modules/_quiz.scss */
+  .quiz--progress {
+    font-size: 3em;
+  }
+}
+/* line 318, ../sass/modules/_quiz.scss */
+.quiz--question {
+  margin-bottom: .5em;
+  color: white;
+}
+@media only screen and (max-height: 550px) {
+  /* line 318, ../sass/modules/_quiz.scss */
+  .quiz--question {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 318, ../sass/modules/_quiz.scss */
+  .quiz--question {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 318, ../sass/modules/_quiz.scss */
+  .quiz--question {
+    font-size: 5em;
+  }
+}
+/* line 336, ../sass/modules/_quiz.scss */
+.quiz--answers-wrapper {
+  padding: .25em;
+}
+/* line 340, ../sass/modules/_quiz.scss */
+.quiz--answers-number, .quiz--answers-answer-inner {
+  display: block;
+  color: white;
+  cursor: pointer;
+  pointer-events: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* line 352, ../sass/modules/_quiz.scss */
+.quiz--answers-number {
+  left: -.95em;
   position: absolute;
   top: 50%;
   width: 1.5em;
   background: black;
   border: 0.2em solid white;
+  cursor: pointer;
+  font-family: "bebas_neueregular";
+  font-size: 1.25em;
+  line-height: 1.5em;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
@@ -1761,217 +2398,170 @@ html.is-locked body {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 147, ../sass/modules/_quiz.scss */
-.quiz--button {
-  color: white;
-  font-size: 1.695em;
+/* line 369, ../sass/modules/_quiz.scss */
+.quiz--answers-number.is-first {
+  text-indent: -1px;
 }
-/* line 153, ../sass/modules/_quiz.scss */
-.quiz--button.is-inactive {
-  cursor: default;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
+/* line 373, ../sass/modules/_quiz.scss */
+.quiz--answers-number.is-checked {
+  background-color: #0abbef;
 }
-/* line 161, ../sass/modules/_quiz.scss */
-.quiz--result {
-  font-size: 4em;
+@media only screen and (min-width: 1700px) {
+  /* line 352, ../sass/modules/_quiz.scss */
+  .quiz--answers-number {
+    font-size: 1.5em;
+  }
 }
-/* line 168, ../sass/modules/_quiz.scss */
-.quiz--text {
-  font-size: 2em;
-}
-/* line 175, ../sass/modules/_quiz.scss */
-.quiz--challenger-answer.is-correct {
-  color: #0f0;
-}
-/* line 179, ../sass/modules/_quiz.scss */
-.quiz--challenger-answer.is-wrong {
-  color: #f00;
-}
-/* line 185, ../sass/modules/_quiz.scss */
-.quiz--start-opponents-wrapper {
-  margin-right: auto;
-  margin-bottom: 2em;
-  margin-left: auto;
-  padding-left: 6em;
-  width: 16em;
-  font-size: 2em;
-  text-align: left;
-}
-/* line 198, ../sass/modules/_quiz.scss */
-.quiz--start-opponent {
-  color: #b0eafc;
-}
-
-/**
- *
- * Quiz header.
- *
- */
-/* line 8, ../sass/modules/_quiz-header.scss */
-.quiz-header {
+/* line 382, ../sass/modules/_quiz.scss */
+.quiz--answers-answer {
   position: relative;
-  height: 100%;
-  width: 100%;
-  background: url("/images/image-flip.jpg") no-repeat;
-  text-align: center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
+  border: .2em solid white;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-left: auto;
+  height: 4em;
+  max-width: 35em;
+  padding: 0 .5em .2em 1.75em;
+  background-color: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  font-family: "permianseriftypefaceregular";
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 19, ../sass/modules/_quiz-header.scss */
-.quiz-header--inner {
+/* line 399, ../sass/modules/_quiz.scss */
+.quiz--answers-answer.is-checked {
+  background-image: -moz-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.65));
+  background-image: -webkit-linear-gradient(left, #0abbef, rgba(0, 0, 0, 0.65));
+  background-image: linear-gradient(to right, #0abbef, rgba(0, 0, 0, 0.65));
+}
+@media only screen and (min-width: 481px) {
+  /* line 382, ../sass/modules/_quiz.scss */
+  .quiz--answers-answer {
+    height: 5em;
+  }
+}
+/* line 408, ../sass/modules/_quiz.scss */
+.quiz--answers-answer-inner {
+  font-size: .75em;
   position: relative;
   top: 50%;
-  padding-top: 4em;
-  padding-right: 1em;
-  padding-left: 1em;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-@media only screen and (min-width: 481px) and (max-height: 700px) {
-  /* line 19, ../sass/modules/_quiz-header.scss */
-  .quiz-header--inner {
-    padding-top: 4.5em;
+@media only screen and (min-width: 481px) {
+  /* line 408, ../sass/modules/_quiz.scss */
+  .quiz--answers-answer-inner {
+    font-size: .9em;
   }
 }
-/* line 34, ../sass/modules/_quiz-header.scss */
-.quiz-header--text, .quiz-header--question, .quiz-header--punchline {
+/* line 418, ../sass/modules/_quiz.scss */
+.quiz--answers-input {
+  display: none;
+}
+/* line 422, ../sass/modules/_quiz.scss */
+.quiz--button, .quiz--try-again-button {
+  margin-right: .5em;
+  margin-left: .5em;
+  padding: .25em 1.25em;
   color: white;
-  font-family: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 41, ../sass/modules/_quiz-header.scss */
-.quiz-header--question, .quiz-header--text {
-  margin-bottom: 0;
-  font-size: 1.5em;
-}
-@media only screen and (min-width: 481px) {
-  /* line 41, ../sass/modules/_quiz-header.scss */
-  .quiz-header--question, .quiz-header--text {
-    font-size: 2.5em;
-  }
-}
-@media only screen and (min-width: 1700px) {
-  /* line 41, ../sass/modules/_quiz-header.scss */
-  .quiz-header--question, .quiz-header--text {
-    font-size: 5em;
-  }
-}
-@media only screen and (min-width: 481px) and (max-height: 700px) {
-  /* line 41, ../sass/modules/_quiz-header.scss */
-  .quiz-header--question, .quiz-header--text {
-    font-size: 2.25em;
-  }
-}
-@media screen and (orientation: landscape) and (max-height: 287px) {
-  /* line 41, ../sass/modules/_quiz-header.scss */
-  .quiz-header--question, .quiz-header--text {
-    font-size: 1.75em;
-  }
-}
-/* line 65, ../sass/modules/_quiz-header.scss */
-.quiz-header--punchline {
-  margin-bottom: .25em;
-  font-size: 3em;
-  line-height: 1em;
-}
-@media only screen and (min-width: 481px) {
-  /* line 65, ../sass/modules/_quiz-header.scss */
-  .quiz-header--punchline {
-    font-size: 8em;
-  }
-}
-@media only screen and (min-width: 1700px) {
-  /* line 65, ../sass/modules/_quiz-header.scss */
-  .quiz-header--punchline {
-    font-size: 12em;
-  }
-}
-@media only screen and (min-width: 481px) and (max-height: 700px) {
-  /* line 65, ../sass/modules/_quiz-header.scss */
-  .quiz-header--punchline {
-    font-size: 6em;
-  }
-}
-@media screen and (orientation: landscape) and (max-height: 287px) {
-  /* line 65, ../sass/modules/_quiz-header.scss */
-  .quiz-header--punchline {
-    font-size: 3em;
-  }
-}
-/* line 89, ../sass/modules/_quiz-header.scss */
-.quiz-header--text {
-  margin-bottom: 1em;
-}
-@media only screen and (min-width: 481px) and (max-height: 700px) {
-  /* line 89, ../sass/modules/_quiz-header.scss */
-  .quiz-header--text {
-    margin-bottom: .5em;
-  }
-}
-@media screen and (orientation: landscape) and (max-height: 287px) {
-  /* line 89, ../sass/modules/_quiz-header.scss */
-  .quiz-header--text {
-    display: none;
-  }
-}
-/* line 102, ../sass/modules/_quiz-header.scss */
-.quiz-header--button {
-  margin-bottom: 1.5em;
-  font-size: 2em;
-}
-@media only screen and (min-width: 481px) {
-  /* line 102, ../sass/modules/_quiz-header.scss */
-  .quiz-header--button {
-    font-size: 2.75em;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  /* line 102, ../sass/modules/_quiz-header.scss */
-  .quiz-header--button {
-    margin-bottom: 1.25em;
-    font-size: 4em;
-  }
-}
-@media only screen and (min-width: 481px) and (max-height: 700px) {
-  /* line 102, ../sass/modules/_quiz-header.scss */
-  .quiz-header--button {
-    margin-bottom: 1em;
-    font-size: 2em;
-  }
-}
-@media screen and (orientation: landscape) and (max-height: 287px) {
-  /* line 102, ../sass/modules/_quiz-header.scss */
-  .quiz-header--button {
-    font-size: 1.75em;
-  }
-}
-/* line 130, ../sass/modules/_quiz-header.scss */
-.quiz-header--scroll {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 2em;
-  cursor: pointer;
-}
-/* line 138, ../sass/modules/_quiz-header.scss */
-.quiz-header--scroll .scroll-text {
+/* line 432, ../sass/modules/_quiz.scss */
+.quiz--button.is-inactive, .quiz--try-again-button.is-inactive {
+  cursor: default;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-@media only screen and (min-width: 1024px) {
-  /* line 130, ../sass/modules/_quiz-header.scss */
-  .quiz-header--scroll {
-    max-width: 3.25em;
+@media only screen and (max-height: 550px) {
+  /* line 422, ../sass/modules/_quiz.scss */
+  .quiz--button, .quiz--try-again-button {
+    padding: .25em .75em;
   }
 }
-@media screen and (orientation: landscape) and (max-height: 287px) {
-  /* line 130, ../sass/modules/_quiz-header.scss */
-  .quiz-header--scroll {
-    display: none;
+@media only screen and (min-width: 1700px) {
+  /* line 422, ../sass/modules/_quiz.scss */
+  .quiz--button, .quiz--try-again-button {
+    padding: .5em 2em;
+  }
+}
+/* line 447, ../sass/modules/_quiz.scss */
+.quiz--button {
+  font-size: 1.5em;
+}
+/* line 451, ../sass/modules/_quiz.scss */
+.quiz--try-again-button {
+  margin-bottom: 1em;
+  padding-top: .23em;
+  padding-bottom: .23em;
+  width: 90%;
+  font-size: 2em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 481px) {
+  /* line 451, ../sass/modules/_quiz.scss */
+  .quiz--try-again-button {
+    padding-right: 2.52em;
+    padding-left: 2.52em;
+    width: auto;
+  }
+}
+/* line 468, ../sass/modules/_quiz.scss */
+.quiz--result {
+  margin-bottom: .5em;
+  font-size: 3em;
+  line-height: 1.25em;
+}
+/* line 475, ../sass/modules/_quiz.scss */
+.quiz--text {
+  font-size: 2em;
+}
+/* line 479, ../sass/modules/_quiz.scss */
+.quiz--challenge-text {
+  margin-bottom: 3em;
+  color: white;
+  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, serif;
+}
+/* line 486, ../sass/modules/_quiz.scss */
+.quiz--text-alternate {
+  margin: 0 auto 1em;
+  max-width: 60em;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: "permianseriftypefaceregular";
+}
+/* line 494, ../sass/modules/_quiz.scss */
+.quiz--text-link {
+  padding-bottom: 2em;
+  color: white;
+  font-family: "permianseriftypefaceregular";
+}
+/* line 501, ../sass/modules/_quiz.scss */
+.quiz--share-button {
+  margin-bottom: 1em;
+  padding-bottom: .2em;
+  padding-left: 2.1em;
+  width: 90%;
+  background-image: url("/images/fb-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #3a589b;
+  color: white;
+  font-size: 2em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 516, ../sass/modules/_quiz.scss */
+.quiz--share-button:hover {
+  background-color: rgba(58, 88, 155, 0.65);
+}
+@media only screen and (min-width: 481px) {
+  /* line 501, ../sass/modules/_quiz.scss */
+  .quiz--share-button {
+    width: auto;
   }
 }
 
@@ -1980,21 +2570,272 @@ html.is-locked body {
  * Videos.
  *
  */
-/* line 7, ../sass/modules/_videos.scss */
-.videos {
-  position: relative;
+/* line 8, ../sass/modules/_video.scss */
+.video-wrapper {
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  background-color: black;
   height: 100%;
-  background-color: #0abbef;
+  width: 100%;
 }
-/* line 14, ../sass/modules/_videos.scss */
-.videos--inner {
+/* line 19, ../sass/modules/_video.scss */
+.video-wrapper .video-js .vjs-tech {
+  top: 10%;
+  height: 90%;
+}
+/* line 26, ../sass/modules/_video.scss */
+.video-wrapper.ng-hide {
+  /* this is just another form of hiding an element */
+  display: block !important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* Close icon */
+/* line 37, ../sass/modules/_video.scss */
+.video-close-icon {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: block;
+  height: 2em;
+  width: 2em;
+  cursor: pointer;
+  position: fixed;
+  z-index: 99;
+  fill: white;
+}
+@media only screen and (min-width: 481px) {
+  /* line 37, ../sass/modules/_video.scss */
+  .video-close-icon {
+    right: 2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 37, ../sass/modules/_video.scss */
+  .video-close-icon {
+    top: 3em;
+    height: 3em;
+    width: 3em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 37, ../sass/modules/_video.scss */
+  .video-close-icon {
+    top: 4em;
+    right: 6em;
+    height: 5em;
+    width: 5em;
+  }
+}
+
+/* line 47, ../sass/modules/_video.scss */
+.video {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  overflow: hidden;
   position: relative;
+  z-index: 97;
   top: 50%;
-  text-align: center;
+  margin: 0 auto;
+  /* The videos embedded have these dimensions so this should be max. */
+  max-height: 720px;
+  max-width: 1280px;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+@media only screen and (min-width: 481px) {
+  /* line 47, ../sass/modules/_video.scss */
+  .video {
+    background-color: black;
+  }
+}
+/* line 91, ../sass/modules/_video.scss */
+.video--coming-soon-wrapper {
+  bottom: 0;
+  position: absolute;
+  z-index: 97;
+  top: 0;
+  cursor: default;
+  height: 100%;
+  width: 100%;
+}
+/* line 101, ../sass/modules/_video.scss */
+.video--coming-soon {
+  top: 50%;
+  width: 80%;
+  position: relative;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 110, ../sass/modules/_video.scss */
+.video--frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+@media only screen and (min-width: 1300px) {
+  /* line 110, ../sass/modules/_video.scss */
+  .video--frame {
+    top: 50%;
+    width: 1280px;
+    height: 720px;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+/* line 130, ../sass/modules/_video.scss */
+.video--fb-like {
+  z-index: 98;
+  top: 1em;
+  left: 1em;
+  position: absolute;
+}
+@media only screen and (min-width: 481px) {
+  /* line 130, ../sass/modules/_video.scss */
+  .video--fb-like {
+    left: 2em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 130, ../sass/modules/_video.scss */
+  .video--fb-like {
+    top: 3em;
+  }
+}
+
+/**
+ *
+ * Rap.
+ *
+ */
+/* line 8, ../sass/modules/_rap.scss */
+.rap {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/backgrounds/small/rappers-two-up-points.jpg");
+  background-repeat: no-repeat;
+  text-align: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+@media only screen and (min-width: 481px) {
+  /* line 8, ../sass/modules/_rap.scss */
+  .rap {
+    background-image: url("/images/backgrounds/medium/rappers-two-up-points.jpg");
+  }
+}
+@media only screen and (min-resolution: 2dppx) and (max-width: 481px) {
+  /* line 8, ../sass/modules/_rap.scss */
+  .rap {
+    background-image: url("/images/backgrounds/medium/rappers-two-up-points.jpg");
+  }
+}
+@media only screen and (min-width: 481px) {
+  /* line 8, ../sass/modules/_rap.scss */
+  .rap {
+    background-image: url("/images/backgrounds/medium/rappers-two-up-points.jpg");
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 8, ../sass/modules/_rap.scss */
+  .rap {
+    background-image: url("/images/backgrounds/large/rappers-two-up-points.jpg");
+  }
+}
+/* line 32, ../sass/modules/_rap.scss */
+.rap--video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+}
+@media only screen and (min-width: 1350px) {
+  /* line 32, ../sass/modules/_rap.scss */
+  .rap--video {
+    height: inherit;
+    width: inherit;
+  }
+}
+/* line 48, ../sass/modules/_rap.scss */
+.rap--video-inner-wrapper {
+  height: 100%;
+}
+@media only screen and (min-width: 481px) {
+  /* line 48, ../sass/modules/_rap.scss */
+  .rap--video-inner-wrapper {
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  /* line 48, ../sass/modules/_rap.scss */
+  .rap--video-inner-wrapper {
+    width: 100%;
+  }
+}
+/* line 63, ../sass/modules/_rap.scss */
+.rap--video-wrapper {
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  position: relative;
+  z-index: 97;
+  margin: 0 auto;
+  max-height: 720px;
+  max-width: 1280px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media only screen and (min-width: 1350px) {
+  /* line 63, ../sass/modules/_rap.scss */
+  .rap--video-wrapper {
+    height: inherit;
+    width: inherit;
+    max-width: 1280px;
+    max-height: 720px;
+    padding-bottom: 0;
+  }
+}
+/* line 84, ../sass/modules/_rap.scss */
+.rap--fb-wrapper {
+  position: relative;
+  top: -30px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+}
+@media only screen and (min-width: 1350px) {
+  /* line 84, ../sass/modules/_rap.scss */
+  .rap--fb-wrapper {
+    width: 100%;
+  }
 }
 
 /**
@@ -2008,47 +2849,62 @@ html.is-locked body {
   /* Headings */
   /* Content and navigation */
   /* Content */
+  /* Top anchor */
   /* Navigation */
+  /* PDF link on static pages */
   /* List */
 }
 /* line 11, ../sass/modules/_static-page.scss */
 .static-page p {
   margin-bottom: 1em;
 }
-/* line 16, ../sass/modules/_static-page.scss */
-.static-page--inner .ng-enter,
-.static-page--inner .ng-leave {
-  -moz-animation: fadeOut 0.5s ease 1 forwards;
-  -webkit-animation: fadeOut 0.5s ease 1 forwards;
-  animation: fadeOut 0.5s ease 1 forwards;
+/* line 15, ../sass/modules/_static-page.scss */
+.static-page p, .static-page--lead, .static-page--summary, .static-page--list, .static-page--top-link {
+  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, serif;
 }
-/* line 22, ../sass/modules/_static-page.scss */
+/* line 23, ../sass/modules/_static-page.scss */
 .static-page--header {
   position: fixed;
   top: 0;
-  z-index: 97;
+  z-index: 95;
   margin-bottom: 4em;
   min-height: 6em;
   width: 100%;
-  background: url("/images/backgrounds/table-laptop-notebook.png") center no-repeat;
+  background-image: url("/images/backgrounds/small/table-laptop-notebook.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
 }
+@media only screen and (min-width: 481px) {
+  /* line 23, ../sass/modules/_static-page.scss */
+  .static-page--header {
+    background-image: url("/images/backgrounds/medium/table-laptop-notebook.jpg");
+  }
+}
+@media only screen and (min-resolution: 2dppx) and (max-width: 481px) {
+  /* line 23, ../sass/modules/_static-page.scss */
+  .static-page--header {
+    background-image: url("/images/backgrounds/medium/table-laptop-notebook.jpg");
+  }
+}
 @media only screen and (min-width: 1024px) {
-  /* line 22, ../sass/modules/_static-page.scss */
+  /* line 23, ../sass/modules/_static-page.scss */
   .static-page--header {
     min-height: 14em;
+    background-image: url("/images/backgrounds/medium/table-laptop-notebook.jpg");
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 22, ../sass/modules/_static-page.scss */
+  /* line 23, ../sass/modules/_static-page.scss */
   .static-page--header {
     min-height: 26em;
+    background-image: url("/images/backgrounds/large/table-laptop-notebook.jpg");
   }
 }
-/* line 46, ../sass/modules/_static-page.scss */
+/* line 57, ../sass/modules/_static-page.scss */
 .static-page--heading {
   position: absolute;
   bottom: -1px;
@@ -2063,65 +2919,72 @@ html.is-locked body {
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 46, ../sass/modules/_static-page.scss */
+  /* line 57, ../sass/modules/_static-page.scss */
   .static-page--heading {
     display: block;
     font-size: 6em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 46, ../sass/modules/_static-page.scss */
+  /* line 57, ../sass/modules/_static-page.scss */
   .static-page--heading {
     font-size: 10em;
   }
 }
-/* line 72, ../sass/modules/_static-page.scss */
+/* line 83, ../sass/modules/_static-page.scss */
 .static-page--sub-heading {
-  margin-bottom: 0;
+  margin-bottom: .25em;
   font-size: 2em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 72, ../sass/modules/_static-page.scss */
+  /* line 83, ../sass/modules/_static-page.scss */
   .static-page--sub-heading {
     font-size: 3em;
   }
 }
-/* line 82, ../sass/modules/_static-page.scss */
+/* line 93, ../sass/modules/_static-page.scss */
 .static-page--paragraph-heading {
   font-size: 1.75em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 82, ../sass/modules/_static-page.scss */
+  /* line 93, ../sass/modules/_static-page.scss */
   .static-page--paragraph-heading {
     font-size: 2em;
   }
 }
-/* line 93, ../sass/modules/_static-page.scss */
+/* line 104, ../sass/modules/_static-page.scss */
 .static-page--content-wrapper {
   margin-right: auto;
   margin-left: auto;
   max-width: 65em;
 }
-/* line 102, ../sass/modules/_static-page.scss */
+/* line 113, ../sass/modules/_static-page.scss */
 .static-page--content {
   padding-right: 2em;
   padding-left: 2em;
 }
-/* line 113, ../sass/modules/_static-page.scss */
+/* line 124, ../sass/modules/_static-page.scss */
+.static-page .static-page--page-top {
+  position: absolute;
+}
+/* line 129, ../sass/modules/_static-page.scss */
 .static-page--nav {
   padding-right: 2em;
   margin-bottom: 2em;
 }
-/* line 121, ../sass/modules/_static-page.scss */
+/* line 136, ../sass/modules/_static-page.scss */
 .static-page--nav-item-wrapper {
   position: relative;
   border-bottom: 8px solid #cccccc;
   padding-bottom: 2em;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 121, ../sass/modules/_static-page.scss */
+  /* line 136, ../sass/modules/_static-page.scss */
   .static-page--nav-item-wrapper {
     position: fixed;
+    top: 17em;
+    bottom: 2em;
+    overflow: auto;
     z-index: 96;
     border-bottom: 0;
     border-left: 8px solid #cccccc;
@@ -2129,48 +2992,53 @@ html.is-locked body {
     padding-left: 2em;
   }
 }
-/* line 138, ../sass/modules/_static-page.scss */
+@media only screen and (min-width: 1700px) {
+  /* line 136, ../sass/modules/_static-page.scss */
+  .static-page--nav-item-wrapper {
+    top: 30em;
+  }
+}
+/* line 160, ../sass/modules/_static-page.scss */
 .static-page--nav-item, .static-page--nav-sub-item {
   display: block;
-  font-family: "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5em;
 }
-/* line 78, ../sass/base/_mixins.scss */
+/* line 16, ../sass/components/_navigation.scss */
 .static-page--nav-item:link, .static-page--nav-sub-item:link {
   color: #666666;
   text-decoration: none;
 }
-/* line 83, ../sass/base/_mixins.scss */
+/* line 21, ../sass/components/_navigation.scss */
 .static-page--nav-item:visited, .static-page--nav-sub-item:visited {
   color: #595959;
 }
-/* line 87, ../sass/base/_mixins.scss */
+/* line 25, ../sass/components/_navigation.scss */
 .static-page--nav-item:hover, .static-page--nav-item:focus, .static-page--nav-sub-item:hover, .static-page--nav-sub-item:focus {
   color: #0abbef;
   text-decoration: none;
 }
-/* line 93, ../sass/base/_mixins.scss */
+/* line 31, ../sass/components/_navigation.scss */
 .static-page--nav-item.is-active, .static-page--nav-sub-item.is-active {
   color: #0abbef;
   text-decoration: underline;
 }
-/* line 143, ../sass/modules/_static-page.scss */
+/* line 165, ../sass/modules/_static-page.scss */
 .static-page--nav-item {
   font-size: 1.75em;
 }
-/* line 147, ../sass/modules/_static-page.scss */
+/* line 169, ../sass/modules/_static-page.scss */
 .static-page--nav-sub-item {
   position: relative;
   padding-left: 1em;
   font-size: 1.35em;
 }
 @media only screen and (min-width: 481px) {
-  /* line 147, ../sass/modules/_static-page.scss */
+  /* line 169, ../sass/modules/_static-page.scss */
   .static-page--nav-sub-item {
     font-size: 1.6em;
   }
 }
-/* line 114, ../sass/base/_mixins.scss */
+/* line 58, ../sass/components/_navigation.scss */
 .static-page--nav-sub-item:before {
   position: absolute;
   top: .35em;
@@ -2187,41 +3055,49 @@ html.is-locked body {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 152, ../sass/modules/_static-page.scss */
+/* line 178, ../sass/modules/_static-page.scss */
+.static-page--pdf-link {
+  border-top: 1px solid #999999;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+/* line 184, ../sass/modules/_static-page.scss */
+.static-page--pdf-icon {
+  height: 1em;
+  vertical-align: middle;
+  padding-left: .5em;
+}
+/* line 190, ../sass/modules/_static-page.scss */
 .static-page--content, .static-page--nav {
   position: relative;
   top: 8.5em;
   text-align: left;
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 @media only screen and (min-width: 1024px) {
-  /* line 152, ../sass/modules/_static-page.scss */
+  /* line 190, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     top: 17em;
   }
 }
 @media only screen and (min-width: 1700px) {
-  /* line 152, ../sass/modules/_static-page.scss */
+  /* line 190, ../sass/modules/_static-page.scss */
   .static-page--content, .static-page--nav {
     top: 30em;
   }
 }
-/* line 173, ../sass/modules/_static-page.scss */
+/* line 208, ../sass/modules/_static-page.scss */
 .static-page--lead {
   margin-bottom: 3em;
 }
-/* line 179, ../sass/modules/_static-page.scss */
+/* line 214, ../sass/modules/_static-page.scss */
 .static-page--summary {
   margin-bottom: 3em;
 }
-/* line 183, ../sass/modules/_static-page.scss */
+/* line 218, ../sass/modules/_static-page.scss */
 .static-page--section {
   margin-bottom: 3em;
 }
-/* line 189, ../sass/modules/_static-page.scss */
+/* line 224, ../sass/modules/_static-page.scss */
 .static-page--list {
   margin-top: 0;
   margin-right: 0;
@@ -2230,17 +3106,114 @@ html.is-locked body {
   padding: 0;
   list-style: none;
 }
-/* line 199, ../sass/modules/_static-page.scss */
+/* line 234, ../sass/modules/_static-page.scss */
 .static-page--list-item {
   border-left: 8px solid #cccccc;
   margin-bottom: 2em;
   padding-left: 1.25em;
 }
-/* line 205, ../sass/modules/_static-page.scss */
+/* line 240, ../sass/modules/_static-page.scss */
 .static-page--top-link {
   border-top: 1px solid #e6e6e6;
   display: block;
   margin-bottom: 3em;
   padding-top: 2em;
   text-align: center;
+}
+
+/**
+ *
+ * Error 404
+ *
+ */
+/* line 7, ../sass/modules/_error-404.scss */
+.error-404 {
+  position: relative;
+  z-index: 99;
+  height: 100%;
+  min-height: 100%;
+  background-image: url("/images/backgrounds/small/device-blurred.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+@media only screen and (min-width: 481px) {
+  /* line 7, ../sass/modules/_error-404.scss */
+  .error-404 {
+    background-image: url("/images/backgrounds/medium/device-blurred.jpg");
+  }
+}
+@media only screen and (min-resolution: 2dppx) and (max-width: 481px) {
+  /* line 7, ../sass/modules/_error-404.scss */
+  .error-404 {
+    background-image: url("/images/backgrounds/medium/device-blurred.jpg");
+  }
+}
+@media only screen and (min-width: 481px) {
+  /* line 7, ../sass/modules/_error-404.scss */
+  .error-404 {
+    background-image: url("/images/backgrounds/medium/device-blurred.jpg");
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 7, ../sass/modules/_error-404.scss */
+  .error-404 {
+    background-image: url("/images/backgrounds/large/device-blurred.jpg");
+  }
+}
+/* line 32, ../sass/modules/_error-404.scss */
+.error-404--inner {
+  height: 100%;
+  padding: 2em;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 41, ../sass/modules/_error-404.scss */
+.error-404--image {
+  max-height: 100%;
+}
+
+/* line 1, ../sass/modules/_cookieterms.scss */
+.cookieterms {
+  z-index: 99;
+  position: fixed;
+  background: white;
+  width: 100%;
+  bottom: 0;
+  font: 1em/1.5 "permianseriftypefaceregular", "Helvetica Neue", Helvetica, Arial, serif;
+  -moz-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* line 14, ../sass/modules/_cookieterms.scss */
+.cookieterms--inner {
+  padding: 1em;
+  text-align: center;
+}
+@media only screen and (min-width: 481px) {
+  /* line 14, ../sass/modules/_cookieterms.scss */
+  .cookieterms--inner {
+    line-height: 2.2em;
+  }
+}
+
+/* line 24, ../sass/modules/_cookieterms.scss */
+.cookieterms--text {
+  margin-right: .5em;
+}
+
+/* line 28, ../sass/modules/_cookieterms.scss */
+.cookieterms--button {
+  padding: .4em 1.5em;
+  background: #0abbef;
+  color: #fff;
+  cursor: pointer;
+  font: 1em/1.5 "bebas_neueregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 2.5em;
 }

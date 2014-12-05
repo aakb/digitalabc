@@ -5,23 +5,17 @@
  */
 
 
-// Handle inline-block margin bug
-// We should move this to some other file, no idea which one at the moment so for now it stays here.
-%grid-markup-fix {
-  margin-right: -4px;
-}
-
-
 
 /* Breakpoints
    ================================================================================================================== */
 
 
-$breakpoint-lap:          481px;
-$breakpoint-desk:         1024px;
-$breakpoint-bigscreen:    1700px;
+$breakpoint-lap:              481px;
+$breakpoint-desk:             1024px;
+$breakpoint-bigscreen:        1700px;
 
-$breakpoint-height:       700px;
+$breakpoint-height:           700px;
+$breakpoint-landscape-height: 287px;
 
 
 
@@ -37,6 +31,7 @@ $border-radius:    .6em;
    ================================================================================================================== */
 
 $theme-color:      #0abbef;
+$facebook-color:   #3a589b;
 $black:            #000;
 $white:            #fff;
 
@@ -55,13 +50,11 @@ $text-color-dark:  $gray-darker;
 /* Typograhy
    ================================================================================================================== */
 
-$font-primary:          'bebas_neueregular';
-$font-secondary:        'permianseriftypefaceregular';
-$font-secondary-bold:   'permianseriftypefacebold';
-$font-family-primary:   'bebas_neueregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-secondary: $font-secondary, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-primary:          1em/1.5 $font-family-primary;
-$font-secondary:        1em/1.5 $font-family-secondary;
+$font-primary:          "bebas_neueregular";
+$font-secondary:        "permianseriftypefaceregular";
+$font-secondary-bold:   "permianseriftypefacebold";
+$font-family-primary:   1em/1.5 $font-primary, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-secondary: 1em/1.5 $font-secondary, "Helvetica Neue", Helvetica, Arial, serif;
 
 
 

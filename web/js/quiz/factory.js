@@ -1,15 +1,3 @@
-abcApp.factory('settingsFactory', function() {
-    var factory = {};
-
-    var serverPath = 'http://digitalabc.vm/'
-
-    factory.getServerPath = function() {
-        return serverPath;
-    }
-
-    return factory;
-});
-
 abcApp.factory('quizFactory', function($http, $q) {
   var factory = {};
   var questions = [];
@@ -21,14 +9,15 @@ abcApp.factory('quizFactory', function($http, $q) {
   var challenger = null;
 
   factory.init = function() {
+    var defer;
     if (initialized) {
-      var defer = $q.defer();
+      defer = $q.defer();
       defer.resolve(true);
       return defer.promise;
     }
 
-    var defer = $q.defer();
-    $http({method: 'GET', url: '/backend/quiz.php?action=questions'})
+    defer = $q.defer();
+    $http({method: 'GET', url: '/api/questions'})
     .success(function(data, status, headers, config) {
       questions = data;
       angular.forEach(questions, function(question, key) {
@@ -38,27 +27,37 @@ abcApp.factory('quizFactory', function($http, $q) {
       initialized = true;
     });
     return defer.promise;
-  }
+  };
+
+  factory.resetQuiz = function() {
+    questions = [];
+    quizFinished = false;
+    initialized = false;
+    resultSaved = false;
+    resultID = null;
+    answers = [];
+    challenger = null;
+  };
 
   factory.finishQuiz = function() {
     quizFinished = true;
-  }
+  };
 
   factory.getQuizFinished = function() {
     return quizFinished;
-  }
+  };
 
   factory.getQuestion = function(id) {
     return questions[id - 1];
-  }
+  };
 
   factory.getAnswer = function(id) {
     return answers[id - 1];
-  }
+  };
 
   factory.getNumberOfQuestions = function() {
     return questions.length;
-  }
+  };
 
   factory.getHighestAnsweredQuestion = function() {
     var questionsAnswered = 0;
@@ -69,18 +68,18 @@ abcApp.factory('quizFactory', function($http, $q) {
     });
 
     return questionsAnswered;
-  }
+  };
 
   factory.getResult = function() {
     var res = 0;
     angular.forEach(questions, function(question, key) {
-      if (question.correctAnswer == answers[key].answer) {
+      if (parseInt(question.correctAnswer) === parseInt(answers[key].answer)) {
         res = res + 1;
       }
     });
 
     return parseInt(100 * (res / questions.length));
-  }
+  };
 
   factory.saveResult = function() {
       var defer = $q.defer();
@@ -93,7 +92,7 @@ abcApp.factory('quizFactory', function($http, $q) {
               result: factory.getResult(),
               answers: ans
           };
-          $http.post('/quiz/api/result/save', data)
+          $http.post('/api/result/save', data)
               .success(function(data, status, headers, config) {
                   resultID = data.id;
                   resultSaved = true;
@@ -104,14 +103,14 @@ abcApp.factory('quizFactory', function($http, $q) {
           defer.resolve(resultID);
       }
       return defer.promise;
-  }
+  };
 
   factory.getChallenge = function(id) {
       var defer = $q.defer();
       if (challenger !== null) {
           defer.resolve(challenger);
       } else {
-          $http.get('/quiz/api/result/get/' + id)
+          $http.get('/api/result/' + id)
               .success(function(data, status, headers, config) {
                 challenger = data;
                 defer.resolve(challenger);
@@ -121,7 +120,7 @@ abcApp.factory('quizFactory', function($http, $q) {
               });
       }
       return defer.promise;
-  }
+  };
 
   return factory;
 });

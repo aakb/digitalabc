@@ -5,11 +5,42 @@ This is the Digital ABC project. It is a Symfony2 project that utilises angularj
 
 To allow the AngularJS integration within a twig template the interpolation symbols have changed for angular from {{ }} to <[ ]>.
 
+We use uglifyjs to compile the javascripts into one file. See Helpful commands for the command to compile the scripts.
+
+###To update the project on the server
+Pull from git (from root of project)
+<pre>
+git pull
+</pre>
+Clear cache
+<pre>
+rm -rf app/cache/*
+</pre>
+Run the uglifyjs script (To compile the javascripts to one file)
+<pre>
+php app/console assetic:dump
+</pre>
 
 ###Helpful commands
+To compile the javascripts
+<pre>
+app/console assetic:dump
+</pre>
+To watch for changes in the javascripts
+<pre>
+app/console assetic:dump --watch
+</pre>
 To clear cache
 <pre>
-php app/console cache:clear
+app/console cache:clear
+</pre>
+To build asssets
+<pre>
+app/console assets:install
+</pre>
+Remove cache on live
+<pre>
+rm -R app/cache/*
 </pre>
 
 ##Installation instructions
@@ -49,7 +80,6 @@ $ cp app/config/parameters.yml.dist app/config/parameters.yml
 </pre>
 
 Fill in relevant settings.
-
 
 ###Setup DB and after changing an entity
 <pre>

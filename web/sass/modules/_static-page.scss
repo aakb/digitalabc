@@ -12,32 +12,43 @@
     margin-bottom: 1em;
   }
 
-  &--inner {
-    .ng-enter,
-    .ng-leave {
-      @include animation(fadeOut .5s ease 1 forwards);
-    }
+  p,
+  &--lead,
+  &--summary,
+  &--list,
+  &--top-link {
+    font: $font-family-secondary;
   }
 
   &--header {
     position: fixed;
     top: 0;
-    z-index: 97;
+    z-index: 95;
 
     margin-bottom: 4em;
     min-height: 6em;
     width: 100%;
 
-    background: url('/images/backgrounds/table-laptop-notebook.png') center no-repeat;
+    background-image: url('/images/backgrounds/small/table-laptop-notebook.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
 
     @include background-size(cover);
 
+    @include breakpoint($breakpoint-lap, false, true) {
+      background-image: url('/images/backgrounds/medium/table-laptop-notebook.jpg');
+    }
+
     @include breakpoint($breakpoint-desk) {
       min-height: 14em;
+
+      background-image: url('/images/backgrounds/medium/table-laptop-notebook.jpg');
     }
 
     @include breakpoint($breakpoint-bigscreen) {
       min-height: 26em;
+
+      background-image: url('/images/backgrounds/large/table-laptop-notebook.jpg');
     }
   }
 
@@ -70,7 +81,7 @@
   }
 
   &--sub-heading {
-    margin-bottom: 0;
+    margin-bottom: .25em;
 
     font-size: 2em;
 
@@ -109,11 +120,15 @@
     padding-left: 2em;
   }
 
+  /* Top anchor */
+  .static-page--page-top {
+    position: absolute;
+  }
+
   /* Navigation */
   &--nav {
     @extend %desk--two-fifths;
     @extend %bigscreen--two-fifths;
-    @extend %grid-markup-fix;
 
     padding-right: 2em;
     margin-bottom: 2em;
@@ -126,6 +141,9 @@
 
       @include breakpoint($breakpoint-desk) {
         position: fixed;
+        top: 17em;
+        bottom: 2em;
+        overflow: auto;
         z-index: 96;
 
         border-bottom: 0;
@@ -133,20 +151,40 @@
         padding-bottom: .5em;
         padding-left: 2em;
       }
+
+      @include breakpoint($breakpoint-bigscreen) {
+        top: 30em;
+      }
     }
 
     &-item,
     &-sub-item {
-      @include nav-base-item();
+      @include navigation--base-item();
     }
 
     &-item {
-      @include nav-item();
+      @include navigation--item();
     }
 
     &-sub-item {
-      @include nav-sub-item();
+      @include navigation--sub-item();
     }
+
+
+  }
+
+
+  /* PDF link on static pages */
+  &--pdf-link { // margin and padding top since it's a unique last child element inside another block
+    border-top: 1px solid $gray;
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+  &--pdf-icon {
+    height: 1em;
+    vertical-align: middle;
+    padding-left: .5em;
   }
 
   &--content,
@@ -157,9 +195,6 @@
     top: 8.5em;
 
     text-align: left;
-
-    // Make sure position fixed on child element works in Chrome.
-    @include transform(translateZ(0));
 
     @include breakpoint($breakpoint-desk) {
       top: 17em;
