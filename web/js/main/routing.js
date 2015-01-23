@@ -4,6 +4,10 @@ abcApp.config(function($routeProvider) {
       controller: 'StaticPageController',
       templateUrl: '/partials/om-projektet/index.html'
     })
+    .when('/om-projektet/konkurrencen', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/om-projektet/konkurrencen/index.html'
+    })
     .when('/om-projektet/unge', {
       controller: 'StaticPageController',
       templateUrl: '/partials/om-projektet/unge/index.html'
