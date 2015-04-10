@@ -8,5 +8,5 @@ composer.phar
 composer.lock
 .idea
 web/config.codekit
-web/js/compiled
+web/js/compiled/main_*.js
 /bin
