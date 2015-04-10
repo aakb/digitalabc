@@ -102,9 +102,6 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     else if ($location.path().indexOf("/undervisningsmateriale") === 0) {
       window.document.title = 'Undervisningsmateriale - Digital ABC';
     }
-    else if ($location.path().indexOf('/om-projektet/konkurrencen') === 0) {
-      window.document.title = 'Konkurrencen - Digital ABC';
-    }
     else if ($location.path().indexOf("/om-projektet/unge") === 0) {
       window.document.title = 'Til de unge - Digital ABC';
     }
@@ -150,7 +147,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
   var slidesInSlideshow = 2;
   var slidesTimeIntervalInMs = 5000;
 
-  $scope.slideshow = 2;
+  $scope.slideshow = 1;
 
   var slideTimer =
     $timeout(function interval() {
