@@ -64,6 +64,10 @@ abcApp.config(function($routeProvider) {
       controller: 'StaticPageController',
       templateUrl: '/partials/digital-ambassadoer/index.html'
     })
+    .when('/konkurrencen', {
+      controller: 'StaticPageController',
+      templateUrl: '/partials/konkurrencen/index.html'
+    })
     .when('/quiz', {
       controller: 'StartController',
       templateUrl: '/partials/quiz/index.html'
