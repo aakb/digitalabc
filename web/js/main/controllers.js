@@ -32,16 +32,12 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     } else {
       return "";
     }
-  }
+  };
 
   // Handle active menu item
   $scope.setPdfLink = function(path) {
-    if ($location.path() === path || $location.path() === '/undervisningsmateriale' ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+    return ($location.path() === path || $location.path() === '/undervisningsmateriale' );
+  };
 
   // Function to scroll to the position of the different elements on the frontpage.
   var scrollToPosition = function() {
@@ -58,7 +54,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     } else {
       $(window).scrollTop(0);
     }
-  }
+  };
   scrollToPosition();
 
   // Change route.
@@ -166,22 +162,24 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 
   // Play video.
   $scope.playVideo = function(video) {
+    var url;
+
     // Set video src.
     switch (video) {
       case 'troll-painter':
-        var url = '//www.youtube.com/embed/z8MVCt4cZsk?showinfo=0';
+        url = '//www.youtube.com/embed/z8MVCt4cZsk?showinfo=0';
         break;
       case 'slave':
-        var url = '//www.youtube.com/embed/n7vUo1oZG08?showinfo=0';
+        url = '//www.youtube.com/embed/n7vUo1oZG08?showinfo=0';
         break;
       case 'pain-in-the-butt':
-        var url = '//www.youtube.com/embed/zsyeqhbKnFw?showinfo=0';
+        url = '//www.youtube.com/embed/zsyeqhbKnFw?showinfo=0';
         break;
       case 'moving-out':
-        var url = '//www.youtube.com/embed/M9Ede-GQI30?showinfo=0';
+        url = '//www.youtube.com/embed/M9Ede-GQI30?showinfo=0';
         break;
       case 'broke-teenager':
-        var url = '//www.youtube.com/embed/XFQycqWNcSM?showinfo=0';
+        url = '//www.youtube.com/embed/XFQycqWNcSM?showinfo=0';
         break;
       default:
         return;
@@ -208,20 +206,20 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
 });
 
 // Frontpage controller.
-abcApp.controller('FrontpageController', function($scope, $location) {
+abcApp.controller('FrontpageController', function($scope) {
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'layout');
 });
 
 
 // Static page controller.
-abcApp.controller('StaticPageController', function($scope, $location, $document) {
+abcApp.controller('StaticPageController', function($scope) {
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'static-page');
 });
 
 // Error 404 controller.
-abcApp.controller('Error404Controller', function($scope, $location, $document) {
+abcApp.controller('Error404Controller', function($scope) {
   // Change layout class.
   $scope.$emit('changeLayoutClassSuffix', 'error-404');
 });
