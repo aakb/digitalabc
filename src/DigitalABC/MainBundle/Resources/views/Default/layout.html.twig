@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Digital ABC"/>
     <meta property="og:title" content="Digital ABC"/>
     <meta property="og:url" content="http://www.digitalabc.dk"/>
-    <meta property="og:image" content="{{ server_path }}/images/channel-image.jpg">
+    <meta property="og:image" content="{{ server_path }}images/channel-image.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="200">
     <meta property="og:image:height" content="200">
@@ -27,8 +27,6 @@
   <!--[if IE 9]>
   <link rel="stylesheet" href="{{ asset('css/ie9.css') }}">
   <![endif]-->
-  <link href="{{ asset('css/video-js.css') }}" rel="stylesheet">
-
 {% endblock %}
 
 {% block body_attr %}data-ng-controller="HeaderController" data-ng-class="{'is-locked': menuOpen !== null && menuOpen}" {% endblock %}
@@ -44,6 +42,7 @@
       <div class="nav--item-wrapper">
         <a href="/" class="nav--item" data-ng-class="setActiveMenuItem('')">Home</a>
         <a href="/#/quiz" class="nav--item" data-ng-class="setActiveMenuItem('/quiz')">Ta' Quizzen!</a>
+        <a href="/#/konkurrencen" class="nav--item" data-ng-class="setActiveMenuItem('/konkurrencen')">Konkurrencen</a>
         <a href="/#/video" class="nav--item" data-ng-class="setActiveMenuItem('/video')">Se videoerne</a>
         <a href="/#/music-video" class="nav--item" data-ng-class="setActiveMenuItem('/music-video')">Musikvideo: "Kom med mig"</a>
         <a href="https://www.facebook.com/tjekpaanemid" class="nav--item" target="_blank">Facebook.com/TjekPaaNemID</a>
@@ -69,8 +68,13 @@
       <div class="nav--item-wrapper">
         <a href="/#/nyttige-links" class="nav--item" data-ng-class="setActiveMenuItem('/nyttige-links')">Nyttige links</a>
         <a href="https://service.nemid.nu/dk-da/bestil_nemid" class="nav--sub-item" target="_blank">Opret NemID - Husk pas!</a>
-        <a href="https://www.borger.dk/Sider/Er-du-tilmeldt-Digital-Post.aspx" class="nav--sub-item" target="_blank">Tilmeld Digital Postkasse - Kræver NemID!</a>
         <a href="https://www.aarhus.dk/da/borger/Digitalisering/Hotline-for-digital-selvbetjening.aspx" class="nav--sub-item" target="_blank">Hjælp til digital selvbetjening</a>
+      </div>
+      <div class="nav--item-wrapper">
+        <a href="/#/grafisk-materiale" class="nav--item" data-ng-class="setActiveMenuItem('/grafisk-materiale')">Grafisk materiale</a>
+        <a href="/assets/poster-print.pdf" class="nav--sub-item" target="_blank">Download plakat (PDF, 1 MB)</a>
+        <a href="/assets/movieposters-print.pdf" class="nav--sub-item" target="_blank">Download filmplakater (PDF, 56 MB)</a>
+        <a href="/assets/postcard-print.pdf" class="nav--sub-item" target="_blank">Download postkort (PDF, 1 MB)</a>
       </div>
       <div class="nav--item-wrapper">
         <a href="/#/digital-ambassadoer" class="nav--item" data-ng-class="setActiveMenuItem('/digital-ambassadoer')">Digital ambassadør</a>
@@ -98,17 +102,16 @@
 {% block scripts %}
   <!-- Script imports -->
   {% javascripts
-  'js/libraries/angular-1.*.js'
-  'js/libraries/jquery-1.*.js'
+  'js/libraries/jquery-1.*.min.js'
+  'js/libraries/angular-1.*.min.js'
+  'js/libraries/angular-animate-1.*.min.js'
+  'js/libraries/angular-route-1.*.min.js'
   'js/libraries/angular-angulartics*.js'
   'js/libraries/matchMedia.js'
-  'js/libraries/angular-animate*.js'
   'js/libraries/angular-picturefill*.js'
-  'js/libraries/angular-route*.js'
   'js/libraries/angular-scroll*.js'
   'js/libraries/fastclick*.js'
   'js/libraries/picturefill.js'
-  'js/libraries/video.js'
   'js/libraries/cookieChecker.js'
   'js/app.js'
   'js/main/*'

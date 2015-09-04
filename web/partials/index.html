@@ -1,12 +1,15 @@
 <section class="quiz-header" data-ng-switch="slideshow">
   <div class="quiz-header--inner">
-    <h2 class="quiz-header--question">Tjek på din NemID OG digital postkasse?</h2>
+    <h2 class="quiz-header--question" data-ng-switch-when="1">Tjek på din NemID OG digital postkasse?</h2>
+    <h2 class="quiz-header--question" data-ng-switch-when="2">Vind fede præmier - deltag i vores</h2>
     <h1 class="quiz-header--punchline">
       <span class="quiz-header--punchline-inner" data-ng-switch-when="1">Ingen stress!</span>
-      <span class="quiz-header--punchline-inner" data-ng-switch-when="2">Styr på dit liv?</span>
+      <span class="quiz-header--punchline-inner" data-ng-switch-when="2">KONKURRENCE</span>
     </h1>
-    <h3 class="quiz-header--text">Ta’ quizzen og kend din Digitale ABC!</h3>
-    <a href="/#/quiz" class="quiz-header--button">Ta' Quizzen</a>
+    <h3 class="quiz-header--text" data-ng-switch-when="1">Ta’ quizzen og kend din Digitale ABC!</h3>
+    <h3 class="quiz-header--text" data-ng-switch-when="2">og bliv aarhusmestre i Digital Selvbetjening!</h3>
+    <a href="/#/quiz" class="quiz-header--button" data-ng-switch-when="1">Ta' Quizzen</a>
+    <a href="/#/konkurrencen" class="quiz-header--button" data-ng-switch-when="2">TIL KONKURRENCEN</a>
     <a href="#video" class="quiz-header--scroll" du-smooth-scroll><img src="/images/scroll.svg"></a>
   </div>
   <div class="quiz-header--background is-first" data-ng-switch-when="1"></div>
@@ -82,43 +85,45 @@
   </div>
 </div>
 <div id="rap" class="rap">
-  <div class="rap--video-wrapper">
-    <div class="rap--fb-wrapper">
-      <div class="fb-like rap--fb-like" data-href="http://digitalabc.dk/share/music-video" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  <div class="rap--video-inner-wrapper">
+    <div class="rap--video-wrapper">
+      <div class="rap--fb-wrapper">
+        <div class="fb-like rap--fb-like" data-href="http://digitalabc.dk/share/music-video" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+      </div>
+      <iframe class="rap--video" width="1280" height="720" src="//www.youtube.com/embed/vOT7l5caSCw?showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
-    <iframe class="rap--video" width="1280" height="720" src="//www.youtube.com/embed/vOT7l5caSCw?showinfo=0" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
-<div class="video-wrapper" id="troll-painter-wrapper" data-ng-show="showVideo === 'troll-painter'">
+<div class="video-wrapper" id="troll-painter-wrapper" data-ng-if="showVideo === 'troll-painter'">
   <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/z8MVCt4cZsk" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
-<div class="video-wrapper" id="broke-teenager-wrapper" data-ng-show="showVideo === 'broke-teenager'">
+<div class="video-wrapper" id="broke-teenager-wrapper" data-ng-if="showVideo === 'broke-teenager'">
   <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/XFQycqWNcSM" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
-<div class="video-wrapper" id="slave-wrapper" data-ng-show="showVideo === 'slave'">
+<div class="video-wrapper" id="slave-wrapper" data-ng-if="showVideo === 'slave'">
   <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/n7vUo1oZG08" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
-<div class="video-wrapper" id="pain-in-the-butt-wrapper" data-ng-show="showVideo === 'pain-in-the-butt'">
+<div class="video-wrapper" id="pain-in-the-butt-wrapper" data-ng-if="showVideo === 'pain-in-the-butt'">
   <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" height="720" src="//www.youtube.com/embed/zsyeqhbKnFw" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
-<div class="video-wrapper" id="moving-out-wrapper" data-ng-show="showVideo === 'moving-out'">
+<div class="video-wrapper" id="moving-out-wrapper" data-ng-if="showVideo === 'moving-out'">
   <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" src="//www.youtube.com/embed/M9Ede-GQI30" height="720" frameborder="0" allowfullscreen></iframe>

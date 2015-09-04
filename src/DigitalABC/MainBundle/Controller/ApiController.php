@@ -245,7 +245,7 @@ class ApiController extends Controller {
               'text' => 'Bestille et pas',
             ),
           ),
-        'correctAnswer' => 2,
+        'correctAnswer' => 1,
       ),
       array (
         'question' => 'Hvordan modtager du i fremtiden regninger fra biblioteket?',
@@ -343,20 +343,20 @@ class ApiController extends Controller {
         'correctAnswer' => 1,
       ),
       array (
-        'question' => 'Hvad sker der 1. november 2014?',
+        'question' => 'Hvad skete der 1. november 2014?',
         'answers' =>
           array (
             array (
               'id' => 0,
-              'text' => 'Det offentlige begynder at sende post til din digitale postkasse',
+              'text' => 'Det offentlige begyndte at sende post til din digitale postkasse',
             ),
             array (
               'id' => 1,
-              'text' => 'Folketinget holder ”tag-dit-kæledyr-med-på-arbejde”-dag',
+              'text' => 'Folketinget holdt "tag-dit-kæledyr-med-på-arbejde"-dag',
             ),
             array (
               'id' => 2,
-              'text' => 'Det offentlige begynder at tjekke, hvor meget tid du bruger på lektier',
+              'text' => 'Det offentlige begyndte at optælle, hvor mange timer unge bruger på lektier',
             ),
           ),
         'correctAnswer' => 0,
