@@ -128,7 +128,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'Quickkassen i kommunens borgerservice',
+              'text' => 'Quickkassen i borgerservice på Rådhuset',
             ),
           ),
         'correctAnswer' => 1,
