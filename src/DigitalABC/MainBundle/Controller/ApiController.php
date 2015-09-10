@@ -105,7 +105,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 1,
-              'text' => 'Udfylder et skema, du får på din uddannelse og sender til Midttrafik',
+              'text' => 'Udfylder et skema, du får på din uddannelse og sender til trafikselskabet',
             ),
             array (
               'id' => 2,
@@ -128,7 +128,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 2,
-              'text' => 'Quickkassen i borgerservice på Rådhuset',
+              'text' => 'Quickkassen i kommunens borgerservice',
             ),
           ),
         'correctAnswer' => 1,
