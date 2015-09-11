@@ -105,7 +105,7 @@ class ApiController extends Controller {
             ),
             array (
               'id' => 1,
-              'text' => 'Udfylder et skema, du får på din uddannelse og sender til Midttrafik',
+              'text' => 'Udfylder et skema, du får på din uddannelse og sender til trafikselskabet',
             ),
             array (
               'id' => 2,
