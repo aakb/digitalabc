@@ -69,14 +69,15 @@
       </span>
     </div>
   </section><!--
---><section class="video--your-movie">
+--><section class="video--your-movie" data-ng-click="playVideo('your-movie')">
     <div class="video--your-movie-inner">
-      <a href="/#/undervisningsmateriale/lav-din-egen-film">
-        <span picture-fill data-alt="Your movie" class="video--your-movie-image">
-          <span pf-src="/images/video/small/your-movie-poster.jpg" data-media="(min-width: 1px)"></span>
-          <span pf-src="/images/video/large/your-movie-poster.jpg" data-media="(min-width: 1024px)"></span>
-        </span>
-      </a>
+      <span picture-fill data-alt="Your movie" class="video--your-movie-image is-static">
+        <span pf-src="/images/video/small/your-movie-poster.jpg" data-media="(min-width: 1px)"></span>
+        <span pf-src="/images/video/large/your-movie-poster.jpg" data-media="(min-width: 1024px)"></span>
+      </span>
+      <span picture-fill data-alt="Your movie" class="video--your-movie-image is-animated">
+        <span pf-src="/images/video/large/your-movie-poster.jpg" data-media="(min-width: 1024px)"></span>
+      </span>
     </div>
   </section>
   </div>
@@ -124,5 +125,12 @@
   <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" src="//www.youtube.com/embed/M9Ede-GQI30" height="720" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="video-wrapper" id="your-movie-wrapper" data-ng-if="showVideo === 'your-movie'">
+  <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  <div class="video">
+    <iframe class="video--frame" width="1280" src="//www.youtube.com/embed/5EWGnavuOpE" height="720" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
