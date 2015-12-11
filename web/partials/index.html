@@ -1,15 +1,12 @@
 <section class="quiz-header" data-ng-switch="slideshow">
   <div class="quiz-header--inner">
-    <h2 class="quiz-header--question" data-ng-switch-when="1">Tjek på din NemID OG digital postkasse?</h2>
-    <h2 class="quiz-header--question" data-ng-switch-when="2">Vind fede præmier - deltag i vores</h2>
+    <h2 class="quiz-header--question">Tjek på din NemID OG digital postkasse?</h2>
     <h1 class="quiz-header--punchline">
       <span class="quiz-header--punchline-inner" data-ng-switch-when="1">Ingen stress!</span>
-      <span class="quiz-header--punchline-inner" data-ng-switch-when="2">KONKURRENCE</span>
+      <span class="quiz-header--punchline-inner" data-ng-switch-when="2">Styr på dit liv?</span>
     </h1>
-    <h3 class="quiz-header--text" data-ng-switch-when="1">Ta’ quizzen og kend din Digitale ABC!</h3>
-    <h3 class="quiz-header--text" data-ng-switch-when="2">og bliv aarhusmestre i Digital Selvbetjening!</h3>
-    <a href="/#/quiz" class="quiz-header--button" data-ng-switch-when="1">Ta' Quizzen</a>
-    <a href="/#/konkurrencen" class="quiz-header--button" data-ng-switch-when="2">TIL KONKURRENCEN</a>
+    <h3 class="quiz-header--text">Ta’ quizzen og kend din Digitale ABC!</h3>
+    <a href="/#/quiz" class="quiz-header--button">Ta' Quizzen</a>
     <a href="#video" class="quiz-header--scroll" du-smooth-scroll><img src="/images/scroll.svg"></a>
   </div>
   <div class="quiz-header--background is-first" data-ng-switch-when="1"></div>
@@ -72,14 +69,15 @@
       </span>
     </div>
   </section><!--
---><section class="video--your-movie">
+--><section class="video--your-movie" data-ng-click="playVideo('your-movie')">
     <div class="video--your-movie-inner">
-      <a href="/#/undervisningsmateriale/lav-din-egen-film">
-        <span picture-fill data-alt="Your movie" class="video--your-movie-image">
-          <span pf-src="/images/video/small/your-movie-poster.jpg" data-media="(min-width: 1px)"></span>
-          <span pf-src="/images/video/large/your-movie-poster.jpg" data-media="(min-width: 1024px)"></span>
-        </span>
-      </a>
+      <span picture-fill data-alt="Your movie" class="video--your-movie-image is-static">
+        <span pf-src="/images/video/small/your-movie-poster.jpg" data-media="(min-width: 1px)"></span>
+        <span pf-src="/images/video/large/your-movie-poster.jpg" data-media="(min-width: 1024px)"></span>
+      </span>
+      <span picture-fill data-alt="Your movie" class="video--your-movie-image is-animated">
+        <span pf-src="/images/video/large/your-movie-poster.jpg" data-media="(min-width: 1024px)"></span>
+      </span>
     </div>
   </section>
   </div>
@@ -127,5 +125,12 @@
   <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
   <div class="video">
     <iframe class="video--frame" width="1280" src="//www.youtube.com/embed/M9Ede-GQI30" height="720" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="video-wrapper" id="your-movie-wrapper" data-ng-if="showVideo === 'your-movie'">
+  <div class="fb-like video--fb-like" data-href="http://digitalabc.dk/share/videos" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+  <div class="video">
+    <iframe class="video--frame" width="1280" src="//www.youtube.com/embed/5EWGnavuOpE" height="720" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>

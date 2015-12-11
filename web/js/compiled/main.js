@@ -2217,9 +2217,6 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
     if ($location.path().indexOf("/quiz") === 0) {
       window.document.title = 'Quiz - Digital ABC';
     }
-    else if ($location.path().indexOf("/konkurrencen") === 0) {
-      window.document.title = 'Konkurrencen - Digital ABC';
-    }
     else if ($location.path().indexOf("/undervisningsmateriale/sidste-omgang") === 0) {
       window.document.title = 'Sidste omgang - Digital ABC';
     }
@@ -2280,7 +2277,7 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
   var slidesInSlideshow = 2;
   var slidesTimeIntervalInMs = 5000;
 
-  $scope.slideshow = 2;
+  $scope.slideshow = 1;
 
   var slideTimer =
     $timeout(function interval() {
@@ -2314,6 +2311,9 @@ abcApp.controller('HeaderController', function($scope, $document, $animate, $loc
         break;
       case 'broke-teenager':
         url = '//www.youtube.com/embed/XFQycqWNcSM?showinfo=0';
+        break;
+      case 'your-movie':
+        url = '//www.youtube.com/embed/5EWGnavuOpE?showinfo=0';
         break;
       default:
         return;
@@ -2432,10 +2432,6 @@ abcApp.config(function($routeProvider) {
     .when('/digital-ambassadoer', {
       controller: 'StaticPageController',
       templateUrl: '/partials/digital-ambassadoer/index.html'
-    })
-    .when('/konkurrencen', {
-      controller: 'StaticPageController',
-      templateUrl: '/partials/konkurrencen/index.html'
     })
     .when('/quiz', {
       controller: 'StartController',
