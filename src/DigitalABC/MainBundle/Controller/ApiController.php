@@ -115,25 +115,6 @@ class ApiController extends Controller {
         'correctAnswer' => 2,
       ),
       array (
-        'question' => 'Hvad er NemBS?',
-        'answers' =>
-          array (
-            array (
-              'id' => 0,
-              'text' => 'Et nyt realityshow hvor B.S. Christiansen dater PH-deltagere',
-            ),
-            array (
-              'id' => 1,
-              'text' => 'En light version af borgerservice på biblioteket',
-            ),
-            array (
-              'id' => 2,
-              'text' => 'Quickkassen i borgerservice på Rådhuset',
-            ),
-          ),
-        'correctAnswer' => 1,
-      ),
-      array (
         'question' => 'Hvad er et nøglekort?',
         'answers' =>
           array (
