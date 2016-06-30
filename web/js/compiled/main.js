@@ -2535,7 +2535,7 @@ abcApp.controller('ShareController', function($scope, $location, $routeParams, q
       cookie     : true,  // enable cookies to allow the server to access
       // the session
       xfbml      : true,  // parse social plugins on this page
-      version    : 'v2.0' // use version 2.0
+      version    : 'v2.6' // use version 2.6
     });
   };
 
