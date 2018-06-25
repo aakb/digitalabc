@@ -1,13 +1,13 @@
-#Digital ABC
+# Digital ABC
 
-##Information
+## Information
 This is the Digital ABC project. It is a Symfony2 project that utilises angularjs.
 
 To allow the AngularJS integration within a twig template the interpolation symbols have changed for angular from {{ }} to <[ ]>.
 
 We use uglifyjs to compile the javascripts into one file. See Helpful commands for the command to compile the scripts.
 
-###To update the project on the server
+### To update the project on the server
 Pull from git (from root of project)
 <pre>
 git pull
@@ -21,7 +21,7 @@ Run the uglifyjs script (To compile the javascripts to one file)
 php app/console assetic:dump
 </pre>
 
-###Helpful commands
+### Helpful commands
 To compile the javascripts
 <pre>
 app/console assetic:dump
@@ -43,8 +43,8 @@ Remove cache on live
 rm -R app/cache/*
 </pre>
 
-##Installation instructions
-###Get composer
+## Installation instructions
+### Get composer
 With brew (global install)
 <pre>
 $ brew install composer
@@ -58,7 +58,7 @@ $ curl -sS http://getcomposer.org/installer | php
 
 This will download composer.phar to the project directory.
 
-###Install dependencies for project
+### Install dependencies for project
 With brew:
 <pre>
 $ composer install
@@ -74,20 +74,20 @@ If there are problems with this, try with apc.enable_cli = Off in php.ini or fro
 php -d apc.enable_cli=Off composer.phar install
 </pre>
 
-###Setup project
+### Setup project
 <pre>
 $ cp app/config/parameters.yml.dist app/config/parameters.yml
 </pre>
 
 Fill in relevant settings.
 
-###Setup DB and after changing an entity
+### Setup DB and after changing an entity
 <pre>
 $ php app/console doctrine:schema:update
 </pre>
 (--force)
 
-###Fix permissions
+### Fix permissions
 Make sure the webserver has access to
 <pre>
 app/cache/
@@ -100,12 +100,12 @@ web/images/
 </pre>
 which is the folder where the uploaded images will reside.
 
-###Set up webserver
+### Set up webserver
 <pre>
 http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
 </pre>
 
-###Check system configuration
+### Check system configuration
 Check that local system is properly configured for Symfony.
 
 <pre>
@@ -123,4 +123,4 @@ http://[path_to_project/app/web]/config.php
 Fix problems.
 
 
-###Ready to go!
+### Ready to go!
