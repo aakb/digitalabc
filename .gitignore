@@ -5,7 +5,6 @@
 /vendor/
 composer.phar
 /app/bootstrap*
-composer.lock
 .idea
 web/config.codekit
 web/js/compiled/main_*.js
