@@ -1,5 +1,9 @@
 # digitalabc changelog
 
+## 1.3.2
+
+* Updated bundles.
+
 ## 1.3.1
 
 * Removed composer.lock from gitignore.
